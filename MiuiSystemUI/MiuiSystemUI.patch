@@ -1,0 +1,436 @@
+--- diff -Naur b/MiuiSystemUI/smali/com/android/systemui/taskmanager/TaskManagerView.smali
++++ diff -Naur a/MiuiSystemUI/smali/com/android/systemui/taskmanager/TaskManagerView.smali
+@@ -1295,67 +1295,28 @@
+ 
+     move-result-object v1
+ 
++    sget-object v10, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
++
++    const/4 v8, 0x1
++
++    invoke-virtual {v1, v10, v8}, Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;
++
++    move-result-object v1
++
++    iput-object v1, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackground:Landroid/graphics/Bitmap;
++
+     .line 344
+-    .local v1, backgroundOriginal:Landroid/graphics/Bitmap;
+-    if-eqz v1, :cond_3
+-
+-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
+-
+-    move-result v8
+-
+-    if-eqz v8, :cond_3
+-
+-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
+-
+-    move-result v8
+-
+-    if-eqz v8, :cond_3
+-
+-    .line 345
++    .line 346
++    .line 349
++    .line 349
++    .line 350
++    new-instance v2, Landroid/graphics/Canvas;
++
+     iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackground:Landroid/graphics/Bitmap;
+ 
+-    if-nez v8, :cond_1
+-
+-    .line 346
+-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
+-
+-    move-result v8
+-
+-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
+-
+-    move-result v9
+-
+-    sget-object v10, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+-
+-    invoke-static {v8, v9, v10}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+-
+-    move-result-object v8
+-
+-    iput-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackground:Landroid/graphics/Bitmap;
+-
+-    .line 347
+-    iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackground:Landroid/graphics/Bitmap;
+-
+-    const/high16 v9, -0x100
+-
+-    invoke-virtual {v8, v9}, Landroid/graphics/Bitmap;->eraseColor(I)V
+-
+-    .line 350
+-    :cond_1
+-    iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackground:Landroid/graphics/Bitmap;
+-
+-    const/16 v9, 0xa
+-
+-    invoke-static {v1, v8, v9}, Lmiui/util/ImageUtils;->fastBlur(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;I)V
++    invoke-direct {v2, v8}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+ 
+     .line 351
+-    new-instance v2, Landroid/graphics/Canvas;
+-
+-    iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackground:Landroid/graphics/Bitmap;
+-
+-    invoke-direct {v2, v8}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+-
+-    .line 352
+     .local v2, canvas:Landroid/graphics/Canvas;
+     invoke-virtual {p0}, Lcom/android/systemui/taskmanager/TaskManagerView;->getResources()Landroid/content/res/Resources;
+
+@@ -1369,21 +1330,20 @@
+ 
+     invoke-virtual {v2, v8}, Landroid/graphics/Canvas;->drawColor(I)V
+ 
+-    .line 357
++    .line 353
+     .end local v1           #backgroundOriginal:Landroid/graphics/Bitmap;
+     .end local v2           #canvas:Landroid/graphics/Canvas;
+     .end local v5           #height:I
+     .end local v7           #width:I
+     :cond_2
++    if-eqz p1, :cond_3
++
++    const/4 v8, 0x0
++
+     :goto_1
+-    if-eqz p1, :cond_4
+-
+-    const/4 v8, 0x0
+-
+-    :goto_2
+     invoke-virtual {p0, v8}, Lcom/android/systemui/taskmanager/TaskManagerView;->setBackAlpha(I)V
+ 
+-    .line 358
++    .line 354
+     const-string v9, "backAlpha"
+ 
+     const/4 v8, 0x1
+@@ -1411,28 +1371,28 @@
+ 
+     invoke-virtual {v8}, Landroid/animation/ObjectAnimator;->start()V
+ 
+-    .line 362
+-    if-eqz p1, :cond_6
+-
+-    .line 363
++    .line 358
++    if-eqz p1, :cond_5
++
++    .line 359
+     const/4 v8, 0x0
+ 
+     invoke-virtual {p0, v8}, Lcom/android/systemui/taskmanager/TaskManagerView;->setVisibility(I)V
+ 
+-    .line 364
++    .line 360
+     iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mRecentTasksMgr:Lcom/android/systemui/taskmanager/RecentTasksManager;
+ 
+     invoke-virtual {v8}, Lcom/android/systemui/taskmanager/RecentTasksManager;->getRecentTasks()Ljava/util/ArrayList;
+ 
+     move-result-object v6
+ 
+-    .line 365
++    .line 361
+     .local v6, tasks:Ljava/util/List;,"Ljava/util/List<Lcom/android/systemui/taskmanager/TaskInfo;>;"
+     new-instance v0, Lcom/android/systemui/taskmanager/TaskManagerView$TaskAdapter;
+ 
+     invoke-direct {v0, p0, v6}, Lcom/android/systemui/taskmanager/TaskManagerView$TaskAdapter;-><init>(Lcom/android/systemui/taskmanager/TaskManagerView;Ljava/util/List;)V
+ 
+-    .line 366
++    .line 362
+     .local v0, adapter:Lcom/android/systemui/taskmanager/TaskManagerView$TaskAdapter;
+     new-instance v8, Lcom/android/systemui/taskmanager/TaskManagerView$7;
+ 
+@@ -1440,90 +1400,90 @@
+ 
+     invoke-virtual {v0, v8}, Lcom/android/systemui/taskmanager/TaskManagerView$TaskAdapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
+ 
++    .line 368
++    iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mTasksView:Lcom/android/systemui/taskmanager/TasksView;
++
++    invoke-virtual {v8, v0}, Lcom/android/systemui/taskmanager/TasksView;->setAdapter(Lcom/android/systemui/taskmanager/TaskManagerView$TaskAdapter;)V
++
++    .line 369
++    iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mTasksView:Lcom/android/systemui/taskmanager/TasksView;
++
++    const/4 v9, 0x0
++
++    invoke-virtual {v8, v9}, Lcom/android/systemui/taskmanager/TasksView;->setCurrentScreen(I)V
++
++    .line 370
++    iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mClearButton:Lcom/android/systemui/taskmanager/ClearButton;
++
++    invoke-virtual {v8}, Lcom/android/systemui/taskmanager/ClearButton;->resume()V
++
++    .line 371
++    iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mTasksView:Lcom/android/systemui/taskmanager/TasksView;
++
++    invoke-virtual {v8}, Lcom/android/systemui/taskmanager/TasksView;->resume()V
++
+     .line 372
+-    iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mTasksView:Lcom/android/systemui/taskmanager/TasksView;
+-
+-    invoke-virtual {v8, v0}, Lcom/android/systemui/taskmanager/TasksView;->setAdapter(Lcom/android/systemui/taskmanager/TaskManagerView$TaskAdapter;)V
+-
+-    .line 373
+-    iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mTasksView:Lcom/android/systemui/taskmanager/TasksView;
+-
+-    const/4 v9, 0x0
+-
+-    invoke-virtual {v8, v9}, Lcom/android/systemui/taskmanager/TasksView;->setCurrentScreen(I)V
++    invoke-direct {p0}, Lcom/android/systemui/taskmanager/TaskManagerView;->refreshUi()V
+ 
+     .line 374
+-    iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mClearButton:Lcom/android/systemui/taskmanager/ClearButton;
+-
+-    invoke-virtual {v8}, Lcom/android/systemui/taskmanager/ClearButton;->resume()V
++    const/4 v8, 0x1
++
++    invoke-virtual {p0, v8}, Lcom/android/systemui/taskmanager/TaskManagerView;->setFocusable(Z)V
+ 
+     .line 375
+-    iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mTasksView:Lcom/android/systemui/taskmanager/TasksView;
+-
+-    invoke-virtual {v8}, Lcom/android/systemui/taskmanager/TasksView;->resume()V
++    const/4 v8, 0x1
++
++    invoke-virtual {p0, v8}, Lcom/android/systemui/taskmanager/TaskManagerView;->setFocusableInTouchMode(Z)V
+ 
+     .line 376
+-    invoke-direct {p0}, Lcom/android/systemui/taskmanager/TaskManagerView;->refreshUi()V
++    invoke-virtual {p0}, Lcom/android/systemui/taskmanager/TaskManagerView;->requestFocus()Z
+ 
+     .line 378
+-    const/4 v8, 0x1
+-
+-    invoke-virtual {p0, v8}, Lcom/android/systemui/taskmanager/TaskManagerView;->setFocusable(Z)V
++    iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackgroundView:Landroid/view/View;
++
++    invoke-virtual {v8}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
++
++    move-result-object v8
++
++    invoke-virtual {v8}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
++
++    move-result v8
++
++    neg-int v8, v8
++
++    invoke-virtual {p0, v8}, Lcom/android/systemui/taskmanager/TaskManagerView;->setScrollY(I)V
+ 
+     .line 379
+-    const/4 v8, 0x1
+-
+-    invoke-virtual {p0, v8}, Lcom/android/systemui/taskmanager/TaskManagerView;->setFocusableInTouchMode(Z)V
++    const-string v8, "scrollY"
++
++    const/4 v9, 0x1
++
++    new-array v9, v9, [I
++
++    const/4 v10, 0x0
++
++    const/4 v11, 0x0
++
++    aput v11, v9, v10
++
++    invoke-static {p0, v8, v9}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
++
++    move-result-object v4
+ 
+     .line 380
+-    invoke-virtual {p0}, Lcom/android/systemui/taskmanager/TaskManagerView;->requestFocus()Z
+-
+-    .line 382
+-    iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackgroundView:Landroid/view/View;
+-
+-    invoke-virtual {v8}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+-
+-    move-result-object v8
+-
+-    invoke-virtual {v8}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+-
+-    move-result v8
+-
+-    neg-int v8, v8
+-
+-    invoke-virtual {p0, v8}, Lcom/android/systemui/taskmanager/TaskManagerView;->setScrollY(I)V
+-
+-    .line 383
+-    const-string v8, "scrollY"
+-
+-    const/4 v9, 0x1
+-
+-    new-array v9, v9, [I
+-
+-    const/4 v10, 0x0
+-
+-    const/4 v11, 0x0
+-
+-    aput v11, v9, v10
+-
+-    invoke-static {p0, v8, v9}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
+-
+-    move-result-object v4
+-
+-    .line 384
+     .local v4, goInAnimator:Landroid/animation/Animator;
+     const-wide/16 v8, 0x12c
+ 
+     invoke-virtual {v4, v8, v9}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
+ 
+-    .line 385
++    .line 381
+     new-instance v8, Lcom/android/systemui/taskmanager/TaskManagerView$8;
+ 
+     invoke-direct {v8, p0}, Lcom/android/systemui/taskmanager/TaskManagerView$8;-><init>(Lcom/android/systemui/taskmanager/TaskManagerView;)V
+ 
+     invoke-virtual {v4, v8}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+ 
+-    .line 403
++    .line 399
+     invoke-virtual {v4}, Landroid/animation/Animator;->start()V
+ 
+     goto/16 :goto_0
+@@ -1532,69 +1492,48 @@
+     .end local v0           #adapter:Lcom/android/systemui/taskmanager/TaskManagerView$TaskAdapter;
+     .end local v4           #goInAnimator:Landroid/animation/Animator;
+     .end local v6           #tasks:Ljava/util/List;,"Ljava/util/List<Lcom/android/systemui/taskmanager/TaskInfo;>;"
+-    .restart local v1       #backgroundOriginal:Landroid/graphics/Bitmap;
+-    .restart local v5       #height:I
+-    .restart local v7       #width:I
+     :cond_3
+-    iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackground:Landroid/graphics/Bitmap;
+-
+-    if-eqz v8, :cond_2
++    const/16 v8, 0xff
++
++    goto/16 :goto_1
+ 
+     .line 354
+-    iget-object v8, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackground:Landroid/graphics/Bitmap;
+-
+-    const/4 v9, 0x0
+-
+-    invoke-virtual {v8, v9}, Landroid/graphics/Bitmap;->eraseColor(I)V
+-
+-    goto/16 :goto_1
+-
+-    .line 357
+-    .end local v1           #backgroundOriginal:Landroid/graphics/Bitmap;
+-    .end local v5           #height:I
+-    .end local v7           #width:I
+     :cond_4
+-    const/16 v8, 0xff
+-
+-    goto/16 :goto_2
+-
+-    .line 358
++    const/4 v8, 0x0
++
++    goto :goto_2
++
++    .line 402
+     :cond_5
+-    const/4 v8, 0x0
+-
+-    goto/16 :goto_3
++    invoke-direct {p0}, Lcom/android/systemui/taskmanager/TaskManagerView;->dismissUserGuide()V
++
++    .line 403
++    invoke-virtual {p0}, Lcom/android/systemui/taskmanager/TaskManagerView;->freeze()V
++
++    .line 404
++    const-string v8, "scrollY"
++
++    const/4 v9, 0x1
++
++    new-array v9, v9, [I
++
++    const/4 v10, 0x0
++
++    iget-object v11, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackgroundView:Landroid/view/View;
++
++    invoke-virtual {v11}, Landroid/view/View;->getHeight()I
++
++    move-result v11
++
++    neg-int v11, v11
++
++    aput v11, v9, v10
++
++    invoke-static {p0, v8, v9}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
++
++    move-result-object v3
+ 
+     .line 406
+-    :cond_6
+-    invoke-direct {p0}, Lcom/android/systemui/taskmanager/TaskManagerView;->dismissUserGuide()V
+-
+-    .line 407
+-    invoke-virtual {p0}, Lcom/android/systemui/taskmanager/TaskManagerView;->freeze()V
+-
+-    .line 408
+-    const-string v8, "scrollY"
+-
+-    const/4 v9, 0x1
+-
+-    new-array v9, v9, [I
+-
+-    const/4 v10, 0x0
+-
+-    iget-object v11, p0, Lcom/android/systemui/taskmanager/TaskManagerView;->mBackgroundView:Landroid/view/View;
+-
+-    invoke-virtual {v11}, Landroid/view/View;->getHeight()I
+-
+-    move-result v11
+-
+-    neg-int v11, v11
+-
+-    aput v11, v9, v10
+-
+-    invoke-static {p0, v8, v9}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
+-
+-    move-result-object v3
+-
+-    .line 410
+     .local v3, downAnimator:Landroid/animation/Animator;
+     new-instance v8, Lcom/android/systemui/taskmanager/TaskManagerView$9;
+ 
+@@ -1602,12 +1541,12 @@
+ 
+     invoke-virtual {v3, v8}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+ 
+-    .line 420
++    .line 416
+     const-wide/16 v8, 0x12c
+ 
+     invoke-virtual {v3, v8, v9}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
+ 
+-    .line 421
++    .line 417
+     invoke-virtual {v3}, Landroid/animation/Animator;->start()V
+ 
+     goto/16 :goto_0
+@@ -1352,11 +1352,11 @@
+ 
+     const/4 v11, 0x0
+ 
+-    if-eqz p1, :cond_5
++    if-eqz p1, :cond_4
+ 
+     const/16 v8, 0xff
+ 
+-    :goto_3
++    :goto_2
+     aput v8, v10, v11
+ 
+     invoke-static {p0, v9, v10}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;

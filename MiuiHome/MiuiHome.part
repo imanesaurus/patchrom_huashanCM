@@ -1,0 +1,41 @@
+From afb88192275a3740c6871f7f4ed82c41dddc6fe9 Mon Sep 17 00:00:00 2001
+From: ymdzq <233900743@qq.com>
+Date: Thu, 8 Aug 2013 20:34:35 +0800
+Subject: [PATCH] add more launcher layouts
+
+---
+ MiuiHome/res/values/arrays.xml | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+--- a/MiuiHome/res/values/arrays.xml
++++ b/MiuiHome/res/values/arrays.xml
+@@ -58,12 +58,26 @@
+         <item>right</item>
+     </string-array>
+     <string-array name="cell_layout_size_entries">
++        <item>3x3</item>
++        <item>3x4</item>
+         <item>4x4</item>
+         <item>4x5</item>
++        <item>5x4</item>
++        <item>5x5</item>
++        <item>6x5</item>
++        <item>6x6</item>
++        <item>6x7</item>
+     </string-array>
+     <string-array name="cell_layout_size_values">
++        <item>3x3</item>
++        <item>3x4</item>
+         <item>4x4</item>
+         <item>4x5</item>
++        <item>5x4</item>
++        <item>5x5</item>
++        <item>6x5</item>
++        <item>6x6</item>
++        <item>6x7</item>
+     </string-array>
+     <string-array name="gadget_weather_theme_type_entries">
+         <item>Default</item>
+-- 
+1.8.1.2
+
