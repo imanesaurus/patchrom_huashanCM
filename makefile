@@ -17,7 +17,7 @@ local-modified-apps := Bluetooth MiuiUpdater
 local-modified-jars :=
 
 # All apks from MIUI
-local-miui-removed-apps := MediaProvider Baidunetworklocation Userbook VoiceAssist
+local-miui-removed-apps := MediaProvider BaiduNetworklocation Userbook VoiceAssist
 
 local-miui-modified-apps := MiuiSystemUI Settings Phone Mms ThemeManager
 
