@@ -116,17 +116,14 @@
     .parameter "context"
 
     .prologue
-    .line 187
     invoke-direct {p0}, Landroid/os/INetworkManagementService$Stub;-><init>()V
 
-    .line 146
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/NetworkManagementService;->mMainHandler:Landroid/os/Handler;
 
-    .line 149
     new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v1, 0x1
@@ -135,66 +132,56 @@
 
     iput-object v0, p0, Lcom/android/server/NetworkManagementService;->mConnectedSignal:Ljava/util/concurrent/CountDownLatch;
 
-    .line 151
     new-instance v0, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
-    .line 154
     new-instance v0, Lcom/android/internal/net/NetworkStatsFactory;
 
     invoke-direct {v0}, Lcom/android/internal/net/NetworkStatsFactory;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/NetworkManagementService;->mStatsFactory:Lcom/android/internal/net/NetworkStatsFactory;
 
-    .line 156
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/NetworkManagementService;->mQuotaLock:Ljava/lang/Object;
 
-    .line 158
     invoke-static {}, Lcom/google/android/collect/Maps;->newHashMap()Ljava/util/HashMap;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/NetworkManagementService;->mActiveQuotas:Ljava/util/HashMap;
 
-    .line 160
     invoke-static {}, Lcom/google/android/collect/Maps;->newHashMap()Ljava/util/HashMap;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/NetworkManagementService;->mActiveAlerts:Ljava/util/HashMap;
 
-    .line 162
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/NetworkManagementService;->mUidRejectOnQuota:Landroid/util/SparseBooleanArray;
 
-    .line 164
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/NetworkManagementService;->mIdleTimerLock:Ljava/lang/Object;
 
-    .line 177
     invoke-static {}, Lcom/google/android/collect/Maps;->newHashMap()Ljava/util/HashMap;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/NetworkManagementService;->mActiveIdleTimers:Ljava/util/HashMap;
 
-    .line 188
     iput-object p1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
-    .line 190
     const-string v0, "simulator"
 
     const-string v1, "ro.product.device"
@@ -209,11 +196,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 200
     :goto_0
     return-void
 
-    .line 194
     :cond_0
     new-instance v0, Lcom/android/server/NativeDaemonConnector;
 
@@ -235,7 +220,6 @@
 
     iput-object v0, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
-    .line 196
     new-instance v0, Ljava/lang/Thread;
 
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
@@ -246,7 +230,6 @@
 
     iput-object v0, p0, Lcom/android/server/NetworkManagementService;->mThread:Ljava/lang/Thread;
 
-    .line 199
     invoke-static {}, Lcom/android/server/Watchdog;->getInstance()Lcom/android/server/Watchdog;
 
     move-result-object v0
@@ -261,7 +244,6 @@
     .parameter "x0"
 
     .prologue
-    .line 91
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mConnectedSignal:Ljava/util/concurrent/CountDownLatch;
 
     return-object v0
@@ -273,7 +255,6 @@
     .parameter "x1"
 
     .prologue
-    .line 91
     iput-object p1, p0, Lcom/android/server/NetworkManagementService;->mConnectedSignal:Ljava/util/concurrent/CountDownLatch;
 
     return-object p1
@@ -284,7 +265,6 @@
     .parameter "x0"
 
     .prologue
-    .line 91
     invoke-direct {p0}, Lcom/android/server/NetworkManagementService;->prepareNativeDaemon()V
 
     return-void
@@ -295,7 +275,6 @@
     .parameter "x0"
 
     .prologue
-    .line 91
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mMainHandler:Landroid/os/Handler;
 
     return-object v0
@@ -307,7 +286,6 @@
     .parameter "x1"
 
     .prologue
-    .line 91
     invoke-direct {p0, p1}, Lcom/android/server/NetworkManagementService;->notifyInterfaceAdded(Ljava/lang/String;)V
 
     return-void
@@ -319,7 +297,6 @@
     .parameter "x1"
 
     .prologue
-    .line 91
     invoke-direct {p0, p1}, Lcom/android/server/NetworkManagementService;->notifyInterfaceRemoved(Ljava/lang/String;)V
 
     return-void
@@ -332,7 +309,6 @@
     .parameter "x2"
 
     .prologue
-    .line 91
     invoke-direct {p0, p1, p2}, Lcom/android/server/NetworkManagementService;->notifyInterfaceStatusChanged(Ljava/lang/String;Z)V
 
     return-void
@@ -345,7 +321,6 @@
     .parameter "x2"
 
     .prologue
-    .line 91
     invoke-direct {p0, p1, p2}, Lcom/android/server/NetworkManagementService;->notifyInterfaceLinkStateChanged(Ljava/lang/String;Z)V
 
     return-void
@@ -358,7 +333,6 @@
     .parameter "x2"
 
     .prologue
-    .line 91
     invoke-direct {p0, p1, p2}, Lcom/android/server/NetworkManagementService;->notifyLimitReached(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -371,7 +345,6 @@
     .parameter "x2"
 
     .prologue
-    .line 91
     invoke-direct {p0, p1, p2}, Lcom/android/server/NetworkManagementService;->notifyInterfaceClassActivity(Ljava/lang/String;Z)V
 
     return-void
@@ -387,25 +360,20 @@
     .end annotation
 
     .prologue
-    .line 203
     new-instance v1, Lcom/android/server/NetworkManagementService;
 
     invoke-direct {v1, p0}, Lcom/android/server/NetworkManagementService;-><init>(Landroid/content/Context;)V
 
-    .line 204
     .local v1, service:Lcom/android/server/NetworkManagementService;
     iget-object v0, v1, Lcom/android/server/NetworkManagementService;->mConnectedSignal:Ljava/util/concurrent/CountDownLatch;
 
-    .line 206
     .local v0, connectedSignal:Ljava/util/concurrent/CountDownLatch;
     iget-object v2, v1, Lcom/android/server/NetworkManagementService;->mThread:Ljava/lang/Thread;
 
     invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
-    .line 208
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
 
-    .line 210
     return-object v1
 .end method
 
@@ -413,18 +381,15 @@
     .locals 3
 
     .prologue
-    .line 1513
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 1514
     .local v0, uid:I
     const/16 v1, 0x3e8
 
     if-eq v0, v1, :cond_0
 
-    .line 1515
     new-instance v1, Ljava/lang/SecurityException;
 
     const-string v2, "Only available to AID_SYSTEM"
@@ -433,7 +398,6 @@
 
     throw v1
 
-    .line 1517
     :cond_0
     return-void
 .end method
@@ -444,7 +408,6 @@
     .parameter "rx"
 
     .prologue
-    .line 1368
     :try_start_0
     iget-object v3, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -479,16 +442,13 @@
 
     move-result-object v1
 
-    .line 1373
     .local v1, event:Lcom/android/server/NativeDaemonEvent;
     if-eqz p2, :cond_1
 
-    .line 1374
     const/16 v2, 0xda
 
     invoke-virtual {v1, v2}, Lcom/android/server/NativeDaemonEvent;->checkCode(I)V
 
-    .line 1380
     :goto_1
     :try_start_1
     invoke-virtual {v1}, Lcom/android/server/NativeDaemonEvent;->getMessage()Ljava/lang/String;
@@ -503,7 +463,6 @@
 
     return v2
 
-    .line 1368
     .end local v1           #event:Lcom/android/server/NativeDaemonEvent;
     :cond_0
     :try_start_2
@@ -513,11 +472,9 @@
 
     goto :goto_0
 
-    .line 1369
     :catch_0
     move-exception v0
 
-    .line 1370
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -525,7 +482,6 @@
 
     throw v2
 
-    .line 1376
     .end local v0           #e:Lcom/android/server/NativeDaemonConnectorException;
     .restart local v1       #event:Lcom/android/server/NativeDaemonEvent;
     :cond_1
@@ -535,11 +491,9 @@
 
     goto :goto_1
 
-    .line 1381
     :catch_1
     move-exception v0
 
-    .line 1382
     .local v0, e:Ljava/lang/NumberFormatException;
     new-instance v2, Ljava/lang/IllegalStateException;
 
@@ -572,7 +526,6 @@
     .parameter "ifaceOut"
 
     .prologue
-    .line 1326
     :try_start_0
     iget-object v4, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -602,13 +555,11 @@
 
     move-result-object v2
 
-    .line 1331
     .local v2, event:Lcom/android/server/NativeDaemonEvent;
     const/16 v4, 0xdd
 
     invoke-virtual {v2, v4}, Lcom/android/server/NativeDaemonEvent;->checkCode(I)V
 
-    .line 1334
     new-instance v3, Ljava/util/StringTokenizer;
 
     invoke-virtual {v2}, Lcom/android/server/NativeDaemonEvent;->getMessage()Ljava/lang/String;
@@ -617,39 +568,31 @@
 
     invoke-direct {v3, v4}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;)V
 
-    .line 1335
     .local v3, tok:Ljava/util/StringTokenizer;
     invoke-virtual {v3}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
-    .line 1336
     invoke-virtual {v3}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
-    .line 1339
     :try_start_1
     new-instance v1, Landroid/net/NetworkStats$Entry;
 
     invoke-direct {v1}, Landroid/net/NetworkStats$Entry;-><init>()V
 
-    .line 1340
     .local v1, entry:Landroid/net/NetworkStats$Entry;
     iput-object p1, v1, Landroid/net/NetworkStats$Entry;->iface:Ljava/lang/String;
 
-    .line 1341
     const/4 v4, -0x5
 
     iput v4, v1, Landroid/net/NetworkStats$Entry;->uid:I
 
-    .line 1342
     const/4 v4, 0x0
 
     iput v4, v1, Landroid/net/NetworkStats$Entry;->set:I
 
-    .line 1343
     const/4 v4, 0x0
 
     iput v4, v1, Landroid/net/NetworkStats$Entry;->tag:I
 
-    .line 1344
     invoke-virtual {v3}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v4
@@ -660,7 +603,6 @@
 
     iput-wide v4, v1, Landroid/net/NetworkStats$Entry;->rxBytes:J
 
-    .line 1345
     invoke-virtual {v3}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v4
@@ -671,7 +613,6 @@
 
     iput-wide v4, v1, Landroid/net/NetworkStats$Entry;->rxPackets:J
 
-    .line 1346
     invoke-virtual {v3}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v4
@@ -682,7 +623,6 @@
 
     iput-wide v4, v1, Landroid/net/NetworkStats$Entry;->txBytes:J
 
-    .line 1347
     invoke-virtual {v3}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v4
@@ -695,17 +635,14 @@
     :try_end_1
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1348
     return-object v1
 
-    .line 1327
     .end local v1           #entry:Landroid/net/NetworkStats$Entry;
     .end local v2           #event:Lcom/android/server/NativeDaemonEvent;
     .end local v3           #tok:Ljava/util/StringTokenizer;
     :catch_0
     move-exception v0
 
-    .line 1328
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -713,14 +650,12 @@
 
     throw v4
 
-    .line 1349
     .end local v0           #e:Lcom/android/server/NativeDaemonConnectorException;
     .restart local v2       #event:Lcom/android/server/NativeDaemonEvent;
     .restart local v3       #tok:Ljava/util/StringTokenizer;
     :catch_1
     move-exception v0
 
-    .line 1350
     .local v0, e:Ljava/lang/NumberFormatException;
     new-instance v4, Ljava/lang/IllegalStateException;
 
@@ -812,7 +747,6 @@
     .end annotation
 
     .prologue
-    .line 930
     new-instance v1, Lcom/android/server/NativeDaemonConnector$Command;
 
     const-string v7, "nat"
@@ -835,22 +769,18 @@
 
     invoke-direct {v1, v7, v8}, Lcom/android/server/NativeDaemonConnector$Command;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 932
     .local v1, cmd:Lcom/android/server/NativeDaemonConnector$Command;
     invoke-static {p2}, Ljava/net/NetworkInterface;->getByName(Ljava/lang/String;)Ljava/net/NetworkInterface;
 
     move-result-object v6
 
-    .line 934
     .local v6, internalNetworkInterface:Ljava/net/NetworkInterface;
     if-nez v6, :cond_1
 
-    .line 935
     const-string v7, "0"
 
     invoke-virtual {v1, v7}, Lcom/android/server/NativeDaemonConnector$Command;->appendArg(Ljava/lang/Object;)Lcom/android/server/NativeDaemonConnector$Command;
 
-    .line 948
     :cond_0
     :try_start_0
     iget-object v7, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
@@ -859,16 +789,13 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 952
     return-void
 
-    .line 937
     :cond_1
     invoke-virtual {v6}, Ljava/net/NetworkInterface;->getInterfaceAddresses()Ljava/util/List;
 
     move-result-object v5
 
-    .line 939
     .local v5, interfaceAddresses:Ljava/util/Collection;,"Ljava/util/Collection<Ljava/net/InterfaceAddress;>;"
     invoke-interface {v5}, Ljava/util/Collection;->size()I
 
@@ -880,7 +807,6 @@
 
     invoke-virtual {v1, v7}, Lcom/android/server/NativeDaemonConnector$Command;->appendArg(Ljava/lang/Object;)Lcom/android/server/NativeDaemonConnector$Command;
 
-    .line 940
     invoke-interface {v5}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -899,7 +825,6 @@
 
     check-cast v4, Ljava/net/InterfaceAddress;
 
-    .line 941
     .local v4, ia:Ljava/net/InterfaceAddress;
     invoke-virtual {v4}, Ljava/net/InterfaceAddress;->getAddress()Ljava/net/InetAddress;
 
@@ -913,7 +838,6 @@
 
     move-result-object v0
 
-    .line 943
     .local v0, addr:Ljava/net/InetAddress;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -949,7 +873,6 @@
 
     goto :goto_0
 
-    .line 949
     .end local v0           #addr:Ljava/net/InetAddress;
     .end local v3           #i$:Ljava/util/Iterator;
     .end local v4           #ia:Ljava/net/InterfaceAddress;
@@ -957,7 +880,6 @@
     :catch_0
     move-exception v2
 
-    .line 950
     .local v2, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v2}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -974,7 +896,6 @@
     .parameter "type"
 
     .prologue
-    .line 634
     new-instance v0, Lcom/android/server/NativeDaemonConnector$Command;
 
     const-string v3, "interface"
@@ -1003,13 +924,11 @@
 
     invoke-direct {v0, v3, v4}, Lcom/android/server/NativeDaemonConnector$Command;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 637
     .local v0, cmd:Lcom/android/server/NativeDaemonConnector$Command;
     invoke-virtual {p3}, Landroid/net/RouteInfo;->getDestination()Landroid/net/LinkAddress;
 
     move-result-object v2
 
-    .line 638
     .local v2, la:Landroid/net/LinkAddress;
     invoke-virtual {v2}, Landroid/net/LinkAddress;->getAddress()Ljava/net/InetAddress;
 
@@ -1021,7 +940,6 @@
 
     invoke-virtual {v0, v3}, Lcom/android/server/NativeDaemonConnector$Command;->appendArg(Ljava/lang/Object;)Lcom/android/server/NativeDaemonConnector$Command;
 
-    .line 639
     invoke-virtual {v2}, Landroid/net/LinkAddress;->getNetworkPrefixLength()I
 
     move-result v3
@@ -1032,14 +950,12 @@
 
     invoke-virtual {v0, v3}, Lcom/android/server/NativeDaemonConnector$Command;->appendArg(Ljava/lang/Object;)Lcom/android/server/NativeDaemonConnector$Command;
 
-    .line 641
     invoke-virtual {p3}, Landroid/net/RouteInfo;->getGateway()Ljava/net/InetAddress;
 
     move-result-object v3
 
     if-nez v3, :cond_1
 
-    .line 642
     invoke-virtual {v2}, Landroid/net/LinkAddress;->getAddress()Ljava/net/InetAddress;
 
     move-result-object v3
@@ -1048,12 +964,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 643
     const-string v3, "0.0.0.0"
 
     invoke-virtual {v0, v3}, Lcom/android/server/NativeDaemonConnector$Command;->appendArg(Ljava/lang/Object;)Lcom/android/server/NativeDaemonConnector$Command;
 
-    .line 652
     :goto_0
     :try_start_0
     iget-object v3, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
@@ -1062,10 +976,8 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 656
     return-void
 
-    .line 645
     :cond_0
     const-string v3, "::0"
 
@@ -1073,7 +985,6 @@
 
     goto :goto_0
 
-    .line 648
     :cond_1
     invoke-virtual {p3}, Landroid/net/RouteInfo;->getGateway()Ljava/net/InetAddress;
 
@@ -1087,11 +998,9 @@
 
     goto :goto_0
 
-    .line 653
     :catch_0
     move-exception v1
 
-    .line 654
     .local v1, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v1}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -1105,14 +1014,12 @@
     .parameter "iface"
 
     .prologue
-    .line 263
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v2}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
 
     move-result v1
 
-    .line 264
     .local v1, length:I
     const/4 v0, 0x0
 
@@ -1120,7 +1027,6 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 266
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
@@ -1134,22 +1040,18 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 264
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 270
     :cond_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v2}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
-    .line 271
     return-void
 
-    .line 267
     :catch_0
     move-exception v2
 
@@ -1162,14 +1064,12 @@
     .parameter "active"
 
     .prologue
-    .line 310
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v2}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
 
     move-result v1
 
-    .line 311
     .local v1, length:I
     const/4 v0, 0x0
 
@@ -1177,7 +1077,6 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 313
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
@@ -1191,22 +1090,18 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 311
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 317
     :cond_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v2}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
-    .line 318
     return-void
 
-    .line 314
     :catch_0
     move-exception v2
 
@@ -1219,14 +1114,12 @@
     .parameter "up"
 
     .prologue
-    .line 249
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v2}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
 
     move-result v1
 
-    .line 250
     .local v1, length:I
     const/4 v0, 0x0
 
@@ -1234,7 +1127,6 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 252
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
@@ -1248,22 +1140,18 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 250
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 256
     :cond_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v2}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
-    .line 257
     return-void
 
-    .line 253
     :catch_0
     move-exception v2
 
@@ -1275,24 +1163,20 @@
     .parameter "iface"
 
     .prologue
-    .line 279
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mActiveAlerts:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 280
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mActiveQuotas:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 282
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v2}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
 
     move-result v1
 
-    .line 283
     .local v1, length:I
     const/4 v0, 0x0
 
@@ -1300,7 +1184,6 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 285
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
@@ -1314,22 +1197,18 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 283
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 289
     :cond_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v2}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
-    .line 290
     return-void
 
-    .line 286
     :catch_0
     move-exception v2
 
@@ -1342,14 +1221,12 @@
     .parameter "up"
 
     .prologue
-    .line 234
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v2}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
 
     move-result v1
 
-    .line 235
     .local v1, length:I
     const/4 v0, 0x0
 
@@ -1357,7 +1234,6 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 237
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
@@ -1371,22 +1247,18 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 235
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 241
     :cond_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v2}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
-    .line 242
     return-void
 
-    .line 238
     :catch_0
     move-exception v2
 
@@ -1399,14 +1271,12 @@
     .parameter "iface"
 
     .prologue
-    .line 296
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v2}, Landroid/os/RemoteCallbackList;->beginBroadcast()I
 
     move-result v1
 
-    .line 297
     .local v1, length:I
     const/4 v0, 0x0
 
@@ -1414,7 +1284,6 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 299
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
@@ -1428,22 +1297,18 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 297
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 303
     :cond_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v2}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
-    .line 304
     return-void
 
-    .line 300
     :catch_0
     move-exception v2
 
@@ -1454,12 +1319,10 @@
     .locals 14
 
     .prologue
-    .line 325
     const/4 v9, 0x0
 
     iput-boolean v9, p0, Lcom/android/server/NetworkManagementService;->mBandwidthControlEnabled:Z
 
-    .line 328
     new-instance v9, Ljava/io/File;
 
     const-string v10, "/proc/net/xt_qtaguid/ctrl"
@@ -1470,18 +1333,15 @@
 
     move-result v4
 
-    .line 329
     .local v4, hasKernelSupport:Z
     if-eqz v4, :cond_0
 
-    .line 330
     const-string v9, "NetworkManagementService"
 
     const-string v10, "enabling bandwidth control"
 
     invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 332
     :try_start_0
     iget-object v9, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -1499,14 +1359,12 @@
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
-    .line 333
     const/4 v9, 0x1
 
     iput-boolean v9, p0, Lcom/android/server/NetworkManagementService;->mBandwidthControlEnabled:Z
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 341
     :goto_0
     const-string v10, "net.qtaguid_enabled"
 
@@ -1519,12 +1377,10 @@
     :goto_1
     invoke-static {v10, v9}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 344
     iget-object v11, p0, Lcom/android/server/NetworkManagementService;->mQuotaLock:Ljava/lang/Object;
 
     monitor-enter v11
 
-    .line 345
     :try_start_1
     iget-object v9, p0, Lcom/android/server/NetworkManagementService;->mActiveQuotas:Ljava/util/HashMap;
 
@@ -1532,11 +1388,9 @@
 
     move-result v7
 
-    .line 346
     .local v7, size:I
     if-lez v7, :cond_2
 
-    .line 347
     const-string v9, "NetworkManagementService"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -1565,10 +1419,8 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 348
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mActiveQuotas:Ljava/util/HashMap;
 
-    .line 349
     .local v1, activeQuotas:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Long;>;"
     invoke-static {}, Lcom/google/android/collect/Maps;->newHashMap()Ljava/util/HashMap;
 
@@ -1576,7 +1428,6 @@
 
     iput-object v9, p0, Lcom/android/server/NetworkManagementService;->mActiveQuotas:Ljava/util/HashMap;
 
-    .line 350
     invoke-virtual {v1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v9
@@ -1599,7 +1450,6 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
-    .line 351
     .local v3, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Long;>;"
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -1621,7 +1471,6 @@
 
     goto :goto_2
 
-    .line 374
     .end local v1           #activeQuotas:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Long;>;"
     .end local v3           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Long;>;"
     .end local v6           #i$:Ljava/util/Iterator;
@@ -1635,11 +1484,9 @@
 
     throw v9
 
-    .line 334
     :catch_0
     move-exception v2
 
-    .line 335
     .local v2, e:Lcom/android/server/NativeDaemonConnectorException;
     const-string v9, "NetworkManagementService"
 
@@ -1649,7 +1496,6 @@
 
     goto :goto_0
 
-    .line 338
     .end local v2           #e:Lcom/android/server/NativeDaemonConnectorException;
     :cond_0
     const-string v9, "NetworkManagementService"
@@ -1660,13 +1506,11 @@
 
     goto :goto_0
 
-    .line 341
     :cond_1
     const-string v9, "0"
 
     goto :goto_1
 
-    .line 355
     .restart local v7       #size:I
     :cond_2
     :try_start_2
@@ -1676,10 +1520,8 @@
 
     move-result v7
 
-    .line 356
     if-lez v7, :cond_3
 
-    .line 357
     const-string v9, "NetworkManagementService"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -1708,10 +1550,8 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 358
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mActiveAlerts:Ljava/util/HashMap;
 
-    .line 359
     .local v0, activeAlerts:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Long;>;"
     invoke-static {}, Lcom/google/android/collect/Maps;->newHashMap()Ljava/util/HashMap;
 
@@ -1719,7 +1559,6 @@
 
     iput-object v9, p0, Lcom/android/server/NetworkManagementService;->mActiveAlerts:Ljava/util/HashMap;
 
-    .line 360
     invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v9
@@ -1742,7 +1581,6 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
-    .line 361
     .restart local v3       #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Long;>;"
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -1764,7 +1602,6 @@
 
     goto :goto_3
 
-    .line 365
     .end local v0           #activeAlerts:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Long;>;"
     .end local v3           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Long;>;"
     .end local v6           #i$:Ljava/util/Iterator;
@@ -1775,10 +1612,8 @@
 
     move-result v7
 
-    .line 366
     if-lez v7, :cond_4
 
-    .line 367
     const-string v9, "NetworkManagementService"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -1807,10 +1642,8 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 368
     iget-object v8, p0, Lcom/android/server/NetworkManagementService;->mUidRejectOnQuota:Landroid/util/SparseBooleanArray;
 
-    .line 369
     .local v8, uidRejectOnQuota:Landroid/util/SparseBooleanArray;
     new-instance v9, Landroid/util/SparseBooleanArray;
 
@@ -1818,7 +1651,6 @@
 
     iput-object v9, p0, Lcom/android/server/NetworkManagementService;->mUidRejectOnQuota:Landroid/util/SparseBooleanArray;
 
-    .line 370
     const/4 v5, 0x0
 
     .local v5, i:I
@@ -1829,7 +1661,6 @@
 
     if-ge v5, v9, :cond_4
 
-    .line 371
     invoke-virtual {v8, v5}, Landroid/util/SparseBooleanArray;->keyAt(I)I
 
     move-result v9
@@ -1840,12 +1671,10 @@
 
     invoke-virtual {p0, v9, v10}, Lcom/android/server/NetworkManagementService;->setUidNetworkRules(IZ)V
 
-    .line 370
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_4
 
-    .line 374
     .end local v5           #i:I
     .end local v8           #uidRejectOnQuota:Landroid/util/SparseBooleanArray;
     :cond_4
@@ -1853,7 +1682,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 377
     iget-boolean v9, p0, Lcom/android/server/NetworkManagementService;->mFirewallEnabled:Z
 
     if-nez v9, :cond_5
@@ -1870,10 +1698,8 @@
     :goto_5
     invoke-virtual {p0, v9}, Lcom/android/server/NetworkManagementService;->setFirewallEnabled(Z)V
 
-    .line 378
     return-void
 
-    .line 377
     :cond_6
     const/4 v9, 0x0
 
@@ -1896,16 +1722,13 @@
     .end annotation
 
     .prologue
-    .line 659
     const/4 v1, 0x0
 
-    .line 660
     .local v1, fstream:Ljava/io/FileInputStream;
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 663
     .local v4, list:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     :try_start_0
     new-instance v2, Ljava/io/FileInputStream;
@@ -1915,7 +1738,6 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
 
-    .line 664
     .end local v1           #fstream:Ljava/io/FileInputStream;
     .local v2, fstream:Ljava/io/FileInputStream;
     :try_start_1
@@ -1923,7 +1745,6 @@
 
     invoke-direct {v3, v2}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 665
     .local v3, in:Ljava/io/DataInputStream;
     new-instance v0, Ljava/io/BufferedReader;
 
@@ -1933,7 +1754,6 @@
 
     invoke-direct {v0, v6}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 670
     .local v0, br:Ljava/io/BufferedReader;
     :goto_0
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -1949,7 +1769,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 671
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -1957,7 +1776,6 @@
 
     goto :goto_0
 
-    .line 673
     .end local v0           #br:Ljava/io/BufferedReader;
     .end local v3           #in:Ljava/io/DataInputStream;
     .end local v5           #s:Ljava/lang/String;
@@ -1966,24 +1784,20 @@
 
     move-object v1, v2
 
-    .line 676
     .end local v2           #fstream:Ljava/io/FileInputStream;
     .restart local v1       #fstream:Ljava/io/FileInputStream;
     :goto_1
     if-eqz v1, :cond_0
 
-    .line 678
     :try_start_2
     invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 683
     :cond_0
     :goto_2
     return-object v4
 
-    .line 676
     .end local v1           #fstream:Ljava/io/FileInputStream;
     .restart local v0       #br:Ljava/io/BufferedReader;
     .restart local v2       #fstream:Ljava/io/FileInputStream;
@@ -1992,7 +1806,6 @@
     :cond_1
     if-eqz v2, :cond_2
 
-    .line 678
     :try_start_3
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_3
@@ -2002,12 +1815,10 @@
     :goto_3
     move-object v1, v2
 
-    .line 681
     .end local v2           #fstream:Ljava/io/FileInputStream;
     .restart local v1       #fstream:Ljava/io/FileInputStream;
     goto :goto_2
 
-    .line 676
     .end local v0           #br:Ljava/io/BufferedReader;
     .end local v3           #in:Ljava/io/DataInputStream;
     .end local v5           #s:Ljava/lang/String;
@@ -2017,18 +1828,15 @@
     :goto_4
     if-eqz v1, :cond_3
 
-    .line 678
     :try_start_4
     invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 676
     :cond_3
     :goto_5
     throw v6
 
-    .line 679
     :catch_1
     move-exception v6
 
@@ -2049,7 +1857,6 @@
 
     goto :goto_3
 
-    .line 676
     .end local v0           #br:Ljava/io/BufferedReader;
     .end local v3           #in:Ljava/io/DataInputStream;
     .end local v5           #s:Ljava/lang/String;
@@ -2062,7 +1869,6 @@
     .restart local v1       #fstream:Ljava/io/FileInputStream;
     goto :goto_4
 
-    .line 673
     :catch_4
     move-exception v6
 
@@ -2078,7 +1884,6 @@
     .parameter "label"
 
     .prologue
-    .line 1085
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.CONNECTIVITY_INTERNAL"
@@ -2087,12 +1892,10 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1089
     iget-object v3, p0, Lcom/android/server/NetworkManagementService;->mIdleTimerLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 1090
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mActiveIdleTimers:Ljava/util/HashMap;
 
@@ -2102,27 +1905,22 @@
 
     check-cast v1, Lcom/android/server/NetworkManagementService$IdleTimerParams;
 
-    .line 1091
     .local v1, params:Lcom/android/server/NetworkManagementService$IdleTimerParams;
     if-eqz v1, :cond_0
 
-    .line 1093
     iget v2, v1, Lcom/android/server/NetworkManagementService$IdleTimerParams;->networkCount:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, v1, Lcom/android/server/NetworkManagementService$IdleTimerParams;->networkCount:I
 
-    .line 1094
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1104
     :goto_0
     return-void
 
-    .line 1098
     :cond_0
     :try_start_1
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
@@ -2160,7 +1958,6 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1102
     :try_start_2
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mActiveIdleTimers:Ljava/util/HashMap;
 
@@ -2170,7 +1967,6 @@
 
     invoke-virtual {v2, p1, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1103
     monitor-exit v3
 
     goto :goto_0
@@ -2185,12 +1981,10 @@
 
     throw v2
 
-    .line 1099
     .restart local v1       #params:Lcom/android/server/NetworkManagementService$IdleTimerParams;
     :catch_0
     move-exception v0
 
-    .line 1100
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     :try_start_3
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
@@ -2208,7 +2002,6 @@
     .parameter "route"
 
     .prologue
-    .line 611
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.CONNECTIVITY_INTERNAL"
@@ -2217,14 +2010,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 612
     const-string v0, "add"
 
     const-string v1, "default"
 
     invoke-direct {p0, p1, v0, p2, v1}, Lcom/android/server/NetworkManagementService;->modifyRoute(Ljava/lang/String;Ljava/lang/String;Landroid/net/RouteInfo;Ljava/lang/String;)V
 
-    .line 613
     return-void
 .end method
 
@@ -2234,7 +2025,6 @@
     .parameter "route"
 
     .prologue
-    .line 623
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.CONNECTIVITY_INTERNAL"
@@ -2243,14 +2033,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 624
     const-string v0, "add"
 
     const-string v1, "secondary"
 
     invoke-direct {p0, p1, v0, p2, v1}, Lcom/android/server/NetworkManagementService;->modifyRoute(Ljava/lang/String;Ljava/lang/String;Landroid/net/RouteInfo;Ljava/lang/String;)V
 
-    .line 625
     return-void
 .end method
 
@@ -2263,7 +2051,6 @@
     .parameter "dns2Addr"
 
     .prologue
-    .line 988
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -2272,7 +2059,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 990
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -2344,14 +2130,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 998
     return-void
 
-    .line 995
     :catch_0
     move-exception v0
 
-    .line 996
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -2365,7 +2148,6 @@
     .parameter "iface"
 
     .prologue
-    .line 581
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -2374,7 +2156,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 583
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -2398,14 +2179,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 587
     return-void
 
-    .line 584
     :catch_0
     move-exception v0
 
-    .line 585
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -2419,7 +2197,6 @@
     .parameter "tty"
 
     .prologue
-    .line 1002
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -2428,7 +2205,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1004
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -2452,14 +2228,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1008
     return-void
 
-    .line 1005
     :catch_0
     move-exception v0
 
-    .line 1006
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -2473,7 +2246,6 @@
     .parameter "iface"
 
     .prologue
-    .line 601
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -2482,7 +2254,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 603
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -2512,14 +2283,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 607
     return-void
 
-    .line 604
     :catch_0
     move-exception v0
 
-    .line 605
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -2534,7 +2302,6 @@
     .parameter "externalInterface"
 
     .prologue
-    .line 966
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -2543,7 +2310,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 968
     :try_start_0
     const-string v1, "disable"
 
@@ -2551,14 +2317,11 @@
     :try_end_0
     .catch Ljava/net/SocketException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 972
     return-void
 
-    .line 969
     :catch_0
     move-exception v0
 
-    .line 970
     .local v0, e:Ljava/net/SocketException;
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -2574,7 +2337,6 @@
     .parameter "args"
 
     .prologue
-    .line 1528
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.DUMP"
@@ -2583,20 +2345,16 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1530
     const-string v2, "NetworkManagementService NativeDaemonConnector Log:"
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1531
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
     invoke-virtual {v2, p1, p2, p3}, Lcom/android/server/NativeDaemonConnector;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 1532
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 1534
     const-string v2, "Bandwidth control enabled: "
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -2605,12 +2363,10 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 1536
     iget-object v3, p0, Lcom/android/server/NetworkManagementService;->mQuotaLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 1537
     :try_start_0
     const-string v2, "Active quota ifaces: "
 
@@ -2624,7 +2380,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1538
     const-string v2, "Active alert ifaces: "
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -2637,30 +2392,25 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1539
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1541
     iget-object v3, p0, Lcom/android/server/NetworkManagementService;->mUidRejectOnQuota:Landroid/util/SparseBooleanArray;
 
     monitor-enter v3
 
-    .line 1542
     :try_start_1
     const-string v2, "UID reject on quota ifaces: ["
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 1543
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mUidRejectOnQuota:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v2}, Landroid/util/SparseBooleanArray;->size()I
 
     move-result v1
 
-    .line 1544
     .local v1, size:I
     const/4 v0, 0x0
 
@@ -2668,7 +2418,6 @@
     :goto_0
     if-ge v0, v1, :cond_1
 
-    .line 1545
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mUidRejectOnQuota:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v2, v0}, Landroid/util/SparseBooleanArray;->keyAt(I)I
@@ -2677,7 +2426,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(I)V
 
-    .line 1546
     add-int/lit8 v2, v1, -0x1
 
     if-ge v0, v2, :cond_0
@@ -2688,13 +2436,11 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1544
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1539
     .end local v0           #i:I
     .end local v1           #size:I
     :catchall_0
@@ -2707,7 +2453,6 @@
 
     throw v2
 
-    .line 1548
     .restart local v0       #i:I
     .restart local v1       #size:I
     :cond_1
@@ -2716,12 +2461,10 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1549
     monitor-exit v3
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 1551
     const-string v2, "Firewall enabled: "
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -2730,10 +2473,8 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 1552
     return-void
 
-    .line 1549
     .end local v0           #i:I
     .end local v1           #size:I
     :catchall_1
@@ -2752,7 +2493,6 @@
     .parameter "iface"
 
     .prologue
-    .line 591
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -2761,7 +2501,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 593
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -2791,14 +2530,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 597
     return-void
 
-    .line 594
     :catch_0
     move-exception v0
 
-    .line 595
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -2813,7 +2549,6 @@
     .parameter "externalInterface"
 
     .prologue
-    .line 956
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -2822,7 +2557,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 958
     :try_start_0
     const-string v1, "enable"
 
@@ -2830,14 +2564,11 @@
     :try_end_0
     .catch Ljava/net/SocketException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 962
     return-void
 
-    .line 959
     :catch_0
     move-exception v0
 
-    .line 960
     .local v0, e:Ljava/net/SocketException;
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -2850,7 +2581,6 @@
     .locals 6
 
     .prologue
-    .line 1429
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -2859,7 +2589,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1431
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -2879,14 +2608,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1435
     return-void
 
-    .line 1432
     :catch_0
     move-exception v0
 
-    .line 1433
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -2900,7 +2626,6 @@
     .parameter "iface"
 
     .prologue
-    .line 1439
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -2909,7 +2634,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1441
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -2933,14 +2657,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1445
     return-void
 
-    .line 1442
     :catch_0
     move-exception v0
 
-    .line 1443
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -2953,7 +2674,6 @@
     .locals 6
 
     .prologue
-    .line 919
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -2962,7 +2682,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 921
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -2998,11 +2717,9 @@
 
     return-object v1
 
-    .line 923
     :catch_0
     move-exception v0
 
-    .line 924
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -3016,7 +2733,6 @@
     .parameter "iface"
 
     .prologue
-    .line 486
     iget-object v9, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v10, "android.permission.CONNECTIVITY_INTERNAL"
@@ -3025,7 +2741,6 @@
 
     invoke-virtual {v9, v10, v11}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 490
     :try_start_0
     iget-object v9, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -3051,13 +2766,11 @@
 
     move-result-object v3
 
-    .line 495
     .local v3, event:Lcom/android/server/NativeDaemonEvent;
     const/16 v9, 0xd5
 
     invoke-virtual {v3, v9}, Lcom/android/server/NativeDaemonEvent;->checkCode(I)V
 
-    .line 498
     new-instance v8, Ljava/util/StringTokenizer;
 
     invoke-virtual {v3}, Lcom/android/server/NativeDaemonEvent;->getMessage()Ljava/lang/String;
@@ -3066,14 +2779,12 @@
 
     invoke-direct {v8, v9}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;)V
 
-    .line 502
     .local v8, st:Ljava/util/StringTokenizer;
     :try_start_1
     new-instance v1, Landroid/net/InterfaceConfiguration;
 
     invoke-direct {v1}, Landroid/net/InterfaceConfiguration;-><init>()V
 
-    .line 503
     .local v1, cfg:Landroid/net/InterfaceConfiguration;
     const-string v9, " "
 
@@ -3085,14 +2796,11 @@
     :try_end_1
     .catch Ljava/util/NoSuchElementException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 504
     const/4 v0, 0x0
 
-    .line 505
     .local v0, addr:Ljava/net/InetAddress;
     const/4 v7, 0x0
 
-    .line 507
     .local v7, prefixLength:I
     :try_start_2
     invoke-virtual {v8}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
@@ -3106,7 +2814,6 @@
 
     move-result-object v0
 
-    .line 513
     :goto_0
     :try_start_3
     invoke-virtual {v8}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
@@ -3120,7 +2827,6 @@
 
     move-result v7
 
-    .line 518
     :goto_1
     :try_start_4
     new-instance v9, Landroid/net/LinkAddress;
@@ -3129,7 +2835,6 @@
 
     invoke-virtual {v1, v9}, Landroid/net/InterfaceConfiguration;->setLinkAddress(Landroid/net/LinkAddress;)V
 
-    .line 519
     :goto_2
     invoke-virtual {v8}, Ljava/util/StringTokenizer;->hasMoreTokens()Z
 
@@ -3137,7 +2842,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 520
     invoke-virtual {v8}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v9
@@ -3148,14 +2852,12 @@
 
     goto :goto_2
 
-    .line 522
     .end local v0           #addr:Ljava/net/InetAddress;
     .end local v1           #cfg:Landroid/net/InterfaceConfiguration;
     .end local v7           #prefixLength:I
     :catch_0
     move-exception v6
 
-    .line 523
     .local v6, nsee:Ljava/util/NoSuchElementException;
     new-instance v9, Ljava/lang/IllegalStateException;
 
@@ -3181,14 +2883,12 @@
 
     throw v9
 
-    .line 491
     .end local v3           #event:Lcom/android/server/NativeDaemonEvent;
     .end local v6           #nsee:Ljava/util/NoSuchElementException;
     .end local v8           #st:Ljava/util/StringTokenizer;
     :catch_1
     move-exception v2
 
-    .line 492
     .local v2, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v2}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -3196,7 +2896,6 @@
 
     throw v9
 
-    .line 508
     .end local v2           #e:Lcom/android/server/NativeDaemonConnectorException;
     .restart local v0       #addr:Ljava/net/InetAddress;
     .restart local v1       #cfg:Landroid/net/InterfaceConfiguration;
@@ -3206,7 +2905,6 @@
     :catch_2
     move-exception v4
 
-    .line 509
     .local v4, iae:Ljava/lang/IllegalArgumentException;
     :try_start_5
     const-string v9, "NetworkManagementService"
@@ -3217,12 +2915,10 @@
 
     goto :goto_0
 
-    .line 514
     .end local v4           #iae:Ljava/lang/IllegalArgumentException;
     :catch_3
     move-exception v5
 
-    .line 515
     .local v5, nfe:Ljava/lang/NumberFormatException;
     const-string v9, "NetworkManagementService"
 
@@ -3234,7 +2930,6 @@
 
     goto :goto_1
 
-    .line 525
     .end local v5           #nfe:Ljava/lang/NumberFormatException;
     :cond_0
     return-object v1
@@ -3245,7 +2940,6 @@
     .parameter "iface"
 
     .prologue
-    .line 1388
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.CONNECTIVITY_INTERNAL"
@@ -3254,7 +2948,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1389
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/NetworkManagementService;->getInterfaceThrottle(Ljava/lang/String;Z)I
@@ -3269,7 +2962,6 @@
     .parameter "iface"
 
     .prologue
-    .line 1394
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.CONNECTIVITY_INTERNAL"
@@ -3278,7 +2970,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1395
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/NetworkManagementService;->getInterfaceThrottle(Ljava/lang/String;Z)I
@@ -3297,7 +2988,6 @@
     .end annotation
 
     .prologue
-    .line 771
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.CONNECTIVITY_INTERNAL"
@@ -3306,7 +2996,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 775
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -3328,13 +3017,11 @@
 
     move-result-object v1
 
-    .line 781
     .local v1, event:Lcom/android/server/NativeDaemonEvent;
     const/16 v2, 0xd3
 
     invoke-virtual {v1, v2}, Lcom/android/server/NativeDaemonEvent;->checkCode(I)V
 
-    .line 782
     invoke-virtual {v1}, Lcom/android/server/NativeDaemonEvent;->getMessage()Ljava/lang/String;
 
     move-result-object v2
@@ -3347,12 +3034,10 @@
 
     return v2
 
-    .line 776
     .end local v1           #event:Lcom/android/server/NativeDaemonEvent;
     :catch_0
     move-exception v0
 
-    .line 777
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -3365,7 +3050,6 @@
     .locals 3
 
     .prologue
-    .line 1142
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.CONNECTIVITY_INTERNAL"
@@ -3374,7 +3058,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1143
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mStatsFactory:Lcom/android/internal/net/NetworkStatsFactory;
 
     const/4 v1, -0x1
@@ -3390,7 +3073,6 @@
     .locals 3
 
     .prologue
-    .line 1130
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.CONNECTIVITY_INTERNAL"
@@ -3399,7 +3081,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1131
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mStatsFactory:Lcom/android/internal/net/NetworkStatsFactory;
 
     invoke-virtual {v0}, Lcom/android/internal/net/NetworkStatsFactory;->readNetworkStatsSummaryDev()Landroid/net/NetworkStats;
@@ -3413,7 +3094,6 @@
     .locals 3
 
     .prologue
-    .line 1136
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.CONNECTIVITY_INTERNAL"
@@ -3422,7 +3102,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1137
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mStatsFactory:Lcom/android/internal/net/NetworkStatsFactory;
 
     invoke-virtual {v0}, Lcom/android/internal/net/NetworkStatsFactory;->readNetworkStatsSummaryXt()Landroid/net/NetworkStats;
@@ -3437,7 +3116,6 @@
     .parameter "ifacePairs"
 
     .prologue
-    .line 1305
     iget-object v4, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v5, "android.permission.CONNECTIVITY_INTERNAL"
@@ -3446,14 +3124,12 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1307
     array-length v4, p1
 
     rem-int/lit8 v4, v4, 0x2
 
     if-eqz v4, :cond_0
 
-    .line 1308
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -3480,7 +3156,6 @@
 
     throw v4
 
-    .line 1312
     :cond_0
     new-instance v3, Landroid/net/NetworkStats;
 
@@ -3492,7 +3167,6 @@
 
     invoke-direct {v3, v4, v5, v6}, Landroid/net/NetworkStats;-><init>(JI)V
 
-    .line 1313
     .local v3, stats:Landroid/net/NetworkStats;
     const/4 v0, 0x0
 
@@ -3502,35 +3176,29 @@
 
     if-ge v0, v4, :cond_2
 
-    .line 1314
     aget-object v1, p1, v0
 
-    .line 1315
     .local v1, ifaceIn:Ljava/lang/String;
     add-int/lit8 v4, v0, 0x1
 
     aget-object v2, p1, v4
 
-    .line 1316
     .local v2, ifaceOut:Ljava/lang/String;
     if-eqz v1, :cond_1
 
     if-eqz v2, :cond_1
 
-    .line 1317
     invoke-direct {p0, v1, v2}, Lcom/android/server/NetworkManagementService;->getNetworkStatsTethering(Ljava/lang/String;Ljava/lang/String;)Landroid/net/NetworkStats$Entry;
 
     move-result-object v4
 
     invoke-virtual {v3, v4}, Landroid/net/NetworkStats;->combineValues(Landroid/net/NetworkStats$Entry;)Landroid/net/NetworkStats;
 
-    .line 1313
     :cond_1
     add-int/lit8 v0, v0, 0x2
 
     goto :goto_0
 
-    .line 1320
     .end local v1           #ifaceIn:Ljava/lang/String;
     .end local v2           #ifaceOut:Ljava/lang/String;
     :cond_2
@@ -3542,7 +3210,6 @@
     .parameter "uid"
 
     .prologue
-    .line 1299
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.CONNECTIVITY_INTERNAL"
@@ -3551,7 +3218,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1300
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mStatsFactory:Lcom/android/internal/net/NetworkStatsFactory;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/net/NetworkStatsFactory;->readNetworkStatsDetail(I)Landroid/net/NetworkStats;
@@ -3566,7 +3232,6 @@
     .parameter "interfaceName"
 
     .prologue
-    .line 688
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
@@ -3579,12 +3244,10 @@
 
     invoke-virtual/range {v19 .. v21}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 689
     new-instance v17, Ljava/util/ArrayList;
 
     invoke-direct/range {v17 .. v17}, Ljava/util/ArrayList;-><init>()V
 
-    .line 693
     .local v17, routes:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/net/RouteInfo;>;"
     const-string v19, "/proc/net/route"
 
@@ -3615,7 +3278,6 @@
 
     check-cast v18, Ljava/lang/String;
 
-    .line 694
     .local v18, s:Ljava/lang/String;
     const-string v19, "\t"
 
@@ -3623,7 +3285,6 @@
 
     move-result-object v5
 
-    .line 696
     .local v5, fields:[Ljava/lang/String;
     array-length v0, v5
 
@@ -3637,12 +3298,10 @@
 
     if-le v0, v1, :cond_0
 
-    .line 697
     const/16 v19, 0x0
 
     aget-object v11, v5, v19
 
-    .line 699
     .local v11, iface:Ljava/lang/String;
     move-object/from16 v0, p1
 
@@ -3652,30 +3311,25 @@
 
     if-eqz v19, :cond_0
 
-    .line 700
     const/16 v19, 0x1
 
     aget-object v2, v5, v19
 
-    .line 701
     .local v2, dest:Ljava/lang/String;
     const/16 v19, 0x2
 
     aget-object v7, v5, v19
 
-    .line 702
     .local v7, gate:Ljava/lang/String;
     const/16 v19, 0x3
 
     aget-object v6, v5, v19
 
-    .line 703
     .local v6, flags:Ljava/lang/String;
     const/16 v19, 0x7
 
     aget-object v13, v5, v19
 
-    .line 706
     .local v13, mask:Ljava/lang/String;
     const/16 v19, 0x10
 
@@ -3696,7 +3350,6 @@
 
     move-result-object v3
 
-    .line 708
     .local v3, destAddr:Ljava/net/InetAddress;
     const/16 v19, 0x10
 
@@ -3716,13 +3369,11 @@
 
     move-result v15
 
-    .line 711
     .local v15, prefixLength:I
     new-instance v12, Landroid/net/LinkAddress;
 
     invoke-direct {v12, v3, v15}, Landroid/net/LinkAddress;-><init>(Ljava/net/InetAddress;I)V
 
-    .line 714
     .local v12, linkAddress:Landroid/net/LinkAddress;
     const/16 v19, 0x10
 
@@ -3742,7 +3393,6 @@
 
     move-result-object v9
 
-    .line 717
     .local v9, gatewayAddr:Ljava/net/InetAddress;
     new-instance v16, Landroid/net/RouteInfo;
 
@@ -3750,7 +3400,6 @@
 
     invoke-direct {v0, v12, v9}, Landroid/net/RouteInfo;-><init>(Landroid/net/LinkAddress;Ljava/net/InetAddress;)V
 
-    .line 718
     .local v16, route:Landroid/net/RouteInfo;
     move-object/from16 v0, v17
 
@@ -3762,7 +3411,6 @@
 
     goto :goto_0
 
-    .line 719
     .end local v3           #destAddr:Ljava/net/InetAddress;
     .end local v9           #gatewayAddr:Ljava/net/InetAddress;
     .end local v12           #linkAddress:Landroid/net/LinkAddress;
@@ -3771,7 +3419,6 @@
     :catch_0
     move-exception v4
 
-    .line 720
     .local v4, e:Ljava/lang/Exception;
     const-string v19, "NetworkManagementService"
 
@@ -3813,7 +3460,6 @@
 
     goto/16 :goto_0
 
-    .line 729
     .end local v2           #dest:Ljava/lang/String;
     .end local v4           #e:Ljava/lang/Exception;
     .end local v5           #fields:[Ljava/lang/String;
@@ -3851,7 +3497,6 @@
 
     check-cast v18, Ljava/lang/String;
 
-    .line 730
     .restart local v18       #s:Ljava/lang/String;
     const-string v19, "\\s+"
 
@@ -3859,7 +3504,6 @@
 
     move-result-object v5
 
-    .line 731
     .restart local v5       #fields:[Ljava/lang/String;
     array-length v0, v5
 
@@ -3873,7 +3517,6 @@
 
     if-le v0, v1, :cond_2
 
-    .line 732
     const/16 v19, 0x9
 
     aget-object v19, v5, v19
@@ -3882,7 +3525,6 @@
 
     move-result-object v11
 
-    .line 733
     .restart local v11       #iface:Ljava/lang/String;
     move-object/from16 v0, p1
 
@@ -3892,24 +3534,20 @@
 
     if-eqz v19, :cond_2
 
-    .line 734
     const/16 v19, 0x0
 
     aget-object v2, v5, v19
 
-    .line 735
     .restart local v2       #dest:Ljava/lang/String;
     const/16 v19, 0x1
 
     aget-object v14, v5, v19
 
-    .line 736
     .local v14, prefix:Ljava/lang/String;
     const/16 v19, 0x4
 
     aget-object v7, v5, v19
 
-    .line 740
     .restart local v7       #gate:Ljava/lang/String;
     const/16 v19, 0x10
 
@@ -3920,25 +3558,21 @@
 
     move-result v15
 
-    .line 744
     .restart local v15       #prefixLength:I
     invoke-static {v2}, Landroid/net/NetworkUtils;->hexToInet6Address(Ljava/lang/String;)Ljava/net/InetAddress;
 
     move-result-object v3
 
-    .line 745
     .restart local v3       #destAddr:Ljava/net/InetAddress;
     new-instance v12, Landroid/net/LinkAddress;
 
     invoke-direct {v12, v3, v15}, Landroid/net/LinkAddress;-><init>(Ljava/net/InetAddress;I)V
 
-    .line 747
     .restart local v12       #linkAddress:Landroid/net/LinkAddress;
     invoke-static {v7}, Landroid/net/NetworkUtils;->hexToInet6Address(Ljava/lang/String;)Ljava/net/InetAddress;
 
     move-result-object v8
 
-    .line 749
     .local v8, gateAddr:Ljava/net/InetAddress;
     new-instance v16, Landroid/net/RouteInfo;
 
@@ -3946,7 +3580,6 @@
 
     invoke-direct {v0, v12, v8}, Landroid/net/RouteInfo;-><init>(Landroid/net/LinkAddress;Ljava/net/InetAddress;)V
 
-    .line 750
     .restart local v16       #route:Landroid/net/RouteInfo;
     move-object/from16 v0, v17
 
@@ -3958,7 +3591,6 @@
 
     goto :goto_1
 
-    .line 751
     .end local v3           #destAddr:Ljava/net/InetAddress;
     .end local v8           #gateAddr:Ljava/net/InetAddress;
     .end local v12           #linkAddress:Landroid/net/LinkAddress;
@@ -3967,7 +3599,6 @@
     :catch_1
     move-exception v4
 
-    .line 752
     .restart local v4       #e:Ljava/lang/Exception;
     const-string v19, "NetworkManagementService"
 
@@ -4009,7 +3640,6 @@
 
     goto/16 :goto_1
 
-    .line 758
     .end local v2           #dest:Ljava/lang/String;
     .end local v4           #e:Ljava/lang/Exception;
     .end local v5           #fields:[Ljava/lang/String;
@@ -4045,7 +3675,6 @@
     .locals 3
 
     .prologue
-    .line 1293
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.CONNECTIVITY_INTERNAL"
@@ -4054,7 +3683,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1294
     iget-boolean v0, p0, Lcom/android/server/NetworkManagementService;->mBandwidthControlEnabled:Z
 
     return v0
@@ -4064,10 +3692,8 @@
     .locals 1
 
     .prologue
-    .line 1460
     invoke-static {}, Lcom/android/server/NetworkManagementService;->enforceSystemUid()V
 
-    .line 1461
     iget-boolean v0, p0, Lcom/android/server/NetworkManagementService;->mFirewallEnabled:Z
 
     return v0
@@ -4077,7 +3703,6 @@
     .locals 7
 
     .prologue
-    .line 825
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.CONNECTIVITY_INTERNAL"
@@ -4086,7 +3711,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 829
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -4108,13 +3732,11 @@
 
     move-result-object v1
 
-    .line 835
     .local v1, event:Lcom/android/server/NativeDaemonEvent;
     const/16 v2, 0xd2
 
     invoke-virtual {v1, v2}, Lcom/android/server/NativeDaemonEvent;->checkCode(I)V
 
-    .line 836
     invoke-virtual {v1}, Lcom/android/server/NativeDaemonEvent;->getMessage()Ljava/lang/String;
 
     move-result-object v2
@@ -4127,12 +3749,10 @@
 
     return v2
 
-    .line 830
     .end local v1           #event:Lcom/android/server/NativeDaemonEvent;
     :catch_0
     move-exception v0
 
-    .line 831
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -4145,7 +3765,6 @@
     .locals 6
 
     .prologue
-    .line 475
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -4154,7 +3773,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 477
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -4184,11 +3802,9 @@
 
     return-object v1
 
-    .line 479
     :catch_0
     move-exception v0
 
-    .line 480
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -4201,7 +3817,6 @@
     .locals 6
 
     .prologue
-    .line 891
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -4210,7 +3825,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 893
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -4246,11 +3860,9 @@
 
     return-object v1
 
-    .line 896
     :catch_0
     move-exception v0
 
-    .line 897
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -4263,7 +3875,6 @@
     .locals 4
 
     .prologue
-    .line 976
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -4272,7 +3883,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 978
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -4296,11 +3906,9 @@
 
     return-object v1
 
-    .line 980
     :catch_0
     move-exception v0
 
-    .line 981
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -4313,17 +3921,14 @@
     .locals 1
 
     .prologue
-    .line 1521
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
     if-eqz v0, :cond_0
 
-    .line 1522
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnector;->monitor()V
 
-    .line 1524
     :cond_0
     return-void
 .end method
@@ -4333,7 +3938,6 @@
     .parameter "observer"
 
     .prologue
-    .line 220
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.CONNECTIVITY_INTERNAL"
@@ -4342,12 +3946,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 221
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->register(Landroid/os/IInterface;)Z
 
-    .line 222
     return-void
 .end method
 
@@ -4356,7 +3958,6 @@
     .parameter "iface"
 
     .prologue
-    .line 1108
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.CONNECTIVITY_INTERNAL"
@@ -4365,12 +3966,10 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1112
     iget-object v3, p0, Lcom/android/server/NetworkManagementService;->mIdleTimerLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 1113
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mActiveIdleTimers:Ljava/util/HashMap;
 
@@ -4380,7 +3979,6 @@
 
     check-cast v1, Lcom/android/server/NetworkManagementService$IdleTimerParams;
 
-    .line 1114
     .local v1, params:Lcom/android/server/NetworkManagementService$IdleTimerParams;
     if-eqz v1, :cond_0
 
@@ -4392,17 +3990,14 @@
 
     if-lez v2, :cond_1
 
-    .line 1115
     :cond_0
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1126
     :goto_0
     return-void
 
-    .line 1119
     :cond_1
     :try_start_1
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
@@ -4444,13 +4039,11 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1124
     :try_start_2
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mActiveIdleTimers:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1125
     monitor-exit v3
 
     goto :goto_0
@@ -4465,12 +4058,10 @@
 
     throw v2
 
-    .line 1121
     .restart local v1       #params:Lcom/android/server/NetworkManagementService$IdleTimerParams;
     :catch_0
     move-exception v0
 
-    .line 1122
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     :try_start_3
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
@@ -4487,7 +4078,6 @@
     .parameter "iface"
 
     .prologue
-    .line 1225
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -4496,22 +4086,18 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1229
     iget-boolean v1, p0, Lcom/android/server/NetworkManagementService;->mBandwidthControlEnabled:Z
 
     if-nez v1, :cond_0
 
-    .line 1245
     :goto_0
     return-void
 
-    .line 1231
     :cond_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mQuotaLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 1232
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mActiveAlerts:Ljava/util/HashMap;
 
@@ -4521,12 +4107,10 @@
 
     if-nez v1, :cond_1
 
-    .line 1234
     monitor-exit v2
 
     goto :goto_0
 
-    .line 1244
     :catchall_0
     move-exception v1
 
@@ -4536,7 +4120,6 @@
 
     throw v1
 
-    .line 1239
     :cond_1
     :try_start_1
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
@@ -4559,7 +4142,6 @@
 
     invoke-virtual {v1, v3, v4}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
-    .line 1240
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mActiveAlerts:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -4567,17 +4149,14 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1244
     :try_start_2
     monitor-exit v2
 
     goto :goto_0
 
-    .line 1241
     :catch_0
     move-exception v0
 
-    .line 1242
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -4593,7 +4172,6 @@
     .parameter "iface"
 
     .prologue
-    .line 1171
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -4602,22 +4180,18 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1175
     iget-boolean v1, p0, Lcom/android/server/NetworkManagementService;->mBandwidthControlEnabled:Z
 
     if-nez v1, :cond_0
 
-    .line 1193
     :goto_0
     return-void
 
-    .line 1177
     :cond_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mQuotaLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 1178
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mActiveQuotas:Ljava/util/HashMap;
 
@@ -4627,12 +4201,10 @@
 
     if-nez v1, :cond_1
 
-    .line 1180
     monitor-exit v2
 
     goto :goto_0
 
-    .line 1192
     :catchall_0
     move-exception v1
 
@@ -4642,21 +4214,18 @@
 
     throw v1
 
-    .line 1183
     :cond_1
     :try_start_1
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mActiveQuotas:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1184
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mActiveAlerts:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1188
     :try_start_2
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -4681,17 +4250,14 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 1192
     :try_start_3
     monitor-exit v2
 
     goto :goto_0
 
-    .line 1189
     :catch_0
     move-exception v0
 
-    .line 1190
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -4708,7 +4274,6 @@
     .parameter "route"
 
     .prologue
-    .line 617
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.CONNECTIVITY_INTERNAL"
@@ -4717,14 +4282,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 618
     const-string v0, "remove"
 
     const-string v1, "default"
 
     invoke-direct {p0, p1, v0, p2, v1}, Lcom/android/server/NetworkManagementService;->modifyRoute(Ljava/lang/String;Ljava/lang/String;Landroid/net/RouteInfo;Ljava/lang/String;)V
 
-    .line 619
     return-void
 .end method
 
@@ -4734,7 +4297,6 @@
     .parameter "route"
 
     .prologue
-    .line 629
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.CONNECTIVITY_INTERNAL"
@@ -4743,14 +4305,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 630
     const-string v0, "remove"
 
     const-string v1, "secondary"
 
     invoke-direct {p0, p1, v0, p2, v1}, Lcom/android/server/NetworkManagementService;->modifyRoute(Ljava/lang/String;Ljava/lang/String;Landroid/net/RouteInfo;Ljava/lang/String;)V
 
-    .line 631
     return-void
 .end method
 
@@ -4760,7 +4320,6 @@
     .parameter "wlanIface"
 
     .prologue
-    .line 1070
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -4769,10 +4328,8 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1072
     if-nez p1, :cond_0
 
-    .line 1073
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -4794,11 +4351,9 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
-    .line 1081
     :goto_0
     return-void
 
-    .line 1075
     :cond_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -4844,11 +4399,9 @@
 
     goto :goto_0
 
-    .line 1078
     :catch_0
     move-exception v0
 
-    .line 1079
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -4862,7 +4415,6 @@
     .parameter "iface"
 
     .prologue
-    .line 1400
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -4871,7 +4423,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1402
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -4895,14 +4446,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1406
     return-void
 
-    .line 1403
     :catch_0
     move-exception v0
 
-    .line 1404
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -4916,7 +4464,6 @@
     .parameter "dns"
 
     .prologue
-    .line 903
     iget-object v6, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v7, "android.permission.CONNECTIVITY_INTERNAL"
@@ -4925,7 +4472,6 @@
 
     invoke-virtual {v6, v7, v8}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 905
     new-instance v1, Lcom/android/server/NativeDaemonConnector$Command;
 
     const-string v6, "tether"
@@ -4948,7 +4494,6 @@
 
     invoke-direct {v1, v6, v7}, Lcom/android/server/NativeDaemonConnector$Command;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 906
     .local v1, cmd:Lcom/android/server/NativeDaemonConnector$Command;
     move-object v0, p1
 
@@ -4964,7 +4509,6 @@
 
     aget-object v5, v0, v3
 
-    .line 907
     .local v5, s:Ljava/lang/String;
     invoke-static {v5}, Landroid/net/NetworkUtils;->numericToInetAddress(Ljava/lang/String;)Ljava/net/InetAddress;
 
@@ -4976,12 +4520,10 @@
 
     invoke-virtual {v1, v6}, Lcom/android/server/NativeDaemonConnector$Command;->appendArg(Ljava/lang/Object;)Lcom/android/server/NativeDaemonConnector$Command;
 
-    .line 906
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 911
     .end local v5           #s:Ljava/lang/String;
     :cond_0
     :try_start_0
@@ -4991,14 +4533,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 915
     return-void
 
-    .line 912
     :catch_0
     move-exception v2
 
-    .line 913
     .local v2, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v2}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -5013,7 +4552,6 @@
     .parameter "servers"
 
     .prologue
-    .line 1410
     iget-object v7, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v8, "android.permission.CONNECTIVITY_INTERNAL"
@@ -5022,7 +4560,6 @@
 
     invoke-virtual {v7, v8, v9}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1412
     new-instance v2, Lcom/android/server/NativeDaemonConnector$Command;
 
     const-string v7, "resolver"
@@ -5043,7 +4580,6 @@
 
     invoke-direct {v2, v7, v8}, Lcom/android/server/NativeDaemonConnector$Command;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 1413
     .local v2, cmd:Lcom/android/server/NativeDaemonConnector$Command;
     move-object v1, p2
 
@@ -5059,13 +4595,11 @@
 
     aget-object v6, v1, v4
 
-    .line 1414
     .local v6, s:Ljava/lang/String;
     invoke-static {v6}, Landroid/net/NetworkUtils;->numericToInetAddress(Ljava/lang/String;)Ljava/net/InetAddress;
 
     move-result-object v0
 
-    .line 1415
     .local v0, a:Ljava/net/InetAddress;
     invoke-virtual {v0}, Ljava/net/InetAddress;->isAnyLocalAddress()Z
 
@@ -5073,20 +4607,17 @@
 
     if-nez v7, :cond_0
 
-    .line 1416
     invoke-virtual {v0}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
     move-result-object v7
 
     invoke-virtual {v2, v7}, Lcom/android/server/NativeDaemonConnector$Command;->appendArg(Ljava/lang/Object;)Lcom/android/server/NativeDaemonConnector$Command;
 
-    .line 1413
     :cond_0
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 1421
     .end local v0           #a:Ljava/net/InetAddress;
     .end local v6           #s:Ljava/lang/String;
     :cond_1
@@ -5097,14 +4628,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1425
     return-void
 
-    .line 1422
     :catch_0
     move-exception v3
 
-    .line 1423
     .local v3, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v3}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -5120,20 +4648,16 @@
     .parameter "allow"
 
     .prologue
-    .line 1490
     invoke-static {}, Lcom/android/server/NetworkManagementService;->enforceSystemUid()V
 
-    .line 1491
     iget-boolean v2, p0, Lcom/android/server/NetworkManagementService;->mFirewallEnabled:Z
 
     invoke-static {v2}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1492
     if-eqz p3, :cond_0
 
     const-string v1, "allow"
 
-    .line 1494
     .local v1, rule:Ljava/lang/String;
     :goto_0
     :try_start_0
@@ -5171,22 +4695,18 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1498
     return-void
 
-    .line 1492
     .end local v1           #rule:Ljava/lang/String;
     :cond_0
     const-string v1, "deny"
 
     goto :goto_0
 
-    .line 1495
     .restart local v1       #rule:Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 1496
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -5201,20 +4721,16 @@
     .parameter "allow"
 
     .prologue
-    .line 1478
     invoke-static {}, Lcom/android/server/NetworkManagementService;->enforceSystemUid()V
 
-    .line 1479
     iget-boolean v2, p0, Lcom/android/server/NetworkManagementService;->mFirewallEnabled:Z
 
     invoke-static {v2}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1480
     if-eqz p2, :cond_0
 
     const-string v1, "allow"
 
-    .line 1482
     .local v1, rule:Ljava/lang/String;
     :goto_0
     :try_start_0
@@ -5244,22 +4760,18 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1486
     return-void
 
-    .line 1480
     .end local v1           #rule:Ljava/lang/String;
     :cond_0
     const-string v1, "deny"
 
     goto :goto_0
 
-    .line 1483
     .restart local v1       #rule:Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 1484
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -5273,10 +4785,8 @@
     .parameter "enabled"
 
     .prologue
-    .line 1449
     invoke-static {}, Lcom/android/server/NetworkManagementService;->enforceSystemUid()V
 
-    .line 1451
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -5297,13 +4807,10 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
-    .line 1452
     iput-boolean p1, p0, Lcom/android/server/NetworkManagementService;->mFirewallEnabled:Z
 
-    .line 1456
     return-void
 
-    .line 1451
     :cond_0
     const-string v1, "disable"
     :try_end_0
@@ -5311,11 +4818,9 @@
 
     goto :goto_0
 
-    .line 1453
     :catch_0
     move-exception v0
 
-    .line 1454
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -5330,20 +4835,16 @@
     .parameter "allow"
 
     .prologue
-    .line 1466
     invoke-static {}, Lcom/android/server/NetworkManagementService;->enforceSystemUid()V
 
-    .line 1467
     iget-boolean v2, p0, Lcom/android/server/NetworkManagementService;->mFirewallEnabled:Z
 
     invoke-static {v2}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1468
     if-eqz p2, :cond_0
 
     const-string v1, "allow"
 
-    .line 1470
     .local v1, rule:Ljava/lang/String;
     :goto_0
     :try_start_0
@@ -5373,22 +4874,18 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1474
     return-void
 
-    .line 1468
     .end local v1           #rule:Ljava/lang/String;
     :cond_0
     const-string v1, "deny"
 
     goto :goto_0
 
-    .line 1471
     .restart local v1       #rule:Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 1472
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -5403,20 +4900,16 @@
     .parameter "allow"
 
     .prologue
-    .line 1502
     invoke-static {}, Lcom/android/server/NetworkManagementService;->enforceSystemUid()V
 
-    .line 1503
     iget-boolean v2, p0, Lcom/android/server/NetworkManagementService;->mFirewallEnabled:Z
 
     invoke-static {v2}, Lcom/android/internal/util/Preconditions;->checkState(Z)V
 
-    .line 1504
     if-eqz p2, :cond_0
 
     const-string v1, "allow"
 
-    .line 1506
     .local v1, rule:Ljava/lang/String;
     :goto_0
     :try_start_0
@@ -5450,22 +4943,18 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1510
     return-void
 
-    .line 1504
     .end local v1           #rule:Ljava/lang/String;
     :cond_0
     const-string v1, "deny"
 
     goto :goto_0
 
-    .line 1507
     .restart local v1       #rule:Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 1508
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -5479,7 +4968,6 @@
     .parameter "alertBytes"
 
     .prologue
-    .line 1249
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -5488,16 +4976,13 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1253
     iget-boolean v1, p0, Lcom/android/server/NetworkManagementService;->mBandwidthControlEnabled:Z
 
     if-nez v1, :cond_0
 
-    .line 1260
     :goto_0
     return-void
 
-    .line 1256
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
@@ -5528,11 +5013,9 @@
 
     goto :goto_0
 
-    .line 1257
     :catch_0
     move-exception v0
 
-    .line 1258
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -5547,7 +5030,6 @@
     .parameter "alertBytes"
 
     .prologue
-    .line 1197
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -5556,16 +5038,13 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1201
     iget-boolean v1, p0, Lcom/android/server/NetworkManagementService;->mBandwidthControlEnabled:Z
 
     if-nez v1, :cond_0
 
-    .line 1221
     :goto_0
     return-void
 
-    .line 1204
     :cond_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mActiveQuotas:Ljava/util/HashMap;
 
@@ -5575,7 +5054,6 @@
 
     if-nez v1, :cond_1
 
-    .line 1205
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "setting alert requires existing quota on iface"
@@ -5584,13 +5062,11 @@
 
     throw v1
 
-    .line 1208
     :cond_1
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mQuotaLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 1209
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mActiveAlerts:Ljava/util/HashMap;
 
@@ -5600,7 +5076,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1210
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -5631,7 +5106,6 @@
 
     throw v1
 
-    .line 1220
     :catchall_0
     move-exception v1
 
@@ -5641,7 +5115,6 @@
 
     throw v1
 
-    .line 1215
     :cond_2
     :try_start_1
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
@@ -5672,7 +5145,6 @@
 
     invoke-virtual {v1, v3, v4}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
-    .line 1216
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mActiveAlerts:Ljava/util/HashMap;
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -5684,17 +5156,14 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1220
     :try_start_2
     monitor-exit v2
 
     goto :goto_0
 
-    .line 1217
     :catch_0
     move-exception v0
 
-    .line 1218
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -5711,7 +5180,6 @@
     .parameter "cfg"
 
     .prologue
-    .line 530
     iget-object v5, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v6, "android.permission.CONNECTIVITY_INTERNAL"
@@ -5720,12 +5188,10 @@
 
     invoke-virtual {v5, v6, v7}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 531
     invoke-virtual {p2}, Landroid/net/InterfaceConfiguration;->getLinkAddress()Landroid/net/LinkAddress;
 
     move-result-object v4
 
-    .line 532
     .local v4, linkAddr:Landroid/net/LinkAddress;
     if-eqz v4, :cond_0
 
@@ -5735,7 +5201,6 @@
 
     if-nez v5, :cond_1
 
-    .line 533
     :cond_0
     new-instance v5, Ljava/lang/IllegalStateException;
 
@@ -5745,7 +5210,6 @@
 
     throw v5
 
-    .line 536
     :cond_1
     new-instance v0, Lcom/android/server/NativeDaemonConnector$Command;
 
@@ -5791,7 +5255,6 @@
 
     invoke-direct {v0, v5, v6}, Lcom/android/server/NativeDaemonConnector$Command;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 539
     .local v0, cmd:Lcom/android/server/NativeDaemonConnector$Command;
     invoke-virtual {p2}, Landroid/net/InterfaceConfiguration;->getFlags()Ljava/lang/Iterable;
 
@@ -5815,13 +5278,11 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 540
     .local v2, flag:Ljava/lang/String;
     invoke-virtual {v0, v2}, Lcom/android/server/NativeDaemonConnector$Command;->appendArg(Ljava/lang/Object;)Lcom/android/server/NativeDaemonConnector$Command;
 
     goto :goto_0
 
-    .line 544
     .end local v2           #flag:Ljava/lang/String;
     :cond_2
     :try_start_0
@@ -5831,14 +5292,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 548
     return-void
 
-    .line 545
     :catch_0
     move-exception v1
 
-    .line 546
     .local v1, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v1}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -5852,7 +5310,6 @@
     .parameter "iface"
 
     .prologue
-    .line 552
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -5861,19 +5318,15 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 553
     invoke-virtual {p0, p1}, Lcom/android/server/NetworkManagementService;->getInterfaceConfig(Ljava/lang/String;)Landroid/net/InterfaceConfiguration;
 
     move-result-object v0
 
-    .line 554
     .local v0, ifcg:Landroid/net/InterfaceConfiguration;
     invoke-virtual {v0}, Landroid/net/InterfaceConfiguration;->setInterfaceDown()V
 
-    .line 555
     invoke-virtual {p0, p1, v0}, Lcom/android/server/NetworkManagementService;->setInterfaceConfig(Ljava/lang/String;Landroid/net/InterfaceConfiguration;)V
 
-    .line 556
     return-void
 .end method
 
@@ -5883,7 +5336,6 @@
     .parameter "enable"
 
     .prologue
-    .line 568
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -5892,7 +5344,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 570
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -5923,10 +5374,8 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
-    .line 575
     return-void
 
-    .line 570
     :cond_0
     const-string v1, "disable"
     :try_end_0
@@ -5934,11 +5383,9 @@
 
     goto :goto_0
 
-    .line 572
     :catch_0
     move-exception v0
 
-    .line 573
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -5953,7 +5400,6 @@
     .parameter "quotaBytes"
 
     .prologue
-    .line 1148
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -5962,22 +5408,18 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1152
     iget-boolean v1, p0, Lcom/android/server/NetworkManagementService;->mBandwidthControlEnabled:Z
 
     if-nez v1, :cond_0
 
-    .line 1167
     :goto_0
     return-void
 
-    .line 1154
     :cond_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mQuotaLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 1155
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mActiveQuotas:Ljava/util/HashMap;
 
@@ -5987,7 +5429,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1156
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -6018,7 +5459,6 @@
 
     throw v1
 
-    .line 1166
     :catchall_0
     move-exception v1
 
@@ -6028,7 +5468,6 @@
 
     throw v1
 
-    .line 1161
     :cond_1
     :try_start_1
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
@@ -6059,7 +5498,6 @@
 
     invoke-virtual {v1, v3, v4}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
-    .line 1162
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mActiveQuotas:Ljava/util/HashMap;
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -6071,17 +5509,14 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1166
     :try_start_2
     monitor-exit v2
 
     goto :goto_0
 
-    .line 1163
     :catch_0
     move-exception v0
 
-    .line 1164
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -6099,7 +5534,6 @@
     .parameter "txKbps"
 
     .prologue
-    .line 1357
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -6108,7 +5542,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1359
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -6148,14 +5581,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1363
     return-void
 
-    .line 1360
     :catch_0
     move-exception v0
 
-    .line 1361
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -6169,7 +5599,6 @@
     .parameter "iface"
 
     .prologue
-    .line 560
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -6178,19 +5607,15 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 561
     invoke-virtual {p0, p1}, Lcom/android/server/NetworkManagementService;->getInterfaceConfig(Ljava/lang/String;)Landroid/net/InterfaceConfiguration;
 
     move-result-object v0
 
-    .line 562
     .local v0, ifcg:Landroid/net/InterfaceConfiguration;
     invoke-virtual {v0}, Landroid/net/InterfaceConfiguration;->setInterfaceUp()V
 
-    .line 563
     invoke-virtual {p0, p1, v0}, Lcom/android/server/NetworkManagementService;->setInterfaceConfig(Ljava/lang/String;Landroid/net/InterfaceConfiguration;)V
 
-    .line 564
     return-void
 .end method
 
@@ -6199,7 +5624,6 @@
     .parameter "enable"
 
     .prologue
-    .line 787
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -6208,7 +5632,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 789
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -6229,10 +5652,8 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
-    .line 793
     return-void
 
-    .line 789
     :cond_0
     const-string v1, "disable"
     :try_end_0
@@ -6240,11 +5661,9 @@
 
     goto :goto_0
 
-    .line 790
     :catch_0
     move-exception v0
 
-    .line 791
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -6259,7 +5678,6 @@
     .parameter "rejectOnQuotaInterfaces"
 
     .prologue
-    .line 1264
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.CONNECTIVITY_INTERNAL"
@@ -6268,22 +5686,18 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1268
     iget-boolean v2, p0, Lcom/android/server/NetworkManagementService;->mBandwidthControlEnabled:Z
 
     if-nez v2, :cond_0
 
-    .line 1289
     :goto_0
     return-void
 
-    .line 1270
     :cond_0
     iget-object v3, p0, Lcom/android/server/NetworkManagementService;->mQuotaLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 1271
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mUidRejectOnQuota:Landroid/util/SparseBooleanArray;
 
@@ -6293,16 +5707,13 @@
 
     move-result v1
 
-    .line 1272
     .local v1, oldRejectOnQuota:Z
     if-ne v1, p2, :cond_1
 
-    .line 1274
     monitor-exit v3
 
     goto :goto_0
 
-    .line 1288
     .end local v1           #oldRejectOnQuota:Z
     :catchall_0
     move-exception v2
@@ -6313,7 +5724,6 @@
 
     throw v2
 
-    .line 1278
     .restart local v1       #oldRejectOnQuota:Z
     :cond_1
     :try_start_1
@@ -6344,10 +5754,8 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
-    .line 1280
     if-eqz p2, :cond_3
 
-    .line 1281
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mUidRejectOnQuota:Landroid/util/SparseBooleanArray;
 
     const/4 v4, 0x1
@@ -6357,7 +5765,6 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1288
     :goto_2
     :try_start_2
     monitor-exit v3
@@ -6366,14 +5773,12 @@
 
     goto :goto_0
 
-    .line 1278
     :cond_2
     :try_start_3
     const-string v2, "removenaughtyapps"
 
     goto :goto_1
 
-    .line 1283
     :cond_3
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mUidRejectOnQuota:Landroid/util/SparseBooleanArray;
 
@@ -6384,11 +5789,9 @@
 
     goto :goto_2
 
-    .line 1285
     :catch_0
     move-exception v0
 
-    .line 1286
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     :try_start_4
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
@@ -6404,7 +5807,6 @@
     .locals 3
 
     .prologue
-    .line 764
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.SHUTDOWN"
@@ -6413,14 +5815,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 766
     const-string v0, "NetworkManagementService"
 
     const-string v1, "Shutting down"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 767
     return-void
 .end method
 
@@ -6430,7 +5830,6 @@
     .parameter "wlanIface"
 
     .prologue
-    .line 1013
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -6439,7 +5838,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1015
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
@@ -6455,12 +5853,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 1017
     const-string v1, "AP"
 
     invoke-virtual {p0, p2, v1}, Lcom/android/server/NetworkManagementService;->wifiFirmwareReload(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1019
     :cond_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
@@ -6476,7 +5872,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1021
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
     const-string v2, "softap"
@@ -6497,11 +5892,9 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
-    .line 1023
     :cond_1
     if-nez p1, :cond_2
 
-    .line 1024
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
     const-string v2, "softap"
@@ -6522,7 +5915,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
-    .line 1029
     :goto_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -6540,10 +5932,8 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
-    .line 1033
     return-void
 
-    .line 1026
     :cond_2
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -6589,11 +5979,9 @@
 
     goto :goto_0
 
-    .line 1030
     :catch_0
     move-exception v0
 
-    .line 1031
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -6612,7 +6000,6 @@
     .end annotation
 
     .prologue
-    .line 843
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.CONNECTIVITY_INTERNAL"
@@ -6621,10 +6008,8 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 846
     const-string v0, "tether start-reverse"
 
-    .line 847
     .local v0, cmd:Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -6648,7 +6033,6 @@
 
     move-result-object v0
 
-    .line 850
     :try_start_0
     iget-object v2, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -6656,21 +6040,17 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 854
     invoke-static {}, Landroid/bluetooth/BluetoothTetheringDataTracker;->getInstance()Landroid/bluetooth/BluetoothTetheringDataTracker;
 
     move-result-object v2
 
     invoke-virtual {v2, p1}, Landroid/bluetooth/BluetoothTetheringDataTracker;->startReverseTether(Ljava/lang/String;)V
 
-    .line 856
     return-void
 
-    .line 851
     :catch_0
     move-exception v1
 
-    .line 852
     .local v1, e:Lcom/android/server/NativeDaemonConnectorException;
     new-instance v2, Ljava/lang/IllegalStateException;
 
@@ -6686,7 +6066,6 @@
     .parameter "dhcpRange"
 
     .prologue
-    .line 797
     iget-object v6, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v7, "android.permission.CONNECTIVITY_INTERNAL"
@@ -6695,7 +6074,6 @@
 
     invoke-virtual {v6, v7, v8}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 801
     new-instance v1, Lcom/android/server/NativeDaemonConnector$Command;
 
     const-string v6, "tether"
@@ -6712,7 +6090,6 @@
 
     invoke-direct {v1, v6, v7}, Lcom/android/server/NativeDaemonConnector$Command;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 802
     .local v1, cmd:Lcom/android/server/NativeDaemonConnector$Command;
     move-object v0, p1
 
@@ -6728,16 +6105,13 @@
 
     aget-object v2, v0, v4
 
-    .line 803
     .local v2, d:Ljava/lang/String;
     invoke-virtual {v1, v2}, Lcom/android/server/NativeDaemonConnector$Command;->appendArg(Ljava/lang/Object;)Lcom/android/server/NativeDaemonConnector$Command;
 
-    .line 802
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 807
     .end local v2           #d:Ljava/lang/String;
     :cond_0
     :try_start_0
@@ -6747,14 +6121,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 811
     return-void
 
-    .line 808
     :catch_0
     move-exception v3
 
-    .line 809
     .local v3, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v3}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -6768,7 +6139,6 @@
     .parameter "wlanIface"
 
     .prologue
-    .line 1059
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -6777,7 +6147,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1061
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -6795,21 +6164,17 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
-    .line 1062
     const-string v1, "STA"
 
     invoke-virtual {p0, p1, v1}, Lcom/android/server/NetworkManagementService;->wifiFirmwareReload(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1066
     return-void
 
-    .line 1063
     :catch_0
     move-exception v0
 
-    .line 1064
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -6827,7 +6192,6 @@
     .end annotation
 
     .prologue
-    .line 860
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -6836,7 +6200,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 862
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -6846,21 +6209,17 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 866
     invoke-static {}, Landroid/bluetooth/BluetoothTetheringDataTracker;->getInstance()Landroid/bluetooth/BluetoothTetheringDataTracker;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/bluetooth/BluetoothTetheringDataTracker;->stopReverseTether()V
 
-    .line 867
     return-void
 
-    .line 863
     :catch_0
     move-exception v0
 
-    .line 864
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -6875,7 +6234,6 @@
     .locals 6
 
     .prologue
-    .line 815
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -6884,7 +6242,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 817
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -6904,14 +6261,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 821
     return-void
 
-    .line 818
     :catch_0
     move-exception v0
 
-    .line 819
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -6924,10 +6278,8 @@
     .locals 0
 
     .prologue
-    .line 214
     invoke-direct {p0}, Lcom/android/server/NetworkManagementService;->prepareNativeDaemon()V
 
-    .line 216
     return-void
 .end method
 
@@ -6936,7 +6288,6 @@
     .parameter "iface"
 
     .prologue
-    .line 871
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -6945,7 +6296,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 873
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -6975,14 +6325,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 877
     return-void
 
-    .line 874
     :catch_0
     move-exception v0
 
-    .line 875
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -6996,7 +6343,6 @@
     .parameter "observer"
 
     .prologue
-    .line 226
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.CONNECTIVITY_INTERNAL"
@@ -7005,12 +6351,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 227
     iget-object v0, p0, Lcom/android/server/NetworkManagementService;->mObservers:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z
 
-    .line 228
     return-void
 .end method
 
@@ -7019,7 +6363,6 @@
     .parameter "iface"
 
     .prologue
-    .line 881
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -7028,7 +6371,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 883
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -7058,14 +6400,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 887
     return-void
 
-    .line 884
     :catch_0
     move-exception v0
 
-    .line 885
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 
@@ -7080,7 +6419,6 @@
     .parameter "mode"
 
     .prologue
-    .line 1049
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.CONNECTIVITY_INTERNAL"
@@ -7089,7 +6427,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1051
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService;->mConnector:Lcom/android/server/NativeDaemonConnector;
 
@@ -7117,14 +6454,11 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1055
     return-void
 
-    .line 1052
     :catch_0
     move-exception v0
 
-    .line 1053
     .local v0, e:Lcom/android/server/NativeDaemonConnectorException;
     invoke-virtual {v0}, Lcom/android/server/NativeDaemonConnectorException;->rethrowAsParcelableException()Ljava/lang/IllegalArgumentException;
 

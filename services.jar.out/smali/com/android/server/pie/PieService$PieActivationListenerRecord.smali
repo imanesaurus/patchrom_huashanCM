@@ -36,20 +36,16 @@
     .parameter "listener"
 
     .prologue
-    .line 85
     iput-object p1, p0, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->this$0:Lcom/android/server/pie/PieService;
 
     invoke-direct {p0}, Landroid/service/pie/IPieHostCallback$Stub;-><init>()V
 
-    .line 86
     iput-object p2, p0, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->listener:Landroid/service/pie/IPieActivationListener;
 
-    .line 87
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->positions:I
 
-    .line 88
     return-void
 .end method
 
@@ -59,7 +55,6 @@
     .parameter "x1"
 
     .prologue
-    .line 82
     invoke-direct {p0, p1}, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->updateFlags(I)V
 
     return-void
@@ -71,7 +66,6 @@
     .parameter "x1"
 
     .prologue
-    .line 82
     invoke-direct {p0, p1}, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->eligibleForActivation(I)Z
 
     move-result v0
@@ -87,7 +81,6 @@
     .parameter "x3"
 
     .prologue
-    .line 82
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->notifyPieActivation(IILcom/android/internal/util/pie/PiePosition;)Z
 
     move-result v0
@@ -100,7 +93,6 @@
     .parameter "positionFlag"
 
     .prologue
-    .line 100
     iget v0, p0, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->positions:I
 
     and-int/2addr v0, p1
@@ -125,7 +117,6 @@
     .parameter "position"
 
     .prologue
-    .line 104
     iget v1, p0, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->positions:I
 
     iget v2, p3, Lcom/android/internal/util/pie/PiePosition;->FLAG:I
@@ -134,7 +125,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 106
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->listener:Landroid/service/pie/IPieActivationListener;
 
@@ -144,25 +134,21 @@
 
     invoke-interface {v1, p1, p2, v2, v3}, Landroid/service/pie/IPieActivationListener;->onPieActivation(IIII)V
 
-    .line 107
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->mActive:Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 113
     :cond_0
     :goto_0
     iget-boolean v1, p0, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->mActive:Z
 
     return v1
 
-    .line 108
     :catch_0
     move-exception v0
 
-    .line 109
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "PieService"
 
@@ -170,7 +156,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 110
     invoke-virtual {p0}, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->binderDied()V
 
     goto :goto_0
@@ -181,12 +166,10 @@
     .parameter "flags"
 
     .prologue
-    .line 95
     and-int/lit8 v0, p1, 0xf
 
     iput v0, p0, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->positions:I
 
-    .line 96
     const/high16 v0, 0x7000
 
     and-int/2addr v0, p1
@@ -195,7 +178,6 @@
 
     iput v0, p0, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->sensitivity:I
 
-    .line 97
     return-void
 .end method
 
@@ -205,13 +187,11 @@
     .locals 1
 
     .prologue
-    .line 91
     iget-object v0, p0, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->this$0:Lcom/android/server/pie/PieService;
 
     #calls: Lcom/android/server/pie/PieService;->removeListenerRecord(Lcom/android/server/pie/PieService$PieActivationListenerRecord;)V
     invoke-static {v0, p0}, Lcom/android/server/pie/PieService;->access$000(Lcom/android/server/pie/PieService;Lcom/android/server/pie/PieService$PieActivationListenerRecord;)V
 
-    .line 92
     return-void
 .end method
 
@@ -221,10 +201,8 @@
     .parameter "prefix"
 
     .prologue
-    .line 145
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 146
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -251,7 +229,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 147
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -274,10 +251,8 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 148
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 149
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -300,7 +275,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 150
     return-void
 .end method
 
@@ -309,12 +283,10 @@
     .parameter "windowToken"
 
     .prologue
-    .line 121
     iget-boolean v0, p0, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->mActive:Z
 
     if-eqz v0, :cond_0
 
-    .line 122
     iget-object v0, p0, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->this$0:Lcom/android/server/pie/PieService;
 
     #getter for: Lcom/android/server/pie/PieService;->mInputFilter:Lcom/android/server/pie/PieInputFilter;
@@ -326,7 +298,6 @@
 
     move-result v0
 
-    .line 124
     :goto_0
     return v0
 
@@ -345,12 +316,10 @@
     .end annotation
 
     .prologue
-    .line 132
     iget-boolean v0, p0, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->mActive:Z
 
     if-eqz v0, :cond_0
 
-    .line 133
     iget-object v0, p0, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->this$0:Lcom/android/server/pie/PieService;
 
     #getter for: Lcom/android/server/pie/PieService;->mInputFilter:Lcom/android/server/pie/PieInputFilter;
@@ -360,12 +329,10 @@
 
     invoke-virtual {v0}, Lcom/android/server/pie/PieInputFilter;->unlockFilter()Z
 
-    .line 134
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->mActive:Z
 
-    .line 135
     iget-object v0, p0, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->this$0:Lcom/android/server/pie/PieService;
 
     #getter for: Lcom/android/server/pie/PieService;->mLock:Ljava/lang/Object;
@@ -375,7 +342,6 @@
 
     monitor-enter v1
 
-    .line 136
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->this$0:Lcom/android/server/pie/PieService;
 
@@ -384,7 +350,6 @@
     #setter for: Lcom/android/server/pie/PieService;->mActiveRecord:Lcom/android/server/pie/PieService$PieActivationListenerRecord;
     invoke-static {v0, v2}, Lcom/android/server/pie/PieService;->access$302(Lcom/android/server/pie/PieService;Lcom/android/server/pie/PieService$PieActivationListenerRecord;)Lcom/android/server/pie/PieService$PieActivationListenerRecord;
 
-    .line 138
     iget-object v0, p0, Lcom/android/server/pie/PieService$PieActivationListenerRecord;->this$0:Lcom/android/server/pie/PieService;
 
     #getter for: Lcom/android/server/pie/PieService;->mHandler:Landroid/os/Handler;
@@ -414,14 +379,11 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 140
     monitor-exit v1
 
-    .line 142
     :cond_0
     return-void
 
-    .line 140
     :catchall_0
     move-exception v0
 

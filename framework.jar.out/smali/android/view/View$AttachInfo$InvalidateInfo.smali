@@ -63,7 +63,6 @@
     .locals 2
 
     .prologue
-    .line 17646
     new-instance v0, Landroid/view/View$AttachInfo$InvalidateInfo$1;
 
     invoke-direct {v0}, Landroid/view/View$AttachInfo$InvalidateInfo$1;-><init>()V
@@ -87,7 +86,6 @@
     .locals 0
 
     .prologue
-    .line 17644
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -97,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 17680
     sget-object v0, Landroid/view/View$AttachInfo$InvalidateInfo;->sPool:Landroid/util/Pool;
 
     invoke-interface {v0}, Landroid/util/Pool;->acquire()Landroid/util/Poolable;
@@ -115,7 +112,6 @@
     .locals 1
 
     .prologue
-    .line 17676
     iget-object v0, p0, Landroid/view/View$AttachInfo$InvalidateInfo;->mNext:Landroid/view/View$AttachInfo$InvalidateInfo;
 
     return-object v0
@@ -125,7 +121,6 @@
     .locals 1
 
     .prologue
-    .line 17644
     invoke-virtual {p0}, Landroid/view/View$AttachInfo$InvalidateInfo;->getNextPoolable()Landroid/view/View$AttachInfo$InvalidateInfo;
 
     move-result-object v0
@@ -137,7 +132,6 @@
     .locals 1
 
     .prologue
-    .line 17688
     iget-boolean v0, p0, Landroid/view/View$AttachInfo$InvalidateInfo;->mIsPooled:Z
 
     return v0
@@ -147,12 +141,10 @@
     .locals 1
 
     .prologue
-    .line 17684
     sget-object v0, Landroid/view/View$AttachInfo$InvalidateInfo;->sPool:Landroid/util/Pool;
 
     invoke-interface {v0, p0}, Landroid/util/Pool;->release(Landroid/util/Poolable;)V
 
-    .line 17685
     return-void
 .end method
 
@@ -161,10 +153,8 @@
     .parameter "element"
 
     .prologue
-    .line 17672
     iput-object p1, p0, Landroid/view/View$AttachInfo$InvalidateInfo;->mNext:Landroid/view/View$AttachInfo$InvalidateInfo;
 
-    .line 17673
     return-void
 .end method
 
@@ -173,7 +163,6 @@
     .parameter "x0"
 
     .prologue
-    .line 17644
     check-cast p1, Landroid/view/View$AttachInfo$InvalidateInfo;
 
     .end local p1
@@ -187,9 +176,7 @@
     .parameter "isPooled"
 
     .prologue
-    .line 17692
     iput-boolean p1, p0, Landroid/view/View$AttachInfo$InvalidateInfo;->mIsPooled:Z
 
-    .line 17693
     return-void
 .end method

@@ -44,10 +44,8 @@
     .locals 1
 
     .prologue
-    .line 110
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 114
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -64,7 +62,6 @@
     .parameter "callingUid"
 
     .prologue
-    .line 121
     invoke-static {p1}, Landroid/os/UserHandle;->getAppId(I)I
 
     move-result v0
@@ -75,14 +72,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 123
     iget v0, p0, Lcom/android/server/AppWidgetServiceImpl$Host;->uid:I
 
     invoke-static {v0, p1}, Landroid/os/UserHandle;->isSameApp(II)Z
 
     move-result v0
 
-    .line 125
     :goto_0
     return v0
 

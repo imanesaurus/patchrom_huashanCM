@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 295
     iput-object p1, p0, Lcom/stericsson/hardware/fm/FmReceiverImpl$OnForcedPauseListenerTransport$1;->this$0:Lcom/stericsson/hardware/fm/FmReceiverImpl$OnForcedPauseListenerTransport;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,12 +38,10 @@
     .parameter "msg"
 
     .prologue
-    .line 298
     iget-object v0, p0, Lcom/stericsson/hardware/fm/FmReceiverImpl$OnForcedPauseListenerTransport$1;->this$0:Lcom/stericsson/hardware/fm/FmReceiverImpl$OnForcedPauseListenerTransport;
 
     #calls: Lcom/stericsson/hardware/fm/FmReceiverImpl$OnForcedPauseListenerTransport;->_handleMessage(Landroid/os/Message;)V
     invoke-static {v0, p1}, Lcom/stericsson/hardware/fm/FmReceiverImpl$OnForcedPauseListenerTransport;->access$400(Lcom/stericsson/hardware/fm/FmReceiverImpl$OnForcedPauseListenerTransport;Landroid/os/Message;)V
 
-    .line 299
     return-void
 .end method

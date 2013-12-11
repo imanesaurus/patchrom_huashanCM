@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 52
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;
 
     invoke-direct {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitorCallback;-><init>()V
@@ -39,15 +38,12 @@
     .parameter "showing"
 
     .prologue
-    .line 61
     if-eqz p1, :cond_0
 
-    .line 63
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->refresh()V
 
-    .line 65
     :cond_0
     return-void
 .end method
@@ -56,11 +52,9 @@
     .locals 1
 
     .prologue
-    .line 56
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->refresh()V
 
-    .line 57
     return-void
 .end method

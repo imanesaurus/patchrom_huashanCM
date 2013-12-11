@@ -31,7 +31,6 @@
     .parameter
 
     .prologue
-    .line 8445
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$12;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p3, p0, Lcom/android/server/am/ActivityManagerService$12;->val$dbox:Landroid/os/DropBoxManager;
@@ -49,7 +48,6 @@
     .locals 5
 
     .prologue
-    .line 8450
     const-wide/16 v1, 0x1388
 
     :try_start_0
@@ -57,7 +55,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8454
     :goto_0
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$12;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -68,7 +65,6 @@
 
     monitor-enter v2
 
-    .line 8455
     :try_start_1
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$12;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -81,7 +77,6 @@
 
     move-result-object v0
 
-    .line 8456
     .local v0, errorReport:Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -89,14 +84,11 @@
 
     if-nez v1, :cond_0
 
-    .line 8457
     monitor-exit v2
 
-    .line 8463
     :goto_1
     return-void
 
-    .line 8459
     :cond_0
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$12;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -120,7 +112,6 @@
 
     invoke-virtual {v1, v3, v4}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
-    .line 8460
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$12;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     #getter for: Lcom/android/server/am/ActivityManagerService;->mStrictModeBuffer:Ljava/lang/StringBuilder;
@@ -130,12 +121,10 @@
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->trimToSize()V
 
-    .line 8461
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 8462
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$12;->val$dbox:Landroid/os/DropBoxManager;
 
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$12;->val$dropboxTag:Ljava/lang/String;
@@ -144,7 +133,6 @@
 
     goto :goto_1
 
-    .line 8461
     .end local v0           #errorReport:Ljava/lang/String;
     :catchall_0
     move-exception v1
@@ -156,7 +144,6 @@
 
     throw v1
 
-    .line 8451
     :catch_0
     move-exception v1
 

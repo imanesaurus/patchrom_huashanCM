@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 146
     iput-object p1, p0, Lcom/android/server/RotationSwitchObserver$2;->this$0:Lcom/android/server/RotationSwitchObserver;
 
     iput-boolean p2, p0, Lcom/android/server/RotationSwitchObserver$2;->val$autorotate:Z
@@ -46,7 +45,6 @@
     .locals 4
 
     .prologue
-    .line 149
     :try_start_0
     const-string v2, "window"
 
@@ -58,21 +56,17 @@
 
     move-result-object v1
 
-    .line 152
     .local v1, wm:Landroid/view/IWindowManager;
     iget-boolean v2, p0, Lcom/android/server/RotationSwitchObserver$2;->val$autorotate:Z
 
     if-eqz v2, :cond_0
 
-    .line 153
     invoke-interface {v1}, Landroid/view/IWindowManager;->thawRotation()V
 
-    .line 160
     .end local v1           #wm:Landroid/view/IWindowManager;
     :goto_0
     return-void
 
-    .line 155
     .restart local v1       #wm:Landroid/view/IWindowManager;
     :cond_0
     const/4 v2, -0x1
@@ -83,12 +77,10 @@
 
     goto :goto_0
 
-    .line 157
     .end local v1           #wm:Landroid/view/IWindowManager;
     :catch_0
     move-exception v0
 
-    .line 158
     .local v0, exc:Landroid/os/RemoteException;
     invoke-static {}, Lcom/android/server/RotationSwitchObserver;->access$300()Ljava/lang/String;
 

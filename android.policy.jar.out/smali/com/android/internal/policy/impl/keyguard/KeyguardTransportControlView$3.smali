@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 140
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardTransportControlView$3;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardTransportControlView;
 
     invoke-direct {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitorCallback;-><init>()V
@@ -39,12 +38,10 @@
     .parameter "userId"
 
     .prologue
-    .line 143
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardTransportControlView$3;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardTransportControlView;
 
     #calls: Lcom/android/internal/policy/impl/keyguard/KeyguardTransportControlView;->updateSettings()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardTransportControlView;->access$900(Lcom/android/internal/policy/impl/keyguard/KeyguardTransportControlView;)V
 
-    .line 144
     return-void
 .end method

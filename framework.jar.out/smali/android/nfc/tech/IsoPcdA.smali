@@ -16,15 +16,12 @@
     .prologue
     const/16 v1, 0x64
 
-    .line 64
     invoke-direct {p0, p1, v1}, Landroid/nfc/tech/BasicTagTechnology;-><init>(Landroid/nfc/Tag;I)V
 
-    .line 65
     invoke-virtual {p1, v1}, Landroid/nfc/Tag;->getTechExtras(I)Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 66
     .local v0, extras:Landroid/os/Bundle;
     return-void
 .end method
@@ -36,7 +33,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 53
     const/16 v2, 0x64
 
     invoke-virtual {p0, v2}, Landroid/nfc/Tag;->hasTech(I)Z
@@ -45,11 +41,9 @@
 
     if-nez v2, :cond_0
 
-    .line 57
     :goto_0
     return-object v1
 
-    .line 55
     :cond_0
     :try_start_0
     new-instance v2, Landroid/nfc/tech/IsoPcdA;
@@ -62,11 +56,9 @@
 
     goto :goto_0
 
-    .line 56
     :catch_0
     move-exception v0
 
-    .line 57
     .local v0, e:Landroid/os/RemoteException;
     goto :goto_0
 .end method
@@ -82,7 +74,6 @@
     .end annotation
 
     .prologue
-    .line 41
     invoke-super {p0}, Landroid/nfc/tech/BasicTagTechnology;->close()V
 
     return-void
@@ -97,7 +88,6 @@
     .end annotation
 
     .prologue
-    .line 41
     invoke-super {p0}, Landroid/nfc/tech/BasicTagTechnology;->connect()V
 
     return-void
@@ -107,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 99
     invoke-virtual {p0}, Landroid/nfc/tech/IsoPcdA;->getMaxTransceiveLengthInternal()I
 
     move-result v0
@@ -119,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 41
     invoke-super {p0}, Landroid/nfc/tech/BasicTagTechnology;->getTag()Landroid/nfc/Tag;
 
     move-result-object v0
@@ -131,7 +119,6 @@
     .locals 1
 
     .prologue
-    .line 41
     invoke-super {p0}, Landroid/nfc/tech/BasicTagTechnology;->isConnected()Z
 
     move-result v0
@@ -148,7 +135,6 @@
     .end annotation
 
     .prologue
-    .line 41
     invoke-super {p0}, Landroid/nfc/tech/BasicTagTechnology;->reconnect()V
 
     return-void
@@ -164,7 +150,6 @@
     .end annotation
 
     .prologue
-    .line 91
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, v0}, Landroid/nfc/tech/IsoPcdA;->transceive([BZ)[B

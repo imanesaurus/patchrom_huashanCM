@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 244
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,36 +44,30 @@
     .parameter "in"
 
     .prologue
-    .line 246
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 247
     .local v3, minfreq:I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 248
     .local v2, maxfreq:I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 249
     .local v4, offset:I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 250
     .local v1, defaultFreq:I
     new-instance v0, Lcom/stericsson/hardware/fm/FmBand;
 
     invoke-direct {v0, v3, v2, v4, v1}, Lcom/stericsson/hardware/fm/FmBand;-><init>(IIII)V
 
-    .line 251
     .local v0, band:Lcom/stericsson/hardware/fm/FmBand;
     return-object v0
 .end method
@@ -84,7 +77,6 @@
     .parameter "x0"
 
     .prologue
-    .line 244
     invoke-virtual {p0, p1}, Lcom/stericsson/hardware/fm/FmBand$1;->createFromParcel(Landroid/os/Parcel;)Lcom/stericsson/hardware/fm/FmBand;
 
     move-result-object v0
@@ -97,7 +89,6 @@
     .parameter "size"
 
     .prologue
-    .line 255
     new-array v0, p1, [Lcom/stericsson/hardware/fm/FmBand;
 
     return-object v0
@@ -108,7 +99,6 @@
     .parameter "x0"
 
     .prologue
-    .line 244
     invoke-virtual {p0, p1}, Lcom/stericsson/hardware/fm/FmBand$1;->newArray(I)[Lcom/stericsson/hardware/fm/FmBand;
 
     move-result-object v0

@@ -38,12 +38,10 @@
     .end annotation
 
     .prologue
-    .line 438
     .local p1, policyPerms:Ljava/util/HashSet;,"Ljava/util/HashSet<Ljava/lang/String;>;"
     .local p2, pkgPolicy:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/pm/SELinuxMMAC$InstallPolicy;>;"
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/pm/SELinuxMMAC$InstallPolicy;-><init>(Ljava/util/HashSet;Ljava/util/HashMap;Ljava/lang/String;)V
 
-    .line 439
     return-void
 .end method
 
@@ -54,7 +52,6 @@
     .parameter "pkg"
 
     .prologue
-    .line 444
     iget-object v0, p0, Lcom/android/server/pm/SELinuxMMAC$DenyPolicy;->pkgPolicy:Ljava/util/HashMap;
 
     iget-object v1, p1, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
@@ -65,7 +62,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 445
     iget-object v0, p0, Lcom/android/server/pm/SELinuxMMAC$DenyPolicy;->pkgPolicy:Ljava/util/HashMap;
 
     iget-object v1, p1, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
@@ -80,7 +76,6 @@
 
     move-result v0
 
-    .line 447
     :goto_0
     return v0
 
@@ -94,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 452
     const-string v0, "deny-all"
 
     return-object v0

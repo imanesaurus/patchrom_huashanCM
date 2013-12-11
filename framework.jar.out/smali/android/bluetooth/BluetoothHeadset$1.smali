@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 226
     iput-object p1, p0, Landroid/bluetooth/BluetoothHeadset$1;->this$0:Landroid/bluetooth/BluetoothHeadset;
 
     invoke-direct {p0}, Landroid/bluetooth/IBluetoothStateChangeCallback$Stub;-><init>()V
@@ -39,14 +38,13 @@
     .parameter "up"
 
     .prologue
-    .line 228
     const-string v1, "BluetoothHeadset"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onBluetoothStateChange: up="
+    const-string v3, "onBluetoothStateChange: up="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -62,10 +60,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 229
     if-nez p1, :cond_0
 
-    .line 231
     iget-object v1, p0, Landroid/bluetooth/BluetoothHeadset$1;->this$0:Landroid/bluetooth/BluetoothHeadset;
 
     #getter for: Landroid/bluetooth/BluetoothHeadset;->mConnection:Landroid/content/ServiceConnection;
@@ -75,7 +71,6 @@
 
     monitor-enter v2
 
-    .line 233
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHeadset$1;->this$0:Landroid/bluetooth/BluetoothHeadset;
 
@@ -84,7 +79,6 @@
     #setter for: Landroid/bluetooth/BluetoothHeadset;->mService:Landroid/bluetooth/IBluetoothHeadset;
     invoke-static {v1, v3}, Landroid/bluetooth/BluetoothHeadset;->access$102(Landroid/bluetooth/BluetoothHeadset;Landroid/bluetooth/IBluetoothHeadset;)Landroid/bluetooth/IBluetoothHeadset;
 
-    .line 234
     iget-object v1, p0, Landroid/bluetooth/BluetoothHeadset$1;->this$0:Landroid/bluetooth/BluetoothHeadset;
 
     #getter for: Landroid/bluetooth/BluetoothHeadset;->mContext:Landroid/content/Context;
@@ -104,20 +98,16 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 238
     :goto_0
     :try_start_1
     monitor-exit v2
 
-    .line 253
     :goto_1
     return-void
 
-    .line 235
     :catch_0
     move-exception v0
 
-    .line 236
     .local v0, re:Ljava/lang/Exception;
     const-string v1, "BluetoothHeadset"
 
@@ -127,7 +117,6 @@
 
     goto :goto_0
 
-    .line 238
     .end local v0           #re:Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -138,7 +127,6 @@
 
     throw v1
 
-    .line 240
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHeadset$1;->this$0:Landroid/bluetooth/BluetoothHeadset;
 
@@ -149,7 +137,6 @@
 
     monitor-enter v2
 
-    .line 242
     :try_start_2
     iget-object v1, p0, Landroid/bluetooth/BluetoothHeadset$1;->this$0:Landroid/bluetooth/BluetoothHeadset;
 
@@ -160,7 +147,6 @@
 
     if-nez v1, :cond_1
 
-    .line 244
     iget-object v1, p0, Landroid/bluetooth/BluetoothHeadset$1;->this$0:Landroid/bluetooth/BluetoothHeadset;
 
     #getter for: Landroid/bluetooth/BluetoothHeadset;->mContext:Landroid/content/Context;
@@ -193,7 +179,6 @@
 
     if-nez v1, :cond_1
 
-    .line 245
     const-string v1, "BluetoothHeadset"
 
     const-string v3, "Could not bind to Bluetooth Headset Service"
@@ -203,7 +188,6 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 251
     :cond_1
     :goto_2
     :try_start_3
@@ -220,11 +204,9 @@
 
     throw v1
 
-    .line 248
     :catch_1
     move-exception v0
 
-    .line 249
     .restart local v0       #re:Ljava/lang/Exception;
     :try_start_4
     const-string v1, "BluetoothHeadset"

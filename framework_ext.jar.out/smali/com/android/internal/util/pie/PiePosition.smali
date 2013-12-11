@@ -47,7 +47,6 @@
 
     const/4 v2, 0x0
 
-    .line 24
     new-instance v0, Lcom/android/internal/util/pie/PiePosition;
 
     const-string v1, "LEFT"
@@ -56,7 +55,6 @@
 
     sput-object v0, Lcom/android/internal/util/pie/PiePosition;->LEFT:Lcom/android/internal/util/pie/PiePosition;
 
-    .line 25
     new-instance v0, Lcom/android/internal/util/pie/PiePosition;
 
     const-string v1, "BOTTOM"
@@ -65,7 +63,6 @@
 
     sput-object v0, Lcom/android/internal/util/pie/PiePosition;->BOTTOM:Lcom/android/internal/util/pie/PiePosition;
 
-    .line 26
     new-instance v0, Lcom/android/internal/util/pie/PiePosition;
 
     const-string v1, "RIGHT"
@@ -74,7 +71,6 @@
 
     sput-object v0, Lcom/android/internal/util/pie/PiePosition;->RIGHT:Lcom/android/internal/util/pie/PiePosition;
 
-    .line 27
     new-instance v0, Lcom/android/internal/util/pie/PiePosition;
 
     const-string v1, "TOP"
@@ -83,7 +79,6 @@
 
     sput-object v0, Lcom/android/internal/util/pie/PiePosition;->TOP:Lcom/android/internal/util/pie/PiePosition;
 
-    .line 23
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/internal/util/pie/PiePosition;
@@ -122,23 +117,18 @@
     .end annotation
 
     .prologue
-    .line 29
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 30
     iput p3, p0, Lcom/android/internal/util/pie/PiePosition;->INDEX:I
 
-    .line 31
     const/4 v0, 0x1
 
     shl-int/2addr v0, p3
 
     iput v0, p0, Lcom/android/internal/util/pie/PiePosition;->FLAG:I
 
-    .line 32
     iput p4, p0, Lcom/android/internal/util/pie/PiePosition;->FACTOR:I
 
-    .line 33
     return-void
 .end method
 
@@ -147,7 +137,6 @@
     .parameter "name"
 
     .prologue
-    .line 23
     const-class v0, Lcom/android/internal/util/pie/PiePosition;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -163,7 +152,6 @@
     .locals 1
 
     .prologue
-    .line 23
     sget-object v0, Lcom/android/internal/util/pie/PiePosition;->$VALUES:[Lcom/android/internal/util/pie/PiePosition;
 
     invoke-virtual {v0}, [Lcom/android/internal/util/pie/PiePosition;->clone()Ljava/lang/Object;

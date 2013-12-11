@@ -26,13 +26,10 @@
     .parameter "theme"
 
     .prologue
-    .line 642
     iput-object p1, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteChooserDialog;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
-    .line 643
     invoke-direct {p0, p2, p3}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
-    .line 644
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 648
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteChooserDialog;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     #getter for: Lcom/android/internal/app/MediaRouteChooserDialogFragment;->mAdapter:Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteAdapter;
@@ -65,7 +61,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 649
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteChooserDialog;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     #getter for: Lcom/android/internal/app/MediaRouteChooserDialogFragment;->mAdapter:Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteAdapter;
@@ -75,11 +70,9 @@
 
     invoke-virtual {v0}, Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteAdapter;->finishGrouping()V
 
-    .line 653
     :goto_0
     return-void
 
-    .line 651
     :cond_0
     invoke-super {p0}, Landroid/app/Dialog;->onBackPressed()V
 
@@ -94,7 +87,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 656
     const/16 v2, 0x19
 
     if-ne p1, v2, :cond_0
@@ -112,7 +104,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 657
     iget-object v2, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteChooserDialog;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     iget-object v2, v2, Lcom/android/internal/app/MediaRouteChooserDialogFragment;->mRouter:Landroid/media/MediaRouter;
@@ -128,21 +119,17 @@
 
     move-result-object v0
 
-    .line 658
     .local v0, selectedRoute:Landroid/media/MediaRouter$RouteInfo;
     if-eqz v0, :cond_1
 
-    .line 659
     const/4 v2, -0x1
 
     invoke-virtual {v0, v2}, Landroid/media/MediaRouter$RouteInfo;->requestUpdateVolume(I)V
 
-    .line 669
     .end local v0           #selectedRoute:Landroid/media/MediaRouter$RouteInfo;
     :goto_0
     return v1
 
-    .line 662
     :cond_0
     const/16 v2, 0x18
 
@@ -161,7 +148,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 663
     iget-object v2, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteChooserDialog;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     iget-object v2, v2, Lcom/android/internal/app/MediaRouteChooserDialogFragment;->mRouter:Landroid/media/MediaRouter;
@@ -177,11 +163,9 @@
 
     move-result-object v0
 
-    .line 664
     .restart local v0       #selectedRoute:Landroid/media/MediaRouter$RouteInfo;
     if-eqz v0, :cond_1
 
-    .line 665
     iget-object v2, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteChooserDialog;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     iget-object v2, v2, Lcom/android/internal/app/MediaRouteChooserDialogFragment;->mRouter:Landroid/media/MediaRouter;
@@ -201,7 +185,6 @@
 
     goto :goto_0
 
-    .line 669
     .end local v0           #selectedRoute:Landroid/media/MediaRouter$RouteInfo;
     :cond_1
     invoke-super {p0, p1, p2}, Landroid/app/Dialog;->onKeyDown(ILandroid/view/KeyEvent;)Z
@@ -219,7 +202,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 673
     const/16 v1, 0x19
 
     if-ne p1, v1, :cond_1
@@ -237,12 +219,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 678
     :cond_0
     :goto_0
     return v0
 
-    .line 675
     :cond_1
     const/16 v1, 0x18
 
@@ -261,7 +241,6 @@
 
     if-nez v1, :cond_0
 
-    .line 678
     :cond_2
     invoke-super {p0, p1, p2}, Landroid/app/Dialog;->onKeyUp(ILandroid/view/KeyEvent;)Z
 

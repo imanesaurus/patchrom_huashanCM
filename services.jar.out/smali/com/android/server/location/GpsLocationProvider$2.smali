@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 365
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$2;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,10 @@
     .parameter "intent"
 
     .prologue
-    .line 367
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 369
     .local v0, action:Ljava/lang/String;
     const-string v4, "com.android.internal.location.ALARM_WAKEUP"
 
@@ -55,7 +52,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 370
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider;->access$100()Z
 
     move-result v4
@@ -68,19 +64,16 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 371
     :cond_0
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider$2;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->startNavigating()V
     invoke-static {v4}, Lcom/android/server/location/GpsLocationProvider;->access$200(Lcom/android/server/location/GpsLocationProvider;)V
 
-    .line 396
     :cond_1
     :goto_0
     return-void
 
-    .line 372
     :cond_2
     const-string v4, "com.android.internal.location.ALARM_TIMEOUT"
 
@@ -90,7 +83,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 373
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider;->access$100()Z
 
     move-result v4
@@ -103,7 +95,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 374
     :cond_3
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider$2;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
@@ -112,7 +103,6 @@
 
     goto :goto_0
 
-    .line 375
     :cond_4
     const-string v4, "android.intent.action.DATA_SMS_RECEIVED"
 
@@ -122,7 +112,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 376
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider$2;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->checkSmsSuplInit(Landroid/content/Intent;)V
@@ -130,7 +119,6 @@
 
     goto :goto_0
 
-    .line 377
     :cond_5
     const-string v4, "android.provider.Telephony.WAP_PUSH_RECEIVED"
 
@@ -140,7 +128,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 378
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider$2;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     #calls: Lcom/android/server/location/GpsLocationProvider;->checkWapSuplInit(Landroid/content/Intent;)V
@@ -148,7 +135,6 @@
 
     goto :goto_0
 
-    .line 379
     :cond_6
     const-string v4, "android.net.conn.CONNECTIVITY_CHANGE"
 
@@ -158,7 +144,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 381
     const-string v4, "noConnectivity"
 
     const/4 v5, 0x0
@@ -169,10 +154,8 @@
 
     if-eqz v4, :cond_7
 
-    .line 382
     const/4 v3, 0x1
 
-    .line 388
     .local v3, networkState:I
     :goto_1
     const-string v4, "networkInfo"
@@ -183,7 +166,6 @@
 
     check-cast v2, Landroid/net/NetworkInfo;
 
-    .line 390
     .local v2, info:Landroid/net/NetworkInfo;
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider$2;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
@@ -200,7 +182,6 @@
 
     check-cast v1, Landroid/net/ConnectivityManager;
 
-    .line 392
     .local v1, connManager:Landroid/net/ConnectivityManager;
     invoke-virtual {v2}, Landroid/net/NetworkInfo;->getType()I
 
@@ -210,14 +191,12 @@
 
     move-result-object v2
 
-    .line 394
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider$2;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-virtual {v4, v3, v2}, Lcom/android/server/location/GpsLocationProvider;->updateNetworkState(ILandroid/net/NetworkInfo;)V
 
     goto :goto_0
 
-    .line 384
     .end local v1           #connManager:Landroid/net/ConnectivityManager;
     .end local v2           #info:Landroid/net/NetworkInfo;
     .end local v3           #networkState:I

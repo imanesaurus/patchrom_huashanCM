@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 85
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 153
     return-void
 .end method
 
@@ -51,7 +49,6 @@
     .parameter "handle"
 
     .prologue
-    .line 143
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mCallback:Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityCallback;
@@ -63,7 +60,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityCallback;->userActivity(J)V
 
-    .line 144
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
@@ -77,7 +73,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->doTransition(Landroid/view/View;F)V
 
-    .line 145
     return-void
 .end method
 
@@ -87,7 +82,6 @@
     .parameter "handle"
 
     .prologue
-    .line 149
     return-void
 .end method
 
@@ -97,7 +91,6 @@
     .parameter "handle"
 
     .prologue
-    .line 137
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mIsBouncing:Z
@@ -107,7 +100,6 @@
 
     if-nez v0, :cond_0
 
-    .line 138
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
@@ -121,7 +113,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->doTransition(Landroid/view/View;F)V
 
-    .line 140
     :cond_0
     return-void
 .end method
@@ -142,7 +133,6 @@
 
     const/4 v2, 0x0
 
-    .line 88
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mStoredTargets:[Ljava/lang/String;
@@ -152,7 +142,6 @@
 
     if-nez v0, :cond_2
 
-    .line 89
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mGlowPadView:Lcom/android/internal/widget/multiwaveview/GlowPadView;
@@ -164,17 +153,14 @@
 
     move-result v9
 
-    .line 90
     .local v9, resId:I
     sparse-switch v9, :sswitch_data_0
 
-    .line 134
     .end local v9           #resId:I
     :cond_0
     :goto_0
     return-void
 
-    .line 92
     .restart local v9       #resId:I
     :sswitch_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
@@ -205,11 +191,9 @@
 
     move-result-object v1
 
-    .line 95
     .local v1, assistIntent:Landroid/content/Intent;
     if-eqz v1, :cond_1
 
-    .line 96
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mActivityLauncher:Lcom/android/internal/policy/impl/keyguard/KeyguardActivityLauncher;
@@ -221,7 +205,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/internal/policy/impl/keyguard/KeyguardActivityLauncher;->launchActivity(Landroid/content/Intent;ZZLandroid/os/Handler;Ljava/lang/Runnable;)V
 
-    .line 100
     :goto_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
@@ -234,7 +217,6 @@
 
     goto :goto_0
 
-    .line 98
     :cond_1
     const-string v0, "SecuritySelectorView"
 
@@ -244,7 +226,6 @@
 
     goto :goto_1
 
-    .line 104
     .end local v1           #assistIntent:Landroid/content/Intent;
     :sswitch_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
@@ -256,7 +237,6 @@
 
     invoke-virtual {v0, v4, v4}, Lcom/android/internal/policy/impl/keyguard/KeyguardActivityLauncher;->launchCamera(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
-    .line 105
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mCallback:Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityCallback;
@@ -268,7 +248,6 @@
 
     goto :goto_0
 
-    .line 110
     :sswitch_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
@@ -279,7 +258,6 @@
 
     invoke-interface {v0, v10, v11}, Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityCallback;->userActivity(J)V
 
-    .line 111
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mCallback:Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityCallback;
@@ -291,7 +269,6 @@
 
     goto :goto_0
 
-    .line 115
     .end local v9           #resId:I
     :cond_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
@@ -305,7 +282,6 @@
 
     move v8, v3
 
-    .line 116
     .local v8, isLand:Z
     :goto_2
     if-nez p2, :cond_3
@@ -335,7 +311,6 @@
 
     if-eqz v8, :cond_6
 
-    .line 117
     :cond_4
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
@@ -352,10 +327,8 @@
     :cond_5
     move v8, v2
 
-    .line 115
     goto :goto_2
 
-    .line 119
     .restart local v8       #isLand:Z
     :cond_6
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
@@ -369,7 +342,6 @@
 
     sub-int/2addr p2, v0
 
-    .line 120
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mStoredTargets:[Ljava/lang/String;
@@ -392,7 +364,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 121
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mStoredTargets:[Ljava/lang/String;
@@ -410,7 +381,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 122
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mCallback:Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityCallback;
@@ -422,7 +392,6 @@
 
     goto/16 :goto_0
 
-    .line 125
     :cond_7
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
@@ -440,7 +409,6 @@
 
     move-result-object v3
 
-    .line 126
     .local v3, launchIntent:Landroid/content/Intent;
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
@@ -463,14 +431,12 @@
 
     goto/16 :goto_0
 
-    .line 128
     .end local v3           #launchIntent:Landroid/content/Intent;
     :catch_0
     move-exception v0
 
     goto/16 :goto_0
 
-    .line 90
     nop
 
     :sswitch_data_0

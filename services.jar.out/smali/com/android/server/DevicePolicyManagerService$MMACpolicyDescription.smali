@@ -20,12 +20,10 @@
     .parameter "path"
 
     .prologue
-    .line 246
     const/16 v0, 0xb
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/DevicePolicyManagerService$PolicyFileDescription;-><init>(Ljava/lang/String;I)V
 
-    .line 247
     return-void
 .end method
 
@@ -35,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 257
     const/4 v0, 0x1
 
     return v0
@@ -46,7 +43,6 @@
     .parameter "admin"
 
     .prologue
-    .line 251
     iget-boolean v0, p1, Lcom/android/server/DevicePolicyManagerService$ActiveAdmin;->isMMACadmin:Z
 
     return v0

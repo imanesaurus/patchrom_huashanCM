@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 1434
     iput-object p1, p0, Lcom/android/server/power/DisplayPowerController$9;->this$0:Lcom/android/server/power/DisplayPowerController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .parameter "accuracy"
 
     .prologue
-    .line 1447
     return-void
 .end method
 
@@ -52,7 +50,6 @@
     .parameter "event"
 
     .prologue
-    .line 1437
     iget-object v3, p0, Lcom/android/server/power/DisplayPowerController$9;->this$0:Lcom/android/server/power/DisplayPowerController;
 
     #getter for: Lcom/android/server/power/DisplayPowerController;->mLightSensorEnabled:Z
@@ -62,12 +59,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 1438
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
 
-    .line 1439
     .local v1, time:J
     iget-object v3, p1, Landroid/hardware/SensorEvent;->values:[F
 
@@ -75,14 +70,12 @@
 
     aget v0, v3, v4
 
-    .line 1440
     .local v0, lux:F
     iget-object v3, p0, Lcom/android/server/power/DisplayPowerController$9;->this$0:Lcom/android/server/power/DisplayPowerController;
 
     #calls: Lcom/android/server/power/DisplayPowerController;->handleLightSensorEvent(JF)V
     invoke-static {v3, v1, v2, v0}, Lcom/android/server/power/DisplayPowerController;->access$1300(Lcom/android/server/power/DisplayPowerController;JF)V
 
-    .line 1442
     .end local v0           #lux:F
     .end local v1           #time:J
     :cond_0

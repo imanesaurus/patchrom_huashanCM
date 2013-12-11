@@ -30,15 +30,12 @@
     .parameter "tabIndex"
 
     .prologue
-    .line 543
     iput-object p1, p0, Landroid/widget/TabWidget$TabClickListener;->this$0:Landroid/widget/TabWidget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 544
     iput p2, p0, Landroid/widget/TabWidget$TabClickListener;->mTabIndex:I
 
-    .line 545
     return-void
 .end method
 
@@ -49,7 +46,6 @@
     .parameter "x2"
 
     .prologue
-    .line 539
     invoke-direct {p0, p1, p2}, Landroid/widget/TabWidget$TabClickListener;-><init>(Landroid/widget/TabWidget;I)V
 
     return-void
@@ -62,7 +58,6 @@
     .parameter "v"
 
     .prologue
-    .line 548
     iget-object v0, p0, Landroid/widget/TabWidget$TabClickListener;->this$0:Landroid/widget/TabWidget;
 
     #getter for: Landroid/widget/TabWidget;->mSelectionChangedListener:Landroid/widget/TabWidget$OnTabSelectionChanged;
@@ -76,6 +71,5 @@
 
     invoke-interface {v0, v1, v2}, Landroid/widget/TabWidget$OnTabSelectionChanged;->onTabSelectionChanged(IZ)V
 
-    .line 549
     return-void
 .end method

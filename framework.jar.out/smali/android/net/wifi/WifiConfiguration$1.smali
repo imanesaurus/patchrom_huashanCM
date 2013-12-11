@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 670
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,12 +48,10 @@
 
     const/4 v8, 0x0
 
-    .line 672
     new-instance v1, Landroid/net/wifi/WifiConfiguration;
 
     invoke-direct {v1}, Landroid/net/wifi/WifiConfiguration;-><init>()V
 
-    .line 673
     .local v1, config:Landroid/net/wifi/WifiConfiguration;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -126,7 +123,6 @@
 
     if-ge v3, v6, :cond_0
 
-    .line 680
     iget-object v6, v1, Landroid/net/wifi/WifiConfiguration;->wepKeys:[Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -135,12 +131,10 @@
 
     aput-object v9, v6, v3
 
-    .line 679
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 681
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -148,14 +142,12 @@
 
     iput v6, v1, Landroid/net/wifi/WifiConfiguration;->wepTxKeyIndex:I
 
-    .line 682
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
     iput v6, v1, Landroid/net/wifi/WifiConfiguration;->priority:I
 
-    .line 683
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
@@ -167,7 +159,6 @@
     :goto_1
     iput-boolean v6, v1, Landroid/net/wifi/WifiConfiguration;->hiddenSSID:Z
 
-    .line 684
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
@@ -177,14 +168,12 @@
     :goto_2
     iput-boolean v7, v1, Landroid/net/wifi/WifiConfiguration;->isIBSS:Z
 
-    .line 685
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
     iput v6, v1, Landroid/net/wifi/WifiConfiguration;->frequency:I
 
-    .line 686
     #calls: Landroid/net/wifi/WifiConfiguration;->readBitSet(Landroid/os/Parcel;)Ljava/util/BitSet;
     invoke-static {p1}, Landroid/net/wifi/WifiConfiguration;->access$100(Landroid/os/Parcel;)Ljava/util/BitSet;
 
@@ -192,7 +181,6 @@
 
     iput-object v6, v1, Landroid/net/wifi/WifiConfiguration;->allowedKeyManagement:Ljava/util/BitSet;
 
-    .line 687
     #calls: Landroid/net/wifi/WifiConfiguration;->readBitSet(Landroid/os/Parcel;)Ljava/util/BitSet;
     invoke-static {p1}, Landroid/net/wifi/WifiConfiguration;->access$100(Landroid/os/Parcel;)Ljava/util/BitSet;
 
@@ -200,7 +188,6 @@
 
     iput-object v6, v1, Landroid/net/wifi/WifiConfiguration;->allowedProtocols:Ljava/util/BitSet;
 
-    .line 688
     #calls: Landroid/net/wifi/WifiConfiguration;->readBitSet(Landroid/os/Parcel;)Ljava/util/BitSet;
     invoke-static {p1}, Landroid/net/wifi/WifiConfiguration;->access$100(Landroid/os/Parcel;)Ljava/util/BitSet;
 
@@ -208,7 +195,6 @@
 
     iput-object v6, v1, Landroid/net/wifi/WifiConfiguration;->allowedAuthAlgorithms:Ljava/util/BitSet;
 
-    .line 689
     #calls: Landroid/net/wifi/WifiConfiguration;->readBitSet(Landroid/os/Parcel;)Ljava/util/BitSet;
     invoke-static {p1}, Landroid/net/wifi/WifiConfiguration;->access$100(Landroid/os/Parcel;)Ljava/util/BitSet;
 
@@ -216,7 +202,6 @@
 
     iput-object v6, v1, Landroid/net/wifi/WifiConfiguration;->allowedPairwiseCiphers:Ljava/util/BitSet;
 
-    .line 690
     #calls: Landroid/net/wifi/WifiConfiguration;->readBitSet(Landroid/os/Parcel;)Ljava/util/BitSet;
     invoke-static {p1}, Landroid/net/wifi/WifiConfiguration;->access$100(Landroid/os/Parcel;)Ljava/util/BitSet;
 
@@ -224,7 +209,6 @@
 
     iput-object v6, v1, Landroid/net/wifi/WifiConfiguration;->allowedGroupCiphers:Ljava/util/BitSet;
 
-    .line 692
     iget-object v0, v1, Landroid/net/wifi/WifiConfiguration;->enterpriseFields:[Landroid/net/wifi/WifiConfiguration$EnterpriseField;
 
     .local v0, arr$:[Landroid/net/wifi/WifiConfiguration$EnterpriseField;
@@ -239,7 +223,6 @@
 
     aget-object v2, v0, v4
 
-    .line 693
     .local v2, field:Landroid/net/wifi/WifiConfiguration$EnterpriseField;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -247,7 +230,6 @@
 
     invoke-virtual {v2, v6}, Landroid/net/wifi/WifiConfiguration$EnterpriseField;->setValue(Ljava/lang/String;)V
 
-    .line 692
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_3
@@ -259,16 +241,13 @@
     :cond_1
     move v6, v8
 
-    .line 683
     goto :goto_1
 
     :cond_2
     move v7, v8
 
-    .line 684
     goto :goto_2
 
-    .line 696
     .restart local v0       #arr$:[Landroid/net/wifi/WifiConfiguration$EnterpriseField;
     .restart local v4       #i$:I
     .restart local v5       #len$:I
@@ -283,7 +262,6 @@
 
     iput-object v6, v1, Landroid/net/wifi/WifiConfiguration;->ipAssignment:Landroid/net/wifi/WifiConfiguration$IpAssignment;
 
-    .line 697
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v6
@@ -294,7 +272,6 @@
 
     iput-object v6, v1, Landroid/net/wifi/WifiConfiguration;->proxySettings:Landroid/net/wifi/WifiConfiguration$ProxySettings;
 
-    .line 698
     const/4 v6, 0x0
 
     invoke-virtual {p1, v6}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
@@ -305,7 +282,6 @@
 
     iput-object v6, v1, Landroid/net/wifi/WifiConfiguration;->linkProperties:Landroid/net/LinkProperties;
 
-    .line 699
     return-object v1
 .end method
 
@@ -314,7 +290,6 @@
     .parameter "x0"
 
     .prologue
-    .line 670
     invoke-virtual {p0, p1}, Landroid/net/wifi/WifiConfiguration$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/wifi/WifiConfiguration;
 
     move-result-object v0
@@ -327,7 +302,6 @@
     .parameter "size"
 
     .prologue
-    .line 703
     new-array v0, p1, [Landroid/net/wifi/WifiConfiguration;
 
     return-object v0
@@ -338,7 +312,6 @@
     .parameter "x0"
 
     .prologue
-    .line 670
     invoke-virtual {p0, p1}, Landroid/net/wifi/WifiConfiguration$1;->newArray(I)[Landroid/net/wifi/WifiConfiguration;
 
     move-result-object v0

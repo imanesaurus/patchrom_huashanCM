@@ -48,10 +48,8 @@
     .prologue
     const/high16 v2, 0x4000
 
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.DREAMING_STARTED"
@@ -64,7 +62,6 @@
 
     iput-object v0, p0, Lcom/android/server/dreams/DreamController;->mDreamingStartedIntent:Landroid/content/Intent;
 
-    .line 57
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.DREAMING_STOPPED"
@@ -77,7 +74,6 @@
 
     iput-object v0, p0, Lcom/android/server/dreams/DreamController;->mDreamingStoppedIntent:Landroid/content/Intent;
 
-    .line 60
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.CLOSE_SYSTEM_DIALOGS"
@@ -86,30 +82,24 @@
 
     iput-object v0, p0, Lcom/android/server/dreams/DreamController;->mCloseNotificationShadeIntent:Landroid/content/Intent;
 
-    .line 64
     new-instance v0, Lcom/android/server/dreams/DreamController$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/dreams/DreamController$1;-><init>(Lcom/android/server/dreams/DreamController;)V
 
     iput-object v0, p0, Lcom/android/server/dreams/DreamController;->mStopUnconnectedDreamRunnable:Ljava/lang/Runnable;
 
-    .line 75
     iput-object p1, p0, Lcom/android/server/dreams/DreamController;->mContext:Landroid/content/Context;
 
-    .line 76
     iput-object p2, p0, Lcom/android/server/dreams/DreamController;->mHandler:Landroid/os/Handler;
 
-    .line 77
     iput-object p3, p0, Lcom/android/server/dreams/DreamController;->mListener:Lcom/android/server/dreams/DreamController$Listener;
 
-    .line 78
     invoke-static {}, Landroid/view/WindowManagerGlobal;->getWindowManagerService()Landroid/view/IWindowManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/dreams/DreamController;->mIWindowManager:Landroid/view/IWindowManager;
 
-    .line 79
     return-void
 .end method
 
@@ -118,7 +108,6 @@
     .parameter "x0"
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/android/server/dreams/DreamController;->mCurrentDream:Lcom/android/server/dreams/DreamController$DreamRecord;
 
     return-object v0
@@ -129,7 +118,6 @@
     .parameter "x0"
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/android/server/dreams/DreamController;->mListener:Lcom/android/server/dreams/DreamController$Listener;
 
     return-object v0
@@ -140,7 +128,6 @@
     .parameter "x0"
 
     .prologue
-    .line 44
     iget-object v0, p0, Lcom/android/server/dreams/DreamController;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -152,7 +139,6 @@
     .parameter "x1"
 
     .prologue
-    .line 44
     invoke-direct {p0, p1}, Lcom/android/server/dreams/DreamController;->attach(Landroid/service/dreams/IDreamService;)V
 
     return-void
@@ -163,7 +149,6 @@
     .parameter "service"
 
     .prologue
-    .line 189
     :try_start_0
     invoke-interface {p1}, Landroid/service/dreams/IDreamService;->asBinder()Landroid/os/IBinder;
 
@@ -175,7 +160,6 @@
 
     invoke-interface {v1, v2, v3}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 190
     iget-object v1, p0, Lcom/android/server/dreams/DreamController;->mCurrentDream:Lcom/android/server/dreams/DreamController$DreamRecord;
 
     iget-object v1, v1, Lcom/android/server/dreams/DreamController$DreamRecord;->mToken:Landroid/os/Binder;
@@ -184,19 +168,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 197
     iget-object v1, p0, Lcom/android/server/dreams/DreamController;->mCurrentDream:Lcom/android/server/dreams/DreamController$DreamRecord;
 
     iput-object p1, v1, Lcom/android/server/dreams/DreamController$DreamRecord;->mService:Landroid/service/dreams/IDreamService;
 
-    .line 199
     iget-object v1, p0, Lcom/android/server/dreams/DreamController;->mCurrentDream:Lcom/android/server/dreams/DreamController$DreamRecord;
 
     iget-boolean v1, v1, Lcom/android/server/dreams/DreamController$DreamRecord;->mIsTest:Z
 
     if-nez v1, :cond_0
 
-    .line 200
     iget-object v1, p0, Lcom/android/server/dreams/DreamController;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/dreams/DreamController;->mDreamingStartedIntent:Landroid/content/Intent;
@@ -205,23 +186,19 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 201
     iget-object v1, p0, Lcom/android/server/dreams/DreamController;->mCurrentDream:Lcom/android/server/dreams/DreamController$DreamRecord;
 
     const/4 v2, 0x1
 
     iput-boolean v2, v1, Lcom/android/server/dreams/DreamController$DreamRecord;->mSentStartBroadcast:Z
 
-    .line 203
     :cond_0
     :goto_0
     return-void
 
-    .line 191
     :catch_0
     move-exception v0
 
-    .line 192
     .local v0, ex:Landroid/os/RemoteException;
     const-string v1, "DreamController"
 
@@ -229,7 +206,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 193
     invoke-virtual {p0}, Lcom/android/server/dreams/DreamController;->stopDream()V
 
     goto :goto_0
@@ -242,22 +218,18 @@
     .parameter "pw"
 
     .prologue
-    .line 82
     const-string v0, "Dreamland:"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 83
     iget-object v0, p0, Lcom/android/server/dreams/DreamController;->mCurrentDream:Lcom/android/server/dreams/DreamController$DreamRecord;
 
     if-eqz v0, :cond_0
 
-    .line 84
     const-string v0, "  mCurrentDream:"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 85
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -282,7 +254,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 86
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -307,7 +278,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 87
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -332,7 +302,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 88
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -357,7 +326,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 89
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -382,7 +350,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 90
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -407,7 +374,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 91
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -432,11 +398,9 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 95
     :goto_0
     return-void
 
-    .line 93
     :cond_0
     const-string v0, "  mCurrentDream: null"
 
@@ -455,10 +419,8 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 98
     invoke-virtual {p0}, Lcom/android/server/dreams/DreamController;->stopDream()V
 
-    .line 101
     iget-object v0, p0, Lcom/android/server/dreams/DreamController;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/dreams/DreamController;->mCloseNotificationShadeIntent:Landroid/content/Intent;
@@ -467,7 +429,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 103
     const-string v0, "DreamController"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -510,7 +471,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     new-instance v0, Lcom/android/server/dreams/DreamController$DreamRecord;
 
     move-object v1, p0
@@ -527,7 +487,6 @@
 
     iput-object v0, p0, Lcom/android/server/dreams/DreamController;->mCurrentDream:Lcom/android/server/dreams/DreamController$DreamRecord;
 
-    .line 108
     :try_start_0
     iget-object v0, p0, Lcom/android/server/dreams/DreamController;->mIWindowManager:Landroid/view/IWindowManager;
 
@@ -537,23 +496,19 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 115
     new-instance v7, Landroid/content/Intent;
 
     const-string v0, "android.service.dreams.DreamService"
 
     invoke-direct {v7, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 116
     .local v7, intent:Landroid/content/Intent;
     invoke-virtual {v7, p2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 117
     const/high16 v0, 0x80
 
     invoke-virtual {v7, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 119
     :try_start_1
     iget-object v0, p0, Lcom/android/server/dreams/DreamController;->mContext:Landroid/content/Context;
 
@@ -567,7 +522,6 @@
 
     if-nez v0, :cond_0
 
-    .line 121
     const-string v0, "DreamController"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -590,21 +544,17 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 122
     invoke-virtual {p0}, Lcom/android/server/dreams/DreamController;->stopDream()V
     :try_end_1
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 133
     .end local v7           #intent:Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 109
     :catch_0
     move-exception v6
 
-    .line 110
     .local v6, ex:Landroid/os/RemoteException;
     const-string v0, "DreamController"
 
@@ -612,18 +562,15 @@
 
     invoke-static {v0, v1, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 111
     invoke-virtual {p0}, Lcom/android/server/dreams/DreamController;->stopDream()V
 
     goto :goto_0
 
-    .line 125
     .end local v6           #ex:Landroid/os/RemoteException;
     .restart local v7       #intent:Landroid/content/Intent;
     :catch_1
     move-exception v6
 
-    .line 126
     .local v6, ex:Ljava/lang/SecurityException;
     const-string v0, "DreamController"
 
@@ -647,19 +594,16 @@
 
     invoke-static {v0, v1, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 127
     invoke-virtual {p0}, Lcom/android/server/dreams/DreamController;->stopDream()V
 
     goto :goto_0
 
-    .line 131
     .end local v6           #ex:Ljava/lang/SecurityException;
     :cond_0
     iget-object v0, p0, Lcom/android/server/dreams/DreamController;->mCurrentDream:Lcom/android/server/dreams/DreamController$DreamRecord;
 
     iput-boolean v8, v0, Lcom/android/server/dreams/DreamController$DreamRecord;->mBound:Z
 
-    .line 132
     iget-object v0, p0, Lcom/android/server/dreams/DreamController;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/dreams/DreamController;->mStopUnconnectedDreamRunnable:Ljava/lang/Runnable;
@@ -677,24 +621,19 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 136
     iget-object v2, p0, Lcom/android/server/dreams/DreamController;->mCurrentDream:Lcom/android/server/dreams/DreamController$DreamRecord;
 
     if-nez v2, :cond_0
 
-    .line 185
     :goto_0
     return-void
 
-    .line 140
     :cond_0
     iget-object v1, p0, Lcom/android/server/dreams/DreamController;->mCurrentDream:Lcom/android/server/dreams/DreamController$DreamRecord;
 
-    .line 141
     .local v1, oldDream:Lcom/android/server/dreams/DreamController$DreamRecord;
     iput-object v5, p0, Lcom/android/server/dreams/DreamController;->mCurrentDream:Lcom/android/server/dreams/DreamController$DreamRecord;
 
-    .line 142
     const-string v2, "DreamController"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -743,19 +682,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
     iget-object v2, p0, Lcom/android/server/dreams/DreamController;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/android/server/dreams/DreamController;->mStopUnconnectedDreamRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 147
     iget-boolean v2, v1, Lcom/android/server/dreams/DreamController$DreamRecord;->mSentStartBroadcast:Z
 
     if-eqz v2, :cond_1
 
-    .line 148
     iget-object v2, p0, Lcom/android/server/dreams/DreamController;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/android/server/dreams/DreamController;->mDreamingStoppedIntent:Landroid/content/Intent;
@@ -764,13 +700,11 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 151
     :cond_1
     iget-object v2, v1, Lcom/android/server/dreams/DreamController$DreamRecord;->mService:Landroid/service/dreams/IDreamService;
 
     if-eqz v2, :cond_2
 
-    .line 156
     :try_start_0
     iget-object v2, v1, Lcom/android/server/dreams/DreamController$DreamRecord;->mService:Landroid/service/dreams/IDreamService;
 
@@ -778,7 +712,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 162
     :goto_1
     :try_start_1
     iget-object v2, v1, Lcom/android/server/dreams/DreamController$DreamRecord;->mService:Landroid/service/dreams/IDreamService;
@@ -793,22 +726,18 @@
     :try_end_1
     .catch Ljava/util/NoSuchElementException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 166
     :goto_2
     iput-object v5, v1, Lcom/android/server/dreams/DreamController$DreamRecord;->mService:Landroid/service/dreams/IDreamService;
 
-    .line 169
     :cond_2
     iget-boolean v2, v1, Lcom/android/server/dreams/DreamController$DreamRecord;->mBound:Z
 
     if-eqz v2, :cond_3
 
-    .line 170
     iget-object v2, p0, Lcom/android/server/dreams/DreamController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 174
     :cond_3
     :try_start_2
     iget-object v2, p0, Lcom/android/server/dreams/DreamController;->mIWindowManager:Landroid/view/IWindowManager;
@@ -819,7 +748,6 @@
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 179
     :goto_3
     iget-object v2, p0, Lcom/android/server/dreams/DreamController;->mHandler:Landroid/os/Handler;
 
@@ -831,11 +759,9 @@
 
     goto :goto_0
 
-    .line 175
     :catch_0
     move-exception v0
 
-    .line 176
     .local v0, ex:Landroid/os/RemoteException;
     const-string v2, "DreamController"
 
@@ -845,14 +771,12 @@
 
     goto :goto_3
 
-    .line 163
     .end local v0           #ex:Landroid/os/RemoteException;
     :catch_1
     move-exception v2
 
     goto :goto_2
 
-    .line 157
     :catch_2
     move-exception v2
 

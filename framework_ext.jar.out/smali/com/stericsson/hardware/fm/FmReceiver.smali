@@ -58,10 +58,8 @@
     .locals 0
 
     .prologue
-    .line 360
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1310
     return-void
 .end method
 
@@ -70,7 +68,6 @@
     .parameter "context"
 
     .prologue
-    .line 459
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0

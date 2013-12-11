@@ -44,34 +44,26 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 428
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v2
 
     invoke-direct {p0, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 65
     const/4 v2, 0x0
 
     iput v2, p0, Landroid/webkit/HTML5WebSocket;->mNativePointer:I
 
-    .line 67
     iput-object v3, p0, Landroid/webkit/HTML5WebSocket;->mWebCoreHandler:Landroid/os/Handler;
 
-    .line 69
     iput-object v3, p0, Landroid/webkit/HTML5WebSocket;->mWebSocket:Landroid/webkit/HTML5WebSocket$WebSocket;
 
-    .line 429
     iput p1, p0, Landroid/webkit/HTML5WebSocket;->mNativePointer:I
 
-    .line 431
     invoke-direct {p0}, Landroid/webkit/HTML5WebSocket;->createWebCoreHandler()V
 
-    .line 433
     const/4 v1, 0x0
 
-    .line 435
     .local v1, th:Ljava/lang/Thread;
     :try_start_0
     new-instance v2, Landroid/webkit/HTML5WebSocket$WebSocket;
@@ -80,7 +72,6 @@
 
     iput-object v2, p0, Landroid/webkit/HTML5WebSocket;->mWebSocket:Landroid/webkit/HTML5WebSocket$WebSocket;
 
-    .line 436
     iget-object v2, p0, Landroid/webkit/HTML5WebSocket;->mWebSocket:Landroid/webkit/HTML5WebSocket$WebSocket;
 
     new-instance v3, Ljava/net/URI;
@@ -93,7 +84,6 @@
 
     move-result-object v1
 
-    .line 442
     :cond_0
     :goto_0
     if-nez v1, :cond_1
@@ -106,7 +96,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 443
     new-instance v2, Ljava/lang/Exception;
 
     const-string v3, "SSL WebSockets aren\'t supported now!"
@@ -115,19 +104,15 @@
 
     invoke-virtual {p0, v2}, Landroid/webkit/HTML5WebSocket;->onError(Ljava/lang/Throwable;)V
 
-    .line 445
     :cond_1
     return-void
 
-    .line 437
     :catch_0
     move-exception v0
 
-    .line 438
     .local v0, e:Ljava/lang/Exception;
     if-eqz v1, :cond_0
 
-    .line 439
     invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
 
     goto :goto_0
@@ -138,7 +123,6 @@
     .parameter "x0"
 
     .prologue
-    .line 50
     iget v0, p0, Landroid/webkit/HTML5WebSocket;->mNativePointer:I
 
     return v0
@@ -150,7 +134,6 @@
     .parameter "x1"
 
     .prologue
-    .line 50
     invoke-direct {p0, p1}, Landroid/webkit/HTML5WebSocket;->nativeOnWebSocketConnected(I)V
 
     return-void
@@ -162,7 +145,6 @@
     .parameter "x1"
 
     .prologue
-    .line 50
     invoke-direct {p0, p1}, Landroid/webkit/HTML5WebSocket;->nativeOnWebSocketClosed(I)V
 
     return-void
@@ -173,7 +155,6 @@
     .parameter "x0"
 
     .prologue
-    .line 50
     iget-object v0, p0, Landroid/webkit/HTML5WebSocket;->mWebSocket:Landroid/webkit/HTML5WebSocket$WebSocket;
 
     return-object v0
@@ -187,7 +168,6 @@
     .parameter "x3"
 
     .prologue
-    .line 50
     invoke-direct {p0, p1, p2, p3}, Landroid/webkit/HTML5WebSocket;->nativeOnWebSocketMessage(I[BI)V
 
     return-void
@@ -199,7 +179,6 @@
     .parameter "x1"
 
     .prologue
-    .line 50
     invoke-direct {p0, p1}, Landroid/webkit/HTML5WebSocket;->nativeOnWebSocketError(I)V
 
     return-void
@@ -209,14 +188,12 @@
     .locals 1
 
     .prologue
-    .line 451
     new-instance v0, Landroid/webkit/HTML5WebSocket$1;
 
     invoke-direct {v0, p0}, Landroid/webkit/HTML5WebSocket$1;-><init>(Landroid/webkit/HTML5WebSocket;)V
 
     iput-object v0, p0, Landroid/webkit/HTML5WebSocket;->mWebCoreHandler:Landroid/os/Handler;
 
-    .line 484
     return-void
 .end method
 
@@ -226,7 +203,6 @@
     .parameter "uri"
 
     .prologue
-    .line 521
     new-instance v0, Landroid/webkit/HTML5WebSocket;
 
     invoke-direct {v0, p0, p1}, Landroid/webkit/HTML5WebSocket;-><init>(ILjava/lang/String;)V
@@ -252,18 +228,15 @@
     .locals 2
 
     .prologue
-    .line 509
     const/16 v1, 0x65
 
     invoke-virtual {p0, v1}, Landroid/webkit/HTML5WebSocket;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 510
     .local v0, message:Landroid/os/Message;
     invoke-virtual {p0, v0}, Landroid/webkit/HTML5WebSocket;->sendMessage(Landroid/os/Message;)Z
 
-    .line 511
     return-void
 .end method
 
@@ -272,16 +245,13 @@
     .parameter "msg"
 
     .prologue
-    .line 97
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 110
     :goto_0
     return-void
 
-    .line 99
     :pswitch_0
     iget-object v0, p0, Landroid/webkit/HTML5WebSocket;->mWebSocket:Landroid/webkit/HTML5WebSocket$WebSocket;
 
@@ -289,7 +259,6 @@
 
     goto :goto_0
 
-    .line 103
     :pswitch_1
     iget-object v0, p0, Landroid/webkit/HTML5WebSocket;->mWebSocket:Landroid/webkit/HTML5WebSocket$WebSocket;
 
@@ -297,7 +266,6 @@
 
     goto :goto_0
 
-    .line 97
     :pswitch_data_0
     .packed-switch 0x64
         :pswitch_0
@@ -309,7 +277,6 @@
     .locals 3
 
     .prologue
-    .line 79
     iget-object v1, p0, Landroid/webkit/HTML5WebSocket;->mWebCoreHandler:Landroid/os/Handler;
 
     const/16 v2, 0xc9
@@ -318,13 +285,11 @@
 
     move-result-object v0
 
-    .line 80
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Landroid/webkit/HTML5WebSocket;->mWebCoreHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 81
     return-void
 .end method
 
@@ -332,7 +297,6 @@
     .locals 3
 
     .prologue
-    .line 73
     iget-object v1, p0, Landroid/webkit/HTML5WebSocket;->mWebCoreHandler:Landroid/os/Handler;
 
     const/16 v2, 0xc8
@@ -341,13 +305,11 @@
 
     move-result-object v0
 
-    .line 74
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Landroid/webkit/HTML5WebSocket;->mWebCoreHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 75
     return-void
 .end method
 
@@ -356,7 +318,6 @@
     .parameter "t"
 
     .prologue
-    .line 91
     iget-object v1, p0, Landroid/webkit/HTML5WebSocket;->mWebCoreHandler:Landroid/os/Handler;
 
     const/16 v2, 0xcb
@@ -365,13 +326,11 @@
 
     move-result-object v0
 
-    .line 92
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Landroid/webkit/HTML5WebSocket;->mWebCoreHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 93
     return-void
 .end method
 
@@ -379,7 +338,6 @@
     .locals 3
 
     .prologue
-    .line 85
     iget-object v1, p0, Landroid/webkit/HTML5WebSocket;->mWebCoreHandler:Landroid/os/Handler;
 
     const/16 v2, 0xca
@@ -388,13 +346,11 @@
 
     move-result-object v0
 
-    .line 86
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Landroid/webkit/HTML5WebSocket;->mWebCoreHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 87
     return-void
 .end method
 
@@ -403,14 +359,11 @@
     .parameter "bytes"
 
     .prologue
-    .line 491
     if-nez p1, :cond_0
 
-    .line 503
     :goto_0
     return-void
 
-    .line 494
     :cond_0
     array-length v3, p1
 
@@ -418,11 +371,9 @@
 
     move-result-object v0
 
-    .line 495
     .local v0, data:Ljava/nio/ByteBuffer;
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 497
     :try_start_0
     iget-object v3, p0, Landroid/webkit/HTML5WebSocket;->mWebSocket:Landroid/webkit/HTML5WebSocket$WebSocket;
 
@@ -430,7 +381,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 501
     :goto_1
     const/16 v3, 0x64
 
@@ -438,18 +388,15 @@
 
     move-result-object v2
 
-    .line 502
     .local v2, message:Landroid/os/Message;
     invoke-virtual {p0, v2}, Landroid/webkit/HTML5WebSocket;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_0
 
-    .line 498
     .end local v2           #message:Landroid/os/Message;
     :catch_0
     move-exception v1
 
-    .line 499
     .local v1, e:Ljava/lang/InterruptedException;
     invoke-virtual {p0, v1}, Landroid/webkit/HTML5WebSocket;->onError(Ljava/lang/Throwable;)V
 

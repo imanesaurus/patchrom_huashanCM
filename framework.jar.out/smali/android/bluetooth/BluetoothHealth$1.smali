@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 102
     iput-object p1, p0, Landroid/bluetooth/BluetoothHealth$1;->this$0:Landroid/bluetooth/BluetoothHealth;
 
     invoke-direct {p0}, Landroid/bluetooth/IBluetoothStateChangeCallback$Stub;-><init>()V
@@ -39,14 +38,13 @@
     .parameter "up"
 
     .prologue
-    .line 104
     const-string v1, "BluetoothHealth"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onBluetoothStateChange: up="
+    const-string v3, "onBluetoothStateChange: up="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -62,10 +60,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     if-nez p1, :cond_0
 
-    .line 107
     iget-object v1, p0, Landroid/bluetooth/BluetoothHealth$1;->this$0:Landroid/bluetooth/BluetoothHealth;
 
     #getter for: Landroid/bluetooth/BluetoothHealth;->mConnection:Landroid/content/ServiceConnection;
@@ -75,7 +71,6 @@
 
     monitor-enter v2
 
-    .line 109
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHealth$1;->this$0:Landroid/bluetooth/BluetoothHealth;
 
@@ -84,7 +79,6 @@
     #setter for: Landroid/bluetooth/BluetoothHealth;->mService:Landroid/bluetooth/IBluetoothHealth;
     invoke-static {v1, v3}, Landroid/bluetooth/BluetoothHealth;->access$102(Landroid/bluetooth/BluetoothHealth;Landroid/bluetooth/IBluetoothHealth;)Landroid/bluetooth/IBluetoothHealth;
 
-    .line 110
     iget-object v1, p0, Landroid/bluetooth/BluetoothHealth$1;->this$0:Landroid/bluetooth/BluetoothHealth;
 
     #getter for: Landroid/bluetooth/BluetoothHealth;->mContext:Landroid/content/Context;
@@ -104,20 +98,16 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 114
     :goto_0
     :try_start_1
     monitor-exit v2
 
-    .line 129
     :goto_1
     return-void
 
-    .line 111
     :catch_0
     move-exception v0
 
-    .line 112
     .local v0, re:Ljava/lang/Exception;
     const-string v1, "BluetoothHealth"
 
@@ -127,7 +117,6 @@
 
     goto :goto_0
 
-    .line 114
     .end local v0           #re:Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -138,7 +127,6 @@
 
     throw v1
 
-    .line 116
     :cond_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothHealth$1;->this$0:Landroid/bluetooth/BluetoothHealth;
 
@@ -149,7 +137,6 @@
 
     monitor-enter v2
 
-    .line 118
     :try_start_2
     iget-object v1, p0, Landroid/bluetooth/BluetoothHealth$1;->this$0:Landroid/bluetooth/BluetoothHealth;
 
@@ -160,7 +147,6 @@
 
     if-nez v1, :cond_1
 
-    .line 120
     iget-object v1, p0, Landroid/bluetooth/BluetoothHealth$1;->this$0:Landroid/bluetooth/BluetoothHealth;
 
     #getter for: Landroid/bluetooth/BluetoothHealth;->mContext:Landroid/content/Context;
@@ -193,7 +179,6 @@
 
     if-nez v1, :cond_1
 
-    .line 121
     const-string v1, "BluetoothHealth"
 
     const-string v3, "Could not bind to Bluetooth Health Service"
@@ -203,7 +188,6 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 127
     :cond_1
     :goto_2
     :try_start_3
@@ -220,11 +204,9 @@
 
     throw v1
 
-    .line 124
     :catch_1
     move-exception v0
 
-    .line 125
     .restart local v0       #re:Ljava/lang/Exception;
     :try_start_4
     const-string v1, "BluetoothHealth"

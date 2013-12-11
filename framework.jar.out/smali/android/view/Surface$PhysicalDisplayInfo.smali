@@ -35,10 +35,8 @@
     .locals 0
 
     .prologue
-    .line 780
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 781
     return-void
 .end method
 
@@ -47,13 +45,10 @@
     .parameter "other"
 
     .prologue
-    .line 783
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 784
     invoke-virtual {p0, p1}, Landroid/view/Surface$PhysicalDisplayInfo;->copyFrom(Landroid/view/Surface$PhysicalDisplayInfo;)V
 
-    .line 785
     return-void
 .end method
 
@@ -64,42 +59,34 @@
     .parameter "other"
 
     .prologue
-    .line 809
     iget v0, p1, Landroid/view/Surface$PhysicalDisplayInfo;->width:I
 
     iput v0, p0, Landroid/view/Surface$PhysicalDisplayInfo;->width:I
 
-    .line 810
     iget v0, p1, Landroid/view/Surface$PhysicalDisplayInfo;->height:I
 
     iput v0, p0, Landroid/view/Surface$PhysicalDisplayInfo;->height:I
 
-    .line 811
     iget v0, p1, Landroid/view/Surface$PhysicalDisplayInfo;->refreshRate:F
 
     iput v0, p0, Landroid/view/Surface$PhysicalDisplayInfo;->refreshRate:F
 
-    .line 812
     iget v0, p1, Landroid/view/Surface$PhysicalDisplayInfo;->density:F
 
     iput v0, p0, Landroid/view/Surface$PhysicalDisplayInfo;->density:F
 
-    .line 813
     iget v0, p1, Landroid/view/Surface$PhysicalDisplayInfo;->xDpi:F
 
     iput v0, p0, Landroid/view/Surface$PhysicalDisplayInfo;->xDpi:F
 
-    .line 814
     iget v0, p1, Landroid/view/Surface$PhysicalDisplayInfo;->yDpi:F
 
     iput v0, p0, Landroid/view/Surface$PhysicalDisplayInfo;->yDpi:F
 
-    .line 815
     iget-boolean v0, p1, Landroid/view/Surface$PhysicalDisplayInfo;->secure:Z
 
     iput-boolean v0, p0, Landroid/view/Surface$PhysicalDisplayInfo;->secure:Z
 
-    .line 816
     return-void
 .end method
 
@@ -108,7 +95,6 @@
     .parameter "other"
 
     .prologue
-    .line 793
     if-eqz p1, :cond_0
 
     iget v0, p0, Landroid/view/Surface$PhysicalDisplayInfo;->width:I
@@ -177,7 +163,6 @@
     .parameter "o"
 
     .prologue
-    .line 789
     instance-of v0, p1, Landroid/view/Surface$PhysicalDisplayInfo;
 
     if-eqz v0, :cond_0
@@ -206,7 +191,6 @@
     .locals 1
 
     .prologue
-    .line 805
     const/4 v0, 0x0
 
     return v0
@@ -216,7 +200,6 @@
     .locals 2
 
     .prologue
-    .line 821
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -311,7 +294,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

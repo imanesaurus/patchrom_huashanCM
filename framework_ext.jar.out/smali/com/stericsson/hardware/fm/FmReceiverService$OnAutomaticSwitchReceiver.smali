@@ -32,22 +32,18 @@
     .parameter "listener"
 
     .prologue
-    .line 479
     iput-object p1, p0, Lcom/stericsson/hardware/fm/FmReceiverService$OnAutomaticSwitchReceiver;->this$0:Lcom/stericsson/hardware/fm/FmReceiverService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 480
     iput-object p2, p0, Lcom/stericsson/hardware/fm/FmReceiverService$OnAutomaticSwitchReceiver;->mListener:Lcom/stericsson/hardware/fm/IOnAutomaticSwitchListener;
 
-    .line 481
     invoke-interface {p2}, Lcom/stericsson/hardware/fm/IOnAutomaticSwitchListener;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/stericsson/hardware/fm/FmReceiverService$OnAutomaticSwitchReceiver;->mKey:Ljava/lang/Object;
 
-    .line 482
     return-void
 .end method
 
@@ -57,14 +53,12 @@
     .locals 3
 
     .prologue
-    .line 501
     const-string v0, "FmReceiverService"
 
     const-string v1, "FM receiver listener died"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 503
     iget-object v0, p0, Lcom/stericsson/hardware/fm/FmReceiverService$OnAutomaticSwitchReceiver;->this$0:Lcom/stericsson/hardware/fm/FmReceiverService;
 
     #getter for: Lcom/stericsson/hardware/fm/FmReceiverService;->mOnAutomaticSwitchReceivers:Ljava/util/HashMap;
@@ -74,7 +68,6 @@
 
     monitor-enter v1
 
-    .line 504
     :try_start_0
     iget-object v0, p0, Lcom/stericsson/hardware/fm/FmReceiverService$OnAutomaticSwitchReceiver;->this$0:Lcom/stericsson/hardware/fm/FmReceiverService;
 
@@ -87,17 +80,14 @@
 
     invoke-virtual {v0, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 505
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 506
     iget-object v0, p0, Lcom/stericsson/hardware/fm/FmReceiverService$OnAutomaticSwitchReceiver;->mListener:Lcom/stericsson/hardware/fm/IOnAutomaticSwitchListener;
 
     if-eqz v0, :cond_0
 
-    .line 507
     iget-object v0, p0, Lcom/stericsson/hardware/fm/FmReceiverService$OnAutomaticSwitchReceiver;->mListener:Lcom/stericsson/hardware/fm/IOnAutomaticSwitchListener;
 
     invoke-interface {v0}, Lcom/stericsson/hardware/fm/IOnAutomaticSwitchListener;->asBinder()Landroid/os/IBinder;
@@ -108,11 +98,9 @@
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 509
     :cond_0
     return-void
 
-    .line 505
     :catchall_0
     move-exception v0
 
@@ -130,28 +118,23 @@
     .parameter "reason"
 
     .prologue
-    .line 490
     :try_start_0
     monitor-enter p0
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 491
     :try_start_1
     iget-object v1, p0, Lcom/stericsson/hardware/fm/FmReceiverService$OnAutomaticSwitchReceiver;->mListener:Lcom/stericsson/hardware/fm/IOnAutomaticSwitchListener;
 
     invoke-interface {v1, p1, p2}, Lcom/stericsson/hardware/fm/IOnAutomaticSwitchListener;->onAutomaticSwitch(II)V
 
-    .line 492
     monitor-exit p0
 
-    .line 497
     const/4 v1, 0x1
 
     :goto_0
     return v1
 
-    .line 492
     :catchall_0
     move-exception v1
 
@@ -164,11 +147,9 @@
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 493
     :catch_0
     move-exception v0
 
-    .line 494
     .local v0, ex:Landroid/os/RemoteException;
     const-string v1, "FmReceiverService"
 
@@ -176,7 +157,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 495
     const/4 v1, 0x0
 
     goto :goto_0
@@ -186,7 +166,6 @@
     .locals 1
 
     .prologue
-    .line 485
     iget-object v0, p0, Lcom/stericsson/hardware/fm/FmReceiverService$OnAutomaticSwitchReceiver;->mListener:Lcom/stericsson/hardware/fm/IOnAutomaticSwitchListener;
 
     return-object v0

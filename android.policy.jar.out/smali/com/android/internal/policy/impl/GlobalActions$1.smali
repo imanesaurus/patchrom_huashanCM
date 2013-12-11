@@ -29,7 +29,6 @@
     .parameter "x4"
 
     .prologue
-    .line 229
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$1;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     move-object v0, p0
@@ -56,13 +55,11 @@
     .parameter "on"
 
     .prologue
-    .line 232
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$1;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     #calls: Lcom/android/internal/policy/impl/GlobalActions;->changeExpandDesktopModeSystemSetting(Z)V
     invoke-static {v0, p1}, Lcom/android/internal/policy/impl/GlobalActions;->access$000(Lcom/android/internal/policy/impl/GlobalActions;Z)V
 
-    .line 233
     return-void
 .end method
 
@@ -70,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 240
     const/4 v0, 0x0
 
     return v0
@@ -80,7 +76,6 @@
     .locals 1
 
     .prologue
-    .line 236
     const/4 v0, 0x0
 
     return v0

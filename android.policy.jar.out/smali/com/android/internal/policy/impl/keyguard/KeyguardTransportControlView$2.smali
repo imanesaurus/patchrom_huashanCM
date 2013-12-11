@@ -25,7 +25,6 @@
     .parameter "x0"
 
     .prologue
-    .line 133
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardTransportControlView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardTransportControlView;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,12 +39,10 @@
     .parameter "selfChange"
 
     .prologue
-    .line 136
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardTransportControlView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardTransportControlView;
 
     #calls: Lcom/android/internal/policy/impl/keyguard/KeyguardTransportControlView;->updateSettings()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardTransportControlView;->access$900(Lcom/android/internal/policy/impl/keyguard/KeyguardTransportControlView;)V
 
-    .line 137
     return-void
 .end method

@@ -56,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 65
     sget-boolean v0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->DEBUG:Z
 
     sput-boolean v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->DEBUG:Z
@@ -69,12 +68,10 @@
     .parameter "context"
 
     .prologue
-    .line 193
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 194
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -87,7 +84,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mCreationOrientation:I
 
-    .line 195
     return-void
 .end method
 
@@ -97,31 +93,26 @@
     .parameter "attrs"
 
     .prologue
-    .line 198
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 85
     new-instance v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$1;-><init>(Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mOnTriggerListener:Lcom/android/internal/widget/multiwaveview/GlowPadView$OnTriggerListener;
 
-    .line 157
     new-instance v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$2;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$2;-><init>(Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mInfoCallback:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitorCallback;
 
-    .line 170
     new-instance v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$3;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$3;-><init>(Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mActivityLauncher:Lcom/android/internal/policy/impl/keyguard/KeyguardActivityLauncher;
 
-    .line 199
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->getContext()Landroid/content/Context;
@@ -132,7 +123,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    .line 200
     return-void
 .end method
 
@@ -141,7 +131,6 @@
     .parameter "x0"
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mStoredTargets:[Ljava/lang/String;
 
     return-object v0
@@ -152,7 +141,6 @@
     .parameter "x0"
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mGlowPadView:Lcom/android/internal/widget/multiwaveview/GlowPadView;
 
     return-object v0
@@ -163,7 +151,6 @@
     .parameter "x0"
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mFadeView:Landroid/view/View;
 
     return-object v0
@@ -174,7 +161,6 @@
     .parameter "x0"
 
     .prologue
-    .line 64
     invoke-direct {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->updateTargets()V
 
     return-void
@@ -185,7 +171,6 @@
     .parameter "x0"
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     return-object v0
@@ -196,7 +181,6 @@
     .parameter "x0"
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -207,7 +191,6 @@
     .parameter "x0"
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -218,7 +201,6 @@
     .parameter "x0"
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -229,7 +211,6 @@
     .parameter "x0"
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mActivityLauncher:Lcom/android/internal/policy/impl/keyguard/KeyguardActivityLauncher;
 
     return-object v0
@@ -240,7 +221,6 @@
     .parameter "x0"
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mCallback:Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityCallback;
 
     return-object v0
@@ -251,7 +231,6 @@
     .parameter "x0"
 
     .prologue
-    .line 64
     iget v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mCreationOrientation:I
 
     return v0
@@ -262,7 +241,6 @@
     .parameter "x0"
 
     .prologue
-    .line 64
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mIsScreenLarge:Z
 
     return v0
@@ -273,7 +251,6 @@
     .parameter "x0"
 
     .prologue
-    .line 64
     iget v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mTargetOffset:I
 
     return v0
@@ -284,7 +261,6 @@
     .parameter "x0"
 
     .prologue
-    .line 64
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mIsBouncing:Z
 
     return v0
@@ -298,24 +274,20 @@
     .parameter "frontBlank"
 
     .prologue
-    .line 227
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v10
 
-    .line 228
     .local v10, res:Landroid/content/res/Resources;
     const/4 v0, 0x2
 
     new-array v9, v0, [Landroid/graphics/drawable/InsetDrawable;
 
-    .line 229
     .local v9, inactivelayer:[Landroid/graphics/drawable/InsetDrawable;
     const/4 v0, 0x2
 
     new-array v7, v0, [Landroid/graphics/drawable/InsetDrawable;
 
-    .line 230
     .local v7, activelayer:[Landroid/graphics/drawable/InsetDrawable;
     const/4 v12, 0x0
 
@@ -339,7 +311,6 @@
 
     aput-object v0, v9, v12
 
-    .line 231
     const/4 v12, 0x1
 
     new-instance v0, Landroid/graphics/drawable/InsetDrawable;
@@ -358,7 +329,6 @@
 
     aput-object v0, v9, v12
 
-    .line 232
     const/4 v12, 0x0
 
     new-instance v0, Landroid/graphics/drawable/InsetDrawable;
@@ -377,7 +347,6 @@
 
     aput-object v0, v7, v12
 
-    .line 233
     const/4 v12, 0x1
 
     new-instance v0, Landroid/graphics/drawable/InsetDrawable;
@@ -403,18 +372,15 @@
 
     aput-object v0, v7, v12
 
-    .line 234
     new-instance v11, Landroid/graphics/drawable/StateListDrawable;
 
     invoke-direct {v11}, Landroid/graphics/drawable/StateListDrawable;-><init>()V
 
-    .line 235
     .local v11, states:Landroid/graphics/drawable/StateListDrawable;
     new-instance v8, Landroid/graphics/drawable/LayerDrawable;
 
     invoke-direct {v8, v9}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
 
-    .line 236
     .local v8, inactiveLayerDrawable:Landroid/graphics/drawable/LayerDrawable;
     const/4 v0, 0x0
 
@@ -422,19 +388,16 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/graphics/drawable/LayerDrawable;->setId(II)V
 
-    .line 237
     const/4 v0, 0x1
 
     const/4 v1, 0x1
 
     invoke-virtual {v8, v0, v1}, Landroid/graphics/drawable/LayerDrawable;->setId(II)V
 
-    .line 238
     new-instance v6, Landroid/graphics/drawable/LayerDrawable;
 
     invoke-direct {v6, v7}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
 
-    .line 239
     .local v6, activeLayerDrawable:Landroid/graphics/drawable/LayerDrawable;
     const/4 v0, 0x0
 
@@ -442,29 +405,24 @@
 
     invoke-virtual {v6, v0, v1}, Landroid/graphics/drawable/LayerDrawable;->setId(II)V
 
-    .line 240
     const/4 v0, 0x1
 
     const/4 v1, 0x1
 
     invoke-virtual {v6, v0, v1}, Landroid/graphics/drawable/LayerDrawable;->setId(II)V
 
-    .line 241
     sget-object v0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->STATE_INACTIVE:[I
 
     invoke-virtual {v11, v0, v8}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
 
-    .line 242
     sget-object v0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->STATE_ACTIVE:[I
 
     invoke-virtual {v11, v0, v6}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
 
-    .line 243
     sget-object v0, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->STATE_FOCUSED:[I
 
     invoke-virtual {v11, v0, v6}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
 
-    .line 244
     return-object v11
 
     .end local v6           #activeLayerDrawable:Landroid/graphics/drawable/LayerDrawable;
@@ -473,7 +431,6 @@
     :cond_0
     move-object v1, p2
 
-    .line 233
     goto :goto_0
 .end method
 
@@ -486,7 +443,6 @@
 
     const/4 v10, 0x0
 
-    .line 426
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v7
@@ -501,23 +457,19 @@
 
     move-result-object v2
 
-    .line 428
     .local v2, output:Landroid/graphics/Bitmap;
     new-instance v0, Landroid/graphics/Canvas;
 
     invoke-direct {v0, v2}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 430
     .local v0, canvas:Landroid/graphics/Canvas;
     const v1, -0xbdbdbe
 
-    .line 431
     .local v1, color:I
     new-instance v3, Landroid/graphics/Paint;
 
     invoke-direct {v3}, Landroid/graphics/Paint;-><init>()V
 
-    .line 432
     .local v3, paint:Landroid/graphics/Paint;
     new-instance v4, Landroid/graphics/Rect;
 
@@ -531,34 +483,27 @@
 
     invoke-direct {v4, v10, v10, v7, v8}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 433
     .local v4, rect:Landroid/graphics/Rect;
     new-instance v5, Landroid/graphics/RectF;
 
     invoke-direct {v5, v4}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
 
-    .line 434
     .local v5, rectF:Landroid/graphics/RectF;
     const/high16 v6, 0x41c0
 
-    .line 435
     .local v6, roundPx:F
     const/4 v7, 0x1
 
     invoke-virtual {v3, v7}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 436
     invoke-virtual {v0, v10, v10, v10, v10}, Landroid/graphics/Canvas;->drawARGB(IIII)V
 
-    .line 437
     const v7, -0xbdbdbe
 
     invoke-virtual {v3, v7}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 438
     invoke-virtual {v0, v5, v11, v11, v3}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 439
     new-instance v7, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v8, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
@@ -567,10 +512,8 @@
 
     invoke-virtual {v3, v7}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 440
     invoke-virtual {v0, p0, v4, v4, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 441
     return-object v2
 .end method
 
@@ -578,14 +521,12 @@
     .locals 14
 
     .prologue
-    .line 257
     iget-object v11, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v11}, Lcom/android/internal/widget/LockPatternUtils;->getCurrentUser()I
 
     move-result v2
 
-    .line 258
     .local v2, currentUserHandle:I
     iget-object v11, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
@@ -593,7 +534,6 @@
 
     move-result-object v6
 
-    .line 259
     .local v6, dpm:Landroid/app/admin/DevicePolicyManager;
     const/4 v11, 0x0
 
@@ -601,7 +541,6 @@
 
     move-result v5
 
-    .line 260
     .local v5, disabledFeatures:I
     iget-object v11, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
@@ -617,7 +556,6 @@
 
     const/4 v10, 0x1
 
-    .line 262
     .local v10, secureCameraDisabled:Z
     :goto_0
     const/4 v11, 0x0
@@ -633,7 +571,6 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 264
     .local v0, cameraDisabledByAdmin:Z
     :goto_1
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->getContext()Landroid/content/Context;
@@ -644,13 +581,11 @@
 
     move-result-object v7
 
-    .line 265
     .local v7, monitor:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
     invoke-virtual {v7}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->isSimLocked()Z
 
     move-result v4
 
-    .line 266
     .local v4, disabledBySimState:Z
     iget-object v11, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mContext:Landroid/content/Context;
 
@@ -664,7 +599,6 @@
 
     move-result v1
 
-    .line 267
     .local v1, cameraPresent:Z
     const v11, 0x1080297
 
@@ -672,18 +606,15 @@
 
     move-result v9
 
-    .line 270
     .local v9, searchTargetPresent:Z
     if-eqz v0, :cond_6
 
-    .line 271
     const-string v11, "SecuritySelectorView"
 
     const-string v12, "Camera disabled by Device Policy"
 
     invoke-static {v11, v12}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 275
     :cond_1
     :goto_2
     iget-object v11, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mContext:Landroid/content/Context;
@@ -704,7 +635,6 @@
 
     const/4 v3, 0x1
 
-    .line 280
     .local v3, currentUserSetup:Z
     :goto_3
     iget-object v11, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mContext:Landroid/content/Context;
@@ -729,7 +659,6 @@
 
     const/4 v8, 0x1
 
-    .line 283
     .local v8, searchActionAvailable:Z
     :goto_4
     if-nez v0, :cond_2
@@ -746,7 +675,6 @@
     :goto_5
     iput-boolean v11, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mCameraDisabled:Z
 
-    .line 285
     if-nez v4, :cond_3
 
     if-eqz v8, :cond_3
@@ -761,13 +689,10 @@
     :goto_6
     iput-boolean v11, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mSearchDisabled:Z
 
-    .line 287
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->updateResources()V
 
-    .line 288
     return-void
 
-    .line 260
     .end local v0           #cameraDisabledByAdmin:Z
     .end local v1           #cameraPresent:Z
     .end local v3           #currentUserSetup:Z
@@ -781,14 +706,12 @@
 
     goto :goto_0
 
-    .line 262
     .restart local v10       #secureCameraDisabled:Z
     :cond_5
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 272
     .restart local v0       #cameraDisabledByAdmin:Z
     .restart local v1       #cameraPresent:Z
     .restart local v4       #disabledBySimState:Z
@@ -797,7 +720,6 @@
     :cond_6
     if-eqz v4, :cond_1
 
-    .line 273
     const-string v11, "SecuritySelectorView"
 
     const-string v12, "Camera disabled by Sim State"
@@ -806,27 +728,23 @@
 
     goto :goto_2
 
-    .line 275
     :cond_7
     const/4 v3, 0x0
 
     goto :goto_3
 
-    .line 280
     .restart local v3       #currentUserSetup:Z
     :cond_8
     const/4 v8, 0x0
 
     goto :goto_4
 
-    .line 283
     .restart local v8       #searchActionAvailable:Z
     :cond_9
     const/4 v11, 0x0
 
     goto :goto_5
 
-    .line 285
     :cond_a
     const/4 v11, 0x0
 
@@ -841,17 +759,14 @@
     .parameter "to"
 
     .prologue
-    .line 445
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mAnim:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 446
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 448
     :cond_0
     const-string v0, "alpha"
 
@@ -869,12 +784,10 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mAnim:Landroid/animation/ObjectAnimator;
 
-    .line 449
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mAnim:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 450
     return-void
 .end method
 
@@ -882,7 +795,6 @@
     .locals 1
 
     .prologue
-    .line 482
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mCallback:Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityCallback;
 
     return-object v0
@@ -893,12 +805,10 @@
     .parameter "duration"
 
     .prologue
-    .line 494
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mIsBouncing:Z
 
-    .line 495
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mSecurityMessageDisplay:Lcom/android/internal/policy/impl/keyguard/SecurityMessageDisplay;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mFadeView:Landroid/view/View;
@@ -907,7 +817,6 @@
 
     invoke-static {v0, v1, v2, p1}, Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityViewHelper;->hideBouncer(Lcom/android/internal/policy/impl/keyguard/SecurityMessageDisplay;Landroid/view/View;Landroid/graphics/drawable/Drawable;I)V
 
-    .line 497
     return-void
 .end method
 
@@ -915,7 +824,6 @@
     .locals 3
 
     .prologue
-    .line 219
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -928,7 +836,6 @@
 
     and-int/lit8 v1, v2, 0xf
 
-    .line 221
     .local v1, screenSize:I
     const/4 v2, 0x3
 
@@ -941,12 +848,10 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 223
     .local v0, isScreenLarge:Z
     :goto_0
     return v0
 
-    .line 221
     .end local v0           #isScreenLarge:Z
     :cond_1
     const/4 v0, 0x0
@@ -959,7 +864,6 @@
     .parameter "resId"
 
     .prologue
-    .line 248
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mGlowPadView:Lcom/android/internal/widget/multiwaveview/GlowPadView;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->getTargetPosition(I)I
@@ -985,7 +889,6 @@
     .locals 1
 
     .prologue
-    .line 467
     const/4 v0, 0x0
 
     return v0
@@ -995,10 +898,8 @@
     .locals 3
 
     .prologue
-    .line 204
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    .line 205
     const v1, 0x10202af
 
     invoke-virtual {p0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->findViewById(I)Landroid/view/View;
@@ -1009,31 +910,26 @@
 
     iput-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mGlowPadView:Lcom/android/internal/widget/multiwaveview/GlowPadView;
 
-    .line 206
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mGlowPadView:Lcom/android/internal/widget/multiwaveview/GlowPadView;
 
     iget-object v2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mOnTriggerListener:Lcom/android/internal/widget/multiwaveview/GlowPadView$OnTriggerListener;
 
     invoke-virtual {v1, v2}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->setOnTriggerListener(Lcom/android/internal/widget/multiwaveview/GlowPadView$OnTriggerListener;)V
 
-    .line 207
     invoke-direct {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->updateTargets()V
 
-    .line 209
     new-instance v1, Lcom/android/internal/policy/impl/keyguard/KeyguardMessageArea$Helper;
 
     invoke-direct {v1, p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardMessageArea$Helper;-><init>(Landroid/view/View;)V
 
     iput-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mSecurityMessageDisplay:Lcom/android/internal/policy/impl/keyguard/SecurityMessageDisplay;
 
-    .line 210
     const v1, 0x10202fc
 
     invoke-virtual {p0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 211
     .local v0, bouncerFrameView:Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
@@ -1041,7 +937,6 @@
 
     iput-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mBouncerFrame:Landroid/graphics/drawable/Drawable;
 
-    .line 212
     return-void
 .end method
 
@@ -1049,7 +944,6 @@
     .locals 2
 
     .prologue
-    .line 472
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1062,7 +956,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->removeCallback(Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitorCallback;)V
 
-    .line 473
     return-void
 .end method
 
@@ -1071,7 +964,6 @@
     .parameter "reason"
 
     .prologue
-    .line 477
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1084,7 +976,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->registerCallback(Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitorCallback;)V
 
-    .line 478
     return-void
 .end method
 
@@ -1092,14 +983,12 @@
     .locals 2
 
     .prologue
-    .line 462
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mGlowPadView:Lcom/android/internal/widget/multiwaveview/GlowPadView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->reset(Z)V
 
-    .line 463
     return-void
 .end method
 
@@ -1108,10 +997,8 @@
     .parameter "carrierArea"
 
     .prologue
-    .line 215
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mFadeView:Landroid/view/View;
 
-    .line 216
     return-void
 .end method
 
@@ -1120,10 +1007,8 @@
     .parameter "callback"
 
     .prologue
-    .line 453
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mCallback:Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityCallback;
 
-    .line 454
     return-void
 .end method
 
@@ -1132,10 +1017,8 @@
     .parameter "utils"
 
     .prologue
-    .line 457
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    .line 458
     return-void
 .end method
 
@@ -1144,12 +1027,10 @@
     .parameter "duration"
 
     .prologue
-    .line 487
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mIsBouncing:Z
 
-    .line 488
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mSecurityMessageDisplay:Lcom/android/internal/policy/impl/keyguard/SecurityMessageDisplay;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mFadeView:Landroid/view/View;
@@ -1158,7 +1039,6 @@
 
     invoke-static {v0, v1, v2, p1}, Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityViewHelper;->showBouncer(Lcom/android/internal/policy/impl/keyguard/SecurityMessageDisplay;Landroid/view/View;Landroid/graphics/drawable/Drawable;I)V
 
-    .line 490
     return-void
 .end method
 
@@ -1166,12 +1046,10 @@
     .locals 1
 
     .prologue
-    .line 253
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mGlowPadView:Lcom/android/internal/widget/multiwaveview/GlowPadView;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->ping()V
 
-    .line 254
     return-void
 .end method
 
@@ -1179,7 +1057,6 @@
     .locals 39
 
     .prologue
-    .line 291
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mContext:Landroid/content/Context;
@@ -1196,18 +1073,15 @@
 
     move-result-object v34
 
-    .line 293
     .local v34, storedVal:Ljava/lang/String;
     if-nez v34, :cond_3
 
-    .line 295
     move-object/from16 v0, p0
 
     iget-boolean v6, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mSearchDisabled:Z
 
     if-nez v6, :cond_0
 
-    .line 296
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mContext:Landroid/content/Context;
@@ -1230,16 +1104,13 @@
 
     move-result-object v24
 
-    .line 298
     .local v24, intent:Landroid/content/Intent;
     if-eqz v24, :cond_0
 
-    .line 302
     invoke-virtual/range {v24 .. v24}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v15
 
-    .line 303
     .local v15, component:Landroid/content/ComponentName;
     move-object/from16 v0, p0
 
@@ -1253,7 +1124,6 @@
 
     move-result v31
 
-    .line 307
     .local v31, replaced:Z
     if-nez v31, :cond_0
 
@@ -1271,7 +1141,6 @@
 
     if-nez v6, :cond_0
 
-    .line 310
     const-string v6, "SecuritySelectorView"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1294,7 +1163,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 315
     .end local v15           #component:Landroid/content/ComponentName;
     .end local v24           #intent:Landroid/content/Intent;
     .end local v31           #replaced:Z
@@ -1316,7 +1184,6 @@
     :goto_0
     invoke-virtual {v7, v8, v6}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->setEnableTarget(IZ)V
 
-    .line 317
     move-object/from16 v0, p0
 
     iget-object v7, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mGlowPadView:Lcom/android/internal/widget/multiwaveview/GlowPadView;
@@ -1334,7 +1201,6 @@
     :goto_1
     invoke-virtual {v7, v8, v6}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->setEnableTarget(IZ)V
 
-    .line 321
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mGlowPadView:Lcom/android/internal/widget/multiwaveview/GlowPadView;
@@ -1343,23 +1209,19 @@
 
     invoke-virtual {v6, v7}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->setMagneticTargets(Z)V
 
-    .line 423
     :goto_2
     return-void
 
-    .line 315
     :cond_1
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 317
     :cond_2
     const/4 v6, 0x0
 
     goto :goto_1
 
-    .line 323
     :cond_3
     const-string v6, "\\|"
 
@@ -1373,7 +1235,6 @@
 
     iput-object v6, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mStoredTargets:[Ljava/lang/String;
 
-    .line 324
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->isScreenLarge()Z
 
     move-result v6
@@ -1382,18 +1243,15 @@
 
     iput-boolean v6, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mIsScreenLarge:Z
 
-    .line 325
     new-instance v33, Ljava/util/ArrayList;
 
     invoke-direct/range {v33 .. v33}, Ljava/util/ArrayList;-><init>()V
 
-    .line 326
     .local v33, storedDraw:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/internal/widget/multiwaveview/TargetDrawable;>;"
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v32
 
-    .line 327
     .local v32, res:Landroid/content/res/Resources;
     const v6, 0x1050058
 
@@ -1403,7 +1261,6 @@
 
     move-result v35
 
-    .line 328
     .local v35, targetInset:I
     move-object/from16 v0, p0
 
@@ -1413,7 +1270,6 @@
 
     move-result-object v27
 
-    .line 329
     .local v27, packMan:Landroid/content/pm/PackageManager;
     move-object/from16 v0, p0
 
@@ -1425,7 +1281,6 @@
 
     const/16 v25, 0x1
 
-    .line 330
     .local v25, isLandscape:Z
     :goto_3
     const v6, 0x1080335
@@ -1436,7 +1291,6 @@
 
     move-result-object v5
 
-    .line 331
     .local v5, blankActiveDrawable:Landroid/graphics/drawable/Drawable;
     new-instance v4, Landroid/graphics/drawable/InsetDrawable;
 
@@ -1450,7 +1304,6 @@
 
     invoke-direct/range {v4 .. v9}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;IIII)V
 
-    .line 333
     .local v4, activeBack:Landroid/graphics/drawable/InsetDrawable;
     move-object/from16 v0, p0
 
@@ -1460,7 +1313,6 @@
 
     invoke-virtual {v6, v7}, Lcom/android/internal/widget/multiwaveview/GlowPadView;->setMagneticTargets(Z)V
 
-    .line 335
     const v6, 0x1080317
 
     move-object/from16 v0, v32
@@ -1469,7 +1321,6 @@
 
     move-result-object v12
 
-    .line 336
     .local v12, blankInActiveDrawable:Landroid/graphics/drawable/Drawable;
     const v6, 0x1080339
 
@@ -1479,7 +1330,6 @@
 
     move-result-object v37
 
-    .line 338
     .local v37, unlockActiveDrawable:Landroid/graphics/drawable/Drawable;
     if-eqz v25, :cond_a
 
@@ -1496,7 +1346,6 @@
 
     iput v6, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mTargetOffset:I
 
-    .line 339
     move-object/from16 v0, p0
 
     iget v6, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mTargetOffset:I
@@ -1505,7 +1354,6 @@
 
     if-ne v6, v7, :cond_4
 
-    .line 340
     new-instance v6, Lcom/android/internal/widget/multiwaveview/TargetDrawable;
 
     const/4 v7, 0x0
@@ -1518,7 +1366,6 @@
 
     invoke-virtual {v0, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 341
     new-instance v6, Lcom/android/internal/widget/multiwaveview/TargetDrawable;
 
     const/4 v7, 0x0
@@ -1531,7 +1378,6 @@
 
     invoke-virtual {v0, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 344
     :cond_4
     new-instance v6, Lcom/android/internal/widget/multiwaveview/TargetDrawable;
 
@@ -1551,7 +1397,6 @@
 
     invoke-virtual {v0, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 345
     const/16 v21, 0x0
 
     .local v21, i:I
@@ -1568,10 +1413,8 @@
 
     if-ge v0, v6, :cond_13
 
-    .line 346
     move/from16 v36, v35
 
-    .line 347
     .local v36, tmpInset:I
     move-object/from16 v0, p0
 
@@ -1583,14 +1426,12 @@
 
     if-ge v0, v6, :cond_12
 
-    .line 348
     move-object/from16 v0, p0
 
     iget-object v6, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mStoredTargets:[Ljava/lang/String;
 
     aget-object v38, v6, v21
 
-    .line 349
     .local v38, uri:Ljava/lang/String;
     const-string v6, "empty"
 
@@ -1602,7 +1443,6 @@
 
     if-nez v6, :cond_11
 
-    .line 351
     const/4 v6, 0x0
 
     :try_start_0
@@ -1612,19 +1452,15 @@
 
     move-result-object v23
 
-    .line 352
     .local v23, in:Landroid/content/Intent;
     const/16 v19, 0x0
 
-    .line 353
     .local v19, front:Landroid/graphics/drawable/Drawable;
     move-object v11, v4
 
-    .line 354
     .local v11, back:Landroid/graphics/drawable/Drawable;
     const/16 v20, 0x0
 
-    .line 355
     .local v20, frontBlank:Z
     const-string v6, "icon_file"
 
@@ -1636,7 +1472,6 @@
 
     if-eqz v6, :cond_b
 
-    .line 356
     const-string v6, "icon_file"
 
     move-object/from16 v0, v23
@@ -1645,16 +1480,13 @@
 
     move-result-object v18
 
-    .line 357
     .local v18, fSource:Ljava/lang/String;
     if-eqz v18, :cond_5
 
-    .line 358
     new-instance v17, Ljava/io/File;
 
     invoke-direct/range {v17 .. v18}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 359
     .local v17, fPath:Ljava/io/File;
     invoke-virtual/range {v17 .. v17}, Ljava/io/File;->exists()Z
 
@@ -1662,7 +1494,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 360
     new-instance v19, Landroid/graphics/drawable/BitmapDrawable;
 
     .end local v19           #front:Landroid/graphics/drawable/Drawable;
@@ -1680,11 +1511,9 @@
 
     invoke-direct {v0, v1, v6}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    .line 361
     .restart local v19       #front:Landroid/graphics/drawable/Drawable;
     add-int/lit8 v36, v36, 0x5
 
-    .line 392
     .end local v17           #fPath:Ljava/io/File;
     .end local v18           #fSource:Ljava/lang/String;
     :cond_5
@@ -1693,7 +1522,6 @@
 
     if-nez v11, :cond_7
 
-    .line 393
     :cond_6
     const/4 v6, 0x1
 
@@ -1705,18 +1533,15 @@
 
     move-result-object v10
 
-    .line 394
     .local v10, aInfo:Landroid/content/pm/ActivityInfo;
     if-eqz v10, :cond_d
 
-    .line 395
     move-object/from16 v0, v27
 
     invoke-virtual {v10, v0}, Landroid/content/pm/ActivityInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v19
 
-    .line 400
     .end local v10           #aInfo:Landroid/content/pm/ActivityInfo;
     :cond_7
     :goto_7
@@ -1740,22 +1565,18 @@
 
     invoke-direct {v0, v1, v6}, Lcom/android/internal/widget/multiwaveview/TargetDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/drawable/Drawable;)V
 
-    .line 401
     .local v26, nDrawable:Lcom/android/internal/widget/multiwaveview/TargetDrawable;
     invoke-virtual/range {v23 .. v23}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v14
 
-    .line 402
     .local v14, compName:Landroid/content/ComponentName;
     if-eqz v14, :cond_8
 
-    .line 403
     invoke-virtual {v14}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 404
     .local v13, cls:Ljava/lang/String;
     const-string v6, "com.android.camera.CameraLauncher"
 
@@ -1765,7 +1586,6 @@
 
     if-eqz v6, :cond_f
 
-    .line 405
     move-object/from16 v0, p0
 
     iget-boolean v6, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mCameraDisabled:Z
@@ -1779,7 +1599,6 @@
 
     invoke-virtual {v0, v6}, Lcom/android/internal/widget/multiwaveview/TargetDrawable;->setEnabled(Z)V
 
-    .line 410
     .end local v13           #cls:Ljava/lang/String;
     :cond_8
     :goto_9
@@ -1789,7 +1608,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 345
     .end local v11           #back:Landroid/graphics/drawable/Drawable;
     .end local v14           #compName:Landroid/content/ComponentName;
     .end local v19           #front:Landroid/graphics/drawable/Drawable;
@@ -1802,7 +1620,6 @@
 
     goto/16 :goto_5
 
-    .line 329
     .end local v4           #activeBack:Landroid/graphics/drawable/InsetDrawable;
     .end local v5           #blankActiveDrawable:Landroid/graphics/drawable/Drawable;
     .end local v12           #blankInActiveDrawable:Landroid/graphics/drawable/Drawable;
@@ -1815,7 +1632,6 @@
 
     goto/16 :goto_3
 
-    .line 338
     .restart local v4       #activeBack:Landroid/graphics/drawable/InsetDrawable;
     .restart local v5       #blankActiveDrawable:Landroid/graphics/drawable/Drawable;
     .restart local v12       #blankInActiveDrawable:Landroid/graphics/drawable/Drawable;
@@ -1826,7 +1642,6 @@
 
     goto/16 :goto_4
 
-    .line 364
     .restart local v11       #back:Landroid/graphics/drawable/Drawable;
     .restart local v19       #front:Landroid/graphics/drawable/Drawable;
     .restart local v20       #frontBlank:Z
@@ -1845,7 +1660,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 365
     const-string v6, "icon_resource"
 
     move-object/from16 v0, v23
@@ -1854,7 +1668,6 @@
 
     move-result-object v30
 
-    .line 366
     .local v30, rSource:Ljava/lang/String;
     const-string v6, "icon_package"
 
@@ -1866,14 +1679,11 @@
 
     move-result-object v29
 
-    .line 367
     .local v29, rPackage:Ljava/lang/String;
     if-eqz v30, :cond_5
 
-    .line 368
     if-eqz v29, :cond_c
 
-    .line 370
     :try_start_1
     move-object/from16 v0, p0
 
@@ -1887,7 +1697,6 @@
 
     move-result-object v28
 
-    .line 371
     .local v28, rContext:Landroid/content/Context;
     invoke-virtual/range {v28 .. v28}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1903,7 +1712,6 @@
 
     move-result v22
 
-    .line 372
     .local v22, id:I
     invoke-virtual/range {v28 .. v28}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1915,7 +1723,6 @@
 
     move-result-object v19
 
-    .line 373
     invoke-virtual/range {v28 .. v28}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -1938,7 +1745,6 @@
 
     move-result v22
 
-    .line 375
     invoke-virtual/range {v28 .. v28}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
@@ -1953,21 +1759,17 @@
 
     move-result-object v11
 
-    .line 376
     const/16 v36, 0x0
 
-    .line 377
     const/16 v20, 0x1
 
     goto/16 :goto_6
 
-    .line 378
     .end local v22           #id:I
     .end local v28           #rContext:Landroid/content/Context;
     :catch_0
     move-exception v16
 
-    .line 379
     .local v16, e:Landroid/content/pm/PackageManager$NameNotFoundException;
     :try_start_2
     invoke-virtual/range {v16 .. v16}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
@@ -1976,7 +1778,6 @@
 
     goto/16 :goto_6
 
-    .line 411
     .end local v11           #back:Landroid/graphics/drawable/Drawable;
     .end local v16           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
     .end local v19           #front:Landroid/graphics/drawable/Drawable;
@@ -1987,7 +1788,6 @@
     :catch_1
     move-exception v16
 
-    .line 412
     .local v16, e:Ljava/lang/Exception;
     new-instance v6, Lcom/android/internal/widget/multiwaveview/TargetDrawable;
 
@@ -2003,7 +1803,6 @@
 
     goto/16 :goto_a
 
-    .line 380
     .end local v16           #e:Ljava/lang/Exception;
     .restart local v11       #back:Landroid/graphics/drawable/Drawable;
     .restart local v19       #front:Landroid/graphics/drawable/Drawable;
@@ -2014,14 +1813,12 @@
     :catch_2
     move-exception v16
 
-    .line 381
     .local v16, e:Landroid/content/res/Resources$NotFoundException;
     :try_start_3
     invoke-virtual/range {v16 .. v16}, Landroid/content/res/Resources$NotFoundException;->printStackTrace()V
 
     goto/16 :goto_6
 
-    .line 384
     .end local v16           #e:Landroid/content/res/Resources$NotFoundException;
     :cond_c
     const-string v6, "drawable"
@@ -2042,7 +1839,6 @@
 
     move-result-object v19
 
-    .line 385
     const-string v6, "_normal"
 
     const-string v7, "_activated"
@@ -2069,15 +1865,12 @@
 
     move-result-object v11
 
-    .line 387
     const/16 v36, 0x0
 
-    .line 388
     const/16 v20, 0x1
 
     goto/16 :goto_6
 
-    .line 397
     .end local v29           #rPackage:Ljava/lang/String;
     .end local v30           #rSource:Ljava/lang/String;
     .restart local v10       #aInfo:Landroid/content/pm/ActivityInfo;
@@ -2092,7 +1885,6 @@
 
     goto/16 :goto_7
 
-    .line 405
     .end local v10           #aInfo:Landroid/content/pm/ActivityInfo;
     .restart local v13       #cls:Ljava/lang/String;
     .restart local v14       #compName:Landroid/content/ComponentName;
@@ -2102,7 +1894,6 @@
 
     goto/16 :goto_8
 
-    .line 406
     :cond_f
     const-string v6, "SearchActivity"
 
@@ -2112,7 +1903,6 @@
 
     if-eqz v6, :cond_8
 
-    .line 407
     move-object/from16 v0, p0
 
     iget-boolean v6, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->mSearchDisabled:Z
@@ -2135,7 +1925,6 @@
 
     goto :goto_b
 
-    .line 415
     .end local v11           #back:Landroid/graphics/drawable/Drawable;
     .end local v13           #cls:Ljava/lang/String;
     .end local v14           #compName:Landroid/content/ComponentName;
@@ -2168,7 +1957,6 @@
 
     goto/16 :goto_a
 
-    .line 418
     .end local v38           #uri:Ljava/lang/String;
     :cond_12
     new-instance v6, Lcom/android/internal/widget/multiwaveview/TargetDrawable;
@@ -2185,7 +1973,6 @@
 
     goto/16 :goto_a
 
-    .line 421
     .end local v36           #tmpInset:I
     :cond_13
     move-object/from16 v0, p0

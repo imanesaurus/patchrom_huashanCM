@@ -45,7 +45,6 @@
     .parameter
 
     .prologue
-    .line 9546
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$8;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     iput-object p2, p0, Lcom/android/server/wm/WindowManagerService$8;->val$client:Landroid/view/IWindow;
@@ -71,7 +70,6 @@
     .locals 6
 
     .prologue
-    .line 9550
     :try_start_0
     iget-object v0, p0, Lcom/android/server/wm/WindowManagerService$8;->val$client:Landroid/view/IWindow;
 
@@ -89,11 +87,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 9556
     :goto_0
     return-void
 
-    .line 9552
     :catch_0
     move-exception v0
 

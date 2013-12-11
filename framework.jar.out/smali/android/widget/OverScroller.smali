@@ -45,12 +45,10 @@
     .parameter "context"
 
     .prologue
-    .line 54
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
 
-    .line 55
     return-void
 .end method
 
@@ -60,12 +58,10 @@
     .parameter "interpolator"
 
     .prologue
-    .line 64
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, p2, v0}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;Z)V
 
-    .line 65
     return-void
 .end method
 
@@ -77,12 +73,10 @@
     .parameter "bounceCoefficientY"
 
     .prologue
-    .line 99
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, p2, v0}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;Z)V
 
-    .line 100
     return-void
 .end method
 
@@ -95,10 +89,8 @@
     .parameter "flywheel"
 
     .prologue
-    .line 117
     invoke-direct {p0, p1, p2, p5}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;Z)V
 
-    .line 118
     return-void
 .end method
 
@@ -109,31 +101,25 @@
     .parameter "flywheel"
 
     .prologue
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
     iput-object p2, p0, Landroid/widget/OverScroller;->mInterpolator:Landroid/view/animation/Interpolator;
 
-    .line 77
     iput-boolean p3, p0, Landroid/widget/OverScroller;->mFlywheel:Z
 
-    .line 79
     new-instance v0, Landroid/widget/OverScroller$SplineOverScroller;
 
     invoke-direct {v0, p1}, Landroid/widget/OverScroller$SplineOverScroller;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
-    .line 80
     new-instance v0, Landroid/widget/OverScroller$SplineOverScroller;
 
     invoke-direct {v0, p1}, Landroid/widget/OverScroller$SplineOverScroller;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
-    .line 82
-    const-string/jumbo v0, "power"
+    const-string v0, "power"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -143,7 +129,6 @@
 
     iput-object v0, p0, Landroid/widget/OverScroller;->mPm:Landroid/os/PowerManager;
 
-    .line 83
     return-void
 .end method
 
@@ -153,17 +138,14 @@
     .locals 1
 
     .prologue
-    .line 521
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     invoke-virtual {v0}, Landroid/widget/OverScroller$SplineOverScroller;->finish()V
 
-    .line 522
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
     invoke-virtual {v0}, Landroid/widget/OverScroller$SplineOverScroller;->finish()V
 
-    .line 523
     return-void
 .end method
 
@@ -208,40 +190,33 @@
     .locals 8
 
     .prologue
-    .line 298
     invoke-virtual {p0}, Landroid/widget/OverScroller;->isFinished()Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
-    .line 299
     const/4 v6, 0x0
 
-    .line 346
     :goto_0
     return v6
 
-    .line 302
     :cond_0
     iget v6, p0, Landroid/widget/OverScroller;->mMode:I
 
     packed-switch v6, :pswitch_data_0
 
-    .line 346
     :cond_1
     :goto_1
     const/4 v6, 0x1
 
     goto :goto_0
 
-    .line 304
     :pswitch_0
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
     move-result-wide v4
 
-    .line 307
     .local v4, time:J
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
@@ -252,7 +227,6 @@
 
     sub-long v1, v4, v6
 
-    .line 309
     .local v1, elapsedTime:J
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
@@ -261,7 +235,6 @@
 
     move-result v0
 
-    .line 310
     .local v0, duration:I
     int-to-long v6, v0
 
@@ -269,38 +242,32 @@
 
     if-gez v6, :cond_3
 
-    .line 311
     long-to-float v6, v1
 
     int-to-float v7, v0
 
     div-float v3, v6, v7
 
-    .line 313
     .local v3, q:F
     iget-object v6, p0, Landroid/widget/OverScroller;->mInterpolator:Landroid/view/animation/Interpolator;
 
     if-nez v6, :cond_2
 
-    .line 314
     invoke-static {v3}, Landroid/widget/Scroller;->viscousFluid(F)F
 
     move-result v3
 
-    .line 319
     :goto_2
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     invoke-virtual {v6, v3}, Landroid/widget/OverScroller$SplineOverScroller;->updateScroll(F)V
 
-    .line 320
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
     invoke-virtual {v6, v3}, Landroid/widget/OverScroller$SplineOverScroller;->updateScroll(F)V
 
     goto :goto_1
 
-    .line 316
     :cond_2
     iget-object v6, p0, Landroid/widget/OverScroller;->mInterpolator:Landroid/view/animation/Interpolator;
 
@@ -310,14 +277,12 @@
 
     goto :goto_2
 
-    .line 322
     .end local v3           #q:F
     :cond_3
     invoke-virtual {p0}, Landroid/widget/OverScroller;->abortAnimation()V
 
     goto :goto_1
 
-    .line 327
     .end local v0           #duration:I
     .end local v1           #elapsedTime:J
     .end local v4           #time:J
@@ -331,7 +296,6 @@
 
     if-nez v6, :cond_4
 
-    .line 328
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     const/4 v7, 0x0
@@ -342,7 +306,6 @@
 
     if-nez v6, :cond_4
 
-    .line 329
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     iget-boolean v7, p0, Landroid/widget/OverScroller;->mSpringOverScrollEnable:Z
@@ -353,12 +316,10 @@
 
     if-nez v6, :cond_4
 
-    .line 330
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     invoke-virtual {v6}, Landroid/widget/OverScroller$SplineOverScroller;->finish()V
 
-    .line 335
     :cond_4
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
@@ -369,7 +330,6 @@
 
     if-nez v6, :cond_1
 
-    .line 336
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
     const/4 v7, 0x0
@@ -380,7 +340,6 @@
 
     if-nez v6, :cond_1
 
-    .line 337
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
     iget-boolean v7, p0, Landroid/widget/OverScroller;->mSpringOverScrollEnable:Z
@@ -391,14 +350,12 @@
 
     if-nez v6, :cond_1
 
-    .line 338
     iget-object v6, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
     invoke-virtual {v6}, Landroid/widget/OverScroller$SplineOverScroller;->finish()V
 
     goto :goto_1
 
-    .line 302
     nop
 
     :pswitch_data_0
@@ -415,17 +372,14 @@
     .end annotation
 
     .prologue
-    .line 253
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     invoke-virtual {v0, p1}, Landroid/widget/OverScroller$SplineOverScroller;->extendDuration(I)V
 
-    .line 254
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
     invoke-virtual {v0, p1}, Landroid/widget/OverScroller$SplineOverScroller;->extendDuration(I)V
 
-    .line 255
     return-void
 .end method
 
@@ -441,7 +395,6 @@
     .parameter "maxY"
 
     .prologue
-    .line 410
     const/4 v9, 0x0
 
     const/4 v10, 0x0
@@ -466,7 +419,6 @@
 
     invoke-virtual/range {v0 .. v10}, Landroid/widget/OverScroller;->fling(IIIIIIIIII)V
 
-    .line 411
     return-void
 .end method
 
@@ -484,7 +436,6 @@
     .parameter "overY"
 
     .prologue
-    .line 443
     iget-boolean v0, p0, Landroid/widget/OverScroller;->mFlywheel:Z
 
     if-eqz v0, :cond_0
@@ -495,7 +446,6 @@
 
     if-nez v0, :cond_0
 
-    .line 444
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     #getter for: Landroid/widget/OverScroller$SplineOverScroller;->mCurrVelocity:F
@@ -503,7 +453,6 @@
 
     move-result v6
 
-    .line 445
     .local v6, oldVelocityX:F
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
@@ -512,7 +461,6 @@
 
     move-result v7
 
-    .line 446
     .local v7, oldVelocityY:F
     int-to-float v0, p3
 
@@ -542,21 +490,18 @@
 
     if-nez v0, :cond_0
 
-    .line 448
     int-to-float v0, p3
 
     add-float/2addr v0, v6
 
     float-to-int p3, v0
 
-    .line 449
     int-to-float v0, p4
 
     add-float/2addr v0, v7
 
     float-to-int p4, v0
 
-    .line 453
     .end local v6           #oldVelocityX:F
     .end local v7           #oldVelocityY:F
     :cond_0
@@ -566,12 +511,10 @@
 
     invoke-virtual {v0, v1}, Landroid/os/PowerManager;->cpuBoost(I)V
 
-    .line 454
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/widget/OverScroller;->mMode:I
 
-    .line 455
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     move v1, p1
@@ -586,7 +529,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/OverScroller$SplineOverScroller;->fling(IIIII)V
 
-    .line 456
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
     move v1, p2
@@ -601,7 +543,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/OverScroller$SplineOverScroller;->fling(IIIII)V
 
-    .line 457
     return-void
 .end method
 
@@ -610,7 +551,6 @@
     .parameter "finished"
 
     .prologue
-    .line 155
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     iget-object v1, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
@@ -623,7 +563,6 @@
     #setter for: Landroid/widget/OverScroller$SplineOverScroller;->mFinished:Z
     invoke-static {v0, v1}, Landroid/widget/OverScroller$SplineOverScroller;->access$002(Landroid/widget/OverScroller$SplineOverScroller;Z)Z
 
-    .line 156
     return-void
 .end method
 
@@ -631,7 +570,6 @@
     .locals 3
 
     .prologue
-    .line 182
     iget-object v1, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     #getter for: Landroid/widget/OverScroller$SplineOverScroller;->mCurrVelocity:F
@@ -648,7 +586,6 @@
 
     mul-float v0, v1, v2
 
-    .line 183
     .local v0, squaredNorm:F
     iget-object v1, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
@@ -668,7 +605,6 @@
 
     add-float/2addr v0, v1
 
-    .line 184
     invoke-static {v0}, Landroid/util/FloatMath;->sqrt(F)F
 
     move-result v1
@@ -680,7 +616,6 @@
     .locals 1
 
     .prologue
-    .line 164
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     #getter for: Landroid/widget/OverScroller$SplineOverScroller;->mCurrentPosition:I
@@ -695,7 +630,6 @@
     .locals 1
 
     .prologue
-    .line 173
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
     #getter for: Landroid/widget/OverScroller$SplineOverScroller;->mCurrentPosition:I
@@ -729,7 +663,6 @@
     .end annotation
 
     .prologue
-    .line 234
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     #getter for: Landroid/widget/OverScroller$SplineOverScroller;->mDuration:I
@@ -755,7 +688,6 @@
     .locals 1
 
     .prologue
-    .line 211
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     #getter for: Landroid/widget/OverScroller$SplineOverScroller;->mFinal:I
@@ -770,7 +702,6 @@
     .locals 1
 
     .prologue
-    .line 220
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
     #getter for: Landroid/widget/OverScroller$SplineOverScroller;->mFinal:I
@@ -785,7 +716,6 @@
     .locals 1
 
     .prologue
-    .line 193
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     #getter for: Landroid/widget/OverScroller$SplineOverScroller;->mStart:I
@@ -800,7 +730,6 @@
     .locals 1
 
     .prologue
-    .line 202
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
     #getter for: Landroid/widget/OverScroller$SplineOverScroller;->mStart:I
@@ -815,7 +744,6 @@
     .locals 1
 
     .prologue
-    .line 143
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     #getter for: Landroid/widget/OverScroller$SplineOverScroller;->mFinished:Z
@@ -849,7 +777,6 @@
     .locals 1
 
     .prologue
-    .line 507
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     #getter for: Landroid/widget/OverScroller$SplineOverScroller;->mFinished:Z
@@ -905,7 +832,6 @@
     .parameter "yvel"
 
     .prologue
-    .line 542
     iget-object v2, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     #getter for: Landroid/widget/OverScroller$SplineOverScroller;->mFinal:I
@@ -922,7 +848,6 @@
 
     sub-int v0, v2, v3
 
-    .line 543
     .local v0, dx:I
     iget-object v2, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
@@ -940,7 +865,6 @@
 
     sub-int v1, v2, v3
 
-    .line 544
     .local v1, dy:I
     invoke-virtual {p0}, Landroid/widget/OverScroller;->isFinished()Z
 
@@ -994,12 +918,10 @@
     .parameter "overX"
 
     .prologue
-    .line 473
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/widget/OverScroller$SplineOverScroller;->notifyEdgeReached(III)V
 
-    .line 474
     return-void
 .end method
 
@@ -1010,12 +932,10 @@
     .parameter "overY"
 
     .prologue
-    .line 490
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/widget/OverScroller$SplineOverScroller;->notifyEdgeReached(III)V
 
-    .line 491
     return-void
 .end method
 
@@ -1045,12 +965,10 @@
     .end annotation
 
     .prologue
-    .line 272
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     invoke-virtual {v0, p1}, Landroid/widget/OverScroller$SplineOverScroller;->setFinalPosition(I)V
 
-    .line 273
     return-void
 .end method
 
@@ -1061,12 +979,10 @@
     .end annotation
 
     .prologue
-    .line 290
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
     invoke-virtual {v0, p1}, Landroid/widget/OverScroller$SplineOverScroller;->setFinalPosition(I)V
 
-    .line 291
     return-void
 .end method
 
@@ -1075,17 +991,14 @@
     .parameter "friction"
 
     .prologue
-    .line 132
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     invoke-virtual {v0, p1}, Landroid/widget/OverScroller$SplineOverScroller;->setFriction(F)V
 
-    .line 133
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
     invoke-virtual {v0, p1}, Landroid/widget/OverScroller$SplineOverScroller;->setFriction(F)V
 
-    .line 134
     return-void
 .end method
 
@@ -1094,10 +1007,8 @@
     .parameter "interpolator"
 
     .prologue
-    .line 121
     iput-object p1, p0, Landroid/widget/OverScroller;->mInterpolator:Landroid/view/animation/Interpolator;
 
-    .line 122
     return-void
 .end method
 
@@ -1145,17 +1056,14 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 400
     iput v2, p0, Landroid/widget/OverScroller;->mMode:I
 
-    .line 403
     iget-object v3, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     invoke-virtual {v3, p1, p3, p4}, Landroid/widget/OverScroller$SplineOverScroller;->springback(III)Z
 
     move-result v0
 
-    .line 404
     .local v0, spingbackX:Z
     iget-object v3, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
@@ -1163,7 +1071,6 @@
 
     move-result v1
 
-    .line 405
     .local v1, spingbackY:Z
     if-nez v0, :cond_0
 
@@ -1187,7 +1094,6 @@
     .parameter "dy"
 
     .prologue
-    .line 364
     const/16 v5, 0xfa
 
     move-object v0, p0
@@ -1202,7 +1108,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/OverScroller;->startScroll(IIIII)V
 
-    .line 365
     return-void
 .end method
 
@@ -1215,29 +1120,24 @@
     .parameter "duration"
 
     .prologue
-    .line 381
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/widget/OverScroller;->mMode:I
 
-    .line 382
     iget-object v0, p0, Landroid/widget/OverScroller;->mPm:Landroid/os/PowerManager;
 
     const v1, 0x16e360
 
     invoke-virtual {v0, v1}, Landroid/os/PowerManager;->cpuBoost(I)V
 
-    .line 383
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
     invoke-virtual {v0, p1, p3, p5}, Landroid/widget/OverScroller$SplineOverScroller;->startScroll(III)V
 
-    .line 384
     iget-object v0, p0, Landroid/widget/OverScroller;->mScrollerY:Landroid/widget/OverScroller$SplineOverScroller;
 
     invoke-virtual {v0, p2, p4, p5}, Landroid/widget/OverScroller$SplineOverScroller;->startScroll(III)V
 
-    .line 385
     return-void
 .end method
 
@@ -1245,12 +1145,10 @@
     .locals 8
 
     .prologue
-    .line 533
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
     move-result-wide v2
 
-    .line 534
     .local v2, time:J
     iget-object v4, p0, Landroid/widget/OverScroller;->mScrollerX:Landroid/widget/OverScroller$SplineOverScroller;
 
@@ -1270,7 +1168,6 @@
 
     move-result-wide v0
 
-    .line 535
     .local v0, startTime:J
     sub-long v4, v2, v0
 

@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 14352
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$16;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$16;->val$uss:Lcom/android/server/am/UserStartedState;
@@ -55,7 +54,6 @@
     .parameter "sendingUser"
 
     .prologue
-    .line 14356
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$16;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$16;->val$uss:Lcom/android/server/am/UserStartedState;
@@ -64,6 +62,5 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/am/ActivityManagerService;->userInitialized(Lcom/android/server/am/UserStartedState;I)V
 
-    .line 14357
     return-void
 .end method

@@ -29,7 +29,6 @@
     .parameter "x0"
 
     .prologue
-    .line 112
     invoke-direct {p0, p1}, Landroid/util/IntProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -42,7 +41,6 @@
     .parameter "object"
 
     .prologue
-    .line 120
     invoke-virtual {p1}, Lcom/android/server/power/DisplayPowerState;->getScreenBrightness()I
 
     move-result v0
@@ -59,7 +57,6 @@
     .parameter "x0"
 
     .prologue
-    .line 112
     check-cast p1, Lcom/android/server/power/DisplayPowerState;
 
     .end local p1
@@ -76,10 +73,8 @@
     .parameter "value"
 
     .prologue
-    .line 115
     invoke-virtual {p1, p2}, Lcom/android/server/power/DisplayPowerState;->setScreenBrightness(I)V
 
-    .line 116
     return-void
 .end method
 
@@ -89,7 +84,6 @@
     .parameter "x1"
 
     .prologue
-    .line 112
     check-cast p1, Lcom/android/server/power/DisplayPowerState;
 
     .end local p1

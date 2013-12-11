@@ -41,7 +41,6 @@
 
     const/4 v2, 0x0
 
-    .line 6941
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     move-object v0, p0
@@ -54,13 +53,10 @@
 
     move-object v6, v2
 
-    .line 6942
     invoke-direct/range {v0 .. v6}, Lcom/android/server/pm/PackageManagerService$InstallArgs;-><init>(Landroid/net/Uri;Landroid/content/pm/IPackageInstallObserver;ILjava/lang/String;Landroid/content/pm/ManifestDigest;Landroid/os/UserHandle;)V
 
-    .line 6924
     iput-boolean v3, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->created:Z
 
-    .line 6943
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->isFwdLocked()Z
 
     move-result v0
@@ -72,7 +68,6 @@
     :goto_0
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->installDir:Ljava/io/File;
 
-    .line 6944
     const-string v0, ".apk"
 
     #calls: Lcom/android/server/pm/PackageManagerService;->getNextCodePath(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -80,7 +75,6 @@
 
     move-result-object v7
 
-    .line 6945
     .local v7, apkName:Ljava/lang/String;
     new-instance v0, Ljava/io/File;
 
@@ -112,14 +106,12 @@
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->codeFileName:Ljava/lang/String;
 
-    .line 6946
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->getResourcePathFromCodePath()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->resourceFileName:Ljava/lang/String;
 
-    .line 6947
     new-instance v0, Ljava/io/File;
 
     #getter for: Lcom/android/server/pm/PackageManagerService;->mAppLibInstallDir:Ljava/io/File;
@@ -135,10 +127,8 @@
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->libraryPath:Ljava/lang/String;
 
-    .line 6948
     return-void
 
-    .line 6943
     .end local v7           #apkName:Ljava/lang/String;
     :cond_0
     iget-object v0, p1, Lcom/android/server/pm/PackageManagerService;->mAppInstallDir:Ljava/io/File;
@@ -152,10 +142,8 @@
     .parameter "params"
 
     .prologue
-    .line 6926
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
 
-    .line 6927
     invoke-virtual {p2}, Lcom/android/server/pm/PackageManagerService$InstallParams;->getPackageUri()Landroid/net/Uri;
 
     move-result-object v1
@@ -178,12 +166,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/pm/PackageManagerService$InstallArgs;-><init>(Landroid/net/Uri;Landroid/content/pm/IPackageInstallObserver;ILjava/lang/String;Landroid/content/pm/ManifestDigest;Landroid/os/UserHandle;)V
 
-    .line 6924
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->created:Z
 
-    .line 6930
     return-void
 .end method
 
@@ -199,7 +185,6 @@
 
     const/4 v1, 0x0
 
-    .line 6932
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     move-object v0, p0
@@ -212,18 +197,14 @@
 
     move-object v6, v1
 
-    .line 6933
     invoke-direct/range {v0 .. v6}, Lcom/android/server/pm/PackageManagerService$InstallArgs;-><init>(Landroid/net/Uri;Landroid/content/pm/IPackageInstallObserver;ILjava/lang/String;Landroid/content/pm/ManifestDigest;Landroid/os/UserHandle;)V
 
-    .line 6924
     iput-boolean v3, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->created:Z
 
-    .line 6934
     new-instance v7, Ljava/io/File;
 
     invoke-direct {v7, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 6935
     .local v7, codeFile:Ljava/io/File;
     invoke-virtual {v7}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
@@ -231,16 +212,12 @@
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->installDir:Ljava/io/File;
 
-    .line 6936
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->codeFileName:Ljava/lang/String;
 
-    .line 6937
     iput-object p3, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->resourceFileName:Ljava/lang/String;
 
-    .line 6938
     iput-object p4, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->libraryPath:Ljava/lang/String;
 
-    .line 6939
     return-void
 .end method
 
@@ -248,31 +225,25 @@
     .locals 9
 
     .prologue
-    .line 7165
     const/4 v3, 0x1
 
-    .line 7166
     .local v3, ret:Z
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->getCodePath()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 7167
     .local v4, sourceDir:Ljava/lang/String;
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->getResourcePath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 7168
     .local v1, publicSourceDir:Ljava/lang/String;
     if-eqz v4, :cond_1
 
-    .line 7169
     new-instance v5, Ljava/io/File;
 
     invoke-direct {v5, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7170
     .local v5, sourceFile:Ljava/io/File;
     invoke-virtual {v5}, Ljava/io/File;->exists()Z
 
@@ -280,7 +251,6 @@
 
     if-nez v6, :cond_0
 
-    .line 7171
     const-string v6, "PackageManager"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -309,14 +279,11 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7172
     const/4 v3, 0x0
 
-    .line 7175
     :cond_0
     invoke-virtual {v5}, Ljava/io/File;->delete()Z
 
-    .line 7177
     .end local v5           #sourceFile:Ljava/io/File;
     :cond_1
     if-eqz v1, :cond_3
@@ -327,12 +294,10 @@
 
     if-nez v6, :cond_3
 
-    .line 7178
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7179
     .local v2, publicSourceFile:Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -340,7 +305,6 @@
 
     if-nez v6, :cond_2
 
-    .line 7180
     const-string v6, "PackageManager"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -369,7 +333,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7182
     :cond_2
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -377,35 +340,29 @@
 
     if-eqz v6, :cond_3
 
-    .line 7183
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 7187
     .end local v2           #publicSourceFile:Ljava/io/File;
     :cond_3
     iget-object v6, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->libraryPath:Ljava/lang/String;
 
     if-eqz v6, :cond_4
 
-    .line 7188
     new-instance v0, Ljava/io/File;
 
     iget-object v6, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->libraryPath:Ljava/lang/String;
 
     invoke-direct {v0, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7189
     .local v0, nativeLibraryFile:Ljava/io/File;
     invoke-static {v0}, Lcom/android/internal/content/NativeLibraryHelper;->removeNativeBinariesFromDirLI(Ljava/io/File;)Z
 
-    .line 7190
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     move-result v6
 
     if-nez v6, :cond_4
 
-    .line 7191
     const-string v6, "PackageManager"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -430,7 +387,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7195
     .end local v0           #nativeLibraryFile:Ljava/io/File;
     :cond_4
     return v3
@@ -440,7 +396,6 @@
     .locals 3
 
     .prologue
-    .line 7153
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -471,12 +426,10 @@
     .locals 3
 
     .prologue
-    .line 7128
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->getCodePath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 7129
     .local v0, codePath:Ljava/lang/String;
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->isFwdLocked()Z
 
@@ -484,12 +437,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 7130
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 7132
     .local v1, sb:Ljava/lang/StringBuilder;
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -501,24 +452,20 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7133
     const/16 v2, 0x2f
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 7134
     invoke-static {v0}, Lcom/android/server/pm/PackageManagerService;->getApkName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7135
     const-string v2, ".zip"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7142
     const-string v2, ".tmp"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -527,18 +474,15 @@
 
     if-eqz v2, :cond_0
 
-    .line 7143
     const-string v2, ".tmp"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 7146
     :cond_0
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 7148
     .end local v0           #codePath:Ljava/lang/String;
     .end local v1           #sb:Ljava/lang/StringBuilder;
     :cond_1
@@ -553,17 +497,14 @@
 
     const/4 v5, -0x1
 
-    .line 7213
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->isFwdLocked()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 7214
     const/16 v0, 0x1a4
 
-    .line 7217
     .local v0, filePermissions:I
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->getCodePath()Ljava/lang/String;
 
@@ -575,11 +516,9 @@
 
     move-result v1
 
-    .line 7218
     .local v1, retCode:I
     if-eqz v1, :cond_0
 
-    .line 7219
     const-string v2, "PackageManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -616,10 +555,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7223
     const/4 v2, 0x0
 
-    .line 7227
     .end local v0           #filePermissions:I
     .end local v1           #retCode:I
     :cond_0
@@ -640,7 +577,6 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 6953
     const-string v3, "devicestoragemonitor"
 
     invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -649,21 +585,17 @@
 
     check-cast v0, Lcom/android/server/DeviceStorageMonitorService;
 
-    .line 6955
     .local v0, dsm:Lcom/android/server/DeviceStorageMonitorService;
     if-nez v0, :cond_0
 
-    .line 6956
     const-string v3, "PackageManager"
 
     const-string v4, "Couldn\'t get low memory threshold; no free limit imposed"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6957
     const-wide/16 v1, 0x0
 
-    .line 6968
     .local v1, lowThreshold:J
     :goto_0
     :try_start_0
@@ -679,7 +611,6 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/content/Context;->grantUriPermission(Ljava/lang/String;Landroid/net/Uri;I)V
 
-    .line 6970
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->packageURI:Landroid/net/Uri;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->isFwdLocked()Z
@@ -692,7 +623,6 @@
 
     move-result v3
 
-    .line 6972
     iget-object v4, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v4, v4, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
@@ -701,12 +631,10 @@
 
     invoke-virtual {v4, v5, v7}, Landroid/content/Context;->revokeUriPermission(Landroid/net/Uri;I)V
 
-    .line 6970
     .end local v1           #lowThreshold:J
     :goto_1
     return v3
 
-    .line 6959
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/DeviceStorageMonitorService;->isMemoryLow()Z
 
@@ -714,19 +642,16 @@
 
     if-eqz v3, :cond_1
 
-    .line 6960
     const-string v3, "PackageManager"
 
     const-string v4, "Memory is reported as being too low; aborting package install"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6961
     const/4 v3, 0x0
 
     goto :goto_1
 
-    .line 6964
     :cond_1
     invoke-virtual {v0}, Lcom/android/server/DeviceStorageMonitorService;->getMemoryLowThreshold()J
 
@@ -735,7 +660,6 @@
     .restart local v1       #lowThreshold:J
     goto :goto_0
 
-    .line 6972
     :catchall_0
     move-exception v3
 
@@ -754,12 +678,10 @@
     .locals 5
 
     .prologue
-    .line 7199
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->getCodePath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 7200
     .local v1, sourceDir:Ljava/lang/String;
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->cleanUp()Z
 
@@ -767,7 +689,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 7201
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v2, v2, Lcom/android/server/pm/PackageManagerService;->mInstaller:Lcom/android/server/pm/Installer;
@@ -776,11 +697,9 @@
 
     move-result v0
 
-    .line 7202
     .local v0, retCode:I
     if-gez v0, :cond_0
 
-    .line 7203
     const-string v2, "PackageManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -813,7 +732,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7209
     .end local v0           #retCode:I
     :cond_0
     return-void
@@ -834,13 +752,10 @@
 
     const/4 v1, -0x4
 
-    .line 6989
     if-eqz p2, :cond_0
 
-    .line 6991
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->createCopyFile()V
 
-    .line 6994
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -848,17 +763,14 @@
 
     invoke-direct {v0, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 6995
     .local v0, codeFile:Ljava/io/File;
     iget-boolean v7, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->created:Z
 
     if-nez v7, :cond_2
 
-    .line 6997
     :try_start_0
     invoke-virtual {v0}, Ljava/io/File;->createNewFile()Z
 
-    .line 6999
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->setPermissions()Z
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -867,16 +779,13 @@
 
     if-nez v7, :cond_2
 
-    .line 7056
     :cond_1
     :goto_0
     return v1
 
-    .line 7003
     :catch_0
     move-exception v3
 
-    .line 7004
     .local v3, e:Ljava/io/IOException;
     const-string v7, "PackageManager"
 
@@ -902,12 +811,10 @@
 
     goto :goto_0
 
-    .line 7008
     .end local v3           #e:Ljava/io/IOException;
     :cond_2
     const/4 v5, 0x0
 
-    .line 7010
     .local v5, out:Landroid/os/ParcelFileDescriptor;
     const/high16 v7, 0x3000
 
@@ -918,10 +825,8 @@
 
     move-result-object v5
 
-    .line 7016
     const/4 v6, -0x4
 
-    .line 7018
     .local v6, ret:I
     :try_start_2
     iget-object v7, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -936,7 +841,6 @@
 
     invoke-virtual {v7, v8, v9, v10}, Landroid/content/Context;->grantUriPermission(Ljava/lang/String;Landroid/net/Uri;I)V
 
-    .line 7020
     iget-object v7, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->packageURI:Landroid/net/Uri;
 
     const/4 v8, 0x0
@@ -947,10 +851,8 @@
 
     move-result v6
 
-    .line 7022
     invoke-static {v5}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 7023
     iget-object v7, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v7, v7, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
@@ -959,14 +861,12 @@
 
     invoke-virtual {v7, v8, v11}, Landroid/content/Context;->revokeUriPermission(Landroid/net/Uri;I)V
 
-    .line 7026
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->isFwdLocked()Z
 
     move-result v7
 
     if-eqz v7, :cond_3
 
-    .line 7027
     new-instance v2, Ljava/io/File;
 
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->getResourcePath()Ljava/lang/String;
@@ -975,7 +875,6 @@
 
     invoke-direct {v2, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7031
     .local v2, destResourceFile:Ljava/io/File;
     :try_start_3
     iget-object v7, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->codeFileName:Ljava/lang/String;
@@ -984,7 +883,6 @@
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 7040
     .end local v2           #destResourceFile:Ljava/io/File;
     :cond_3
     new-instance v4, Ljava/io/File;
@@ -995,7 +893,6 @@
 
     invoke-direct {v4, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7041
     .local v4, nativeLibraryFile:Ljava/io/File;
     const-string v7, "PackageManager"
 
@@ -1023,20 +920,16 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7042
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
     move-result v7
 
     if-eqz v7, :cond_4
 
-    .line 7043
     invoke-static {v4}, Lcom/android/internal/content/NativeLibraryHelper;->removeNativeBinariesFromDirLI(Ljava/io/File;)Z
 
-    .line 7044
     invoke-virtual {v4}, Ljava/io/File;->delete()Z
 
-    .line 7047
     :cond_4
     :try_start_4
     #calls: Lcom/android/server/pm/PackageManagerService;->copyNativeLibrariesForInternalApp(Ljava/io/File;Ljava/io/File;)I
@@ -1046,7 +939,6 @@
 
     move-result v1
 
-    .line 7048
     .local v1, copyRet:I
     if-ne v1, v11, :cond_1
 
@@ -1054,16 +946,13 @@
     :goto_1
     move v1, v6
 
-    .line 7056
     goto/16 :goto_0
 
-    .line 7011
     .end local v4           #nativeLibraryFile:Ljava/io/File;
     .end local v6           #ret:I
     :catch_1
     move-exception v3
 
-    .line 7012
     .local v3, e:Ljava/io/FileNotFoundException;
     const-string v7, "PackageManager"
 
@@ -1091,7 +980,6 @@
 
     goto/16 :goto_0
 
-    .line 7022
     .end local v3           #e:Ljava/io/FileNotFoundException;
     .restart local v6       #ret:I
     :catchall_0
@@ -1099,7 +987,6 @@
 
     invoke-static {v5}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 7023
     iget-object v8, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v8, v8, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
@@ -1108,15 +995,12 @@
 
     invoke-virtual {v8, v9, v11}, Landroid/content/Context;->revokeUriPermission(Landroid/net/Uri;I)V
 
-    .line 7022
     throw v7
 
-    .line 7032
     .restart local v2       #destResourceFile:Ljava/io/File;
     :catch_2
     move-exception v3
 
-    .line 7033
     .local v3, e:Ljava/io/IOException;
     const-string v7, "PackageManager"
 
@@ -1124,19 +1008,16 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7035
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     goto/16 :goto_0
 
-    .line 7051
     .end local v2           #destResourceFile:Ljava/io/File;
     .end local v3           #e:Ljava/io/IOException;
     .restart local v4       #nativeLibraryFile:Ljava/io/File;
     :catch_3
     move-exception v3
 
-    .line 7052
     .restart local v3       #e:Ljava/io/IOException;
     const-string v7, "PackageManager"
 
@@ -1144,7 +1025,6 @@
 
     invoke-static {v7, v8, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 7053
     const/16 v6, -0x6e
 
     goto :goto_1
@@ -1154,7 +1034,6 @@
     .locals 2
 
     .prologue
-    .line 6981
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->isFwdLocked()Z
 
     move-result v0
@@ -1168,7 +1047,6 @@
     :goto_0
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->installDir:Ljava/io/File;
 
-    .line 6982
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->installDir:Ljava/io/File;
@@ -1184,29 +1062,24 @@
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->codeFileName:Ljava/lang/String;
 
-    .line 6983
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->getResourcePathFromCodePath()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->resourceFileName:Ljava/lang/String;
 
-    .line 6984
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->getLibraryPathFromCodePath()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->libraryPath:Ljava/lang/String;
 
-    .line 6985
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->created:Z
 
-    .line 6986
     return-void
 
-    .line 6981
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -1220,10 +1093,8 @@
     .parameter "delete"
 
     .prologue
-    .line 7232
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->cleanUpResourcesLI()V
 
-    .line 7233
     const/4 v0, 0x1
 
     return v0
@@ -1235,15 +1106,12 @@
     .parameter "uid"
 
     .prologue
-    .line 7117
     const/4 v0, 0x1
 
     if-eq p1, v0, :cond_0
 
-    .line 7118
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->cleanUp()Z
 
-    .line 7120
     :cond_0
     return p1
 .end method
@@ -1253,15 +1121,12 @@
     .parameter "status"
 
     .prologue
-    .line 7060
     const/4 v0, 0x1
 
     if-eq p1, v0, :cond_0
 
-    .line 7061
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->cleanUp()Z
 
-    .line 7063
     :cond_0
     return p1
 .end method
@@ -1277,18 +1142,14 @@
 
     const/4 v7, 0x0
 
-    .line 7067
     if-eq p1, v8, :cond_1
 
-    .line 7068
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->cleanUp()Z
 
-    .line 7112
     :cond_0
     :goto_0
     return v7
 
-    .line 7071
     :cond_1
     new-instance v4, Ljava/io/File;
 
@@ -1298,7 +1159,6 @@
 
     invoke-direct {v4, v9}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7072
     .local v4, oldCodeFile:Ljava/io/File;
     new-instance v6, Ljava/io/File;
 
@@ -1308,7 +1168,6 @@
 
     invoke-direct {v6, v9}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7073
     .local v6, oldResourceFile:Ljava/io/File;
     new-instance v5, Ljava/io/File;
 
@@ -1318,7 +1177,6 @@
 
     invoke-direct {v5, v9}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7076
     .local v5, oldLibraryFile:Ljava/io/File;
     const-string v9, ".apk"
 
@@ -1327,7 +1185,6 @@
 
     move-result-object v0
 
-    .line 7077
     .local v0, apkName:Ljava/lang/String;
     new-instance v1, Ljava/io/File;
 
@@ -1353,7 +1210,6 @@
 
     invoke-direct {v1, v9, v10}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 7078
     .local v1, newCodeFile:Ljava/io/File;
     invoke-virtual {v4, v1}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
@@ -1361,14 +1217,12 @@
 
     if-eqz v9, :cond_0
 
-    .line 7081
     invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v9
 
     iput-object v9, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->codeFileName:Ljava/lang/String;
 
-    .line 7084
     new-instance v3, Ljava/io/File;
 
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->getResourcePathFromCodePath()Ljava/lang/String;
@@ -1377,7 +1231,6 @@
 
     invoke-direct {v3, v9}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7085
     .local v3, newResFile:Ljava/io/File;
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->isFwdLocked()Z
 
@@ -1391,7 +1244,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 7088
     :cond_2
     invoke-virtual {v3}, Ljava/io/File;->getPath()Ljava/lang/String;
 
@@ -1399,7 +1251,6 @@
 
     iput-object v9, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->resourceFileName:Ljava/lang/String;
 
-    .line 7091
     new-instance v2, Ljava/io/File;
 
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->getLibraryPathFromCodePath()Ljava/lang/String;
@@ -1408,7 +1259,6 @@
 
     invoke-direct {v2, v9}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7092
     .local v2, newLibraryFile:Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -1416,13 +1266,10 @@
 
     if-eqz v9, :cond_3
 
-    .line 7093
     invoke-static {v2}, Lcom/android/internal/content/NativeLibraryHelper;->removeNativeBinariesFromDirLI(Ljava/io/File;)Z
 
-    .line 7094
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 7096
     :cond_3
     invoke-virtual {v5, v2}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
@@ -1430,7 +1277,6 @@
 
     if-nez v9, :cond_4
 
-    .line 7097
     const-string v8, "PackageManager"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -1473,7 +1319,6 @@
 
     goto/16 :goto_0
 
-    .line 7101
     :cond_4
     invoke-virtual {v2}, Ljava/io/File;->getPath()Ljava/lang/String;
 
@@ -1481,14 +1326,12 @@
 
     iput-object v9, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->libraryPath:Ljava/lang/String;
 
-    .line 7104
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->setPermissions()Z
 
     move-result v9
 
     if-eqz v9, :cond_0
 
-    .line 7108
     invoke-static {v1}, Landroid/os/SELinux;->restorecon(Ljava/io/File;)Z
 
     move-result v9
@@ -1497,7 +1340,6 @@
 
     move v7, v8
 
-    .line 7112
     goto/16 :goto_0
 .end method
 
@@ -1505,7 +1347,6 @@
     .locals 1
 
     .prologue
-    .line 6977
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->codeFileName:Ljava/lang/String;
 
     return-object v0
@@ -1515,19 +1356,16 @@
     .locals 1
 
     .prologue
-    .line 7158
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->libraryPath:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 7159
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->getLibraryPathFromCodePath()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->libraryPath:Ljava/lang/String;
 
-    .line 7161
     :cond_0
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->libraryPath:Ljava/lang/String;
 
@@ -1538,7 +1376,6 @@
     .locals 1
 
     .prologue
-    .line 7124
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$FileInstallArgs;->resourceFileName:Ljava/lang/String;
 
     return-object v0

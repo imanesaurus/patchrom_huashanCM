@@ -27,16 +27,12 @@
     .parameter "_reqPolicy"
 
     .prologue
-    .line 215
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 216
     iput-object p1, p0, Lcom/android/server/DevicePolicyManagerService$PolicyFileDescription;->path:Ljava/lang/String;
 
-    .line 217
     iput p2, p0, Lcom/android/server/DevicePolicyManagerService$PolicyFileDescription;->reqPolicy:I
 
-    .line 218
     return-void
 .end method
 

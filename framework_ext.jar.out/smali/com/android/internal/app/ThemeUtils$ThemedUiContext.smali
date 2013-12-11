@@ -25,13 +25,10 @@
     .parameter "packageName"
 
     .prologue
-    .line 40
     invoke-direct {p0, p1}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
 
-    .line 41
     iput-object p2, p0, Lcom/android/internal/app/ThemeUtils$ThemedUiContext;->mPackageName:Ljava/lang/String;
 
-    .line 42
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 46
     iget-object v0, p0, Lcom/android/internal/app/ThemeUtils$ThemedUiContext;->mPackageName:Ljava/lang/String;
 
     return-object v0

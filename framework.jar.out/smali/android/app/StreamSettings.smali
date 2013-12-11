@@ -34,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 22
     new-instance v0, Landroid/app/StreamSettings$1;
 
     invoke-direct {v0}, Landroid/app/StreamSettings$1;-><init>()V
@@ -51,10 +50,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 39
     invoke-direct {p0, p1, v0, v0}, Landroid/app/StreamSettings;-><init>(IIZ)V
 
-    .line 40
     return-void
 .end method
 
@@ -65,24 +62,18 @@
     .parameter "override"
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     iput p1, p0, Landroid/app/StreamSettings;->mStreamId:I
 
-    .line 44
     iput p2, p0, Landroid/app/StreamSettings;->mValue:I
 
-    .line 45
     iput-boolean p3, p0, Landroid/app/StreamSettings;->mOverride:Z
 
-    .line 46
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/app/StreamSettings;->mDirty:Z
 
-    .line 47
     return-void
 .end method
 
@@ -91,13 +82,10 @@
     .parameter "parcel"
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     invoke-virtual {p0, p1}, Landroid/app/StreamSettings;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 36
     return-void
 .end method
 
@@ -113,12 +101,10 @@
     .end annotation
 
     .prologue
-    .line 79
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v0
 
-    .line 80
     .local v0, event:I
     new-instance v2, Landroid/app/StreamSettings;
 
@@ -126,7 +112,6 @@
 
     invoke-direct {v2, v3}, Landroid/app/StreamSettings;-><init>(I)V
 
-    .line 81
     .local v2, streamDescriptor:Landroid/app/StreamSettings;
     :goto_0
     const/4 v3, 0x3
@@ -137,7 +122,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "streamDescriptor"
+    const-string v4, "streamDescriptor"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -145,20 +130,17 @@
 
     if-nez v3, :cond_4
 
-    .line 82
     :cond_0
     const/4 v3, 0x2
 
     if-ne v0, v3, :cond_1
 
-    .line 83
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 84
     .local v1, name:Ljava/lang/String;
-    const-string/jumbo v3, "streamId"
+    const-string v3, "streamId"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -166,7 +148,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 85
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v3
@@ -177,7 +158,6 @@
 
     iput v3, v2, Landroid/app/StreamSettings;->mStreamId:I
 
-    .line 92
     .end local v1           #name:Ljava/lang/String;
     :cond_1
     :goto_1
@@ -187,10 +167,9 @@
 
     goto :goto_0
 
-    .line 86
     .restart local v1       #name:Ljava/lang/String;
     :cond_2
-    const-string/jumbo v3, "value"
+    const-string v3, "value"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -198,7 +177,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 87
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v3
@@ -211,9 +189,8 @@
 
     goto :goto_1
 
-    .line 88
     :cond_3
-    const-string/jumbo v3, "override"
+    const-string v3, "override"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -221,7 +198,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 89
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v3
@@ -234,7 +210,6 @@
 
     goto :goto_1
 
-    .line 94
     .end local v1           #name:Ljava/lang/String;
     :cond_4
     return-object v2
@@ -246,7 +221,6 @@
     .locals 1
 
     .prologue
-    .line 111
     const/4 v0, 0x0
 
     return v0
@@ -256,7 +230,6 @@
     .locals 1
 
     .prologue
-    .line 50
     iget v0, p0, Landroid/app/StreamSettings;->mStreamId:I
 
     return v0
@@ -266,7 +239,6 @@
     .locals 1
 
     .prologue
-    .line 54
     iget v0, p0, Landroid/app/StreamSettings;->mValue:I
 
     return v0
@@ -278,47 +250,38 @@
     .parameter "context"
 
     .prologue
-    .line 99
     const-string v0, "<streamDescriptor>\n<streamId>"
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 100
     iget v0, p0, Landroid/app/StreamSettings;->mStreamId:I
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 101
     const-string v0, "</streamId>\n<value>"
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 102
     iget v0, p0, Landroid/app/StreamSettings;->mValue:I
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 103
     const-string v0, "</value>\n<override>"
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 104
     iget-boolean v0, p0, Landroid/app/StreamSettings;->mOverride:Z
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 105
     const-string v0, "</override>\n</streamDescriptor>\n"
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 106
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/app/StreamSettings;->mDirty:Z
 
-    .line 107
     return-void
 .end method
 
@@ -326,7 +289,6 @@
     .locals 1
 
     .prologue
-    .line 73
     iget-boolean v0, p0, Landroid/app/StreamSettings;->mDirty:Z
 
     return v0
@@ -336,7 +298,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iget-boolean v0, p0, Landroid/app/StreamSettings;->mOverride:Z
 
     return v0
@@ -351,14 +312,12 @@
 
     const/4 v2, 0x0
 
-    .line 125
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/app/StreamSettings;->mStreamId:I
 
-    .line 126
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -370,14 +329,12 @@
     :goto_0
     iput-boolean v0, p0, Landroid/app/StreamSettings;->mOverride:Z
 
-    .line 127
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/app/StreamSettings;->mValue:I
 
-    .line 128
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -387,19 +344,16 @@
     :goto_1
     iput-boolean v1, p0, Landroid/app/StreamSettings;->mDirty:Z
 
-    .line 129
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 126
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 128
     goto :goto_1
 .end method
 
@@ -408,15 +362,12 @@
     .parameter "override"
 
     .prologue
-    .line 63
     iput-boolean p1, p0, Landroid/app/StreamSettings;->mOverride:Z
 
-    .line 64
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/StreamSettings;->mDirty:Z
 
-    .line 65
     return-void
 .end method
 
@@ -425,15 +376,12 @@
     .parameter "value"
 
     .prologue
-    .line 58
     iput p1, p0, Landroid/app/StreamSettings;->mValue:I
 
-    .line 59
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/app/StreamSettings;->mDirty:Z
 
-    .line 60
     return-void
 .end method
 
@@ -447,12 +395,10 @@
 
     const/4 v2, 0x0
 
-    .line 117
     iget v0, p0, Landroid/app/StreamSettings;->mStreamId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 118
     iget-boolean v0, p0, Landroid/app/StreamSettings;->mOverride:Z
 
     if-eqz v0, :cond_0
@@ -462,12 +408,10 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 119
     iget v0, p0, Landroid/app/StreamSettings;->mValue:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 120
     iget-boolean v0, p0, Landroid/app/StreamSettings;->mDirty:Z
 
     if-eqz v0, :cond_1
@@ -475,18 +419,15 @@
     :goto_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 121
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 118
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 120
     goto :goto_1
 .end method

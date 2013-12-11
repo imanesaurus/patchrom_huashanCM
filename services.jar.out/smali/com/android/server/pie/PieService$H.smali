@@ -25,13 +25,10 @@
     .parameter "looper"
 
     .prologue
-    .line 331
     iput-object p1, p0, Lcom/android/server/pie/PieService$H;->this$0:Lcom/android/server/pie/PieService;
 
-    .line 332
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 333
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .parameter "sensitivity"
 
     .prologue
-    .line 361
     iget-object v0, p0, Lcom/android/server/pie/PieService$H;->this$0:Lcom/android/server/pie/PieService;
 
     #getter for: Lcom/android/server/pie/PieService;->mLock:Ljava/lang/Object;
@@ -51,7 +47,6 @@
 
     monitor-enter v1
 
-    .line 362
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pie/PieService$H;->this$0:Lcom/android/server/pie/PieService;
 
@@ -62,7 +57,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 363
     iget-object v0, p0, Lcom/android/server/pie/PieService$H;->this$0:Lcom/android/server/pie/PieService;
 
     #getter for: Lcom/android/server/pie/PieService;->mInputFilter:Lcom/android/server/pie/PieInputFilter;
@@ -72,7 +66,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/pie/PieInputFilter;->updatePositions(I)V
 
-    .line 364
     iget-object v0, p0, Lcom/android/server/pie/PieService$H;->this$0:Lcom/android/server/pie/PieService;
 
     #getter for: Lcom/android/server/pie/PieService;->mInputFilter:Lcom/android/server/pie/PieInputFilter;
@@ -82,14 +75,11 @@
 
     invoke-virtual {v0, p2}, Lcom/android/server/pie/PieInputFilter;->updateSensitivity(I)V
 
-    .line 366
     :cond_0
     monitor-exit v1
 
-    .line 367
     return-void
 
-    .line 366
     :catchall_0
     move-exception v0
 
@@ -109,24 +99,20 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 337
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 358
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 344
     :pswitch_1
     const/16 v0, 0x7d17
 
     invoke-virtual {p0, v0}, Lcom/android/server/pie/PieService$H;->removeMessages(I)V
 
-    .line 345
     iget-object v1, p0, Lcom/android/server/pie/PieService$H;->this$0:Lcom/android/server/pie/PieService;
 
     iget v2, p1, Landroid/os/Message;->arg1:I
@@ -144,12 +130,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 347
     invoke-direct {p0, v4, v4}, Lcom/android/server/pie/PieService$H;->updateServiceHandler(II)V
 
     goto :goto_0
 
-    .line 355
     :pswitch_2
     iget v0, p1, Landroid/os/Message;->arg1:I
 
@@ -159,7 +143,6 @@
 
     goto :goto_0
 
-    .line 337
     :pswitch_data_0
     .packed-switch 0x7d17
         :pswitch_1

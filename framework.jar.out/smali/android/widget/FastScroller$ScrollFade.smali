@@ -37,7 +37,6 @@
     .parameter
 
     .prologue
-    .line 834
     iput-object p1, p0, Landroid/widget/FastScroller$ScrollFade;->this$0:Landroid/widget/FastScroller;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .prologue
     const-wide/16 v7, 0xd0
 
-    .line 848
     iget-object v3, p0, Landroid/widget/FastScroller$ScrollFade;->this$0:Landroid/widget/FastScroller;
 
     invoke-virtual {v3}, Landroid/widget/FastScroller;->getState()I
@@ -64,20 +62,16 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 849
     const/16 v0, 0xd0
 
-    .line 858
     :goto_0
     return v0
 
-    .line 852
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
 
-    .line 853
     .local v1, now:J
     iget-wide v3, p0, Landroid/widget/FastScroller$ScrollFade;->mStartTime:J
 
@@ -89,13 +83,11 @@
 
     if-lez v3, :cond_1
 
-    .line 854
     const/4 v0, 0x0
 
     .local v0, alpha:I
     goto :goto_0
 
-    .line 856
     .end local v0           #alpha:I
     :cond_1
     iget-wide v3, p0, Landroid/widget/FastScroller$ScrollFade;->mStartTime:J
@@ -120,7 +112,6 @@
     .locals 2
 
     .prologue
-    .line 862
     iget-object v0, p0, Landroid/widget/FastScroller$ScrollFade;->this$0:Landroid/widget/FastScroller;
 
     invoke-virtual {v0}, Landroid/widget/FastScroller;->getState()I
@@ -131,14 +122,11 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 863
     invoke-virtual {p0}, Landroid/widget/FastScroller$ScrollFade;->startFade()V
 
-    .line 872
     :goto_0
     return-void
 
-    .line 867
     :cond_0
     invoke-virtual {p0}, Landroid/widget/FastScroller$ScrollFade;->getAlpha()I
 
@@ -146,7 +134,6 @@
 
     if-lez v0, :cond_1
 
-    .line 868
     iget-object v0, p0, Landroid/widget/FastScroller$ScrollFade;->this$0:Landroid/widget/FastScroller;
 
     iget-object v0, v0, Landroid/widget/FastScroller;->mList:Landroid/widget/AbsListView;
@@ -155,7 +142,6 @@
 
     goto :goto_0
 
-    .line 870
     :cond_1
     iget-object v0, p0, Landroid/widget/FastScroller$ScrollFade;->this$0:Landroid/widget/FastScroller;
 
@@ -170,25 +156,21 @@
     .locals 2
 
     .prologue
-    .line 842
     const-wide/16 v0, 0xc8
 
     iput-wide v0, p0, Landroid/widget/FastScroller$ScrollFade;->mFadeDuration:J
 
-    .line 843
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/widget/FastScroller$ScrollFade;->mStartTime:J
 
-    .line 844
     iget-object v0, p0, Landroid/widget/FastScroller$ScrollFade;->this$0:Landroid/widget/FastScroller;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/widget/FastScroller;->setState(I)V
 
-    .line 845
     return-void
 .end method

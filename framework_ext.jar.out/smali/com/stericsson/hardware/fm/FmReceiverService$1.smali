@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 512
     iput-object p1, p0, Lcom/stericsson/hardware/fm/FmReceiverService$1;->this$0:Lcom/stericsson/hardware/fm/FmReceiverService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,21 +39,17 @@
     .parameter "intent"
 
     .prologue
-    .line 516
     if-nez p2, :cond_1
 
-    .line 534
     :cond_0
     :goto_0
     return-void
 
-    .line 520
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 521
     .local v0, action:Ljava/lang/String;
     const-string v1, "android.intent.action.AIRPLANE_MODE"
 
@@ -64,14 +59,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 522
     const-string v1, "FmReceiverService"
 
-    const-string/jumbo v2, "onReceive:ACTION_AIRPLANE_MODE_CHANGED"
+    const-string v2, "onReceive:ACTION_AIRPLANE_MODE_CHANGED"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 525
     iget-object v1, p0, Lcom/stericsson/hardware/fm/FmReceiverService$1;->this$0:Lcom/stericsson/hardware/fm/FmReceiverService;
 
     #calls: Lcom/stericsson/hardware/fm/FmReceiverService;->isAirplaneModeOn()Z
@@ -81,7 +74,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 530
     iget-object v1, p0, Lcom/stericsson/hardware/fm/FmReceiverService$1;->this$0:Lcom/stericsson/hardware/fm/FmReceiverService;
 
     #calls: Lcom/stericsson/hardware/fm/FmReceiverService;->_fm_receiver_reset()I
@@ -91,7 +83,6 @@
 
     if-lez v1, :cond_0
 
-    .line 531
     iget-object v1, p0, Lcom/stericsson/hardware/fm/FmReceiverService$1;->this$0:Lcom/stericsson/hardware/fm/FmReceiverService;
 
     const/4 v2, 0x3

@@ -39,7 +39,6 @@
     .parameter
 
     .prologue
-    .line 51
     iput-object p1, p0, Landroid/service/pie/PieManager$PieActivationListener$Delegator$1;->this$1:Landroid/service/pie/PieManager$PieActivationListener$Delegator;
 
     iput p2, p0, Landroid/service/pie/PieManager$PieActivationListener$Delegator$1;->val$touchX:I
@@ -61,7 +60,6 @@
     .locals 5
 
     .prologue
-    .line 53
     iget-object v0, p0, Landroid/service/pie/PieManager$PieActivationListener$Delegator$1;->this$1:Landroid/service/pie/PieManager$PieActivationListener$Delegator;
 
     iget-object v0, v0, Landroid/service/pie/PieManager$PieActivationListener$Delegator;->this$0:Landroid/service/pie/PieManager$PieActivationListener;
@@ -82,6 +80,5 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/service/pie/PieManager$PieActivationListener;->onPieActivation(IILcom/android/internal/util/pie/PiePosition;I)V
 
-    .line 54
     return-void
 .end method

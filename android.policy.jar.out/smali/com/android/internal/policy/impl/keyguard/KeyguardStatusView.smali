@@ -39,14 +39,12 @@
     .parameter "context"
 
     .prologue
-    .line 69
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p1, v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 70
     return-void
 .end method
 
@@ -56,12 +54,10 @@
     .parameter "attrs"
 
     .prologue
-    .line 73
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 74
     return-void
 .end method
 
@@ -72,17 +68,14 @@
     .parameter "defStyle"
 
     .prologue
-    .line 77
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/GridLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 52
     new-instance v0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView$1;-><init>(Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->mInfoCallback:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitorCallback;
 
-    .line 78
     return-void
 .end method
 
@@ -92,7 +85,6 @@
     .parameter "text"
 
     .prologue
-    .line 145
     sget-boolean v0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;->USE_UPPER_CASE:Z
 
     if-eqz v0, :cond_1
@@ -105,7 +97,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 147
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -119,17 +110,14 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 151
     :goto_1
     return-void
 
-    .line 147
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 149
     :cond_1
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -142,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 141
     const/4 v0, -0x2
 
     return v0
@@ -152,10 +139,8 @@
     .locals 2
 
     .prologue
-    .line 130
     invoke-super {p0}, Landroid/widget/GridLayout;->onAttachedToWindow()V
 
-    .line 131
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
@@ -166,7 +151,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->registerCallback(Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitorCallback;)V
 
-    .line 132
     return-void
 .end method
 
@@ -174,10 +158,8 @@
     .locals 2
 
     .prologue
-    .line 136
     invoke-super {p0}, Landroid/widget/GridLayout;->onDetachedFromWindow()V
 
-    .line 137
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
@@ -188,7 +170,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->removeCallback(Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitorCallback;)V
 
-    .line 138
     return-void
 .end method
 
@@ -198,10 +179,8 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 82
     invoke-super {p0}, Landroid/widget/GridLayout;->onFinishInflate()V
 
-    .line 83
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -210,7 +189,6 @@
 
     move-result-object v2
 
-    .line 84
     .local v2, res:Landroid/content/res/Resources;
     const v4, 0x10400d1
 
@@ -220,7 +198,6 @@
 
     iput-object v4, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->mDateFormatString:Ljava/lang/CharSequence;
 
-    .line 86
     const v4, 0x1020063
 
     invoke-virtual {p0, v4}, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->findViewById(I)Landroid/view/View;
@@ -231,7 +208,6 @@
 
     iput-object v4, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->mDateView:Landroid/widget/TextView;
 
-    .line 87
     const v4, 0x10202e4
 
     invoke-virtual {p0, v4}, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->findViewById(I)Landroid/view/View;
@@ -242,7 +218,6 @@
 
     iput-object v4, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->mAlarmStatusView:Landroid/widget/TextView;
 
-    .line 88
     const v4, 0x1020302
 
     invoke-virtual {p0, v4}, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->findViewById(I)Landroid/view/View;
@@ -253,7 +228,6 @@
 
     iput-object v4, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->mClockView:Lcom/android/internal/policy/impl/keyguard/ClockView;
 
-    .line 89
     new-instance v4, Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->getContext()Landroid/content/Context;
@@ -264,14 +238,12 @@
 
     iput-object v4, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    .line 92
     iget-object v4, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->mDateView:Landroid/widget/TextView;
 
     sget-object v5, Landroid/graphics/Typeface;->SANS_SERIF:Landroid/graphics/Typeface;
 
     invoke-virtual {v4, v5, v6}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
 
-    .line 95
     const/4 v4, 0x2
 
     new-array v1, v4, [Landroid/view/View;
@@ -286,7 +258,6 @@
 
     aput-object v4, v1, v6
 
-    .line 96
     .local v1, marqueeViews:[Landroid/view/View;
     const/4 v0, 0x0
 
@@ -296,14 +267,11 @@
 
     if-ge v0, v4, :cond_1
 
-    .line 97
     aget-object v3, v1, v0
 
-    .line 98
     .local v3, v:Landroid/view/View;
     if-nez v3, :cond_0
 
-    .line 99
     new-instance v4, Ljava/lang/RuntimeException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -328,21 +296,17 @@
 
     throw v4
 
-    .line 101
     :cond_0
     invoke-virtual {v3, v6}, Landroid/view/View;->setSelected(Z)V
 
-    .line 96
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 103
     .end local v3           #v:Landroid/view/View;
     :cond_1
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->refresh()V
 
-    .line 104
     return-void
 .end method
 
@@ -350,18 +314,14 @@
     .locals 1
 
     .prologue
-    .line 107
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->mClockView:Lcom/android/internal/policy/impl/keyguard/ClockView;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/keyguard/ClockView;->updateTime()V
 
-    .line 108
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->refreshDate()V
 
-    .line 109
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->refreshAlarmStatus()V
 
-    .line 110
     return-void
 .end method
 
@@ -371,14 +331,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 114
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {v1}, Lcom/android/internal/widget/LockPatternUtils;->getNextAlarm()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 115
     .local v0, nextAlarm:Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -386,28 +344,23 @@
 
     if-nez v1, :cond_0
 
-    .line 116
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->mAlarmStatusView:Landroid/widget/TextView;
 
     invoke-direct {p0, v1, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->maybeSetUpperCaseText(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
 
-    .line 117
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->mAlarmStatusView:Landroid/widget/TextView;
 
     const v2, 0x108002e
 
     invoke-virtual {v1, v2, v3, v3, v3}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
-    .line 118
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->mAlarmStatusView:Landroid/widget/TextView;
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 122
     :goto_0
     return-void
 
-    .line 120
     :cond_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->mAlarmStatusView:Landroid/widget/TextView;
 
@@ -422,7 +375,6 @@
     .locals 3
 
     .prologue
-    .line 125
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->mDateView:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->mDateFormatString:Ljava/lang/CharSequence;
@@ -437,6 +389,5 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->maybeSetUpperCaseText(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
 
-    .line 126
     return-void
 .end method

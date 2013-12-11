@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 344
     iput-object p1, p0, Lcom/android/server/ThrottleService$3;->this$0:Lcom/android/server/ThrottleService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 347
     iget-object v0, p0, Lcom/android/server/ThrottleService$3;->this$0:Lcom/android/server/ThrottleService;
 
     const/4 v1, 0x0
@@ -48,6 +46,5 @@
     #setter for: Lcom/android/server/ThrottleService;->mUiContext:Landroid/content/Context;
     invoke-static {v0, v1}, Lcom/android/server/ThrottleService;->access$002(Lcom/android/server/ThrottleService;Landroid/content/Context;)Landroid/content/Context;
 
-    .line 348
     return-void
 .end method

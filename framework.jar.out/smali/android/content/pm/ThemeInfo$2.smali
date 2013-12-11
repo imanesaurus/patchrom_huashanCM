@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 118
     invoke-static {}, Landroid/content/pm/ThemeInfo$AttributeIndex;->values()[Landroid/content/pm/ThemeInfo$AttributeIndex;
 
     move-result-object v0

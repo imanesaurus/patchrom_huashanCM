@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .parameter "in"
 
     .prologue
-    .line 24
     new-instance v0, Landroid/app/StreamSettings;
 
     invoke-direct {v0, p1}, Landroid/app/StreamSettings;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .parameter "x0"
 
     .prologue
-    .line 22
     invoke-virtual {p0, p1}, Landroid/app/StreamSettings$1;->createFromParcel(Landroid/os/Parcel;)Landroid/app/StreamSettings;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .parameter "size"
 
     .prologue
-    .line 29
     new-array v0, p1, [Landroid/app/StreamSettings;
 
     return-object v0
@@ -82,7 +78,6 @@
     .parameter "x0"
 
     .prologue
-    .line 22
     invoke-virtual {p0, p1}, Landroid/app/StreamSettings$1;->newArray(I)[Landroid/app/StreamSettings;
 
     move-result-object v0

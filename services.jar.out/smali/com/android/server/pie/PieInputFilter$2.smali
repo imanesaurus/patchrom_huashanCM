@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 274
     invoke-static {}, Lcom/android/server/pie/PieInputFilter$State;->values()[Lcom/android/server/pie/PieInputFilter$State;
 
     move-result-object v0

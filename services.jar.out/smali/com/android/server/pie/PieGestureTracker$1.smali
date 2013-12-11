@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 159
     invoke-static {}, Lcom/android/internal/util/pie/PiePosition;->values()[Lcom/android/internal/util/pie/PiePosition;
 
     move-result-object v0

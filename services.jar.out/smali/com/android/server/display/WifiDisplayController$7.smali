@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 402
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$7;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     iput-object p2, p0, Lcom/android/server/display/WifiDisplayController$7;->val$displays:[Landroid/hardware/display/WifiDisplay;
@@ -46,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 405
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$7;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     #getter for: Lcom/android/server/display/WifiDisplayController;->mListener:Lcom/android/server/display/WifiDisplayController$Listener;
@@ -58,6 +56,5 @@
 
     invoke-interface {v0, v1}, Lcom/android/server/display/WifiDisplayController$Listener;->onScanFinished([Landroid/hardware/display/WifiDisplay;)V
 
-    .line 406
     return-void
 .end method

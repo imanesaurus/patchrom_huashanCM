@@ -25,7 +25,6 @@
     .locals 1
 
     .prologue
-    .line 41
     const-class v0, Lcom/android/server/DeviceHandlerService;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -44,22 +43,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 50
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 47
     iput-object v0, p0, Lcom/android/server/DeviceHandlerService;->mDeviceKeyHandler:Lcom/android/internal/os/DeviceKeyHandler;
 
-    .line 48
     iput-object v0, p0, Lcom/android/server/DeviceHandlerService;->mDeviceDockBatteryHandler:Lcom/android/internal/os/DeviceDockBatteryHandler;
 
-    .line 51
     iput-object p1, p0, Lcom/android/server/DeviceHandlerService;->mContext:Landroid/content/Context;
 
-    .line 52
     invoke-direct {p0}, Lcom/android/server/DeviceHandlerService;->registerHandlers()V
 
-    .line 53
     return-void
 .end method
 
@@ -76,13 +69,11 @@
 
     const/4 v8, 0x0
 
-    .line 102
     :try_start_0
     invoke-virtual {p1, p3}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 103
     .local v0, clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     const/4 v4, 0x1
 
@@ -98,7 +89,6 @@
 
     move-result-object v1
 
-    .line 104
     .local v1, constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     const/4 v4, 0x1
 
@@ -114,7 +104,6 @@
 
     move-result-object v3
 
-    .line 106
     .local v3, handler:Ljava/lang/Object;
     sget-object v4, Lcom/android/server/DeviceHandlerService;->TAG:Ljava/lang/String;
 
@@ -140,18 +129,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 115
     .end local v0           #clazz:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     .end local v1           #constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     .end local v3           #handler:Ljava/lang/Object;
     :goto_0
     return-object v3
 
-    .line 110
     :catch_0
     move-exception v2
 
-    .line 111
     .local v2, e:Ljava/lang/Exception;
     sget-object v4, Lcom/android/server/DeviceHandlerService;->TAG:Ljava/lang/String;
 
@@ -169,7 +155,6 @@
 
     invoke-static {v4, v5, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 115
     const/4 v3, 0x0
 
     goto :goto_0
@@ -179,14 +164,12 @@
     .locals 8
 
     .prologue
-    .line 58
     iget-object v5, p0, Lcom/android/server/DeviceHandlerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    .line 59
     .local v4, res:Landroid/content/res/Resources;
     const v5, 0x1040098
 
@@ -194,7 +177,6 @@
 
     move-result-object v1
 
-    .line 62
     .local v1, deviceHandlersLib:Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
@@ -202,19 +184,16 @@
 
     if-eqz v5, :cond_1
 
-    .line 63
     sget-object v5, Lcom/android/server/DeviceHandlerService;->TAG:Ljava/lang/String;
 
     const-string v6, "No device specific handler lib was defined."
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     :cond_0
     :goto_0
     return-void
 
-    .line 66
     :cond_1
     new-instance v0, Ldalvik/system/DexClassLoader;
 
@@ -240,7 +219,6 @@
 
     invoke-direct {v0, v1, v5, v6, v7}, Ldalvik/system/DexClassLoader;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;)V
 
-    .line 76
     .local v0, classLoader:Ljava/lang/ClassLoader;
     const v5, 0x1040099
 
@@ -248,7 +226,6 @@
 
     move-result-object v2
 
-    .line 78
     .local v2, handlerClass:Ljava/lang/String;
     invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
 
@@ -256,7 +233,6 @@
 
     if-nez v5, :cond_2
 
-    .line 79
     const-string v5, "key"
 
     invoke-direct {p0, v0, v5, v2}, Lcom/android/server/DeviceHandlerService;->getHandler(Ljava/lang/ClassLoader;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
@@ -267,7 +243,6 @@
 
     iput-object v5, p0, Lcom/android/server/DeviceHandlerService;->mDeviceKeyHandler:Lcom/android/internal/os/DeviceKeyHandler;
 
-    .line 86
     :cond_2
     const v5, 0x111005b
 
@@ -275,25 +250,21 @@
 
     move-result v3
 
-    .line 87
     .local v3, hasDockBattery:Z
     if-eqz v3, :cond_0
 
-    .line 88
     const v5, 0x1040096
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 91
     invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
 
     move-result v5
 
     if-nez v5, :cond_0
 
-    .line 92
     const-string v5, "dock battery"
 
     invoke-direct {p0, v0, v5, v2}, Lcom/android/server/DeviceHandlerService;->getHandler(Ljava/lang/ClassLoader;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
@@ -313,7 +284,6 @@
     .locals 1
 
     .prologue
-    .line 123
     iget-object v0, p0, Lcom/android/server/DeviceHandlerService;->mDeviceDockBatteryHandler:Lcom/android/internal/os/DeviceDockBatteryHandler;
 
     return-object v0
@@ -323,7 +293,6 @@
     .locals 1
 
     .prologue
-    .line 119
     iget-object v0, p0, Lcom/android/server/DeviceHandlerService;->mDeviceKeyHandler:Lcom/android/internal/os/DeviceKeyHandler;
 
     return-object v0

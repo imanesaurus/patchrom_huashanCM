@@ -6643,7 +6643,7 @@
 
     const-string v1, "MiuiMagnifierController"
 
-    const-string/jumbo v2, "performLongClick to show MagnifierController"
+    const-string v2, "performLongClick to show MagnifierController"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 

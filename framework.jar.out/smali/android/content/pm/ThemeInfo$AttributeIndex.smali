@@ -68,7 +68,6 @@
 
     const/4 v3, 0x0
 
-    .line 48
     new-instance v0, Landroid/content/pm/ThemeInfo$AttributeIndex;
 
     const-string v1, "THEME_PACKAGE_INDEX"
@@ -77,7 +76,6 @@
 
     sput-object v0, Landroid/content/pm/ThemeInfo$AttributeIndex;->THEME_PACKAGE_INDEX:Landroid/content/pm/ThemeInfo$AttributeIndex;
 
-    .line 49
     new-instance v0, Landroid/content/pm/ThemeInfo$AttributeIndex;
 
     const-string v1, "PREVIEW_INDEX"
@@ -86,7 +84,6 @@
 
     sput-object v0, Landroid/content/pm/ThemeInfo$AttributeIndex;->PREVIEW_INDEX:Landroid/content/pm/ThemeInfo$AttributeIndex;
 
-    .line 50
     new-instance v0, Landroid/content/pm/ThemeInfo$AttributeIndex;
 
     const-string v1, "AUTHOR_INDEX"
@@ -95,7 +92,6 @@
 
     sput-object v0, Landroid/content/pm/ThemeInfo$AttributeIndex;->AUTHOR_INDEX:Landroid/content/pm/ThemeInfo$AttributeIndex;
 
-    .line 51
     new-instance v0, Landroid/content/pm/ThemeInfo$AttributeIndex;
 
     const-string v1, "THEME_INDEX"
@@ -104,7 +100,6 @@
 
     sput-object v0, Landroid/content/pm/ThemeInfo$AttributeIndex;->THEME_INDEX:Landroid/content/pm/ThemeInfo$AttributeIndex;
 
-    .line 52
     new-instance v0, Landroid/content/pm/ThemeInfo$AttributeIndex;
 
     const-string v1, "THEME_STYLE_NAME_INDEX"
@@ -113,7 +108,6 @@
 
     sput-object v0, Landroid/content/pm/ThemeInfo$AttributeIndex;->THEME_STYLE_NAME_INDEX:Landroid/content/pm/ThemeInfo$AttributeIndex;
 
-    .line 53
     new-instance v0, Landroid/content/pm/ThemeInfo$AttributeIndex;
 
     const-string v1, "THUMBNAIL_INDEX"
@@ -124,7 +118,6 @@
 
     sput-object v0, Landroid/content/pm/ThemeInfo$AttributeIndex;->THUMBNAIL_INDEX:Landroid/content/pm/ThemeInfo$AttributeIndex;
 
-    .line 54
     new-instance v0, Landroid/content/pm/ThemeInfo$AttributeIndex;
 
     const-string v1, "RINGTONE_FILE_NAME_INDEX"
@@ -135,7 +128,6 @@
 
     sput-object v0, Landroid/content/pm/ThemeInfo$AttributeIndex;->RINGTONE_FILE_NAME_INDEX:Landroid/content/pm/ThemeInfo$AttributeIndex;
 
-    .line 55
     new-instance v0, Landroid/content/pm/ThemeInfo$AttributeIndex;
 
     const-string v1, "NOTIFICATION_RINGTONE_FILE_NAME_INDEX"
@@ -146,7 +138,6 @@
 
     sput-object v0, Landroid/content/pm/ThemeInfo$AttributeIndex;->NOTIFICATION_RINGTONE_FILE_NAME_INDEX:Landroid/content/pm/ThemeInfo$AttributeIndex;
 
-    .line 56
     new-instance v0, Landroid/content/pm/ThemeInfo$AttributeIndex;
 
     const-string v1, "WALLPAPER_IMAGE_INDEX"
@@ -157,7 +148,6 @@
 
     sput-object v0, Landroid/content/pm/ThemeInfo$AttributeIndex;->WALLPAPER_IMAGE_INDEX:Landroid/content/pm/ThemeInfo$AttributeIndex;
 
-    .line 57
     new-instance v0, Landroid/content/pm/ThemeInfo$AttributeIndex;
 
     const-string v1, "COPYRIGHT_INDEX"
@@ -168,7 +158,6 @@
 
     sput-object v0, Landroid/content/pm/ThemeInfo$AttributeIndex;->COPYRIGHT_INDEX:Landroid/content/pm/ThemeInfo$AttributeIndex;
 
-    .line 58
     new-instance v0, Landroid/content/pm/ThemeInfo$AttributeIndex;
 
     const-string v1, "RINGTONE_NAME_INDEX"
@@ -179,7 +168,6 @@
 
     sput-object v0, Landroid/content/pm/ThemeInfo$AttributeIndex;->RINGTONE_NAME_INDEX:Landroid/content/pm/ThemeInfo$AttributeIndex;
 
-    .line 59
     new-instance v0, Landroid/content/pm/ThemeInfo$AttributeIndex;
 
     const-string v1, "NOTIFICATION_RINGTONE_NAME_INDEX"
@@ -190,7 +178,6 @@
 
     sput-object v0, Landroid/content/pm/ThemeInfo$AttributeIndex;->NOTIFICATION_RINGTONE_NAME_INDEX:Landroid/content/pm/ThemeInfo$AttributeIndex;
 
-    .line 60
     new-instance v0, Landroid/content/pm/ThemeInfo$AttributeIndex;
 
     const-string v1, "STYLE_INDEX"
@@ -201,7 +188,6 @@
 
     sput-object v0, Landroid/content/pm/ThemeInfo$AttributeIndex;->STYLE_INDEX:Landroid/content/pm/ThemeInfo$AttributeIndex;
 
-    .line 47
     const/16 v0, 0xd
 
     new-array v0, v0, [Landroid/content/pm/ThemeInfo$AttributeIndex;
@@ -290,7 +276,6 @@
     .end annotation
 
     .prologue
-    .line 47
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -301,7 +286,6 @@
     .parameter "ordinal"
 
     .prologue
-    .line 63
     invoke-static {}, Landroid/content/pm/ThemeInfo$AttributeIndex;->values()[Landroid/content/pm/ThemeInfo$AttributeIndex;
 
     move-result-object v0
@@ -316,7 +300,6 @@
     .parameter "name"
 
     .prologue
-    .line 47
     const-class v0, Landroid/content/pm/ThemeInfo$AttributeIndex;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -332,7 +315,6 @@
     .locals 1
 
     .prologue
-    .line 47
     sget-object v0, Landroid/content/pm/ThemeInfo$AttributeIndex;->$VALUES:[Landroid/content/pm/ThemeInfo$AttributeIndex;
 
     invoke-virtual {v0}, [Landroid/content/pm/ThemeInfo$AttributeIndex;->clone()Ljava/lang/Object;

@@ -37,22 +37,18 @@
     .parameter "handler"
 
     .prologue
-    .line 377
     iput-object p1, p0, Lcom/android/server/pie/PieService$DisplayObserver;->this$0:Lcom/android/server/pie/PieService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 375
     new-instance v1, Landroid/view/DisplayInfo;
 
     invoke-direct {v1}, Landroid/view/DisplayInfo;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/pie/PieService$DisplayObserver;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
 
-    .line 378
     iput-object p3, p0, Lcom/android/server/pie/PieService$DisplayObserver;->mHandler:Landroid/os/Handler;
 
-    .line 379
     const-string v1, "display"
 
     invoke-virtual {p2, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -63,7 +59,6 @@
 
     iput-object v1, p0, Lcom/android/server/pie/PieService$DisplayObserver;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
-    .line 381
     const-string v1, "window"
 
     invoke-virtual {p2, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -72,7 +67,6 @@
 
     check-cast v0, Landroid/view/WindowManager;
 
-    .line 384
     .local v0, windowManager:Landroid/view/WindowManager;
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
@@ -80,10 +74,8 @@
 
     iput-object v1, p0, Lcom/android/server/pie/PieService$DisplayObserver;->mDefaultDisplay:Landroid/view/Display;
 
-    .line 385
     invoke-direct {p0}, Lcom/android/server/pie/PieService$DisplayObserver;->updateDisplayInfo()V
 
-    .line 386
     return-void
 .end method
 
@@ -91,7 +83,6 @@
     .locals 4
 
     .prologue
-    .line 392
     iget-object v0, p0, Lcom/android/server/pie/PieService$DisplayObserver;->mDefaultDisplay:Landroid/view/Display;
 
     iget-object v1, p0, Lcom/android/server/pie/PieService$DisplayObserver;->mDefaultDisplayInfo:Landroid/view/DisplayInfo;
@@ -102,7 +93,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 393
     iget-object v0, p0, Lcom/android/server/pie/PieService$DisplayObserver;->this$0:Lcom/android/server/pie/PieService;
 
     #getter for: Lcom/android/server/pie/PieService;->mLock:Ljava/lang/Object;
@@ -112,7 +102,6 @@
 
     monitor-enter v1
 
-    .line 394
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pie/PieService$DisplayObserver;->this$0:Lcom/android/server/pie/PieService;
 
@@ -123,7 +112,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 395
     iget-object v0, p0, Lcom/android/server/pie/PieService$DisplayObserver;->this$0:Lcom/android/server/pie/PieService;
 
     #getter for: Lcom/android/server/pie/PieService;->mInputFilter:Lcom/android/server/pie/PieInputFilter;
@@ -137,15 +125,12 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/android/server/pie/PieInputFilter;->updateDisplay(Landroid/view/Display;Landroid/view/DisplayInfo;)V
 
-    .line 397
     :cond_0
     monitor-exit v1
 
-    .line 401
     :goto_0
     return-void
 
-    .line 397
     :catchall_0
     move-exception v0
 
@@ -155,7 +140,6 @@
 
     throw v0
 
-    .line 399
     :cond_1
     const-string v0, "PieService"
 
@@ -172,17 +156,14 @@
     .locals 2
 
     .prologue
-    .line 404
     iget-object v0, p0, Lcom/android/server/pie/PieService$DisplayObserver;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     iget-object v1, p0, Lcom/android/server/pie/PieService$DisplayObserver;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p0, v1}, Landroid/hardware/display/DisplayManager;->registerDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;)V
 
-    .line 405
     invoke-direct {p0}, Lcom/android/server/pie/PieService$DisplayObserver;->updateDisplayInfo()V
 
-    .line 406
     return-void
 .end method
 
@@ -191,7 +172,6 @@
     .parameter "displayId"
 
     .prologue
-    .line 415
     return-void
 .end method
 
@@ -200,10 +180,8 @@
     .parameter "displayId"
 
     .prologue
-    .line 424
     invoke-direct {p0}, Lcom/android/server/pie/PieService$DisplayObserver;->updateDisplayInfo()V
 
-    .line 425
     return-void
 .end method
 
@@ -212,7 +190,6 @@
     .parameter "displayId"
 
     .prologue
-    .line 420
     return-void
 .end method
 
@@ -220,11 +197,9 @@
     .locals 1
 
     .prologue
-    .line 409
     iget-object v0, p0, Lcom/android/server/pie/PieService$DisplayObserver;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     invoke-virtual {v0, p0}, Landroid/hardware/display/DisplayManager;->unregisterDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;)V
 
-    .line 410
     return-void
 .end method

@@ -37,7 +37,6 @@
     .parameter
 
     .prologue
-    .line 224
     iput-object p1, p0, Lcom/android/server/AssetRedirectionManagerService$1;->this$0:Lcom/android/server/AssetRedirectionManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .parameter "b"
 
     .prologue
-    .line 227
     iget-object v1, p1, Lcom/android/server/AssetRedirectionManagerService$RedirectionKey;->themePackageName:Ljava/lang/String;
 
     iget-object v2, p2, Lcom/android/server/AssetRedirectionManagerService$RedirectionKey;->themePackageName:Ljava/lang/String;
@@ -62,17 +60,14 @@
 
     move-result v0
 
-    .line 228
     .local v0, comp:I
     if-eqz v0, :cond_0
 
     move v1, v0
 
-    .line 235
     :goto_0
     return v1
 
-    .line 231
     :cond_0
     iget-object v1, p1, Lcom/android/server/AssetRedirectionManagerService$RedirectionKey;->themeId:Ljava/lang/String;
 
@@ -82,15 +77,12 @@
 
     move-result v0
 
-    .line 232
     if-eqz v0, :cond_1
 
     move v1, v0
 
-    .line 233
     goto :goto_0
 
-    .line 235
     :cond_1
     iget-object v1, p1, Lcom/android/server/AssetRedirectionManagerService$RedirectionKey;->targetPackageName:Ljava/lang/String;
 
@@ -109,7 +101,6 @@
     .parameter "x1"
 
     .prologue
-    .line 224
     check-cast p1, Lcom/android/server/AssetRedirectionManagerService$RedirectionKey;
 
     .end local p1

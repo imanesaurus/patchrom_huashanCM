@@ -29,7 +29,6 @@
     .parameter "x0"
 
     .prologue
-    .line 136
     invoke-direct {p0, p1}, Landroid/util/FloatProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -42,7 +41,6 @@
     .parameter "view"
 
     .prologue
-    .line 145
     iget v0, p1, Lcom/android/internal/policy/impl/keyguard/SlidingChallengeLayout;->mHandleAlpha:F
 
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -57,7 +55,6 @@
     .parameter "x0"
 
     .prologue
-    .line 136
     check-cast p1, Lcom/android/internal/policy/impl/keyguard/SlidingChallengeLayout;
 
     .end local p1
@@ -74,13 +71,10 @@
     .parameter "value"
 
     .prologue
-    .line 139
     iput p2, p1, Lcom/android/internal/policy/impl/keyguard/SlidingChallengeLayout;->mHandleAlpha:F
 
-    .line 140
     invoke-virtual {p1}, Lcom/android/internal/policy/impl/keyguard/SlidingChallengeLayout;->invalidate()V
 
-    .line 141
     return-void
 .end method
 
@@ -90,7 +84,6 @@
     .parameter "x1"
 
     .prologue
-    .line 136
     check-cast p1, Lcom/android/internal/policy/impl/keyguard/SlidingChallengeLayout;
 
     .end local p1

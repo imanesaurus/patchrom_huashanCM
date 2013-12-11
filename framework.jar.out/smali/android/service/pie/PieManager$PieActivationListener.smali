@@ -33,10 +33,8 @@
     .locals 2
 
     .prologue
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -47,7 +45,6 @@
 
     iput-object v0, p0, Landroid/service/pie/PieManager$PieActivationListener;->mHandler:Landroid/os/Handler;
 
-    .line 62
     return-void
 .end method
 
@@ -56,17 +53,14 @@
     .parameter "looper"
 
     .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     iput-object v0, p0, Landroid/service/pie/PieManager$PieActivationListener;->mHandler:Landroid/os/Handler;
 
-    .line 66
     new-instance v0, Landroid/service/pie/PieManager$PieActivationListener$Delegator;
 
     const/4 v1, 0x0
@@ -75,7 +69,6 @@
 
     iput-object v0, p0, Landroid/service/pie/PieManager$PieActivationListener;->mDelegator:Landroid/service/pie/PieManager$PieActivationListener$Delegator;
 
-    .line 67
     return-void
 .end method
 
@@ -84,7 +77,6 @@
     .parameter "x0"
 
     .prologue
-    .line 44
     iget-object v0, p0, Landroid/service/pie/PieManager$PieActivationListener;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -95,7 +87,6 @@
     .parameter "x0"
 
     .prologue
-    .line 44
     iget-object v0, p0, Landroid/service/pie/PieManager$PieActivationListener;->mDelegator:Landroid/service/pie/PieManager$PieActivationListener$Delegator;
 
     return-object v0
@@ -108,7 +99,6 @@
     .parameter "applicationWindowToken"
 
     .prologue
-    .line 92
     :try_start_0
     iget-object v1, p0, Landroid/service/pie/PieManager$PieActivationListener;->mCallback:Landroid/service/pie/IPieHostCallback;
 
@@ -118,15 +108,12 @@
 
     move-result v1
 
-    .line 97
     :goto_0
     return v1
 
-    .line 93
     :catch_0
     move-exception v0
 
-    .line 94
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "PieManager"
 
@@ -154,7 +141,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     const/4 v1, 0x0
 
     goto :goto_0
@@ -167,7 +153,6 @@
     .locals 4
 
     .prologue
-    .line 111
     :try_start_0
     iget-object v1, p0, Landroid/service/pie/PieManager$PieActivationListener;->mCallback:Landroid/service/pie/IPieHostCallback;
 
@@ -175,15 +160,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 116
     :goto_0
     return-void
 
-    .line 112
     :catch_0
     move-exception v0
 
-    .line 113
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "PieManager"
 
@@ -191,7 +173,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "restoreListenerState failed: "
+    const-string v3, "restoreListenerState failed: "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -219,9 +201,7 @@
     .parameter "hostCallback"
 
     .prologue
-    .line 70
     iput-object p1, p0, Landroid/service/pie/PieManager$PieActivationListener;->mCallback:Landroid/service/pie/IPieHostCallback;
 
-    .line 71
     return-void
 .end method

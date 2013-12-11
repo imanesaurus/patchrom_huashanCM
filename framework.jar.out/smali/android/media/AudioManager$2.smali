@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 1015
     invoke-static {}, Landroid/app/ProfileGroup$Mode;->values()[Landroid/app/ProfileGroup$Mode;
 
     move-result-object v0

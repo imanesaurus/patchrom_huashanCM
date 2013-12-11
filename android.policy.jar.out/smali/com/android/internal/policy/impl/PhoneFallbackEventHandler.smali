@@ -31,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 39
     const-string v0, "PhoneFallbackEventHandler"
 
     sput-object v0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->TAG:Ljava/lang/String;
@@ -44,13 +43,10 @@
     .parameter "context"
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mContext:Landroid/content/Context;
 
-    .line 52
     return-void
 .end method
 
@@ -59,7 +55,6 @@
     .parameter "keyEvent"
 
     .prologue
-    .line 291
     const-string v2, "audio"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -70,25 +65,20 @@
 
     move-result-object v0
 
-    .line 293
     .local v0, audioService:Landroid/media/IAudioService;
     if-eqz v0, :cond_0
 
-    .line 295
     :try_start_0
     invoke-interface {v0, p1}, Landroid/media/IAudioService;->dispatchMediaKeyEvent(Landroid/view/KeyEvent;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 302
     :goto_0
     return-void
 
-    .line 296
     :catch_0
     move-exception v1
 
-    .line 297
     .local v1, e:Landroid/os/RemoteException;
     sget-object v2, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->TAG:Ljava/lang/String;
 
@@ -114,7 +104,6 @@
 
     goto :goto_0
 
-    .line 300
     .end local v1           #e:Landroid/os/RemoteException;
     :cond_0
     sget-object v2, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->TAG:Ljava/lang/String;
@@ -133,27 +122,22 @@
     .parameter "event"
 
     .prologue
-    .line 64
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v0
 
-    .line 65
     .local v0, action:I
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v1
 
-    .line 67
     .local v1, keyCode:I
     if-nez v0, :cond_0
 
-    .line 68
     invoke-virtual {p0, v1, p1}, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v2
 
-    .line 70
     :goto_0
     return v2
 
@@ -169,12 +153,10 @@
     .locals 2
 
     .prologue
-    .line 280
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mAudioManager:Landroid/media/AudioManager;
 
     if-nez v0, :cond_0
 
-    .line 281
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mContext:Landroid/content/Context;
 
     const-string v1, "audio"
@@ -187,7 +169,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 283
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mAudioManager:Landroid/media/AudioManager;
 
@@ -198,12 +179,10 @@
     .locals 2
 
     .prologue
-    .line 273
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mKeyguardManager:Landroid/app/KeyguardManager;
 
     if-nez v0, :cond_0
 
-    .line 274
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mContext:Landroid/content/Context;
 
     const-string v1, "keyguard"
@@ -216,7 +195,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mKeyguardManager:Landroid/app/KeyguardManager;
 
-    .line 276
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mKeyguardManager:Landroid/app/KeyguardManager;
 
@@ -227,12 +205,10 @@
     .locals 2
 
     .prologue
-    .line 258
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mSearchManager:Landroid/app/SearchManager;
 
     if-nez v0, :cond_0
 
-    .line 259
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mContext:Landroid/content/Context;
 
     const-string v1, "search"
@@ -245,7 +221,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mSearchManager:Landroid/app/SearchManager;
 
-    .line 261
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mSearchManager:Landroid/app/SearchManager;
 
@@ -256,12 +231,10 @@
     .locals 2
 
     .prologue
-    .line 265
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     if-nez v0, :cond_0
 
-    .line 266
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mContext:Landroid/content/Context;
 
     const-string v1, "phone"
@@ -274,7 +247,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    .line 269
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
@@ -302,23 +274,19 @@
 
     const/4 v12, 0x1
 
-    .line 79
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
 
     move-result-object v10
 
-    .line 81
     .local v10, dispatcher:Landroid/view/KeyEvent$DispatcherState;
     sparse-switch p1, :sswitch_data_0
 
-    .line 182
     :cond_0
     :goto_0
     return v6
 
-    .line 85
     :sswitch_0
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->getAudioManager()Landroid/media/AudioManager;
 
@@ -330,10 +298,8 @@
 
     move v6, v12
 
-    .line 86
     goto :goto_0
 
-    .line 95
     :sswitch_1
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->getTelephonyManager()Landroid/telephony/TelephonyManager;
 
@@ -347,20 +313,16 @@
 
     move v6, v12
 
-    .line 96
     goto :goto_0
 
-    .line 106
     :cond_1
     :sswitch_2
     invoke-direct {p0, p2}, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->handleMediaKeyEvent(Landroid/view/KeyEvent;)V
 
     move v6, v12
 
-    .line 107
     goto :goto_0
 
-    .line 111
     :sswitch_3
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->getKeyguardManager()Landroid/app/KeyguardManager;
 
@@ -374,24 +336,20 @@
 
     if-eqz v10, :cond_0
 
-    .line 114
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 115
     invoke-virtual {v10, p2, p0}, Landroid/view/KeyEvent$DispatcherState;->startTracking(Landroid/view/KeyEvent;Ljava/lang/Object;)V
 
     :cond_2
     :goto_1
     move v6, v12
 
-    .line 129
     goto :goto_0
 
-    .line 116
     :cond_3
     invoke-virtual {p2}, Landroid/view/KeyEvent;->isLongPress()Z
 
@@ -405,30 +363,24 @@
 
     if-eqz v0, :cond_2
 
-    .line 117
     invoke-virtual {v10, p2}, Landroid/view/KeyEvent$DispatcherState;->performedLongPress(Landroid/view/KeyEvent;)V
 
-    .line 118
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mView:Landroid/view/View;
 
     invoke-virtual {v0, v6}, Landroid/view/View;->performHapticFeedback(I)Z
 
-    .line 120
     new-instance v1, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.VOICE_COMMAND"
 
     invoke-direct {v1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 121
     .local v1, intent:Landroid/content/Intent;
     invoke-virtual {v1, v4}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 123
     :try_start_0
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->sendCloseSystemWindows()V
 
-    .line 124
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
@@ -437,17 +389,14 @@
 
     goto :goto_1
 
-    .line 125
     :catch_0
     move-exception v11
 
-    .line 126
     .local v11, e:Landroid/content/ActivityNotFoundException;
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->startCallActivity()V
 
     goto :goto_1
 
-    .line 133
     .end local v1           #intent:Landroid/content/Intent;
     .end local v11           #e:Landroid/content/ActivityNotFoundException;
     :sswitch_4
@@ -463,24 +412,20 @@
 
     if-eqz v10, :cond_0
 
-    .line 136
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result v0
 
     if-nez v0, :cond_5
 
-    .line 137
     invoke-virtual {v10, p2, p0}, Landroid/view/KeyEvent$DispatcherState;->startTracking(Landroid/view/KeyEvent;Ljava/lang/Object;)V
 
     :cond_4
     :goto_2
     move v6, v12
 
-    .line 148
     goto :goto_0
 
-    .line 138
     :cond_5
     invoke-virtual {p2}, Landroid/view/KeyEvent;->isLongPress()Z
 
@@ -494,31 +439,25 @@
 
     if-eqz v0, :cond_4
 
-    .line 139
     invoke-virtual {v10, p2}, Landroid/view/KeyEvent$DispatcherState;->performedLongPress(Landroid/view/KeyEvent;)V
 
-    .line 140
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mView:Landroid/view/View;
 
     invoke-virtual {v0, v6}, Landroid/view/View;->performHapticFeedback(I)Z
 
-    .line 141
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->sendCloseSystemWindows()V
 
-    .line 143
     new-instance v1, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.CAMERA_BUTTON"
 
     invoke-direct {v1, v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 144
     .restart local v1       #intent:Landroid/content/Intent;
     const-string v0, "android.intent.extra.KEY_EVENT"
 
     invoke-virtual {v1, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 145
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mContext:Landroid/content/Context;
 
     sget-object v2, Landroid/os/UserHandle;->CURRENT_OR_SELF:Landroid/os/UserHandle;
@@ -535,7 +474,6 @@
 
     goto :goto_2
 
-    .line 152
     .end local v1           #intent:Landroid/content/Intent;
     :sswitch_5
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->getKeyguardManager()Landroid/app/KeyguardManager;
@@ -550,19 +488,16 @@
 
     if-eqz v10, :cond_0
 
-    .line 155
     invoke-virtual {p2}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result v0
 
     if-nez v0, :cond_6
 
-    .line 156
     invoke-virtual {v10, p2, p0}, Landroid/view/KeyEvent$DispatcherState;->startTracking(Landroid/view/KeyEvent;Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
-    .line 157
     :cond_6
     invoke-virtual {p2}, Landroid/view/KeyEvent;->isLongPress()Z
 
@@ -576,7 +511,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 158
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -587,7 +521,6 @@
 
     move-result-object v9
 
-    .line 159
     .local v9, config:Landroid/content/res/Configuration;
     iget v0, v9, Landroid/content/res/Configuration;->keyboard:I
 
@@ -599,7 +532,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 162
     :cond_7
     new-instance v1, Landroid/content/Intent;
 
@@ -607,11 +539,9 @@
 
     invoke-direct {v1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 163
     .restart local v1       #intent:Landroid/content/Intent;
     invoke-virtual {v1, v4}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 165
     :try_start_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mView:Landroid/view/View;
 
@@ -619,38 +549,31 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->performHapticFeedback(I)Z
 
-    .line 166
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->sendCloseSystemWindows()V
 
-    .line 167
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->getSearchManager()Landroid/app/SearchManager;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/app/SearchManager;->stopSearch()V
 
-    .line 168
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 172
     invoke-virtual {v10, p2}, Landroid/view/KeyEvent$DispatcherState;->performedLongPress(Landroid/view/KeyEvent;)V
     :try_end_1
     .catch Landroid/content/ActivityNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
     move v6, v12
 
-    .line 173
     goto/16 :goto_0
 
-    .line 174
     :catch_1
     move-exception v0
 
     goto/16 :goto_0
 
-    .line 81
     :sswitch_data_0
     .sparse-switch
         0x5 -> :sswitch_3
@@ -681,25 +604,20 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 189
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mView:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
 
     move-result-object v1
 
-    .line 190
     .local v1, dispatcher:Landroid/view/KeyEvent$DispatcherState;
     if-eqz v1, :cond_0
 
-    .line 191
     invoke-virtual {v1, p2}, Landroid/view/KeyEvent$DispatcherState;->handleUpEvent(Landroid/view/KeyEvent;)V
 
-    .line 194
     :cond_0
     sparse-switch p1, :sswitch_data_0
 
-    .line 243
     :cond_1
     const/4 v2, 0x0
 
@@ -707,7 +625,6 @@
     :goto_0
     return v2
 
-    .line 198
     :sswitch_0
     invoke-virtual {p2}, Landroid/view/KeyEvent;->isCanceled()Z
 
@@ -715,7 +632,6 @@
 
     if-nez v3, :cond_2
 
-    .line 199
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mContext:Landroid/content/Context;
 
     const-string v4, "audio"
@@ -726,11 +642,9 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 201
     .local v0, audioManager:Landroid/media/AudioManager;
     if-eqz v0, :cond_2
 
-    .line 202
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->getAudioManager()Landroid/media/AudioManager;
 
     move-result-object v3
@@ -741,14 +655,12 @@
 
     goto :goto_0
 
-    .line 219
     .end local v0           #audioManager:Landroid/media/AudioManager;
     :sswitch_1
     invoke-direct {p0, p2}, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->handleMediaKeyEvent(Landroid/view/KeyEvent;)V
 
     goto :goto_0
 
-    .line 224
     :sswitch_2
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->getKeyguardManager()Landroid/app/KeyguardManager;
 
@@ -760,7 +672,6 @@
 
     if-nez v3, :cond_1
 
-    .line 227
     invoke-virtual {p2}, Landroid/view/KeyEvent;->isTracking()Z
 
     move-result v3
@@ -777,7 +688,6 @@
 
     goto :goto_0
 
-    .line 234
     :sswitch_3
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->getKeyguardManager()Landroid/app/KeyguardManager;
 
@@ -789,7 +699,6 @@
 
     if-nez v3, :cond_1
 
-    .line 237
     invoke-virtual {p2}, Landroid/view/KeyEvent;->isTracking()Z
 
     move-result v3
@@ -802,12 +711,10 @@
 
     if-nez v3, :cond_2
 
-    .line 238
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->startCallActivity()V
 
     goto :goto_0
 
-    .line 194
     :sswitch_data_0
     .sparse-switch
         0x5 -> :sswitch_3
@@ -834,7 +741,6 @@
     .parameter "event"
 
     .prologue
-    .line 59
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->getAudioManager()Landroid/media/AudioManager;
 
     move-result-object v0
@@ -843,7 +749,6 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/media/AudioManager;->preDispatchKeyEvent(Landroid/view/KeyEvent;I)V
 
-    .line 60
     return-void
 .end method
 
@@ -851,14 +756,12 @@
     .locals 2
 
     .prologue
-    .line 287
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mContext:Landroid/content/Context;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/PhoneWindowManager;->sendCloseSystemWindows(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 288
     return-void
 .end method
 
@@ -867,10 +770,8 @@
     .parameter "v"
 
     .prologue
-    .line 55
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mView:Landroid/view/View;
 
-    .line 56
     return-void
 .end method
 
@@ -878,23 +779,19 @@
     .locals 4
 
     .prologue
-    .line 247
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->sendCloseSystemWindows()V
 
-    .line 248
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.CALL_BUTTON"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 249
     .local v1, intent:Landroid/content/Intent;
     const/high16 v2, 0x1000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 251
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->mContext:Landroid/content/Context;
 
@@ -902,15 +799,12 @@
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 255
     :goto_0
     return-void
 
-    .line 252
     :catch_0
     move-exception v0
 
-    .line 253
     .local v0, e:Landroid/content/ActivityNotFoundException;
     sget-object v2, Lcom/android/internal/policy/impl/PhoneFallbackEventHandler;->TAG:Ljava/lang/String;
 

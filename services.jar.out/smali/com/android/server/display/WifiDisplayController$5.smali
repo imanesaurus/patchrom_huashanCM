@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 361
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$5;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "peers"
 
     .prologue
-    .line 368
     iget-object v2, p0, Lcom/android/server/display/WifiDisplayController$5;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     #getter for: Lcom/android/server/display/WifiDisplayController;->mAvailableWifiDisplayPeers:Ljava/util/ArrayList;
@@ -52,7 +50,6 @@
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 369
     invoke-virtual {p1}, Landroid/net/wifi/p2p/WifiP2pDeviceList;->getDeviceList()Ljava/util/Collection;
 
     move-result-object v2
@@ -76,7 +73,6 @@
 
     check-cast v0, Landroid/net/wifi/p2p/WifiP2pDevice;
 
-    .line 374
     .local v0, device:Landroid/net/wifi/p2p/WifiP2pDevice;
     #calls: Lcom/android/server/display/WifiDisplayController;->isWifiDisplay(Landroid/net/wifi/p2p/WifiP2pDevice;)Z
     invoke-static {v0}, Lcom/android/server/display/WifiDisplayController;->access$1200(Landroid/net/wifi/p2p/WifiP2pDevice;)Z
@@ -85,7 +81,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 375
     iget-object v2, p0, Lcom/android/server/display/WifiDisplayController$5;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     #getter for: Lcom/android/server/display/WifiDisplayController;->mAvailableWifiDisplayPeers:Ljava/util/ArrayList;
@@ -97,7 +92,6 @@
 
     goto :goto_0
 
-    .line 379
     .end local v0           #device:Landroid/net/wifi/p2p/WifiP2pDevice;
     :cond_1
     iget-object v2, p0, Lcom/android/server/display/WifiDisplayController$5;->this$0:Lcom/android/server/display/WifiDisplayController;
@@ -105,6 +99,5 @@
     #calls: Lcom/android/server/display/WifiDisplayController;->handleScanFinished()V
     invoke-static {v2}, Lcom/android/server/display/WifiDisplayController;->access$900(Lcom/android/server/display/WifiDisplayController;)V
 
-    .line 380
     return-void
 .end method

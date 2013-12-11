@@ -30,19 +30,14 @@
     .parameter "iface"
 
     .prologue
-    .line 174
     invoke-direct {p0}, Landroid/net/INetworkManagementEventObserver$Stub;-><init>()V
 
-    .line 175
     iput-object p1, p0, Lcom/android/server/ThrottleService$InterfaceObserver;->mHandler:Landroid/os/Handler;
 
-    .line 176
     iput p2, p0, Lcom/android/server/ThrottleService$InterfaceObserver;->mMsg:I
 
-    .line 177
     iput-object p3, p0, Lcom/android/server/ThrottleService$InterfaceObserver;->mIface:Ljava/lang/String;
 
-    .line 178
     return-void
 .end method
 
@@ -53,7 +48,6 @@
     .parameter "iface"
 
     .prologue
-    .line 194
     iget-object v0, p0, Lcom/android/server/ThrottleService$InterfaceObserver;->mIface:Ljava/lang/String;
 
     invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -62,7 +56,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 195
     iget-object v0, p0, Lcom/android/server/ThrottleService$InterfaceObserver;->mHandler:Landroid/os/Handler;
 
     iget v1, p0, Lcom/android/server/ThrottleService$InterfaceObserver;->mMsg:I
@@ -73,7 +66,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 197
     :cond_0
     return-void
 .end method
@@ -84,7 +76,6 @@
     .parameter "active"
 
     .prologue
-    .line 201
     return-void
 .end method
 
@@ -94,7 +85,6 @@
     .parameter "up"
 
     .prologue
-    .line 189
     return-void
 .end method
 
@@ -103,7 +93,6 @@
     .parameter "iface"
 
     .prologue
-    .line 199
     return-void
 .end method
 
@@ -113,10 +102,8 @@
     .parameter "up"
 
     .prologue
-    .line 181
     if-eqz p2, :cond_0
 
-    .line 182
     iget-object v0, p0, Lcom/android/server/ThrottleService$InterfaceObserver;->mIface:Ljava/lang/String;
 
     invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -125,7 +112,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 183
     iget-object v0, p0, Lcom/android/server/ThrottleService$InterfaceObserver;->mHandler:Landroid/os/Handler;
 
     iget v1, p0, Lcom/android/server/ThrottleService$InterfaceObserver;->mMsg:I
@@ -136,7 +122,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 186
     :cond_0
     return-void
 .end method
@@ -147,6 +132,5 @@
     .parameter "iface"
 
     .prologue
-    .line 200
     return-void
 .end method

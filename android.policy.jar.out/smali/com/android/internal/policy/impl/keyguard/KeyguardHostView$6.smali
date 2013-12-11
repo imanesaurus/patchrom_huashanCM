@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 803
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$6;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "securityVerified"
 
     .prologue
-    .line 837
     return-void
 .end method
 
@@ -50,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 832
     const/4 v0, 0x0
 
     return v0
@@ -60,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 827
     const/4 v0, 0x0
 
     return v0
@@ -70,7 +66,6 @@
     .locals 0
 
     .prologue
-    .line 823
     return-void
 .end method
 
@@ -78,7 +73,6 @@
     .locals 0
 
     .prologue
-    .line 819
     return-void
 .end method
 
@@ -87,7 +81,6 @@
     .parameter "action"
 
     .prologue
-    .line 815
     return-void
 .end method
 
@@ -95,7 +88,6 @@
     .locals 0
 
     .prologue
-    .line 811
     return-void
 .end method
 
@@ -104,6 +96,5 @@
     .parameter "timeout"
 
     .prologue
-    .line 807
     return-void
 .end method

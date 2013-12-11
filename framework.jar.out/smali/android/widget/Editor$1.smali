@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 1582
     iput-object p1, p0, Landroid/widget/Editor$1;->this$0:Landroid/widget/Editor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 1584
     iget-object v0, p0, Landroid/widget/Editor$1;->this$0:Landroid/widget/Editor;
 
     invoke-virtual {v0}, Landroid/widget/Editor;->showSuggestions()V
 
-    .line 1585
     return-void
 .end method

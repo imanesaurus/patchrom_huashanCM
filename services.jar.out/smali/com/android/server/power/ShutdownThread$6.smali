@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 334
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void

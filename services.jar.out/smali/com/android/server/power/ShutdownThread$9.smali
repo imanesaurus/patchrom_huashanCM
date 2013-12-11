@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 458
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$9;->this$0:Lcom/android/server/power/ShutdownThread;
 
     iput-wide p2, p0, Lcom/android/server/power/ShutdownThread$9;->val$endTime:J
@@ -52,7 +51,6 @@
 
     const/4 v8, 0x0
 
-    .line 464
     const-string v9, "nfc"
 
     invoke-static {v9}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -63,7 +61,6 @@
 
     move-result-object v3
 
-    .line 466
     .local v3, nfc:Landroid/nfc/INfcAdapter;
     const-string v9, "phone"
 
@@ -75,7 +72,6 @@
 
     move-result-object v5
 
-    .line 468
     .local v5, phone:Lcom/android/internal/telephony/ITelephony;
     const-string v9, "bluetooth_manager"
 
@@ -87,7 +83,6 @@
 
     move-result-object v0
 
-    .line 473
     .local v0, bluetooth:Landroid/bluetooth/IBluetoothManager;
     if-eqz v3, :cond_0
 
@@ -101,26 +96,22 @@
     :cond_0
     move v4, v7
 
-    .line 475
     .local v4, nfcOff:Z
     :goto_0
     if-nez v4, :cond_1
 
-    .line 476
     const-string v9, "ShutdownThread"
 
     const-string v10, "Turning off NFC..."
 
     invoke-static {v9, v10}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 477
     const/4 v9, 0x0
 
     invoke-interface {v3, v9}, Landroid/nfc/INfcAdapter;->disable(Z)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 485
     :cond_1
     :goto_1
     if-eqz v0, :cond_2
@@ -135,26 +126,22 @@
     :cond_2
     move v1, v7
 
-    .line 486
     .local v1, bluetoothOff:Z
     :goto_2
     if-nez v1, :cond_3
 
-    .line 487
     const-string v9, "ShutdownThread"
 
     const-string v10, "Disabling Bluetooth..."
 
     invoke-static {v9, v10}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 488
     const/4 v9, 0x0
 
     invoke-interface {v0, v9}, Landroid/bluetooth/IBluetoothManager;->disable(Z)Z
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 496
     :cond_3
     :goto_3
     if-eqz v5, :cond_4
@@ -169,26 +156,22 @@
     :cond_4
     move v6, v7
 
-    .line 497
     .local v6, radioOff:Z
     :goto_4
     if-nez v6, :cond_5
 
-    .line 498
     const-string v9, "ShutdownThread"
 
     const-string v10, "Turning off radio..."
 
     invoke-static {v9, v10}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 499
     const/4 v9, 0x0
 
     invoke-interface {v5, v9}, Lcom/android/internal/telephony/ITelephony;->setRadio(Z)Z
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 506
     :cond_5
     :goto_5
     const-string v9, "ShutdownThread"
@@ -197,7 +180,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 508
     :goto_6
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -209,10 +191,8 @@
 
     if-gez v9, :cond_9
 
-    .line 509
     if-nez v1, :cond_6
 
-    .line 511
     :try_start_3
     invoke-interface {v0}, Landroid/bluetooth/IBluetoothManager;->isEnabled()Z
     :try_end_3
@@ -224,22 +204,18 @@
 
     move v1, v7
 
-    .line 516
     :goto_7
     if-eqz v1, :cond_6
 
-    .line 517
     const-string v9, "ShutdownThread"
 
     const-string v10, "Bluetooth turned off."
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 520
     :cond_6
     if-nez v6, :cond_7
 
-    .line 522
     :try_start_4
     invoke-interface {v5}, Lcom/android/internal/telephony/ITelephony;->isRadioOn()Z
     :try_end_4
@@ -251,22 +227,18 @@
 
     move v6, v7
 
-    .line 527
     :goto_8
     if-eqz v6, :cond_7
 
-    .line 528
     const-string v9, "ShutdownThread"
 
     const-string v10, "Radio turned off."
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 531
     :cond_7
     if-nez v4, :cond_8
 
-    .line 533
     :try_start_5
     invoke-interface {v3}, Landroid/nfc/INfcAdapter;->getState()I
     :try_end_5
@@ -278,18 +250,15 @@
 
     move v4, v7
 
-    .line 538
     :goto_9
     if-eqz v6, :cond_8
 
-    .line 539
     const-string v9, "ShutdownThread"
 
     const-string v10, "NFC turned off."
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 543
     :cond_8
     if-eqz v6, :cond_10
 
@@ -297,19 +266,16 @@
 
     if-eqz v4, :cond_10
 
-    .line 544
     const-string v9, "ShutdownThread"
 
     const-string v10, "NFC, Radio and Bluetooth shutdown complete."
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 545
     iget-object v9, p0, Lcom/android/server/power/ShutdownThread$9;->val$done:[Z
 
     aput-boolean v7, v9, v8
 
-    .line 550
     :cond_9
     return-void
 
@@ -319,14 +285,11 @@
     :cond_a
     move v4, v8
 
-    .line 473
     goto/16 :goto_0
 
-    .line 479
     :catch_0
     move-exception v2
 
-    .line 480
     .local v2, ex:Landroid/os/RemoteException;
     const-string v9, "ShutdownThread"
 
@@ -334,7 +297,6 @@
 
     invoke-static {v9, v10, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 481
     const/4 v4, 0x1
 
     .restart local v4       #nfcOff:Z
@@ -344,14 +306,11 @@
     :cond_b
     move v1, v8
 
-    .line 485
     goto/16 :goto_2
 
-    .line 490
     :catch_1
     move-exception v2
 
-    .line 491
     .restart local v2       #ex:Landroid/os/RemoteException;
     const-string v9, "ShutdownThread"
 
@@ -359,7 +318,6 @@
 
     invoke-static {v9, v10, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 492
     const/4 v1, 0x1
 
     .restart local v1       #bluetoothOff:Z
@@ -369,14 +327,11 @@
     :cond_c
     move v6, v8
 
-    .line 496
     goto/16 :goto_4
 
-    .line 501
     :catch_2
     move-exception v2
 
-    .line 502
     .restart local v2       #ex:Landroid/os/RemoteException;
     const-string v9, "ShutdownThread"
 
@@ -384,7 +339,6 @@
 
     invoke-static {v9, v10, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 503
     const/4 v6, 0x1
 
     .restart local v6       #radioOff:Z
@@ -394,14 +348,11 @@
     :cond_d
     move v1, v8
 
-    .line 511
     goto :goto_7
 
-    .line 512
     :catch_3
     move-exception v2
 
-    .line 513
     .restart local v2       #ex:Landroid/os/RemoteException;
     const-string v9, "ShutdownThread"
 
@@ -409,7 +360,6 @@
 
     invoke-static {v9, v10, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 514
     const/4 v1, 0x1
 
     goto :goto_7
@@ -418,14 +368,11 @@
     :cond_e
     move v6, v8
 
-    .line 522
     goto :goto_8
 
-    .line 523
     :catch_4
     move-exception v2
 
-    .line 524
     .restart local v2       #ex:Landroid/os/RemoteException;
     const-string v9, "ShutdownThread"
 
@@ -433,7 +380,6 @@
 
     invoke-static {v9, v10, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 525
     const/4 v6, 0x1
 
     goto :goto_8
@@ -442,14 +388,11 @@
     :cond_f
     move v4, v8
 
-    .line 533
     goto :goto_9
 
-    .line 534
     :catch_5
     move-exception v2
 
-    .line 535
     .restart local v2       #ex:Landroid/os/RemoteException;
     const-string v9, "ShutdownThread"
 
@@ -457,12 +400,10 @@
 
     invoke-static {v9, v10, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 536
     const/4 v4, 0x1
 
     goto :goto_9
 
-    .line 548
     .end local v2           #ex:Landroid/os/RemoteException;
     :cond_10
     const-wide/16 v9, 0x1f4

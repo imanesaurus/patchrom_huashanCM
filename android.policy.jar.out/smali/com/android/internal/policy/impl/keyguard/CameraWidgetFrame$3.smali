@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 86
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/CameraWidgetFrame$3;->this$0:Lcom/android/internal/policy/impl/keyguard/CameraWidgetFrame;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 89
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/CameraWidgetFrame$3;->this$0:Lcom/android/internal/policy/impl/keyguard/CameraWidgetFrame;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/CameraWidgetFrame;->mHandler:Landroid/os/Handler;
@@ -58,6 +56,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 90
     return-void
 .end method

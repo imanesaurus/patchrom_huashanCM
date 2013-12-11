@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 48
     iput-object p1, p0, Landroid/service/pie/PieManager$PieActivationListener$Delegator;->this$0:Landroid/service/pie/PieManager$PieActivationListener;
 
     invoke-direct {p0}, Landroid/service/pie/IPieActivationListener$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 48
     invoke-direct {p0, p1}, Landroid/service/pie/PieManager$PieActivationListener$Delegator;-><init>(Landroid/service/pie/PieManager$PieActivationListener;)V
 
     return-void
@@ -59,7 +57,6 @@
     .end annotation
 
     .prologue
-    .line 51
     iget-object v0, p0, Landroid/service/pie/PieManager$PieActivationListener$Delegator;->this$0:Landroid/service/pie/PieManager$PieActivationListener;
 
     #getter for: Landroid/service/pie/PieManager$PieActivationListener;->mHandler:Landroid/os/Handler;
@@ -83,6 +80,5 @@
 
     invoke-virtual {v6, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 56
     return-void
 .end method

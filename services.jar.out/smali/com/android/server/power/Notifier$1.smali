@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 433
     iput-object p1, p0, Lcom/android/server/power/Notifier$1;->this$0:Lcom/android/server/power/Notifier;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 436
     iget-object v0, p0, Lcom/android/server/power/Notifier$1;->this$0:Lcom/android/server/power/Notifier;
 
     #getter for: Lcom/android/server/power/Notifier;->mLock:Ljava/lang/Object;
@@ -51,7 +49,6 @@
 
     monitor-enter v1
 
-    .line 437
     :try_start_0
     iget-object v0, p0, Lcom/android/server/power/Notifier$1;->this$0:Lcom/android/server/power/Notifier;
 
@@ -71,7 +68,6 @@
 
     if-nez v0, :cond_0
 
-    .line 438
     iget-object v0, p0, Lcom/android/server/power/Notifier$1;->this$0:Lcom/android/server/power/Notifier;
 
     const/4 v2, 0x0
@@ -79,7 +75,6 @@
     #setter for: Lcom/android/server/power/Notifier;->mScreenOnBlockerAcquired:Z
     invoke-static {v0, v2}, Lcom/android/server/power/Notifier;->access$102(Lcom/android/server/power/Notifier;Z)Z
 
-    .line 439
     iget-object v0, p0, Lcom/android/server/power/Notifier$1;->this$0:Lcom/android/server/power/Notifier;
 
     #getter for: Lcom/android/server/power/Notifier;->mScreenOnBlocker:Lcom/android/server/power/ScreenOnBlocker;
@@ -89,14 +84,11 @@
 
     invoke-interface {v0}, Lcom/android/server/power/ScreenOnBlocker;->release()V
 
-    .line 441
     :cond_0
     monitor-exit v1
 
-    .line 442
     return-void
 
-    .line 441
     :catchall_0
     move-exception v0
 

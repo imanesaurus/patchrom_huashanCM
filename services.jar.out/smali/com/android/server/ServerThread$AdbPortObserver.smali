@@ -24,15 +24,12 @@
     .parameter
 
     .prologue
-    .line 96
     iput-object p1, p0, Lcom/android/server/ServerThread$AdbPortObserver;->this$0:Lcom/android/server/ServerThread;
 
-    .line 97
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 98
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .parameter "selfChange"
 
     .prologue
-    .line 101
     iget-object v1, p0, Lcom/android/server/ServerThread$AdbPortObserver;->this$0:Lcom/android/server/ServerThread;
 
     iget-object v1, v1, Lcom/android/server/ServerThread;->mContentResolver:Landroid/content/ContentResolver;
@@ -56,7 +52,6 @@
 
     move-result v0
 
-    .line 104
     .local v0, adbPort:I
     const-string v1, "service.adb.tcp.port"
 
@@ -66,6 +61,5 @@
 
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 105
     return-void
 .end method

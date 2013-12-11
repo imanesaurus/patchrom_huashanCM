@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 2452
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/PagedView$11;->this$0:Lcom/android/internal/policy/impl/keyguard/PagedView;
 
     iput-object p2, p0, Lcom/android/internal/policy/impl/keyguard/PagedView$11;->val$onAnimationEndRunnable:Ljava/lang/Runnable;
@@ -44,11 +43,9 @@
     .parameter "animation"
 
     .prologue
-    .line 2454
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/PagedView$11;->val$onAnimationEndRunnable:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 2455
     return-void
 .end method

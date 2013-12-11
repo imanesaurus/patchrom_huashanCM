@@ -25,18 +25,14 @@
     .parameter "context"
 
     .prologue
-    .line 137
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$ViewManagerHost;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;
 
-    .line 138
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 139
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$ViewManagerHost;->setFitsSystemWindows(Z)V
 
-    .line 140
     return-void
 .end method
 
@@ -49,7 +45,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 168
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$ViewManagerHost;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;->mKeyguardView:Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;
@@ -59,22 +54,18 @@
 
     if-eqz v3, :cond_2
 
-    .line 169
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v1
 
-    .line 170
     .local v1, keyCode:I
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v0
 
-    .line 172
     .local v0, action:I
     if-nez v0, :cond_1
 
-    .line 173
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$ViewManagerHost;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;
 
     invoke-virtual {v3, v1, p1}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;->handleKeyDown(ILandroid/view/KeyEvent;)Z
@@ -83,20 +74,17 @@
 
     if-eqz v3, :cond_2
 
-    .line 182
     .end local v0           #action:I
     .end local v1           #keyCode:I
     :cond_0
     :goto_0
     return v2
 
-    .line 176
     .restart local v0       #action:I
     .restart local v1       #keyCode:I
     :cond_1
     if-ne v0, v2, :cond_2
 
-    .line 177
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$ViewManagerHost;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;
 
     invoke-virtual {v3, v1, p1}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;->handleKeyUp(ILandroid/view/KeyEvent;)Z
@@ -105,7 +93,6 @@
 
     if-nez v3, :cond_0
 
-    .line 182
     .end local v0           #action:I
     .end local v1           #keyCode:I
     :cond_2
@@ -121,7 +108,6 @@
     .parameter "insets"
 
     .prologue
-    .line 144
     const-string v0, "TAG"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -154,7 +140,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->fitSystemWindows(Landroid/graphics/Rect;)Z
 
     move-result v0
@@ -167,16 +152,13 @@
     .parameter "newConfig"
 
     .prologue
-    .line 150
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 151
     new-instance v0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$ViewManagerHost$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$ViewManagerHost$1;-><init>(Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$ViewManagerHost;)V
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$ViewManagerHost;->post(Ljava/lang/Runnable;)Z
 
-    .line 164
     return-void
 .end method

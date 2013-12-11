@@ -38,12 +38,10 @@
     .end annotation
 
     .prologue
-    .line 405
     .local p1, policyPerms:Ljava/util/HashSet;,"Ljava/util/HashSet<Ljava/lang/String;>;"
     .local p2, pkgPolicy:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/pm/SELinuxMMAC$InstallPolicy;>;"
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/pm/SELinuxMMAC$InstallPolicy;-><init>(Ljava/util/HashSet;Ljava/util/HashMap;Ljava/lang/String;)V
 
-    .line 406
     return-void
 .end method
 
@@ -54,7 +52,6 @@
     .parameter "pkg"
 
     .prologue
-    .line 411
     iget-object v2, p0, Lcom/android/server/pm/SELinuxMMAC$BlackListPolicy;->pkgPolicy:Ljava/util/HashMap;
 
     iget-object v3, p1, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
@@ -65,7 +62,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 412
     iget-object v2, p0, Lcom/android/server/pm/SELinuxMMAC$BlackListPolicy;->pkgPolicy:Ljava/util/HashMap;
 
     iget-object v3, p1, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
@@ -80,11 +76,9 @@
 
     move-result v2
 
-    .line 424
     :goto_0
     return v2
 
-    .line 415
     :cond_0
     iget-object v2, p1, Landroid/content/pm/PackageParser$Package;->requestedPermissions:Ljava/util/ArrayList;
 
@@ -92,7 +86,6 @@
 
     move-result-object v0
 
-    .line 416
     .local v0, itr:Ljava/util/Iterator;
     :cond_1
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -101,14 +94,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 417
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 418
     .local v1, perm:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/pm/SELinuxMMAC$BlackListPolicy;->policyPerms:Ljava/util/HashSet;
 
@@ -118,7 +109,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 419
     const-string v2, "SELinuxMMAC"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -153,12 +143,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 421
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 424
     .end local v1           #perm:Ljava/lang/String;
     :cond_2
     const/4 v2, 0x1
@@ -170,7 +158,6 @@
     .locals 2
 
     .prologue
-    .line 429
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

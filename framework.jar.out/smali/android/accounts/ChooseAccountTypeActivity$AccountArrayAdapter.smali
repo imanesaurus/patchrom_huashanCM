@@ -57,14 +57,11 @@
     .end annotation
 
     .prologue
-    .line 176
     .local p3, infos:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/accounts/ChooseAccountTypeActivity$AuthInfo;>;"
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
 
-    .line 177
     iput-object p3, p0, Landroid/accounts/ChooseAccountTypeActivity$AccountArrayAdapter;->mInfos:Ljava/util/ArrayList;
 
-    .line 178
     const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -75,7 +72,6 @@
 
     iput-object v0, p0, Landroid/accounts/ChooseAccountTypeActivity$AccountArrayAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    .line 180
     return-void
 .end method
 
@@ -90,10 +86,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 186
     if-nez p2, :cond_0
 
-    .line 187
     iget-object v1, p0, Landroid/accounts/ChooseAccountTypeActivity$AccountArrayAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
     const v2, 0x1090034
@@ -102,12 +96,10 @@
 
     move-result-object p2
 
-    .line 188
     new-instance v0, Landroid/accounts/ChooseAccountTypeActivity$ViewHolder;
 
     invoke-direct {v0, v3}, Landroid/accounts/ChooseAccountTypeActivity$ViewHolder;-><init>(Landroid/accounts/ChooseAccountTypeActivity$1;)V
 
-    .line 189
     .local v0, holder:Landroid/accounts/ChooseAccountTypeActivity$ViewHolder;
     const v1, 0x1020275
 
@@ -119,7 +111,6 @@
 
     iput-object v1, v0, Landroid/accounts/ChooseAccountTypeActivity$ViewHolder;->text:Landroid/widget/TextView;
 
-    .line 190
     const v1, 0x1020274
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -130,10 +121,8 @@
 
     iput-object v1, v0, Landroid/accounts/ChooseAccountTypeActivity$ViewHolder;->icon:Landroid/widget/ImageView;
 
-    .line 191
     invoke-virtual {p2, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 196
     :goto_0
     iget-object v2, v0, Landroid/accounts/ChooseAccountTypeActivity$ViewHolder;->text:Landroid/widget/TextView;
 
@@ -149,7 +138,6 @@
 
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 197
     iget-object v2, v0, Landroid/accounts/ChooseAccountTypeActivity$ViewHolder;->icon:Landroid/widget/ImageView;
 
     iget-object v1, p0, Landroid/accounts/ChooseAccountTypeActivity$AccountArrayAdapter;->mInfos:Ljava/util/ArrayList;
@@ -164,10 +152,8 @@
 
     invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 199
     return-object p2
 
-    .line 193
     .end local v0           #holder:Landroid/accounts/ChooseAccountTypeActivity$ViewHolder;
     :cond_0
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;

@@ -33,7 +33,6 @@
     .parameter
 
     .prologue
-    .line 559
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$10;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     iput-object p2, p0, Lcom/android/internal/policy/impl/GlobalActions$10;->val$profiles:[Landroid/app/Profile;
@@ -53,14 +52,11 @@
     .parameter "which"
 
     .prologue
-    .line 561
     if-gez p2, :cond_0
 
-    .line 566
     :goto_0
     return-void
 
-    .line 563
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$10;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -71,7 +67,6 @@
     #setter for: Lcom/android/internal/policy/impl/GlobalActions;->mChosenProfile:Landroid/app/Profile;
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/GlobalActions;->access$1302(Lcom/android/internal/policy/impl/GlobalActions;Landroid/app/Profile;)Landroid/app/Profile;
 
-    .line 564
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$10;->val$profileManager:Landroid/app/ProfileManager;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlobalActions$10;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
@@ -87,7 +82,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ProfileManager;->setActiveProfile(Ljava/util/UUID;)V
 
-    .line 565
     invoke-interface {p1}, Landroid/content/DialogInterface;->cancel()V
 
     goto :goto_0

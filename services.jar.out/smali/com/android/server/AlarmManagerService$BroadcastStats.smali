@@ -50,19 +50,15 @@
     .parameter "packageName"
 
     .prologue
-    .line 158
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 155
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/AlarmManagerService$BroadcastStats;->filterStats:Ljava/util/HashMap;
 
-    .line 159
     iput-object p1, p0, Lcom/android/server/AlarmManagerService$BroadcastStats;->mPackageName:Ljava/lang/String;
 
-    .line 160
     return-void
 .end method

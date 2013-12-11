@@ -28,7 +28,6 @@
     .parameter
 
     .prologue
-    .line 343
     iput-object p1, p0, Lcom/android/server/usb/LegacyUsbDeviceManager$LegacyUsbHandler$2;->this$1:Lcom/android/server/usb/LegacyUsbDeviceManager$LegacyUsbHandler;
 
     iput-object p3, p0, Lcom/android/server/usb/LegacyUsbDeviceManager$LegacyUsbHandler$2;->val$this$0:Lcom/android/server/usb/LegacyUsbDeviceManager;
@@ -45,12 +44,10 @@
     .parameter "selfChange"
 
     .prologue
-    .line 345
     iget-object v0, p0, Lcom/android/server/usb/LegacyUsbDeviceManager$LegacyUsbHandler$2;->this$1:Lcom/android/server/usb/LegacyUsbDeviceManager$LegacyUsbHandler;
 
     #calls: Lcom/android/server/usb/LegacyUsbDeviceManager$LegacyUsbHandler;->updateAdbNotification()V
     invoke-static {v0}, Lcom/android/server/usb/LegacyUsbDeviceManager$LegacyUsbHandler;->access$800(Lcom/android/server/usb/LegacyUsbDeviceManager$LegacyUsbHandler;)V
 
-    .line 346
     return-void
 .end method

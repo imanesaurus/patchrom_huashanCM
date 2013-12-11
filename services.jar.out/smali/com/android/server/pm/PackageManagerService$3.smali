@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 5429
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,21 +49,16 @@
 
     const/4 v2, -0x1
 
-    .line 5431
     iget v0, p1, Landroid/content/pm/ResolveInfo;->priority:I
 
-    .line 5432
     .local v0, v1:I
     iget v1, p2, Landroid/content/pm/ResolveInfo;->priority:I
 
-    .line 5434
     .local v1, v2:I
     if-eq v0, v1, :cond_2
 
-    .line 5435
     if-le v0, v1, :cond_1
 
-    .line 5454
     :cond_0
     :goto_0
     return v2
@@ -72,27 +66,21 @@
     :cond_1
     move v2, v3
 
-    .line 5435
     goto :goto_0
 
-    .line 5437
     :cond_2
     iget v0, p1, Landroid/content/pm/ResolveInfo;->preferredOrder:I
 
-    .line 5438
     iget v1, p2, Landroid/content/pm/ResolveInfo;->preferredOrder:I
 
-    .line 5439
     if-eq v0, v1, :cond_3
 
-    .line 5440
     if-gt v0, v1, :cond_0
 
     move v2, v3
 
     goto :goto_0
 
-    .line 5442
     :cond_3
     iget-boolean v4, p1, Landroid/content/pm/ResolveInfo;->isDefault:Z
 
@@ -100,7 +88,6 @@
 
     if-eq v4, v5, :cond_4
 
-    .line 5443
     iget-boolean v4, p1, Landroid/content/pm/ResolveInfo;->isDefault:Z
 
     if-nez v4, :cond_0
@@ -109,24 +96,19 @@
 
     goto :goto_0
 
-    .line 5445
     :cond_4
     iget v0, p1, Landroid/content/pm/ResolveInfo;->match:I
 
-    .line 5446
     iget v1, p2, Landroid/content/pm/ResolveInfo;->match:I
 
-    .line 5448
     if-eq v0, v1, :cond_5
 
-    .line 5449
     if-gt v0, v1, :cond_0
 
     move v2, v3
 
     goto :goto_0
 
-    .line 5451
     :cond_5
     iget-boolean v4, p1, Landroid/content/pm/ResolveInfo;->system:Z
 
@@ -134,7 +116,6 @@
 
     if-eq v4, v5, :cond_6
 
-    .line 5452
     iget-boolean v4, p1, Landroid/content/pm/ResolveInfo;->system:Z
 
     if-nez v4, :cond_0
@@ -143,7 +124,6 @@
 
     goto :goto_0
 
-    .line 5454
     :cond_6
     const/4 v2, 0x0
 
@@ -156,7 +136,6 @@
     .parameter "x1"
 
     .prologue
-    .line 5429
     check-cast p1, Landroid/content/pm/ResolveInfo;
 
     .end local p1

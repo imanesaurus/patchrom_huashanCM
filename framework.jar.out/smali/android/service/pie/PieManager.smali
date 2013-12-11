@@ -30,13 +30,10 @@
     .parameter "ps"
 
     .prologue
-    .line 119
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 120
     iput-object p1, p0, Landroid/service/pie/PieManager;->mPs:Landroid/service/pie/IPieService;
 
-    .line 121
     return-void
 .end method
 
@@ -44,25 +41,21 @@
     .locals 4
 
     .prologue
-    .line 130
     const-class v2, Landroid/service/pie/PieManager;
 
     monitor-enter v2
 
-    .line 131
     :try_start_0
     sget-object v1, Landroid/service/pie/PieManager;->sInstance:Landroid/service/pie/PieManager;
 
     if-nez v1, :cond_0
 
-    .line 132
-    const-string/jumbo v1, "pieservice"
+    const-string v1, "pieservice"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 133
     .local v0, b:Landroid/os/IBinder;
     new-instance v1, Landroid/service/pie/PieManager;
 
@@ -74,7 +67,6 @@
 
     sput-object v1, Landroid/service/pie/PieManager;->sInstance:Landroid/service/pie/PieManager;
 
-    .line 135
     :cond_0
     sget-object v1, Landroid/service/pie/PieManager;->sInstance:Landroid/service/pie/PieManager;
 
@@ -82,7 +74,6 @@
 
     return-object v1
 
-    .line 136
     :catchall_0
     move-exception v1
 
@@ -99,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 149
     iget-object v0, p0, Landroid/service/pie/PieManager;->mPs:Landroid/service/pie/IPieService;
 
     if-eqz v0, :cond_0
@@ -120,7 +110,6 @@
     .parameter "listener"
 
     .prologue
-    .line 166
     :try_start_0
     iget-object v2, p0, Landroid/service/pie/PieManager;->mPs:Landroid/service/pie/IPieService;
 
@@ -133,25 +122,20 @@
 
     move-result-object v0
 
-    .line 167
     .local v0, callback:Landroid/service/pie/IPieHostCallback;
     invoke-virtual {p1, v0}, Landroid/service/pie/PieManager$PieActivationListener;->setHostCallback(Landroid/service/pie/IPieHostCallback;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 168
     const/4 v2, 0x1
 
-    .line 171
     .end local v0           #callback:Landroid/service/pie/IPieHostCallback;
     :goto_0
     return v2
 
-    .line 169
     :catch_0
     move-exception v1
 
-    .line 170
     .local v1, e:Landroid/os/RemoteException;
     const-string v2, "PieManager"
 
@@ -179,7 +163,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
     const/4 v2, 0x0
 
     goto :goto_0
@@ -191,7 +174,6 @@
     .parameter "positions"
 
     .prologue
-    .line 187
     :try_start_0
     iget-object v1, p0, Landroid/service/pie/PieManager;->mPs:Landroid/service/pie/IPieService;
 
@@ -208,15 +190,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 191
     :goto_0
     return-void
 
-    .line 188
     :catch_0
     move-exception v0
 
-    .line 189
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "PieManager"
 

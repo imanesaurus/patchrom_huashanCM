@@ -25,13 +25,10 @@
     .parameter "handler"
 
     .prologue
-    .line 216
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindow$SettingsObserver;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
-    .line 217
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 218
     return-void
 .end method
 
@@ -45,7 +42,6 @@
 
     const/4 v1, 0x0
 
-    .line 239
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindow$SettingsObserver;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindow$SettingsObserver;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
@@ -71,13 +67,11 @@
     #setter for: Lcom/android/internal/policy/impl/PhoneWindow;->mEnableGestures:Z
     invoke-static {v2, v0}, Lcom/android/internal/policy/impl/PhoneWindow;->access$102(Lcom/android/internal/policy/impl/PhoneWindow;Z)Z
 
-    .line 242
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 239
     goto :goto_0
 .end method
 
@@ -85,7 +79,6 @@
     .locals 3
 
     .prologue
-    .line 221
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindow$SettingsObserver;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
     #getter for: Lcom/android/internal/policy/impl/PhoneWindow;->mContext:Landroid/content/Context;
@@ -97,7 +90,6 @@
 
     move-result-object v0
 
-    .line 222
     .local v0, resolver:Landroid/content/ContentResolver;
     const-string v1, "enable_stylus_gestures"
 
@@ -109,10 +101,8 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 225
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindow$SettingsObserver;->checkGestures()V
 
-    .line 226
     return-void
 .end method
 
@@ -121,10 +111,8 @@
     .parameter "selfChange"
 
     .prologue
-    .line 235
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindow$SettingsObserver;->checkGestures()V
 
-    .line 236
     return-void
 .end method
 
@@ -132,7 +120,6 @@
     .locals 2
 
     .prologue
-    .line 229
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindow$SettingsObserver;->this$0:Lcom/android/internal/policy/impl/PhoneWindow;
 
     #getter for: Lcom/android/internal/policy/impl/PhoneWindow;->mContext:Landroid/content/Context;
@@ -144,10 +131,8 @@
 
     move-result-object v0
 
-    .line 230
     .local v0, resolver:Landroid/content/ContentResolver;
     invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 231
     return-void
 .end method

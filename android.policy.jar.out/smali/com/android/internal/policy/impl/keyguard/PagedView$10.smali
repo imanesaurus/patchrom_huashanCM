@@ -36,24 +36,20 @@
     .parameter
 
     .prologue
-    .line 2416
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/PagedView$10;->this$0:Lcom/android/internal/policy/impl/keyguard/PagedView;
 
     iput-wide p2, p0, Lcom/android/internal/policy/impl/keyguard/PagedView$10;->val$startTime:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2417
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/internal/policy/impl/keyguard/PagedView$10;->mCount:I
 
-    .line 2421
     iget-wide v0, p0, Lcom/android/internal/policy/impl/keyguard/PagedView$10;->val$startTime:J
 
     iput-wide v0, p0, Lcom/android/internal/policy/impl/keyguard/PagedView$10;->mStartTime:J
 
-    .line 2422
     return-void
 .end method
 
@@ -64,19 +60,16 @@
     .parameter "t"
 
     .prologue
-    .line 2426
     iget v0, p0, Lcom/android/internal/policy/impl/keyguard/PagedView$10;->mCount:I
 
     if-gez v0, :cond_1
 
-    .line 2427
     iget v0, p0, Lcom/android/internal/policy/impl/keyguard/PagedView$10;->mCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/internal/policy/impl/keyguard/PagedView$10;->mCount:I
 
-    .line 2433
     :cond_0
     :goto_0
     const/high16 v0, 0x3f80
@@ -91,13 +84,11 @@
 
     return v0
 
-    .line 2428
     :cond_1
     iget v0, p0, Lcom/android/internal/policy/impl/keyguard/PagedView$10;->mCount:I
 
     if-nez v0, :cond_0
 
-    .line 2429
     const/high16 v0, 0x3f00
 
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
@@ -127,7 +118,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/keyguard/PagedView$10;->mOffset:F
 
-    .line 2431
     iget v0, p0, Lcom/android/internal/policy/impl/keyguard/PagedView$10;->mCount:I
 
     add-int/lit8 v0, v0, 0x1

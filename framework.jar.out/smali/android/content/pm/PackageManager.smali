@@ -320,10 +320,8 @@
     .locals 0
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     return-void
 .end method
 
@@ -333,7 +331,6 @@
     .parameter "packageName"
 
     .prologue
-    .line 3009
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -404,7 +401,6 @@
     .parameter "userId"
 
     .prologue
-    .line 2816
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Not implemented. Must override in a subclass."
@@ -624,50 +620,40 @@
 
     const/4 v1, 0x0
 
-    .line 2415
     new-instance v10, Landroid/content/pm/PackageParser;
 
     invoke-direct {v10, p1}, Landroid/content/pm/PackageParser;-><init>(Ljava/lang/String;)V
 
-    .line 2416
     .local v10, packageParser:Landroid/content/pm/PackageParser;
     new-instance v9, Landroid/util/DisplayMetrics;
 
     invoke-direct {v9}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 2417
     .local v9, metrics:Landroid/util/DisplayMetrics;
     invoke-virtual {v9}, Landroid/util/DisplayMetrics;->setToDefaults()V
 
-    .line 2418
     new-instance v11, Ljava/io/File;
 
     invoke-direct {v11, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2419
     .local v11, sourceFile:Ljava/io/File;
     invoke-virtual {v10, v11, p1, v9, v5}, Landroid/content/pm/PackageParser;->parsePackage(Ljava/io/File;Ljava/lang/String;Landroid/util/DisplayMetrics;I)Landroid/content/pm/PackageParser$Package;
 
     move-result-object v0
 
-    .line 2421
     .local v0, pkg:Landroid/content/pm/PackageParser$Package;
     if-nez v0, :cond_0
 
-    .line 2428
     :goto_0
     return-object v1
 
-    .line 2424
     :cond_0
     and-int/lit8 v2, p2, 0x40
 
     if-eqz v2, :cond_1
 
-    .line 2425
     invoke-virtual {v10, v0, v5}, Landroid/content/pm/PackageParser;->collectCertificates(Landroid/content/pm/PackageParser$Package;I)Z
 
-    .line 2427
     :cond_1
     new-instance v8, Landroid/content/pm/PackageUserState;
 
@@ -680,7 +666,6 @@
 
     move-object v7, v1
 
-    .line 2428
     invoke-static/range {v0 .. v8}, Landroid/content/pm/PackageParser;->generatePackageInfo(Landroid/content/pm/PackageParser$Package;[IIJJLjava/util/HashSet;Landroid/content/pm/PackageUserState;)Landroid/content/pm/PackageInfo;
 
     move-result-object v1
@@ -713,14 +698,12 @@
     .parameter "observer"
 
     .prologue
-    .line 2735
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
 
     invoke-virtual {p0, p1, v0, p2}, Landroid/content/pm/PackageManager;->getPackageSizeInfo(Ljava/lang/String;ILandroid/content/pm/IPackageStatsObserver;)V
 
-    .line 2736
     return-void
 .end method
 

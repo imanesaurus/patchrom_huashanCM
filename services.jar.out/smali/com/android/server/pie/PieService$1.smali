@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 175
     iput-object p1, p0, Lcom/android/server/pie/PieService$1;->this$0:Lcom/android/server/pie/PieService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,16 +40,13 @@
     .locals 1
 
     .prologue
-    .line 178
     const/4 v0, -0x2
 
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 180
     const/4 v0, 0x0
 
     invoke-static {v0}, Landroid/os/Process;->setCanSelfBackground(Z)V
 
-    .line 181
     return-void
 .end method

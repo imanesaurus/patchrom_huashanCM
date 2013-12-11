@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 123
     iput-object p1, p0, Lcom/android/server/RotationSwitchObserver$1;->this$0:Lcom/android/server/RotationSwitchObserver;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -41,20 +40,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 126
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 141
     :goto_0
     return-void
 
-    .line 128
     :pswitch_0
     monitor-enter p0
 
-    .line 129
     :try_start_0
     iget-object v2, p0, Lcom/android/server/RotationSwitchObserver$1;->this$0:Lcom/android/server/RotationSwitchObserver;
 
@@ -67,14 +62,12 @@
 
     const/4 v0, 0x1
 
-    .line 130
     .local v0, autoRotate:Z
     :cond_0
     if-eqz v0, :cond_1
 
     const v1, 0x104003b
 
-    .line 134
     .local v1, toastId:I
     :goto_1
     iget-object v2, p0, Lcom/android/server/RotationSwitchObserver$1;->this$0:Lcom/android/server/RotationSwitchObserver;
@@ -82,7 +75,6 @@
     #calls: Lcom/android/server/RotationSwitchObserver;->setAutoRotation(Z)V
     invoke-static {v2, v0}, Lcom/android/server/RotationSwitchObserver;->access$100(Lcom/android/server/RotationSwitchObserver;Z)V
 
-    .line 136
     iget-object v2, p0, Lcom/android/server/RotationSwitchObserver$1;->this$0:Lcom/android/server/RotationSwitchObserver;
 
     #getter for: Lcom/android/server/RotationSwitchObserver;->mContext:Landroid/content/Context;
@@ -109,12 +101,10 @@
 
     invoke-virtual {v2}, Landroid/widget/Toast;->show()V
 
-    .line 138
     monitor-exit p0
 
     goto :goto_0
 
-    .line 139
     .end local v0           #autoRotate:Z
     .end local v1           #toastId:I
     :catchall_0
@@ -126,14 +116,12 @@
 
     throw v2
 
-    .line 130
     .restart local v0       #autoRotate:Z
     :cond_1
     const v1, 0x104003c
 
     goto :goto_1
 
-    .line 126
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

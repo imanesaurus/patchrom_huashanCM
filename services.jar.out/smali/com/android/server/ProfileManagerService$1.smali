@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 100
     iput-object p1, p0, Lcom/android/server/ProfileManagerService$1;->this$0:Lcom/android/server/ProfileManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .parameter "newState"
 
     .prologue
-    .line 131
     iget-object v3, p0, Lcom/android/server/ProfileManagerService$1;->this$0:Lcom/android/server/ProfileManagerService;
 
     #getter for: Lcom/android/server/ProfileManagerService;->mProfiles:Ljava/util/Map;
@@ -70,7 +68,6 @@
 
     check-cast v2, Landroid/app/Profile;
 
-    .line 132
     .local v2, p:Landroid/app/Profile;
     invoke-virtual {v2, p1, p2}, Landroid/app/Profile;->getTrigger(ILjava/lang/String;)I
 
@@ -78,7 +75,6 @@
 
     if-ne p3, v3, :cond_0
 
-    .line 137
     :try_start_0
     iget-object v3, p0, Lcom/android/server/ProfileManagerService$1;->this$0:Lcom/android/server/ProfileManagerService;
 
@@ -101,7 +97,6 @@
 
     if-nez v3, :cond_0
 
-    .line 138
     iget-object v3, p0, Lcom/android/server/ProfileManagerService$1;->this$0:Lcom/android/server/ProfileManagerService;
 
     const/4 v4, 0x1
@@ -113,11 +108,9 @@
 
     goto :goto_0
 
-    .line 140
     :catch_0
     move-exception v0
 
-    .line 141
     .local v0, e:Landroid/os/RemoteException;
     const-string v3, "ProfileService"
 
@@ -127,7 +120,6 @@
 
     goto :goto_0
 
-    .line 144
     .end local v0           #e:Landroid/os/RemoteException;
     .end local v2           #p:Landroid/app/Profile;
     :cond_1
@@ -146,12 +138,10 @@
 
     const/4 v4, 0x0
 
-    .line 103
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 104
     .local v0, action:Ljava/lang/String;
     const-string v6, "android.intent.action.LOCALE_CHANGED"
 
@@ -161,24 +151,20 @@
 
     if-eqz v6, :cond_1
 
-    .line 105
     iget-object v4, p0, Lcom/android/server/ProfileManagerService$1;->this$0:Lcom/android/server/ProfileManagerService;
 
     #calls: Lcom/android/server/ProfileManagerService;->persistIfDirty()V
     invoke-static {v4}, Lcom/android/server/ProfileManagerService;->access$000(Lcom/android/server/ProfileManagerService;)V
 
-    .line 106
     iget-object v4, p0, Lcom/android/server/ProfileManagerService$1;->this$0:Lcom/android/server/ProfileManagerService;
 
     #calls: Lcom/android/server/ProfileManagerService;->initialize()V
     invoke-static {v4}, Lcom/android/server/ProfileManagerService;->access$100(Lcom/android/server/ProfileManagerService;)V
 
-    .line 128
     :cond_0
     :goto_0
     return-void
 
-    .line 107
     :cond_1
     const-string v6, "android.intent.action.ACTION_SHUTDOWN"
 
@@ -188,7 +174,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 108
     iget-object v4, p0, Lcom/android/server/ProfileManagerService$1;->this$0:Lcom/android/server/ProfileManagerService;
 
     #calls: Lcom/android/server/ProfileManagerService;->persistIfDirty()V
@@ -196,7 +181,6 @@
 
     goto :goto_0
 
-    .line 110
     :cond_2
     const-string v6, "android.net.wifi.STATE_CHANGE"
 
@@ -206,7 +190,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 111
     iget-object v5, p0, Lcom/android/server/ProfileManagerService$1;->this$0:Lcom/android/server/ProfileManagerService;
 
     #calls: Lcom/android/server/ProfileManagerService;->getActiveSSID()Ljava/lang/String;
@@ -214,21 +197,17 @@
 
     move-result-object v1
 
-    .line 113
     .local v1, activeSSID:Ljava/lang/String;
     if-eqz v1, :cond_3
 
-    .line 114
     const/4 v3, 0x0
 
-    .line 115
     .local v3, triggerState:I
     iget-object v5, p0, Lcom/android/server/ProfileManagerService$1;->this$0:Lcom/android/server/ProfileManagerService;
 
     #setter for: Lcom/android/server/ProfileManagerService;->mLastConnectedSSID:Ljava/lang/String;
     invoke-static {v5, v1}, Lcom/android/server/ProfileManagerService;->access$302(Lcom/android/server/ProfileManagerService;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 119
     :goto_1
     iget-object v5, p0, Lcom/android/server/ProfileManagerService$1;->this$0:Lcom/android/server/ProfileManagerService;
 
@@ -241,7 +220,6 @@
 
     goto :goto_0
 
-    .line 117
     .end local v3           #triggerState:I
     :cond_3
     const/4 v3, 0x1
@@ -249,7 +227,6 @@
     .restart local v3       #triggerState:I
     goto :goto_1
 
-    .line 120
     .end local v1           #activeSSID:Ljava/lang/String;
     .end local v3           #triggerState:I
     :cond_4
@@ -269,7 +246,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 122
     :cond_5
     const-string v6, "android.bluetooth.device.action.ACL_CONNECTED"
 
@@ -281,7 +257,6 @@
 
     move v3, v4
 
-    .line 124
     .restart local v3       #triggerState:I
     :goto_2
     const-string v4, "android.bluetooth.device.extra.DEVICE"
@@ -292,7 +267,6 @@
 
     check-cast v2, Landroid/bluetooth/BluetoothDevice;
 
-    .line 126
     .local v2, device:Landroid/bluetooth/BluetoothDevice;
     invoke-virtual {v2}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
@@ -307,6 +281,5 @@
     :cond_6
     move v3, v5
 
-    .line 122
     goto :goto_2
 .end method

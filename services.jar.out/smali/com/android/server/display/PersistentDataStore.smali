@@ -31,17 +31,14 @@
     .locals 3
 
     .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/PersistentDataStore;->mRememberedWifiDisplays:Ljava/util/ArrayList;
 
-    .line 74
     new-instance v0, Landroid/util/AtomicFile;
 
     new-instance v1, Ljava/io/File;
@@ -54,7 +51,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/PersistentDataStore;->mAtomicFile:Landroid/util/AtomicFile;
 
-    .line 75
     return-void
 .end method
 
@@ -62,12 +58,10 @@
     .locals 1
 
     .prologue
-    .line 181
     iget-object v0, p0, Lcom/android/server/display/PersistentDataStore;->mRememberedWifiDisplays:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 182
     return-void
 .end method
 
@@ -76,14 +70,12 @@
     .parameter "deviceAddress"
 
     .prologue
-    .line 160
     iget-object v2, p0, Lcom/android/server/display/PersistentDataStore;->mRememberedWifiDisplays:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 161
     .local v0, count:I
     const/4 v1, 0x0
 
@@ -91,7 +83,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 162
     iget-object v2, p0, Lcom/android/server/display/PersistentDataStore;->mRememberedWifiDisplays:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -110,19 +101,16 @@
 
     if-eqz v2, :cond_0
 
-    .line 166
     .end local v1           #i:I
     :goto_1
     return v1
 
-    .line 161
     .restart local v1       #i:I
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 166
     :cond_1
     const/4 v1, -0x1
 
@@ -133,10 +121,8 @@
     .locals 5
 
     .prologue
-    .line 185
     invoke-direct {p0}, Lcom/android/server/display/PersistentDataStore;->clearState()V
 
-    .line 189
     :try_start_0
     iget-object v3, p0, Lcom/android/server/display/PersistentDataStore;->mAtomicFile:Landroid/util/AtomicFile;
 
@@ -146,14 +132,12 @@
 
     move-result-object v1
 
-    .line 196
     .local v1, is:Ljava/io/InputStream;
     :try_start_1
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v2
 
-    .line 197
     .local v2, parser:Lorg/xmlpull/v1/XmlPullParser;
     new-instance v3, Ljava/io/BufferedInputStream;
 
@@ -163,38 +147,31 @@
 
     invoke-interface {v2, v3, v4}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 198
     invoke-direct {p0, v2}, Lcom/android/server/display/PersistentDataStore;->loadFromXml(Lorg/xmlpull/v1/XmlPullParser;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 206
     .end local v2           #parser:Lorg/xmlpull/v1/XmlPullParser;
     :goto_0
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 208
     .end local v1           #is:Ljava/io/InputStream;
     :goto_1
     return-void
 
-    .line 190
     :catch_0
     move-exception v0
 
-    .line 191
     .local v0, ex:Ljava/io/FileNotFoundException;
     goto :goto_1
 
-    .line 199
     .end local v0           #ex:Ljava/io/FileNotFoundException;
     .restart local v1       #is:Ljava/io/InputStream;
     :catch_1
     move-exception v0
 
-    .line 200
     .local v0, ex:Ljava/io/IOException;
     :try_start_2
     const-string v3, "DisplayManager"
@@ -203,14 +180,12 @@
 
     invoke-static {v3, v4, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 201
     invoke-direct {p0}, Lcom/android/server/display/PersistentDataStore;->clearState()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_0
 
-    .line 206
     .end local v0           #ex:Ljava/io/IOException;
     :catchall_0
     move-exception v3
@@ -219,11 +194,9 @@
 
     throw v3
 
-    .line 202
     :catch_2
     move-exception v0
 
-    .line 203
     .local v0, ex:Lorg/xmlpull/v1/XmlPullParserException;
     :try_start_3
     const-string v3, "DisplayManager"
@@ -232,7 +205,6 @@
 
     invoke-static {v3, v4, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 204
     invoke-direct {p0}, Lcom/android/server/display/PersistentDataStore;->clearState()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -251,17 +223,14 @@
     .end annotation
 
     .prologue
-    .line 235
     const-string v1, "display-manager-state"
 
     invoke-static {p1, v1}, Lcom/android/internal/util/XmlUtils;->beginDocument(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)V
 
-    .line 236
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v0
 
-    .line 237
     .local v0, outerDepth:I
     :cond_0
     :goto_0
@@ -271,7 +240,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 238
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -284,12 +252,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 239
     invoke-direct {p0, p1}, Lcom/android/server/display/PersistentDataStore;->loadRememberedWifiDisplaysFromXml(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 242
     :cond_1
     return-void
 .end method
@@ -298,20 +264,16 @@
     .locals 1
 
     .prologue
-    .line 170
     iget-boolean v0, p0, Lcom/android/server/display/PersistentDataStore;->mLoaded:Z
 
     if-nez v0, :cond_0
 
-    .line 171
     invoke-direct {p0}, Lcom/android/server/display/PersistentDataStore;->load()V
 
-    .line 172
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/display/PersistentDataStore;->mLoaded:Z
 
-    .line 174
     :cond_0
     return-void
 .end method
@@ -329,12 +291,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 246
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v3
 
-    .line 247
     .local v3, outerDepth:I
     :cond_0
     :goto_0
@@ -344,7 +304,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 248
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -357,14 +316,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 249
     const-string v4, "deviceAddress"
 
     invoke-interface {p1, v6, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 250
     .local v0, deviceAddress:Ljava/lang/String;
     const-string v4, "deviceName"
 
@@ -372,7 +329,6 @@
 
     move-result-object v2
 
-    .line 251
     .local v2, deviceName:Ljava/lang/String;
     const-string v4, "deviceAlias"
 
@@ -380,13 +336,11 @@
 
     move-result-object v1
 
-    .line 252
     .local v1, deviceAlias:Ljava/lang/String;
     if-eqz v0, :cond_1
 
     if-nez v2, :cond_2
 
-    .line 253
     :cond_1
     new-instance v4, Lorg/xmlpull/v1/XmlPullParserException;
 
@@ -396,7 +350,6 @@
 
     throw v4
 
-    .line 256
     :cond_2
     invoke-direct {p0, v0}, Lcom/android/server/display/PersistentDataStore;->findRememberedWifiDisplay(Ljava/lang/String;)I
 
@@ -404,7 +357,6 @@
 
     if-ltz v4, :cond_3
 
-    .line 257
     new-instance v4, Lorg/xmlpull/v1/XmlPullParserException;
 
     const-string v5, "Found duplicate wifi display device address."
@@ -413,7 +365,6 @@
 
     throw v4
 
-    .line 261
     :cond_3
     iget-object v4, p0, Lcom/android/server/display/PersistentDataStore;->mRememberedWifiDisplays:Ljava/util/ArrayList;
 
@@ -425,7 +376,6 @@
 
     goto :goto_0
 
-    .line 265
     .end local v0           #deviceAddress:Ljava/lang/String;
     .end local v1           #deviceAlias:Ljava/lang/String;
     .end local v2           #deviceName:Ljava/lang/String;
@@ -437,7 +387,6 @@
     .locals 6
 
     .prologue
-    .line 213
     :try_start_0
     iget-object v4, p0, Lcom/android/server/display/PersistentDataStore;->mAtomicFile:Landroid/util/AtomicFile;
 
@@ -447,18 +396,15 @@
 
     move-result-object v1
 
-    .line 214
     .local v1, os:Ljava/io/FileOutputStream;
     const/4 v3, 0x0
 
-    .line 216
     .local v3, success:Z
     :try_start_1
     new-instance v2, Lcom/android/internal/util/FastXmlSerializer;
 
     invoke-direct {v2}, Lcom/android/internal/util/FastXmlSerializer;-><init>()V
 
-    .line 217
     .local v2, serializer:Lorg/xmlpull/v1/XmlSerializer;
     new-instance v4, Ljava/io/BufferedOutputStream;
 
@@ -468,34 +414,27 @@
 
     invoke-interface {v2, v4, v5}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 218
     invoke-direct {p0, v2}, Lcom/android/server/display/PersistentDataStore;->saveToXml(Lorg/xmlpull/v1/XmlSerializer;)V
 
-    .line 219
     invoke-interface {v2}, Lorg/xmlpull/v1/XmlSerializer;->flush()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 220
     const/4 v3, 0x1
 
-    .line 222
     if-eqz v3, :cond_1
 
-    .line 223
     :try_start_2
     iget-object v4, p0, Lcom/android/server/display/PersistentDataStore;->mAtomicFile:Landroid/util/AtomicFile;
 
     invoke-virtual {v4, v1}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
 
-    .line 231
     .end local v1           #os:Ljava/io/FileOutputStream;
     .end local v2           #serializer:Lorg/xmlpull/v1/XmlSerializer;
     .end local v3           #success:Z
     :goto_0
     return-void
 
-    .line 222
     .restart local v1       #os:Ljava/io/FileOutputStream;
     .restart local v3       #success:Z
     :catchall_0
@@ -503,24 +442,20 @@
 
     if-eqz v3, :cond_0
 
-    .line 223
     iget-object v5, p0, Lcom/android/server/display/PersistentDataStore;->mAtomicFile:Landroid/util/AtomicFile;
 
     invoke-virtual {v5, v1}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
 
-    .line 222
     :goto_1
     throw v4
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 228
     .end local v1           #os:Ljava/io/FileOutputStream;
     .end local v3           #success:Z
     :catch_0
     move-exception v0
 
-    .line 229
     .local v0, ex:Ljava/io/IOException;
     const-string v4, "DisplayManager"
 
@@ -530,7 +465,6 @@
 
     goto :goto_0
 
-    .line 225
     .end local v0           #ex:Ljava/io/IOException;
     .restart local v1       #os:Ljava/io/FileOutputStream;
     .restart local v3       #success:Z
@@ -567,29 +501,24 @@
 
     const/4 v4, 0x0
 
-    .line 268
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
     invoke-interface {p1, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 269
     const-string v2, "http://xmlpull.org/v1/doc/features.html#indent-output"
 
     invoke-interface {p1, v2, v3}, Lorg/xmlpull/v1/XmlSerializer;->setFeature(Ljava/lang/String;Z)V
 
-    .line 270
     const-string v2, "display-manager-state"
 
     invoke-interface {p1, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 271
     const-string v2, "remembered-wifi-displays"
 
     invoke-interface {p1, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 272
     iget-object v2, p0, Lcom/android/server/display/PersistentDataStore;->mRememberedWifiDisplays:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -610,13 +539,11 @@
 
     check-cast v0, Landroid/hardware/display/WifiDisplay;
 
-    .line 273
     .local v0, display:Landroid/hardware/display/WifiDisplay;
     const-string v2, "wifi-display"
 
     invoke-interface {p1, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 274
     const-string v2, "deviceAddress"
 
     invoke-virtual {v0}, Landroid/hardware/display/WifiDisplay;->getDeviceAddress()Ljava/lang/String;
@@ -625,7 +552,6 @@
 
     invoke-interface {p1, v4, v2, v3}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 275
     const-string v2, "deviceName"
 
     invoke-virtual {v0}, Landroid/hardware/display/WifiDisplay;->getDeviceName()Ljava/lang/String;
@@ -634,14 +560,12 @@
 
     invoke-interface {p1, v4, v2, v3}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 276
     invoke-virtual {v0}, Landroid/hardware/display/WifiDisplay;->getDeviceAlias()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 277
     const-string v2, "deviceAlias"
 
     invoke-virtual {v0}, Landroid/hardware/display/WifiDisplay;->getDeviceAlias()Ljava/lang/String;
@@ -650,7 +574,6 @@
 
     invoke-interface {p1, v4, v2, v3}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 279
     :cond_0
     const-string v2, "wifi-display"
 
@@ -658,22 +581,18 @@
 
     goto :goto_0
 
-    .line 281
     .end local v0           #display:Landroid/hardware/display/WifiDisplay;
     :cond_1
     const-string v2, "remembered-wifi-displays"
 
     invoke-interface {p1, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 282
     const-string v2, "display-manager-state"
 
     invoke-interface {p1, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 283
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    .line 284
     return-void
 .end method
 
@@ -681,12 +600,10 @@
     .locals 1
 
     .prologue
-    .line 177
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/display/PersistentDataStore;->mDirty:Z
 
-    .line 178
     return-void
 .end method
 
@@ -697,16 +614,12 @@
     .parameter "display"
 
     .prologue
-    .line 99
     if-eqz p1, :cond_1
 
-    .line 100
     invoke-direct {p0}, Lcom/android/server/display/PersistentDataStore;->loadIfNeeded()V
 
-    .line 102
     const/4 v0, 0x0
 
-    .line 103
     .local v0, alias:Ljava/lang/String;
     invoke-virtual {p1}, Landroid/hardware/display/WifiDisplay;->getDeviceAddress()Ljava/lang/String;
 
@@ -716,11 +629,9 @@
 
     move-result v1
 
-    .line 104
     .local v1, index:I
     if-ltz v1, :cond_0
 
-    .line 105
     iget-object v2, p0, Lcom/android/server/display/PersistentDataStore;->mRememberedWifiDisplays:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -733,7 +644,6 @@
 
     move-result-object v0
 
-    .line 107
     :cond_0
     invoke-virtual {p1}, Landroid/hardware/display/WifiDisplay;->getDeviceAlias()Ljava/lang/String;
 
@@ -745,7 +655,6 @@
 
     if-nez v2, :cond_1
 
-    .line 108
     new-instance v2, Landroid/hardware/display/WifiDisplay;
 
     invoke-virtual {p1}, Landroid/hardware/display/WifiDisplay;->getDeviceAddress()Ljava/lang/String;
@@ -760,7 +669,6 @@
 
     move-object p1, v2
 
-    .line 111
     .end local v0           #alias:Ljava/lang/String;
     .end local v1           #index:I
     .end local p1
@@ -775,17 +683,13 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 115
     move-object v3, p1
 
-    .line 116
     .local v3, results:[Landroid/hardware/display/WifiDisplay;
     if-eqz v3, :cond_2
 
-    .line 117
     array-length v0, p1
 
-    .line 118
     .local v0, count:I
     const/4 v1, 0x0
 
@@ -793,39 +697,31 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
-    .line 119
     aget-object v4, p1, v1
 
     invoke-virtual {p0, v4}, Lcom/android/server/display/PersistentDataStore;->applyWifiDisplayAlias(Landroid/hardware/display/WifiDisplay;)Landroid/hardware/display/WifiDisplay;
 
     move-result-object v2
 
-    .line 120
     .local v2, result:Landroid/hardware/display/WifiDisplay;
     aget-object v4, p1, v1
 
     if-eq v2, v4, :cond_1
 
-    .line 121
     if-ne v3, p1, :cond_0
 
-    .line 122
     new-array v3, v0, [Landroid/hardware/display/WifiDisplay;
 
-    .line 123
     invoke-static {p1, v5, v3, v5, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 125
     :cond_0
     aput-object v2, v3, v1
 
-    .line 118
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 129
     .end local v0           #count:I
     .end local v1           #i:I
     .end local v2           #result:Landroid/hardware/display/WifiDisplay;
@@ -838,27 +734,21 @@
     .parameter "deviceAddress"
 
     .prologue
-    .line 150
     invoke-direct {p0, p1}, Lcom/android/server/display/PersistentDataStore;->findRememberedWifiDisplay(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 151
     .local v0, index:I
     if-ltz v0, :cond_0
 
-    .line 152
     iget-object v1, p0, Lcom/android/server/display/PersistentDataStore;->mRememberedWifiDisplays:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 153
     invoke-direct {p0}, Lcom/android/server/display/PersistentDataStore;->setDirty()V
 
-    .line 154
     const/4 v1, 0x1
 
-    .line 156
     :goto_0
     return v1
 
@@ -873,19 +763,15 @@
     .parameter "deviceAddress"
 
     .prologue
-    .line 85
     invoke-direct {p0}, Lcom/android/server/display/PersistentDataStore;->loadIfNeeded()V
 
-    .line 86
     invoke-direct {p0, p1}, Lcom/android/server/display/PersistentDataStore;->findRememberedWifiDisplay(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 87
     .local v0, index:I
     if-ltz v0, :cond_0
 
-    .line 88
     iget-object v1, p0, Lcom/android/server/display/PersistentDataStore;->mRememberedWifiDisplays:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -894,7 +780,6 @@
 
     check-cast v1, Landroid/hardware/display/WifiDisplay;
 
-    .line 90
     :goto_0
     return-object v1
 
@@ -908,10 +793,8 @@
     .locals 2
 
     .prologue
-    .line 94
     invoke-direct {p0}, Lcom/android/server/display/PersistentDataStore;->loadIfNeeded()V
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/display/PersistentDataStore;->mRememberedWifiDisplays:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/android/server/display/PersistentDataStore;->mRememberedWifiDisplays:Ljava/util/ArrayList;
@@ -936,10 +819,8 @@
     .parameter "display"
 
     .prologue
-    .line 133
     invoke-direct {p0}, Lcom/android/server/display/PersistentDataStore;->loadIfNeeded()V
 
-    .line 135
     invoke-virtual {p1}, Landroid/hardware/display/WifiDisplay;->getDeviceAddress()Ljava/lang/String;
 
     move-result-object v2
@@ -948,11 +829,9 @@
 
     move-result v0
 
-    .line 136
     .local v0, index:I
     if-ltz v0, :cond_1
 
-    .line 137
     iget-object v2, p0, Lcom/android/server/display/PersistentDataStore;->mRememberedWifiDisplays:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -961,7 +840,6 @@
 
     check-cast v1, Landroid/hardware/display/WifiDisplay;
 
-    .line 138
     .local v1, other:Landroid/hardware/display/WifiDisplay;
     invoke-virtual {v1, p1}, Landroid/hardware/display/WifiDisplay;->equals(Landroid/hardware/display/WifiDisplay;)Z
 
@@ -969,32 +847,26 @@
 
     if-eqz v2, :cond_0
 
-    .line 139
     const/4 v2, 0x0
 
-    .line 146
     .end local v1           #other:Landroid/hardware/display/WifiDisplay;
     :goto_0
     return v2
 
-    .line 141
     .restart local v1       #other:Landroid/hardware/display/WifiDisplay;
     :cond_0
     iget-object v2, p0, Lcom/android/server/display/PersistentDataStore;->mRememberedWifiDisplays:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0, p1}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 145
     .end local v1           #other:Landroid/hardware/display/WifiDisplay;
     :goto_1
     invoke-direct {p0}, Lcom/android/server/display/PersistentDataStore;->setDirty()V
 
-    .line 146
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 143
     :cond_1
     iget-object v2, p0, Lcom/android/server/display/PersistentDataStore;->mRememberedWifiDisplays:Ljava/util/ArrayList;
 
@@ -1007,20 +879,16 @@
     .locals 1
 
     .prologue
-    .line 78
     iget-boolean v0, p0, Lcom/android/server/display/PersistentDataStore;->mDirty:Z
 
     if-eqz v0, :cond_0
 
-    .line 79
     invoke-direct {p0}, Lcom/android/server/display/PersistentDataStore;->save()V
 
-    .line 80
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/display/PersistentDataStore;->mDirty:Z
 
-    .line 82
     :cond_0
     return-void
 .end method

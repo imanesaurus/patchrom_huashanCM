@@ -317,7 +317,7 @@
     .prologue
     const/16 v2, 0x1cc
 
-    const-string/jumbo v1, "ro.carrier.name"
+    const-string v1, "ro.carrier.name"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1770,7 +1770,7 @@
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .local v1, sb:Ljava/lang/StringBuilder;
-    const-string/jumbo v2, "{"
+    const-string v2, "{"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

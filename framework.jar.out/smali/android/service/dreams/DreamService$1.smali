@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 657
     iput-object p1, p0, Landroid/service/dreams/DreamService$1;->this$0:Landroid/service/dreams/DreamService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 661
     :try_start_0
     iget-object v1, p0, Landroid/service/dreams/DreamService$1;->this$0:Landroid/service/dreams/DreamService;
 
@@ -49,15 +47,12 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 666
     :goto_0
     return-void
 
-    .line 662
     :catch_0
     move-exception v0
 
-    .line 663
     .local v0, t:Ljava/lang/Throwable;
     iget-object v1, p0, Landroid/service/dreams/DreamService$1;->this$0:Landroid/service/dreams/DreamService;
 
@@ -70,7 +65,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 664
     iget-object v1, p0, Landroid/service/dreams/DreamService$1;->this$0:Landroid/service/dreams/DreamService;
 
     #calls: Landroid/service/dreams/DreamService;->safelyFinish()V

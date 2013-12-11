@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 722
     iput-object p1, p0, Lcom/android/server/BatteryService$8;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 725
     const-string v0, "android.intent.action.DOCK_EVENT"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -53,7 +51,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 726
     iget-object v0, p0, Lcom/android/server/BatteryService$8;->this$0:Lcom/android/server/BatteryService;
 
     #getter for: Lcom/android/server/BatteryService;->mLock:Ljava/lang/Object;
@@ -63,21 +60,17 @@
 
     monitor-enter v1
 
-    .line 727
     :try_start_0
     iget-object v0, p0, Lcom/android/server/BatteryService$8;->this$0:Lcom/android/server/BatteryService;
 
     #calls: Lcom/android/server/BatteryService;->updateLocked()V
     invoke-static {v0}, Lcom/android/server/BatteryService;->access$200(Lcom/android/server/BatteryService;)V
 
-    .line 728
     monitor-exit v1
 
-    .line 730
     :cond_0
     return-void
 
-    .line 728
     :catchall_0
     move-exception v0
 

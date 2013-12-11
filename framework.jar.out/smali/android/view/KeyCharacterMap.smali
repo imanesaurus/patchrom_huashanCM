@@ -143,193 +143,164 @@
 
     const/16 v3, 0x2d
 
-    .line 198
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     sput-object v0, Landroid/view/KeyCharacterMap;->sCombiningToAccent:Landroid/util/SparseIntArray;
 
-    .line 199
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     sput-object v0, Landroid/view/KeyCharacterMap;->sAccentToCombining:Landroid/util/SparseIntArray;
 
-    .line 201
     invoke-static {v5, v4}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 202
     const/16 v0, 0x301
 
     invoke-static {v0, v2}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 203
     const/16 v0, 0x2c6
 
     invoke-static {v6, v0}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 204
     const/16 v0, 0x303
 
     const/16 v1, 0x2dc
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 205
     const/16 v0, 0x304
 
     const/16 v1, 0xaf
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 206
     const/16 v0, 0x306
 
     const/16 v1, 0x2d8
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 207
     const/16 v0, 0x307
 
     const/16 v1, 0x2d9
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 208
     const/16 v0, 0x308
 
     const/16 v1, 0xa8
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 209
     const/16 v0, 0x309
 
     const/16 v1, 0x2c0
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 210
     const/16 v0, 0x30a
 
     const/16 v1, 0x2da
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 211
     const/16 v0, 0x30b
 
     const/16 v1, 0x2dd
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 212
     const/16 v0, 0x30c
 
     const/16 v1, 0x2c7
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 213
     const/16 v0, 0x30d
 
     const/16 v1, 0x2c8
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 218
     const/16 v0, 0x312
 
     const/16 v1, 0x2bb
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 219
     const/16 v0, 0x313
 
     const/16 v1, 0x1fbd
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 220
     const/16 v0, 0x314
 
     const/16 v1, 0x2bd
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 221
     const/16 v0, 0x315
 
     const/16 v1, 0x2bc
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 222
     const/16 v0, 0x31b
 
     const/16 v1, 0x27
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 223
     const/16 v0, 0x323
 
     const/16 v1, 0x2e
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 225
     const/16 v0, 0x327
 
     const/16 v1, 0xb8
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 226
     const/16 v0, 0x328
 
     const/16 v1, 0x2db
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 227
     const/16 v0, 0x329
 
     const/16 v1, 0x2cc
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 228
     const/16 v0, 0x331
 
     const/16 v1, 0x2cd
 
     invoke-static {v0, v1}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 229
     const/16 v0, 0x335
 
     invoke-static {v0, v3}, Landroid/view/KeyCharacterMap;->addCombining(II)V
 
-    .line 235
     sget-object v0, Landroid/view/KeyCharacterMap;->sCombiningToAccent:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x340
 
     invoke-virtual {v0, v1, v4}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 236
     sget-object v0, Landroid/view/KeyCharacterMap;->sCombiningToAccent:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x341
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 237
     sget-object v0, Landroid/view/KeyCharacterMap;->sCombiningToAccent:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x343
@@ -338,21 +309,18 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 240
     sget-object v0, Landroid/view/KeyCharacterMap;->sAccentToCombining:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x60
 
     invoke-virtual {v0, v1, v5}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 241
     sget-object v0, Landroid/view/KeyCharacterMap;->sAccentToCombining:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x5e
 
     invoke-virtual {v0, v1, v6}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 242
     sget-object v0, Landroid/view/KeyCharacterMap;->sAccentToCombining:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x7e
@@ -361,119 +329,102 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 255
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     sput-object v0, Landroid/view/KeyCharacterMap;->sDeadKeyCache:Landroid/util/SparseIntArray;
 
-    .line 256
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     sput-object v0, Landroid/view/KeyCharacterMap;->sDeadKeyBuilder:Ljava/lang/StringBuilder;
 
-    .line 260
     const/16 v0, 0x44
 
     const/16 v1, 0x110
 
     invoke-static {v3, v0, v1}, Landroid/view/KeyCharacterMap;->addDeadKey(III)V
 
-    .line 261
     const/16 v0, 0x47
 
     const/16 v1, 0x1e4
 
     invoke-static {v3, v0, v1}, Landroid/view/KeyCharacterMap;->addDeadKey(III)V
 
-    .line 262
     const/16 v0, 0x48
 
     const/16 v1, 0x126
 
     invoke-static {v3, v0, v1}, Landroid/view/KeyCharacterMap;->addDeadKey(III)V
 
-    .line 263
     const/16 v0, 0x49
 
     const/16 v1, 0x197
 
     invoke-static {v3, v0, v1}, Landroid/view/KeyCharacterMap;->addDeadKey(III)V
 
-    .line 264
     const/16 v0, 0x4c
 
     const/16 v1, 0x141
 
     invoke-static {v3, v0, v1}, Landroid/view/KeyCharacterMap;->addDeadKey(III)V
 
-    .line 265
     const/16 v0, 0x4f
 
     const/16 v1, 0xd8
 
     invoke-static {v3, v0, v1}, Landroid/view/KeyCharacterMap;->addDeadKey(III)V
 
-    .line 266
     const/16 v0, 0x54
 
     const/16 v1, 0x166
 
     invoke-static {v3, v0, v1}, Landroid/view/KeyCharacterMap;->addDeadKey(III)V
 
-    .line 267
     const/16 v0, 0x64
 
     const/16 v1, 0x111
 
     invoke-static {v3, v0, v1}, Landroid/view/KeyCharacterMap;->addDeadKey(III)V
 
-    .line 268
     const/16 v0, 0x67
 
     const/16 v1, 0x1e5
 
     invoke-static {v3, v0, v1}, Landroid/view/KeyCharacterMap;->addDeadKey(III)V
 
-    .line 269
     const/16 v0, 0x68
 
     const/16 v1, 0x127
 
     invoke-static {v3, v0, v1}, Landroid/view/KeyCharacterMap;->addDeadKey(III)V
 
-    .line 270
     const/16 v0, 0x69
 
     const/16 v1, 0x268
 
     invoke-static {v3, v0, v1}, Landroid/view/KeyCharacterMap;->addDeadKey(III)V
 
-    .line 271
     const/16 v0, 0x6c
 
     const/16 v1, 0x142
 
     invoke-static {v3, v0, v1}, Landroid/view/KeyCharacterMap;->addDeadKey(III)V
 
-    .line 272
     const/16 v0, 0x6f
 
     const/16 v1, 0xf8
 
     invoke-static {v3, v0, v1}, Landroid/view/KeyCharacterMap;->addDeadKey(III)V
 
-    .line 273
     const/16 v0, 0x74
 
     const/16 v1, 0x167
 
     invoke-static {v3, v0, v1}, Landroid/view/KeyCharacterMap;->addDeadKey(III)V
 
-    .line 285
     new-instance v0, Landroid/view/KeyCharacterMap$1;
 
     invoke-direct {v0}, Landroid/view/KeyCharacterMap$1;-><init>()V
@@ -488,13 +439,10 @@
     .parameter "ptr"
 
     .prologue
-    .line 321
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 322
     iput p1, p0, Landroid/view/KeyCharacterMap;->mPtr:I
 
-    .line 323
     return-void
 .end method
 
@@ -503,22 +451,18 @@
     .parameter "in"
 
     .prologue
-    .line 310
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 311
     if-nez p1, :cond_0
 
-    .line 312
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "parcel must not be null"
+    const-string v1, "parcel must not be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 314
     :cond_0
     invoke-static {p1}, Landroid/view/KeyCharacterMap;->nativeReadFromParcel(Landroid/os/Parcel;)I
 
@@ -526,12 +470,10 @@
 
     iput v0, p0, Landroid/view/KeyCharacterMap;->mPtr:I
 
-    .line 315
     iget v0, p0, Landroid/view/KeyCharacterMap;->mPtr:I
 
     if-nez v0, :cond_1
 
-    .line 316
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Could not read KeyCharacterMap from parcel."
@@ -540,7 +482,6 @@
 
     throw v0
 
-    .line 318
     :cond_1
     return-void
 .end method
@@ -551,7 +492,6 @@
     .parameter "x1"
 
     .prologue
-    .line 32
     invoke-direct {p0, p1}, Landroid/view/KeyCharacterMap;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -563,17 +503,14 @@
     .parameter "accent"
 
     .prologue
-    .line 246
     sget-object v0, Landroid/view/KeyCharacterMap;->sCombiningToAccent:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p0, p1}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 247
     sget-object v0, Landroid/view/KeyCharacterMap;->sAccentToCombining:Landroid/util/SparseIntArray;
 
     invoke-virtual {v0, p1, p0}, Landroid/util/SparseIntArray;->append(II)V
 
-    .line 248
     return-void
 .end method
 
@@ -584,18 +521,15 @@
     .parameter "result"
 
     .prologue
-    .line 277
     sget-object v2, Landroid/view/KeyCharacterMap;->sAccentToCombining:Landroid/util/SparseIntArray;
 
     invoke-virtual {v2, p0}, Landroid/util/SparseIntArray;->get(I)I
 
     move-result v1
 
-    .line 278
     .local v1, combining:I
     if-nez v1, :cond_0
 
-    .line 279
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v3, "Invalid dead key declaration."
@@ -604,19 +538,16 @@
 
     throw v2
 
-    .line 281
     :cond_0
     shl-int/lit8 v2, v1, 0x10
 
     or-int v0, v2, p1
 
-    .line 282
     .local v0, combination:I
     sget-object v2, Landroid/view/KeyCharacterMap;->sDeadKeyCache:Landroid/util/SparseIntArray;
 
     invoke-virtual {v2, v0, p2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 283
     return-void
 .end method
 
@@ -627,7 +558,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 697
     invoke-static {}, Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager;
 
     move-result-object v0
@@ -652,7 +582,6 @@
     .parameter "keyCodes"
 
     .prologue
-    .line 711
     invoke-static {}, Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager;
 
     move-result-object v0
@@ -674,36 +603,30 @@
 
     const/4 v4, 0x0
 
-    .line 496
     sget-object v5, Landroid/view/KeyCharacterMap;->sAccentToCombining:Landroid/util/SparseIntArray;
 
     invoke-virtual {v5, p0}, Landroid/util/SparseIntArray;->get(I)I
 
     move-result v2
 
-    .line 497
     .local v2, combining:I
     if-nez v2, :cond_0
 
     move v1, v4
 
-    .line 514
     :goto_0
     return v1
 
-    .line 501
     :cond_0
     shl-int/lit8 v5, v2, 0x10
 
     or-int v0, v5, p1
 
-    .line 503
     .local v0, combination:I
     sget-object v5, Landroid/view/KeyCharacterMap;->sDeadKeyCache:Landroid/util/SparseIntArray;
 
     monitor-enter v5
 
-    .line 504
     :try_start_0
     sget-object v6, Landroid/view/KeyCharacterMap;->sDeadKeyCache:Landroid/util/SparseIntArray;
 
@@ -713,32 +636,27 @@
 
     move-result v1
 
-    .line 505
     .local v1, combined:I
     if-ne v1, v8, :cond_1
 
-    .line 506
     sget-object v6, Landroid/view/KeyCharacterMap;->sDeadKeyBuilder:Ljava/lang/StringBuilder;
 
     const/4 v7, 0x0
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 507
     sget-object v6, Landroid/view/KeyCharacterMap;->sDeadKeyBuilder:Ljava/lang/StringBuilder;
 
     int-to-char v7, p1
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 508
     sget-object v6, Landroid/view/KeyCharacterMap;->sDeadKeyBuilder:Ljava/lang/StringBuilder;
 
     int-to-char v7, v2
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 509
     sget-object v6, Landroid/view/KeyCharacterMap;->sDeadKeyBuilder:Ljava/lang/StringBuilder;
 
     sget-object v7, Ljava/text/Normalizer$Form;->NFC:Ljava/text/Normalizer$Form;
@@ -747,7 +665,6 @@
 
     move-result-object v3
 
-    .line 510
     .local v3, result:Ljava/lang/String;
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -763,13 +680,11 @@
 
     move-result v1
 
-    .line 511
     :goto_1
     sget-object v4, Landroid/view/KeyCharacterMap;->sDeadKeyCache:Landroid/util/SparseIntArray;
 
     invoke-virtual {v4, v0, v1}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 513
     .end local v3           #result:Ljava/lang/String;
     :cond_1
     monitor-exit v5
@@ -791,7 +706,6 @@
     :cond_2
     move v1, v4
 
-    .line 510
     goto :goto_1
 .end method
 
@@ -800,32 +714,26 @@
     .parameter "deviceId"
 
     .prologue
-    .line 343
     invoke-static {}, Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager;
 
     move-result-object v0
 
-    .line 344
     .local v0, im:Landroid/hardware/input/InputManager;
     invoke-virtual {v0, p0}, Landroid/hardware/input/InputManager;->getInputDevice(I)Landroid/view/InputDevice;
 
     move-result-object v1
 
-    .line 345
     .local v1, inputDevice:Landroid/view/InputDevice;
     if-nez v1, :cond_0
 
-    .line 346
     const/4 v2, -0x1
 
     invoke-virtual {v0, v2}, Landroid/hardware/input/InputManager;->getInputDevice(I)Landroid/view/InputDevice;
 
     move-result-object v1
 
-    .line 347
     if-nez v1, :cond_0
 
-    .line 348
     new-instance v2, Landroid/view/KeyCharacterMap$UnavailableException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -850,7 +758,6 @@
 
     throw v2
 
-    .line 352
     :cond_0
     invoke-virtual {v1}, Landroid/view/InputDevice;->getKeyCharacterMap()Landroid/view/KeyCharacterMap;
 
@@ -895,7 +802,6 @@
     .locals 1
 
     .prologue
-    .line 724
     const/4 v0, 0x0
 
     return v0
@@ -910,22 +816,18 @@
     .end annotation
 
     .prologue
-    .line 327
     iget v0, p0, Landroid/view/KeyCharacterMap;->mPtr:I
 
     if-eqz v0, :cond_0
 
-    .line 328
     iget v0, p0, Landroid/view/KeyCharacterMap;->mPtr:I
 
     invoke-static {v0}, Landroid/view/KeyCharacterMap;->nativeDispose(I)V
 
-    .line 329
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/view/KeyCharacterMap;->mPtr:I
 
-    .line 331
     :cond_0
     return-void
 .end method
@@ -936,19 +838,16 @@
     .parameter "metaState"
 
     .prologue
-    .line 377
     invoke-static {p2}, Landroid/view/KeyEvent;->normalizeMetaState(I)I
 
     move-result p2
 
-    .line 378
     iget v2, p0, Landroid/view/KeyCharacterMap;->mPtr:I
 
     invoke-static {v2, p1, p2}, Landroid/view/KeyCharacterMap;->nativeGetCharacter(III)C
 
     move-result v0
 
-    .line 380
     .local v0, ch:C
     sget-object v2, Landroid/view/KeyCharacterMap;->sCombiningToAccent:Landroid/util/SparseIntArray;
 
@@ -956,16 +855,13 @@
 
     move-result v1
 
-    .line 381
     .local v1, map:I
     if-eqz v1, :cond_0
 
-    .line 382
     const/high16 v2, -0x8000
 
     or-int v0, v1, v2
 
-    .line 384
     .end local v0           #ch:C
     :cond_0
     return v0
@@ -976,7 +872,6 @@
     .parameter "keyCode"
 
     .prologue
-    .line 484
     iget v0, p0, Landroid/view/KeyCharacterMap;->mPtr:I
 
     invoke-static {v0, p1}, Landroid/view/KeyCharacterMap;->nativeGetDisplayLabel(II)C
@@ -991,10 +886,8 @@
     .parameter "chars"
 
     .prologue
-    .line 604
     if-nez p1, :cond_0
 
-    .line 605
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "chars must not be null."
@@ -1003,7 +896,6 @@
 
     throw v0
 
-    .line 607
     :cond_0
     iget v0, p0, Landroid/view/KeyCharacterMap;->mPtr:I
 
@@ -1020,18 +912,15 @@
     .parameter "metaState"
 
     .prologue
-    .line 406
     invoke-static {}, Landroid/view/KeyCharacterMap$FallbackAction;->obtain()Landroid/view/KeyCharacterMap$FallbackAction;
 
     move-result-object v0
 
-    .line 407
     .local v0, action:Landroid/view/KeyCharacterMap$FallbackAction;
     invoke-static {p2}, Landroid/view/KeyEvent;->normalizeMetaState(I)I
 
     move-result p2
 
-    .line 408
     iget v1, p0, Landroid/view/KeyCharacterMap;->mPtr:I
 
     invoke-static {v1, p1, p2, v0}, Landroid/view/KeyCharacterMap;->nativeGetFallbackAction(IIILandroid/view/KeyCharacterMap$FallbackAction;)Z
@@ -1040,7 +929,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 409
     iget v1, v0, Landroid/view/KeyCharacterMap$FallbackAction;->metaState:I
 
     invoke-static {v1}, Landroid/view/KeyEvent;->normalizeMetaState(I)I
@@ -1049,17 +937,14 @@
 
     iput v1, v0, Landroid/view/KeyCharacterMap$FallbackAction;->metaState:I
 
-    .line 413
     .end local v0           #action:Landroid/view/KeyCharacterMap$FallbackAction;
     :goto_0
     return-object v0
 
-    .line 412
     .restart local v0       #action:Landroid/view/KeyCharacterMap$FallbackAction;
     :cond_0
     invoke-virtual {v0}, Landroid/view/KeyCharacterMap$FallbackAction;->recycle()V
 
-    .line 413
     const/4 v0, 0x0
 
     goto :goto_0
@@ -1081,7 +966,6 @@
 
     const/4 v1, 0x0
 
-    .line 562
     iget-object v3, p2, Landroid/view/KeyCharacterMap$KeyData;->meta:[C
 
     array-length v3, v3
@@ -1090,16 +974,14 @@
 
     if-ge v3, v4, :cond_0
 
-    .line 563
     new-instance v1, Ljava/lang/IndexOutOfBoundsException;
 
-    const-string/jumbo v2, "results.meta.length must be >= 4"
+    const-string v2, "results.meta.length must be >= 4"
 
     invoke-direct {v1, v2}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 567
     :cond_0
     iget v3, p0, Landroid/view/KeyCharacterMap;->mPtr:I
 
@@ -1107,19 +989,15 @@
 
     move-result v0
 
-    .line 568
     .local v0, displayLabel:C
     if-nez v0, :cond_1
 
-    .line 579
     :goto_0
     return v1
 
-    .line 572
     :cond_1
     iput-char v0, p2, Landroid/view/KeyCharacterMap$KeyData;->displayLabel:C
 
-    .line 573
     iget v3, p0, Landroid/view/KeyCharacterMap;->mPtr:I
 
     invoke-static {v3, p1}, Landroid/view/KeyCharacterMap;->nativeGetNumber(II)C
@@ -1128,7 +1006,6 @@
 
     iput-char v3, p2, Landroid/view/KeyCharacterMap$KeyData;->number:C
 
-    .line 574
     iget-object v3, p2, Landroid/view/KeyCharacterMap$KeyData;->meta:[C
 
     iget v4, p0, Landroid/view/KeyCharacterMap;->mPtr:I
@@ -1139,7 +1016,6 @@
 
     aput-char v4, v3, v1
 
-    .line 575
     iget-object v1, p2, Landroid/view/KeyCharacterMap$KeyData;->meta:[C
 
     iget v3, p0, Landroid/view/KeyCharacterMap;->mPtr:I
@@ -1150,7 +1026,6 @@
 
     aput-char v3, v1, v2
 
-    .line 576
     iget-object v1, p2, Landroid/view/KeyCharacterMap$KeyData;->meta:[C
 
     iget v3, p0, Landroid/view/KeyCharacterMap;->mPtr:I
@@ -1161,7 +1036,6 @@
 
     aput-char v3, v1, v5
 
-    .line 577
     iget-object v1, p2, Landroid/view/KeyCharacterMap$KeyData;->meta:[C
 
     iget v3, p0, Landroid/view/KeyCharacterMap;->mPtr:I
@@ -1174,7 +1048,6 @@
 
     move v1, v2
 
-    .line 579
     goto :goto_0
 .end method
 
@@ -1182,7 +1055,6 @@
     .locals 1
 
     .prologue
-    .line 644
     iget v0, p0, Landroid/view/KeyCharacterMap;->mPtr:I
 
     invoke-static {v0}, Landroid/view/KeyCharacterMap;->nativeGetKeyboardType(I)I
@@ -1198,7 +1070,6 @@
     .parameter "chars"
 
     .prologue
-    .line 454
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/view/KeyCharacterMap;->getMatch(I[CI)C
@@ -1215,10 +1086,8 @@
     .parameter "metaState"
 
     .prologue
-    .line 468
     if-nez p2, :cond_0
 
-    .line 469
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "chars must not be null."
@@ -1227,13 +1096,11 @@
 
     throw v0
 
-    .line 472
     :cond_0
     invoke-static {p3}, Landroid/view/KeyEvent;->normalizeMetaState(I)I
 
     move-result p3
 
-    .line 473
     iget v0, p0, Landroid/view/KeyCharacterMap;->mPtr:I
 
     invoke-static {v0, p1, p2, p3}, Landroid/view/KeyCharacterMap;->nativeGetMatch(II[CI)C
@@ -1247,26 +1114,22 @@
     .locals 1
 
     .prologue
-    .line 680
     invoke-virtual {p0}, Landroid/view/KeyCharacterMap;->getKeyboardType()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 685
     const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    .line 683
     :pswitch_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 680
     nop
 
     :pswitch_data_0
@@ -1281,7 +1144,6 @@
     .parameter "keyCode"
 
     .prologue
-    .line 438
     iget v0, p0, Landroid/view/KeyCharacterMap;->mPtr:I
 
     invoke-static {v0, p1}, Landroid/view/KeyCharacterMap;->nativeGetNumber(II)C
@@ -1296,7 +1158,6 @@
     .parameter "keyCode"
 
     .prologue
-    .line 617
     iget v1, p0, Landroid/view/KeyCharacterMap;->mPtr:I
 
     invoke-static {v1, p1}, Landroid/view/KeyCharacterMap;->nativeGetDisplayLabel(II)C
@@ -1307,23 +1168,19 @@
 
     move-result v0
 
-    .line 619
     .local v0, type:I
     packed-switch v0, :pswitch_data_0
 
-    .line 628
     const/4 v1, 0x1
 
     :goto_0
     return v1
 
-    .line 626
     :pswitch_0
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 619
     nop
 
     :pswitch_data_0
@@ -1342,24 +1199,20 @@
     .parameter "flags"
 
     .prologue
-    .line 716
     if-nez p1, :cond_0
 
-    .line 717
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "parcel must not be null"
+    const-string v1, "parcel must not be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 719
     :cond_0
     iget v0, p0, Landroid/view/KeyCharacterMap;->mPtr:I
 
     invoke-static {v0, p1}, Landroid/view/KeyCharacterMap;->nativeWriteToParcel(ILandroid/os/Parcel;)V
 
-    .line 720
     return-void
 .end method

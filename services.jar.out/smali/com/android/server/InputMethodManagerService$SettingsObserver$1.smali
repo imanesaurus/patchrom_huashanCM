@@ -28,7 +28,6 @@
     .parameter
 
     .prologue
-    .line 405
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$SettingsObserver$1;->this$1:Lcom/android/server/InputMethodManagerService$SettingsObserver;
 
     iput-object p3, p0, Lcom/android/server/InputMethodManagerService$SettingsObserver$1;->val$this$0:Lcom/android/server/InputMethodManagerService;
@@ -45,13 +44,11 @@
     .parameter "selfChange"
 
     .prologue
-    .line 407
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$SettingsObserver$1;->this$1:Lcom/android/server/InputMethodManagerService$SettingsObserver;
 
     iget-object v0, v0, Lcom/android/server/InputMethodManagerService$SettingsObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/InputMethodManagerService;->updateFromSettingsLocked()V
 
-    .line 408
     return-void
 .end method

@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 267
     iput-object p1, p0, Lcom/android/server/usb/LegacyUsbDeviceManager$LegacyUsbHandler$1;->this$1:Lcom/android/server/usb/LegacyUsbDeviceManager$LegacyUsbHandler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 270
     iget-object v0, p0, Lcom/android/server/usb/LegacyUsbDeviceManager$LegacyUsbHandler$1;->this$1:Lcom/android/server/usb/LegacyUsbDeviceManager$LegacyUsbHandler;
 
     iget-object v0, v0, Lcom/android/server/usb/LegacyUsbDeviceManager$LegacyUsbHandler;->this$0:Lcom/android/server/usb/LegacyUsbDeviceManager;
@@ -54,6 +52,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/usb/LegacyUsbDeviceManager$LegacyUsbHandler;->sendEmptyMessage(I)Z
 
-    .line 271
     return-void
 .end method

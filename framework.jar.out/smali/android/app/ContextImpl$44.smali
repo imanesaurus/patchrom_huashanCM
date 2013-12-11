@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 570
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,20 +31,17 @@
     .parameter "ctx"
 
     .prologue
-    .line 572
     const-string v2, "fm_transmitter"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 573
     .local v0, b:Landroid/os/IBinder;
     invoke-static {v0}, Lcom/stericsson/hardware/fm/IFmTransmitter$Stub;->asInterface(Landroid/os/IBinder;)Lcom/stericsson/hardware/fm/IFmTransmitter;
 
     move-result-object v1
 
-    .line 574
     .local v1, service:Lcom/stericsson/hardware/fm/IFmTransmitter;
     new-instance v2, Lcom/stericsson/hardware/fm/FmTransmitterImpl;
 

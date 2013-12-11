@@ -22,16 +22,15 @@
     .locals 3
 
     .prologue
-    .line 54
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MAIN"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-string/jumbo v1, "net.cactii.flash2"
+    const-string v1, "net.cactii.flash2"
 
-    const-string/jumbo v2, "net.cactii.flash2.MainActivity"
+    const-string v2, "net.cactii.flash2.MainActivity"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -46,7 +45,6 @@
     .locals 0
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -60,18 +60,15 @@
     .locals 1
 
     .prologue
-    .line 87
     .local p0, this:Landroid/content/pm/RegisteredServicesCache$UserServices;,"Landroid/content/pm/RegisteredServicesCache$UserServices<TV;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 88
     invoke-static {}, Lcom/google/android/collect/Maps;->newHashMap()Ljava/util/HashMap;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/pm/RegisteredServicesCache$UserServices;->persistentServices:Ljava/util/Map;
 
-    .line 90
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/pm/RegisteredServicesCache$UserServices;->services:Ljava/util/Map;
@@ -84,7 +81,6 @@
     .parameter "x0"
 
     .prologue
-    .line 87
     .local p0, this:Landroid/content/pm/RegisteredServicesCache$UserServices;,"Landroid/content/pm/RegisteredServicesCache$UserServices<TV;>;"
     invoke-direct {p0}, Landroid/content/pm/RegisteredServicesCache$UserServices;-><init>()V
 

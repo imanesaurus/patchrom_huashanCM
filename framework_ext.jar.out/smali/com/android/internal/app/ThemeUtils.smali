@@ -26,10 +26,8 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     return-void
 .end method
 
@@ -38,7 +36,6 @@
     .parameter "context"
 
     .prologue
-    .line 52
     :try_start_0
     const-string v1, "com.android.systemui"
 
@@ -48,7 +45,6 @@
 
     move-result-object v0
 
-    .line 54
     .local v0, uiContext:Landroid/content/Context;
     new-instance v1, Lcom/android/internal/app/ThemeUtils$ThemedUiContext;
 
@@ -60,16 +56,13 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 58
     .end local v0           #uiContext:Landroid/content/Context;
     :goto_0
     return-object v1
 
-    .line 55
     :catch_0
     move-exception v1
 
-    .line 58
     const/4 v1, 0x0
 
     goto :goto_0
@@ -81,39 +74,32 @@
     .parameter "receiver"
 
     .prologue
-    .line 62
     new-instance v1, Landroid/content/IntentFilter;
 
     const-string v2, "com.tmobile.intent.action.THEME_CHANGED"
 
     invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 64
     .local v1, filter:Landroid/content/IntentFilter;
     :try_start_0
-    const-string/jumbo v2, "vnd.tmobile.cursor.item/theme"
+    const-string v2, "vnd.tmobile.cursor.item/theme"
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addDataType(Ljava/lang/String;)V
 
-    .line 65
-    const-string/jumbo v2, "vnd.tmobile.cursor.item/style"
+    const-string v2, "vnd.tmobile.cursor.item/style"
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addDataType(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/content/IntentFilter$MalformedMimeTypeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 70
     :goto_0
     invoke-virtual {p0, p1, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 71
     return-void
 
-    .line 66
     :catch_0
     move-exception v0
 
-    .line 67
     .local v0, e:Landroid/content/IntentFilter$MalformedMimeTypeException;
     const-string v2, "ThemeUtils"
 

@@ -30,20 +30,16 @@
     .parameter "listener"
 
     .prologue
-    .line 201
     invoke-direct {p0}, Lcom/stericsson/hardware/fm/IOnBlockScanListener$Stub;-><init>()V
 
-    .line 202
     iput-object p1, p0, Lcom/stericsson/hardware/fm/FmTransmitterImpl$OnBlockScanListenerTransport;->mListener:Lcom/stericsson/hardware/fm/FmTransmitter$OnScanListener;
 
-    .line 204
     new-instance v0, Lcom/stericsson/hardware/fm/FmTransmitterImpl$OnBlockScanListenerTransport$1;
 
     invoke-direct {v0, p0}, Lcom/stericsson/hardware/fm/FmTransmitterImpl$OnBlockScanListenerTransport$1;-><init>(Lcom/stericsson/hardware/fm/FmTransmitterImpl$OnBlockScanListenerTransport;)V
 
     iput-object v0, p0, Lcom/stericsson/hardware/fm/FmTransmitterImpl$OnBlockScanListenerTransport;->mListenerHandler:Landroid/os/Handler;
 
-    .line 210
     return-void
 .end method
 
@@ -52,22 +48,18 @@
     .parameter "msg"
 
     .prologue
-    .line 225
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 234
     :goto_0
     return-void
 
-    .line 227
     :pswitch_0
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/Bundle;
 
-    .line 228
     .local v1, b:Landroid/os/Bundle;
     const-string v4, "frequency"
 
@@ -75,15 +67,13 @@
 
     move-result-object v2
 
-    .line 229
     .local v2, frequency:[I
-    const-string/jumbo v4, "signalStrength"
+    const-string v4, "signalStrength"
 
     invoke-virtual {v1, v4}, Landroid/os/Bundle;->getIntArray(Ljava/lang/String;)[I
 
     move-result-object v3
 
-    .line 230
     .local v3, signalStrengths:[I
     const-string v4, "aborted"
 
@@ -91,7 +81,6 @@
 
     move-result v0
 
-    .line 231
     .local v0, aborted:Z
     iget-object v4, p0, Lcom/stericsson/hardware/fm/FmTransmitterImpl$OnBlockScanListenerTransport;->mListener:Lcom/stericsson/hardware/fm/FmTransmitter$OnScanListener;
 
@@ -99,7 +88,6 @@
 
     goto :goto_0
 
-    .line 225
     nop
 
     :pswitch_data_0
@@ -114,7 +102,6 @@
     .parameter "x1"
 
     .prologue
-    .line 195
     invoke-direct {p0, p1}, Lcom/stericsson/hardware/fm/FmTransmitterImpl$OnBlockScanListenerTransport;->_handleMessage(Landroid/os/Message;)V
 
     return-void
@@ -129,46 +116,37 @@
     .parameter "aborted"
 
     .prologue
-    .line 213
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v1
 
-    .line 214
     .local v1, msg:Landroid/os/Message;
     const/4 v2, 0x1
 
     iput v2, v1, Landroid/os/Message;->what:I
 
-    .line 215
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 216
     .local v0, b:Landroid/os/Bundle;
     const-string v2, "frequency"
 
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putIntArray(Ljava/lang/String;[I)V
 
-    .line 217
-    const-string/jumbo v2, "signalStrength"
+    const-string v2, "signalStrength"
 
     invoke-virtual {v0, v2, p2}, Landroid/os/Bundle;->putIntArray(Ljava/lang/String;[I)V
 
-    .line 218
     const-string v2, "aborted"
 
     invoke-virtual {v0, v2, p3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 219
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 220
     iget-object v2, p0, Lcom/stericsson/hardware/fm/FmTransmitterImpl$OnBlockScanListenerTransport;->mListenerHandler:Landroid/os/Handler;
 
     invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 221
     return-void
 .end method

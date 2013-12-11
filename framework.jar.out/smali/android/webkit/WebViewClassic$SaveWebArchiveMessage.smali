@@ -52,19 +52,14 @@
     .end annotation
 
     .prologue
-    .line 2611
     .local p3, callback:Landroid/webkit/ValueCallback;,"Landroid/webkit/ValueCallback<Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2612
     iput-object p1, p0, Landroid/webkit/WebViewClassic$SaveWebArchiveMessage;->mBasename:Ljava/lang/String;
 
-    .line 2613
     iput-boolean p2, p0, Landroid/webkit/WebViewClassic$SaveWebArchiveMessage;->mAutoname:Z
 
-    .line 2614
     iput-object p3, p0, Landroid/webkit/WebViewClassic$SaveWebArchiveMessage;->mCallback:Landroid/webkit/ValueCallback;
 
-    .line 2615
     return-void
 .end method

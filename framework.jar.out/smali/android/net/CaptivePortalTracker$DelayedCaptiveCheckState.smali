@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 221
     iput-object p1, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 221
     invoke-direct {p0, p1}, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;-><init>(Landroid/net/CaptivePortalTracker;)V
 
     return-void
@@ -50,7 +48,6 @@
     .locals 5
 
     .prologue
-    .line 225
     iget-object v0, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
 
     iget-object v1, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
@@ -73,7 +70,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/net/CaptivePortalTracker;->sendMessageDelayed(Landroid/os/Message;J)V
 
-    .line 227
     return-void
 .end method
 
@@ -84,20 +80,16 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 232
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 247
     const/4 v1, 0x0
 
-    .line 249
     :cond_0
     :goto_0
     return v1
 
-    .line 234
     :pswitch_0
     iget v2, p1, Landroid/os/Message;->arg1:I
 
@@ -110,7 +102,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 235
     iget-object v2, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
 
     iget-object v3, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
@@ -125,11 +116,9 @@
 
     move-result-object v0
 
-    .line 236
     .local v0, server:Ljava/net/InetAddress;
     if-eqz v0, :cond_1
 
-    .line 237
     iget-object v2, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
 
     #calls: Landroid/net/CaptivePortalTracker;->isCaptivePortal(Ljava/net/InetAddress;)Z
@@ -139,13 +128,11 @@
 
     if-eqz v2, :cond_1
 
-    .line 239
     iget-object v2, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
 
     #calls: Landroid/net/CaptivePortalTracker;->setNotificationVisible(Z)V
     invoke-static {v2, v1}, Landroid/net/CaptivePortalTracker;->access$700(Landroid/net/CaptivePortalTracker;Z)V
 
-    .line 243
     :cond_1
     iget-object v2, p0, Landroid/net/CaptivePortalTracker$DelayedCaptiveCheckState;->this$0:Landroid/net/CaptivePortalTracker;
 
@@ -161,7 +148,6 @@
 
     goto :goto_0
 
-    .line 232
     nop
 
     :pswitch_data_0

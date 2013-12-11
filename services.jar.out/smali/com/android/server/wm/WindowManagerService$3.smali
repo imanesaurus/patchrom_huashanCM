@@ -54,7 +54,6 @@
     .parameter
 
     .prologue
-    .line 778
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$3;->val$holder:[Lcom/android/server/wm/WindowManagerService;
 
     iput-object p2, p0, Lcom/android/server/wm/WindowManagerService$3;->val$context:Landroid/content/Context;
@@ -86,7 +85,6 @@
     .locals 13
 
     .prologue
-    .line 781
     iget-object v11, p0, Lcom/android/server/wm/WindowManagerService$3;->val$holder:[Lcom/android/server/wm/WindowManagerService;
 
     const/4 v12, 0x0
@@ -117,6 +115,5 @@
 
     aput-object v0, v11, v12
 
-    .line 783
     return-void
 .end method

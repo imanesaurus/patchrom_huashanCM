@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 127
     iput-object p1, p0, Landroid/media/RemoteDisplay$2;->this$0:Landroid/media/RemoteDisplay;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 130
     iget-object v0, p0, Landroid/media/RemoteDisplay$2;->this$0:Landroid/media/RemoteDisplay;
 
     #getter for: Landroid/media/RemoteDisplay;->mListener:Landroid/media/RemoteDisplay$Listener;
@@ -51,6 +49,5 @@
 
     invoke-interface {v0}, Landroid/media/RemoteDisplay$Listener;->onDisplayDisconnected()V
 
-    .line 131
     return-void
 .end method

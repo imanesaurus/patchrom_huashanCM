@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 316
     iput-object p1, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$2;->this$0:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,14 +44,13 @@
 
     const/4 v8, 0x1
 
-    .line 320
     const-string v5, "BluetoothTethering"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "startReverseTether mCsHandler: "
+    const-string v7, "startReverseTether mCsHandler: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -75,7 +73,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 321
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -104,11 +101,9 @@
 
     move-result-object v0
 
-    .line 322
     .local v0, DhcpResultName:Ljava/lang/String;
     const-string v4, ""
 
-    .line 324
     .local v4, result:Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -118,7 +113,6 @@
 
     if-ge v1, v5, :cond_3
 
-    .line 325
     const-wide/16 v5, 0xc8
 
     :try_start_0
@@ -126,12 +120,10 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 326
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 328
     const-string v5, "failed"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -140,29 +132,25 @@
 
     if-eqz v5, :cond_1
 
-    .line 329
     const-string v5, "BluetoothTethering"
 
-    const-string/jumbo v6, "startReverseTether, failed to start dhcp service"
+    const-string v6, "startReverseTether, failed to start dhcp service"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 352
     :cond_0
     :goto_1
     return-void
 
-    .line 325
     :catch_0
     move-exception v2
 
     .local v2, ie:Ljava/lang/InterruptedException;
     goto :goto_1
 
-    .line 332
     .end local v2           #ie:Ljava/lang/InterruptedException;
     :cond_1
-    const-string/jumbo v5, "ok"
+    const-string v5, "ok"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -170,7 +158,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 334
     iget-object v5, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$2;->this$0:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
     invoke-static {}, Landroid/bluetooth/BluetoothTetheringDataTracker;->access$200()Ljava/lang/String;
@@ -184,7 +171,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 336
     iget-object v5, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$2;->this$0:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
     #getter for: Landroid/bluetooth/BluetoothTetheringDataTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
@@ -194,7 +180,6 @@
 
     invoke-virtual {v5, v8}, Landroid/net/NetworkInfo;->setIsAvailable(Z)V
 
-    .line 337
     iget-object v5, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$2;->this$0:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
     #getter for: Landroid/bluetooth/BluetoothTetheringDataTracker;->mNetworkInfo:Landroid/net/NetworkInfo;
@@ -206,7 +191,6 @@
 
     invoke-virtual {v5, v6, v9, v9}, Landroid/net/NetworkInfo;->setDetailedState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 340
     iget-object v5, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$2;->this$0:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
     #getter for: Landroid/bluetooth/BluetoothTetheringDataTracker;->mCsHandler:Landroid/os/Handler;
@@ -216,7 +200,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 341
     iget-object v5, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$2;->this$0:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
     #getter for: Landroid/bluetooth/BluetoothTetheringDataTracker;->mCsHandler:Landroid/os/Handler;
@@ -237,11 +220,9 @@
 
     move-result-object v3
 
-    .line 342
     .local v3, msg:Landroid/os/Message;
     invoke-virtual {v3}, Landroid/os/Message;->sendToTarget()V
 
-    .line 344
     iget-object v5, p0, Landroid/bluetooth/BluetoothTetheringDataTracker$2;->this$0:Landroid/bluetooth/BluetoothTetheringDataTracker;
 
     #getter for: Landroid/bluetooth/BluetoothTetheringDataTracker;->mCsHandler:Landroid/os/Handler;
@@ -260,19 +241,16 @@
 
     move-result-object v3
 
-    .line 345
     invoke-virtual {v3}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_1
 
-    .line 324
     .end local v3           #msg:Landroid/os/Message;
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 351
     :cond_3
     const-string v5, "BluetoothTethering"
 
@@ -280,7 +258,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "startReverseTether, dhcp failed, resut: "
+    const-string v7, "startReverseTether, dhcp failed, resut: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

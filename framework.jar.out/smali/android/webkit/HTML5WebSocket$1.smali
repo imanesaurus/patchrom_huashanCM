@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 451
     iput-object p1, p0, Landroid/webkit/HTML5WebSocket$1;->this$0:Landroid/webkit/HTML5WebSocket;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,17 +38,14 @@
     .parameter "msg"
 
     .prologue
-    .line 454
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 482
     :cond_0
     :goto_0
     return-void
 
-    .line 456
     :pswitch_0
     iget-object v1, p0, Landroid/webkit/HTML5WebSocket$1;->this$0:Landroid/webkit/HTML5WebSocket;
 
@@ -65,7 +61,6 @@
 
     goto :goto_0
 
-    .line 460
     :pswitch_1
     iget-object v1, p0, Landroid/webkit/HTML5WebSocket$1;->this$0:Landroid/webkit/HTML5WebSocket;
 
@@ -81,11 +76,9 @@
 
     goto :goto_0
 
-    .line 464
     :pswitch_2
     const/4 v0, 0x0
 
-    .line 466
     .local v0, msgData:Ljava/nio/ByteBuffer;
     :cond_1
     iget-object v1, p0, Landroid/webkit/HTML5WebSocket$1;->this$0:Landroid/webkit/HTML5WebSocket;
@@ -99,10 +92,8 @@
 
     move-result-object v0
 
-    .line 467
     if-eqz v0, :cond_0
 
-    .line 470
     iget-object v1, p0, Landroid/webkit/HTML5WebSocket$1;->this$0:Landroid/webkit/HTML5WebSocket;
 
     iget-object v2, p0, Landroid/webkit/HTML5WebSocket$1;->this$0:Landroid/webkit/HTML5WebSocket;
@@ -123,12 +114,10 @@
     #calls: Landroid/webkit/HTML5WebSocket;->nativeOnWebSocketMessage(I[BI)V
     invoke-static {v1, v2, v3, v4}, Landroid/webkit/HTML5WebSocket;->access$400(Landroid/webkit/HTML5WebSocket;I[BI)V
 
-    .line 471
     if-nez p1, :cond_1
 
     goto :goto_0
 
-    .line 475
     .end local v0           #msgData:Ljava/nio/ByteBuffer;
     :pswitch_3
     iget-object v1, p0, Landroid/webkit/HTML5WebSocket$1;->this$0:Landroid/webkit/HTML5WebSocket;
@@ -145,7 +134,6 @@
 
     goto :goto_0
 
-    .line 454
     nop
 
     :pswitch_data_0

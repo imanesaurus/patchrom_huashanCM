@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 761
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$5;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;
 
     invoke-direct {p0}, Landroid/widget/RemoteViews$OnClickHandler;-><init>()V
@@ -43,14 +42,12 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 766
     invoke-virtual {p2}, Landroid/app/PendingIntent;->isActivity()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 767
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$5;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;
 
     new-instance v2, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$5$1;
@@ -59,7 +56,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->setOnDismissAction(Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$OnDismissAction;)V
 
-    .line 789
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$5;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->mViewStateManager:Lcom/android/internal/policy/impl/keyguard/KeyguardViewStateManager;
@@ -73,7 +69,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 790
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$5;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;->mViewStateManager:Lcom/android/internal/policy/impl/keyguard/KeyguardViewStateManager;
@@ -83,11 +78,9 @@
 
     invoke-virtual {v1, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewStateManager;->showBouncer(Z)V
 
-    .line 796
     :goto_0
     return v0
 
-    .line 792
     :cond_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$5;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;
 
@@ -102,7 +95,6 @@
 
     goto :goto_0
 
-    .line 796
     :cond_1
     invoke-super {p0, p1, p2, p3}, Landroid/widget/RemoteViews$OnClickHandler;->onClickHandler(Landroid/view/View;Landroid/app/PendingIntent;Landroid/content/Intent;)Z
 

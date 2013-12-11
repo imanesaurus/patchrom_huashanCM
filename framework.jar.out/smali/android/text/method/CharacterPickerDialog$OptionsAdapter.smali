@@ -25,13 +25,10 @@
     .parameter "context"
 
     .prologue
-    .line 113
     iput-object p1, p0, Landroid/text/method/CharacterPickerDialog$OptionsAdapter;->this$0:Landroid/text/method/CharacterPickerDialog;
 
-    .line 114
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 115
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 126
     iget-object v0, p0, Landroid/text/method/CharacterPickerDialog$OptionsAdapter;->this$0:Landroid/text/method/CharacterPickerDialog;
 
     #getter for: Landroid/text/method/CharacterPickerDialog;->mOptions:Ljava/lang/String;
@@ -61,7 +57,6 @@
     .parameter "position"
 
     .prologue
-    .line 130
     iget-object v0, p0, Landroid/text/method/CharacterPickerDialog$OptionsAdapter;->this$0:Landroid/text/method/CharacterPickerDialog;
 
     #getter for: Landroid/text/method/CharacterPickerDialog;->mOptions:Ljava/lang/String;
@@ -85,7 +80,6 @@
     .parameter "position"
 
     .prologue
-    .line 134
     int-to-long v0, p1
 
     return-wide v0
@@ -98,7 +92,6 @@
     .parameter "parent"
 
     .prologue
-    .line 118
     iget-object v1, p0, Landroid/text/method/CharacterPickerDialog$OptionsAdapter;->this$0:Landroid/text/method/CharacterPickerDialog;
 
     #getter for: Landroid/text/method/CharacterPickerDialog;->mInflater:Landroid/view/LayoutInflater;
@@ -116,7 +109,6 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    .line 120
     .local v0, b:Landroid/widget/Button;
     iget-object v1, p0, Landroid/text/method/CharacterPickerDialog$OptionsAdapter;->this$0:Landroid/text/method/CharacterPickerDialog;
 
@@ -135,11 +127,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 121
     iget-object v1, p0, Landroid/text/method/CharacterPickerDialog$OptionsAdapter;->this$0:Landroid/text/method/CharacterPickerDialog;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 122
     return-object v0
 .end method

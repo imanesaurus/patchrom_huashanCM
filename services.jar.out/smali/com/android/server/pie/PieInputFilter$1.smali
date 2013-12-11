@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 175
     iput-object p1, p0, Lcom/android/server/pie/PieInputFilter$1;->this$0:Lcom/android/server/pie/PieInputFilter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .parameter "position"
 
     .prologue
-    .line 178
     iget-object v0, p0, Lcom/android/server/pie/PieInputFilter$1;->this$0:Lcom/android/server/pie/PieInputFilter;
 
     #getter for: Lcom/android/server/pie/PieInputFilter;->mHandler:Landroid/os/Handler;
@@ -61,7 +59,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 180
     iget-object v0, p0, Lcom/android/server/pie/PieInputFilter$1;->this$0:Lcom/android/server/pie/PieInputFilter;
 
     sget-object v1, Lcom/android/server/pie/PieInputFilter$State;->LOCKED:Lcom/android/server/pie/PieInputFilter$State;
@@ -69,6 +66,5 @@
     #setter for: Lcom/android/server/pie/PieInputFilter;->mState:Lcom/android/server/pie/PieInputFilter$State;
     invoke-static {v0, v1}, Lcom/android/server/pie/PieInputFilter;->access$102(Lcom/android/server/pie/PieInputFilter;Lcom/android/server/pie/PieInputFilter$State;)Lcom/android/server/pie/PieInputFilter$State;
 
-    .line 181
     return-void
 .end method

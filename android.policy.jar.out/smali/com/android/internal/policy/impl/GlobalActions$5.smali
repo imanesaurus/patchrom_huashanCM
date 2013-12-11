@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 346
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$5;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/GlobalActions$ProfileChooseAction;-><init>(Lcom/android/internal/policy/impl/GlobalActions;)V
@@ -38,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 352
     const/4 v0, 0x1
 
     return v0
@@ -48,13 +46,11 @@
     .locals 1
 
     .prologue
-    .line 348
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$5;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     #calls: Lcom/android/internal/policy/impl/GlobalActions;->createProfileDialog()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/GlobalActions;->access$700(Lcom/android/internal/policy/impl/GlobalActions;)V
 
-    .line 349
     return-void
 .end method
 
@@ -62,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 360
     const/4 v0, 0x0
 
     return v0
@@ -72,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 356
     const/4 v0, 0x0
 
     return v0

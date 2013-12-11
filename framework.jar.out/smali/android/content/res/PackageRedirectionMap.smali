@@ -28,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 15
     new-instance v0, Landroid/content/res/PackageRedirectionMap$1;
 
     invoke-direct {v0}, Landroid/content/res/PackageRedirectionMap$1;-><init>()V
@@ -42,14 +41,12 @@
     .locals 1
 
     .prologue
-    .line 27
     invoke-static {}, Landroid/content/res/PackageRedirectionMap;->nativeConstructor()I
 
     move-result v0
 
     invoke-direct {p0, v0}, Landroid/content/res/PackageRedirectionMap;-><init>(I)V
 
-    .line 28
     return-void
 .end method
 
@@ -58,24 +55,19 @@
     .parameter "nativePointer"
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     if-nez p1, :cond_0
 
-    .line 36
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0}, Ljava/lang/RuntimeException;-><init>()V
 
     throw v0
 
-    .line 38
     :cond_0
     iput p1, p0, Landroid/content/res/PackageRedirectionMap;->mNativePointer:I
 
-    .line 39
     return-void
 .end method
 
@@ -84,14 +76,12 @@
     .parameter "in"
 
     .prologue
-    .line 31
     invoke-static {p1}, Landroid/content/res/PackageRedirectionMap;->nativeCreateFromParcel(Landroid/os/Parcel;)I
 
     move-result v0
 
     invoke-direct {p0, v0}, Landroid/content/res/PackageRedirectionMap;-><init>(I)V
 
-    .line 32
     return-void
 .end method
 
@@ -101,7 +91,6 @@
     .parameter "x1"
 
     .prologue
-    .line 12
     invoke-direct {p0, p1}, Landroid/content/res/PackageRedirectionMap;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -139,12 +128,10 @@
     .parameter "toIdent"
 
     .prologue
-    .line 67
     iget v0, p0, Landroid/content/res/PackageRedirectionMap;->mNativePointer:I
 
     invoke-direct {p0, v0, p1, p2}, Landroid/content/res/PackageRedirectionMap;->nativeAddRedirection(III)V
 
-    .line 68
     return-void
 .end method
 
@@ -152,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 52
     const/4 v0, 0x0
 
     return v0
@@ -167,12 +153,10 @@
     .end annotation
 
     .prologue
-    .line 43
     iget v0, p0, Landroid/content/res/PackageRedirectionMap;->mNativePointer:I
 
     invoke-static {v0}, Landroid/content/res/PackageRedirectionMap;->nativeDestructor(I)V
 
-    .line 44
     return-void
 .end method
 
@@ -180,7 +164,6 @@
     .locals 1
 
     .prologue
-    .line 47
     iget v0, p0, Landroid/content/res/PackageRedirectionMap;->mNativePointer:I
 
     return v0
@@ -190,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 63
     iget v0, p0, Landroid/content/res/PackageRedirectionMap;->mNativePointer:I
 
     invoke-direct {p0, v0}, Landroid/content/res/PackageRedirectionMap;->nativeGetPackageId(I)I
@@ -204,7 +186,6 @@
     .locals 1
 
     .prologue
-    .line 72
     iget v0, p0, Landroid/content/res/PackageRedirectionMap;->mNativePointer:I
 
     invoke-direct {p0, v0}, Landroid/content/res/PackageRedirectionMap;->nativeGetRedirectionKeys(I)[I
@@ -219,7 +200,6 @@
     .parameter "fromIdent"
 
     .prologue
-    .line 77
     iget v0, p0, Landroid/content/res/PackageRedirectionMap;->mNativePointer:I
 
     invoke-direct {p0, v0, p1}, Landroid/content/res/PackageRedirectionMap;->nativeLookupRedirection(II)I
@@ -235,7 +215,6 @@
     .parameter "flags"
 
     .prologue
-    .line 57
     iget v0, p0, Landroid/content/res/PackageRedirectionMap;->mNativePointer:I
 
     invoke-static {v0, p1}, Landroid/content/res/PackageRedirectionMap;->nativeWriteToParcel(ILandroid/os/Parcel;)Z
@@ -244,14 +223,12 @@
 
     if-nez v0, :cond_0
 
-    .line 58
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0}, Ljava/lang/RuntimeException;-><init>()V
 
     throw v0
 
-    .line 60
     :cond_0
     return-void
 .end method

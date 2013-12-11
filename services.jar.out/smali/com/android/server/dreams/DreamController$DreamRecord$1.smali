@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 234
     iput-object p1, p0, Lcom/android/server/dreams/DreamController$DreamRecord$1;->this$1:Lcom/android/server/dreams/DreamController$DreamRecord;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +40,12 @@
     .locals 2
 
     .prologue
-    .line 237
     iget-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord$1;->this$1:Lcom/android/server/dreams/DreamController$DreamRecord;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Lcom/android/server/dreams/DreamController$DreamRecord;->mService:Landroid/service/dreams/IDreamService;
 
-    .line 238
     iget-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord$1;->this$1:Lcom/android/server/dreams/DreamController$DreamRecord;
 
     iget-object v0, v0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
@@ -62,14 +59,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 239
     iget-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord$1;->this$1:Lcom/android/server/dreams/DreamController$DreamRecord;
 
     iget-object v0, v0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     invoke-virtual {v0}, Lcom/android/server/dreams/DreamController;->stopDream()V
 
-    .line 241
     :cond_0
     return-void
 .end method
