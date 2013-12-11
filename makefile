@@ -12,7 +12,7 @@ local-out-zip-file := MIUI_`date '+%d.%b.%Y-%H.%M.%S'`_huashanCM.zip
 local-previous-target-dir := 
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := Bluetooth 
+local-modified-apps := Bluetooth MiuiUpdater
 
 local-modified-jars :=
 
@@ -44,12 +44,14 @@ updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 pre_install_data_packages := out/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
+	cp other/system_fonts.xml $(ZIP_DIR)/system/etc/system_fonts.xml
 # To replace spn
 #	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
 # To replace kernel
 	cp other/boot.img $(ZIP_DIR)/boot.img
 	cp other/installd $(ZIP_DIR)/system/bin/installd
 	cp other/Camera.apk $(ZIP_DIR)/system/app
+	cp other/09batterytweaks $(ZIP_DIR)/system/etc/init.d
 # To replace FM icon
 #	cp -rf other/miui_mod_icons/* $(ZIP_DIR)/system/media/theme/miui_mod_icons/
 # To add MiuiSettings
@@ -57,12 +59,11 @@ local-pre-zip-misc:
 	rm -rf $(ZIP_DIR)/system/addon.d
 	rm -rf $(ZIP_DIR)/system/bin/backuptool.functions
 	rm -rf $(ZIP_DIR)/system/bin/backuptool.sh
-	for apk in $(ZIP_DIR)/data/media/preinstall_apps/*.apk; do\
-		$(AAPT) d --values resources $$apk | grep 'id=127 packageCount' | sed -e "s/^.*name=//" >> $(pre_install_data_packages);\
-	done
-	more $(pre_install_data_packages) | wc -l > $(ZIP_DIR)/system/etc/enforcecopyinglibpackages.txt
-	more $(pre_install_data_packages) >> $(ZIP_DIR)/system/etc/enforcecopyinglibpackages.txt
-
+	
+	@echo Remove usless stuff
+	rm -rf $(ZIP_DIR)/data/media/preinstall_apps/*.apk
+	rm -rf $(ZIP_DIR)/system/media/video/*.mp4
+	rm -rf $(ZIP_DIR)/system/tts/lang_pico/*.bin
 out/framework2.jar : out/framework.jar
 
 %.phone : out/%.jar
