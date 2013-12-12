@@ -63,8 +63,6 @@
 
     if-ltz p0, :cond_0
 
-    add-int/lit8 v0, p2, -0x1
-
     if-le p0, v0, :cond_1
 
     :cond_0
@@ -78,8 +76,6 @@
 
     :cond_1
     if-ltz p1, :cond_2
-
-    add-int/lit8 v0, p2, -0x1
 
     if-le p1, v0, :cond_3
 
