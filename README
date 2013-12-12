@@ -39,3 +39,9 @@ $ make fullota PORT_PRODUCT=huashan BUILD_NUMBER=3.XX.XX
 
 
 ps : 3.XX.XX is filled by miui version. ex : 3.12.6
+
+
+Credits
+-------
+Micode For patchrom
+CyanogenMod Team for bring CM to our Devices (ubberlaggydarwin, adfad666, -kali, eagleeyetom)
