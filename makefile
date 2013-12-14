@@ -12,12 +12,12 @@ local-out-zip-file := MIUI_`date '+%d.%b.%Y-%H.%M.%S'`_huashanCM.zip
 local-previous-target-dir := 
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := Bluetooth MiuiUpdater
+local-modified-apps := Bluetooth
 
 local-modified-jars :=
 
 # All apks from MIUI
-local-miui-removed-apps := MediaProvider BaiduNetworklocation Userbook VoiceAssist
+local-miui-removed-apps := MediaProvider BaiduNetworkLocation Userbook VoiceAssist
 
 local-miui-modified-apps := MiuiSystemUI Settings Phone Mms ThemeManager
 
