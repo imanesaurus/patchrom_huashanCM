@@ -1,5 +1,4 @@
 Patchrom MIUI V5 for XPERIA SP (HUASHAN)
-========================================
 
 Get started
 ----------------
