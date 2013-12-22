@@ -41,5 +41,4 @@ then
             echo "rm file: $file"
             rm -rf "$file"
     done
-	cp -rf overlay/framework_ext.jar.out/smali/* $BUILD_OUT/framework_ext/smali
 fi

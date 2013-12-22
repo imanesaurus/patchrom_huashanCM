@@ -12,7 +12,7 @@ local-out-zip-file := MIUI_`date '+%d.%b.%Y-%H.%M.%S'`_huashanCM.zip
 local-previous-target-dir := 
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := Bluetooth
+local-modified-apps := 
 
 local-modified-jars :=
 
@@ -44,7 +44,6 @@ updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 pre_install_data_packages := out/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
-	cp other/system_fonts.xml $(ZIP_DIR)/system/etc/system_fonts.xml
 # To replace spn
 #	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
 # To replace kernel
@@ -76,7 +75,6 @@ out/framework2.jar : out/framework.jar
 	#adb reboot
 
 %.sign-plat : out/%
-#%.sign-plat : /home/gexudong/libra.jbmiui/out/target/product/maguro/system/app/%
 	java -jar $(TOOL_DIR)/signapk.jar $(PORT_ROOT)/build/security/platform.x509.pem $(PORT_ROOT)/build/security/platform.pk8  $< $<.signed
 	@echo push -- to --- phone
 	adb remount
