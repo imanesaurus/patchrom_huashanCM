@@ -1,0 +1,10 @@
+diff a/framework.jar.out/smali/android/webkit/WebSettingsClassic.smali b/framework.jar.out/smali/android/webkit/WebSettingsClassic.smali	(rejected hunks)
+@@ -373,6 +375,8 @@
+ 
+     iput-boolean v2, p0, Landroid/webkit/WebSettingsClassic;->mPasswordEchoEnabled:Z
+ 
++    iput-boolean v2, p0, Landroid/webkit/WebSettingsClassic;->mBlockFloatPopupWindows:Z
++
+     iput-boolean v2, p0, Landroid/webkit/WebSettingsClassic;->mUseWebViewBackgroundForOverscroll:Z
+ 
+     new-instance v1, Landroid/webkit/WebSettingsClassic$EventHandler;
