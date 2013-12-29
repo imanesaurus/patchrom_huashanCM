@@ -56,6 +56,7 @@ if [ $1 = "ThemeManager" ];then
 fi
 
 if [ $1 = "MiuiHome" ];then
+    $XMLMERGYTOOL $1/res/values $2/res/values
     cp $1/*.part out/
     cd out
     $GIT_APPLY MiuiHome.part
@@ -68,5 +69,16 @@ if [ $1 = "MiuiHome" ];then
 fi
 
 if [ $1 = "MiuiSystemUI" ];then
-	appendPart $1
+    cp $1/*.part out/
+    cd out
+    $GIT_APPLY MiuiSystemUI.part
+    cd ..
+    for file in `find $2 -name *.rej`
+    do
+	echo "Fatal error: MiuiSystemUI patch fail"
+        exit 1
+    done
+
+	$XMLMERGYTOOL $1/res/values $2/res/values
+	$XMLMERGYTOOL $1/res/values-xhdpi $2/res/values-xhdpi
 fi

@@ -29,16 +29,30 @@ fi
 
 if [ $2 = "$BUILD_OUT/framework_ext" ]
 then
-    # remove all files at out/framework1 those exist in framework.jar.out
+    # remove all files at out/framework_ext those exist in framework.jar.out
     for file2 in `find framework.jar.out -name *.smali`; do
             file=${file2/framework.jar.out/$BUILD_OUT\/framework_ext}
             echo "rm file: $file"
             rm -rf "$file"
     done
-    # remove all files at out/framework_ext those exist in telephony-common.jar.out
-    for file2 in `find telephony-common.jar.out -name *.smali`; do
-            file=${file2/telephony-common.jar.out/$BUILD_OUT\/framework_ext}
-            echo "rm file: $file"
-            rm -rf "$file"
+
+    cp -rf "$BUILD_OUT/framework_miui/smali/com/google/android/mms" "$BUILD_OUT/framework_ext/smali/com/google/android"
+    cp -u -r $BUILD_OUT/$SEP_FRAME/*  $BUILD_OUT/framework_ext
+    rm -rf $BUILD_OUT/$SEP_FRAME
+fi
+
+if [ $2 = "$BUILD_OUT/android.policy" ]
+then
+    for file in overlay/android.policy/*.patch
+    do
+        cp $file out/
+        cd out
+        git.apply `basename $file`
+        cd ..
+        for file2 in `find $2 -name *.rej`
+        do
+            echo "$file2 fail"
+            exit 1
+        done
     done
 fi

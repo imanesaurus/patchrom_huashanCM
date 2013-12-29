@@ -6,7 +6,6 @@ private-phone-apps := ApplicationsProvider \
 					  CertInstaller \
 					  DefaultContainerService \
 					  DrmProvider \
-                                          DSPManager \
 					  KeyChain \
                                           LatinIME \
 					  LiveWallpapers \
