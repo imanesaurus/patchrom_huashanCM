@@ -19,7 +19,11 @@ local-modified-jars :=
 # All apks from MIUI
 local-miui-removed-apps := MediaProvider BaiduNetworkLocation Userbook VoiceAssist 
 
-local-miui-modified-apps := MiuiSystemUI Settings Phone Mms ThemeManager
+local-miui-modified-apps := AntiSpam Backup Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
+			ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer MiuiCompass \
+			MiuiGallery MiuiHome MiuiSystemUI MiuiVideoPlayer MiWallpaper Mms Music NetworkAssistant Notes PackageInstaller Phone \
+			PaymentService Provision QuickSearchBox Settings SoundRecorder TelephonyProvider ThemeManager Transfer VpnDialogs \
+			Weather WeatherProvider XiaomiServiceFramework YellowPage SettingsProvider LBESEC_MIUI GuardProvider
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
 # Default configrations are HDPI for ics branch and XHDPI for jellybean branch
