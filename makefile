@@ -57,7 +57,7 @@ local-pre-zip-misc:
 	cp other/Camera.apk $(ZIP_DIR)/system/app
 	cp other/09batterytweaks $(ZIP_DIR)/system/etc/init.d
 # To replace FM icon
-#	cp -rf other/miui_mod_icons/* $(ZIP_DIR)/system/media/theme/miui_mod_icons/
+	cp -rf other/miui_mod_icons/* $(ZIP_DIR)/system/media/theme/miui_mod_icons/
 # To add MiuiSettings
 #	cp other/MiuiSettings.apk $(ZIP_DIR)/system/app/MiuiSettings.apk
 	rm -rf $(ZIP_DIR)/system/addon.d
