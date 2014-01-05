@@ -250,9 +250,8 @@ fi
 
 if [ $1 = "Music" ];then
 	addMultilang $1
-	sed -i -e 's/\"no_effect\">Wyłączone/\"no_effect\">ViPER FX/' out/$1/res/values-pl/strings.xml
 	adjustDpi $1
-	$XMLMERGYTOOL $1/res/values $2/res/values
+	sed -i 's#@string/app_class#com.miui.player.Application#g' $2/AndroidManifest.xml
 fi
 
 if [ $1 = "NetworkAssistant" ];then
