@@ -49,6 +49,8 @@ pre_install_data_packages := out/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
 	cp other/system_fonts.xml $(ZIP_DIR)/system/etc/system_fonts.xml
+# To added GAPPS
+	cp -rf other/gapps/* $(ZIP_DIR)
 # To replace spn
 #	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
 # To replace kernel
@@ -65,7 +67,6 @@ local-pre-zip-misc:
 	rm -rf $(ZIP_DIR)/system/bin/backuptool.sh
 	
 	@echo Remove usless stuff
-	rm -rf $(ZIP_DIR)/data/media/preinstall_apps/*.apk
 	rm -rf $(ZIP_DIR)/system/media/video/*.mp4
 	rm -rf $(ZIP_DIR)/system/tts/lang_pico/*.bin
 out/framework2.jar : out/framework.jar
