@@ -63,7 +63,7 @@
 .method public abstract getServiceProviderName()Ljava/lang/String;
 .end method
 
-.method public abstract getState()Lcom/android/internal/telephony/IccCardConstants$State;
+.method public abstract getState()Lcom/android/internal/telephony/IccCard$State;
 .end method
 
 .method public abstract hasIccCard()Z
