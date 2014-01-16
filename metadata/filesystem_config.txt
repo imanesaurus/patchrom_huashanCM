@@ -93,6 +93,7 @@ system/bin/btnvtool 0 2000 755
 system/bin/bu 0 2000 755
 system/bin/bugreport 0 2000 755
 system/bin/cat 0 2000 755
+system/bin/chargemon 0 2000 755
 system/bin/chmod 0 2000 755
 system/bin/chown 0 2000 755
 system/bin/cmp 0 2000 755

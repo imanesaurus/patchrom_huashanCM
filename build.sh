@@ -11,5 +11,11 @@ rmdir AntiSpam Backup Browser BugReport Calculator Calendar CalendarProvider Clo
 
 cp -rf out/MiuiSystemUI backupfiles/MiuiSystemUI$2
 
-./copydisk.sh $1 $2 $3
+./copydisk.sh $3
+
+cd ..
+cp -f huashan/out/target_files.zip target_files.zip
+./ota.sh $3
+cp -f ota_update_$3.zip ../../../mnt/hgfs/D/miuihuashan/ota_huashan_$3.zip 
+cd huashan
 exit
