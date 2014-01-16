@@ -12,7 +12,7 @@ local-out-zip-file := MIUI_`date '+%d.%b.%Y-%H.%M.%S'`_huashanCM.zip
 local-previous-target-dir := 
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := 
+local-modified-apps := V4A
 
 local-modified-jars :=
 
@@ -49,10 +49,14 @@ pre_install_data_packages := out/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
 	cp other/system_fonts.xml $(ZIP_DIR)/system/etc/system_fonts.xml
-# To added GAPPS
+# To added GAPPS & xloud
 	cp -rf other/gapps/* $(ZIP_DIR)
 # To replace spn
 #	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
+# To added V4A
+	cp other/libv4a_fx_ics.so $(ZIP_DIR)/system/lib/soundfx/libv4a_fx_ics.so
+	cp other/audio_effects.conf $(ZIP_DIR)/system/etc/audio_effects.conf
+	cp other/audio_effects.conf $(ZIP_DIR)/system/vendor/etc/audio_effects.conf
 # To replace kernel
 	cp other/boot.img $(ZIP_DIR)/boot.img
 	cp other/installd $(ZIP_DIR)/system/bin/installd
