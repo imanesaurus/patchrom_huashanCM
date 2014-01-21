@@ -114,13 +114,8 @@ ro.ril.disable.power.collapse=0
 debug.performance.tuning=1
 video.accelerate.hw=1
 ro.kernel.android.checkjni=0
-
-# BE2 & Dolby
-ro.service.swiqi2.supported=true
-persist.service.swiqi2.enable=1
-ro.config.hw_dolby=true
-
-# Google DNS
+ro.somc.clearphase.supported=true
+ro.semc.xloud.supported=true
 net.rmnet0.dns1=8.8.8.8
 net.rmnet0.dns2=8.8.4.4
 net.ppp0.dns1=8.8.8.8

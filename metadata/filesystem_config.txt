@@ -5,6 +5,7 @@ system/addon.d/blacklist 0 0 755
 system/app 0 0 755
 system/app/Apollo.apk 0 0 644
 system/app/ApplicationsProvider.apk 0 0 644
+system/app/AudioEffectService.apk 0 0 644
 system/app/BackupRestoreConfirmation.apk 0 0 644
 system/app/BasicDreams.apk 0 0 644
 system/app/Bluetooth.apk 0 0 644
@@ -41,6 +42,7 @@ system/app/LatinIME.apk 0 0 644
 system/app/LiveWallpapers.apk 0 0 644
 system/app/LiveWallpapersPicker.apk 0 0 644
 system/app/LockClock.apk 0 0 644
+system/app/m7Parts.apk 0 0 644
 system/app/MagicSmokeWallpapers.apk 0 0 644
 system/app/MediaProvider.apk 0 0 644
 system/app/Mms.apk 0 0 644
@@ -57,6 +59,7 @@ system/app/Settings.apk 0 0 644
 system/app/SettingsProvider.apk 0 0 644
 system/app/SharedStorageBackup.apk 0 0 644
 system/app/SoundRecorder.apk 0 0 644
+system/app/SPN.apk 0 0 644
 system/app/Stk.apk 0 0 644
 system/app/SystemUI.apk 0 0 644
 system/app/Tag.apk 0 0 644
@@ -454,6 +457,8 @@ system/etc/permissions/com.android.location.provider.xml 0 0 644
 system/etc/permissions/com.android.nfc_extras.xml 0 0 644
 system/etc/permissions/com.cyanogenmod.android.xml 0 0 644
 system/etc/permissions/com.cyanogenmod.nfc.enhanced.xml 0 0 644
+system/etc/permissions/com.sonyericsson.audioeffectif.xml 0 0 644
+system/etc/permissions/com.sonymobile.imageprocessor.xml 0 0 644
 system/etc/permissions/com.stericsson.hardware.fm.receiver.xml 0 0 644
 system/etc/permissions/com.tmobile.software.themes.xml 0 0 644
 system/etc/permissions/handheld_core_hardware.xml 0 0 644
@@ -660,6 +665,10 @@ system/etc/terminfo/x/xterm-r5 0 0 644
 system/etc/terminfo/x/xterm-r6 0 0 644
 system/etc/terminfo/x/xterm-vt220 0 0 644
 system/etc/terminfo/x/xterm-xfree86 0 0 644
+system/etc/be2_album 0 0 644
+system/etc/be_movie 0 0 644
+system/etc/be_movie_setting 0 0 644
+system/etc/be_movie_spc 0 0 644
 system/etc/thermald.conf 0 0 644
 system/etc/vold.fstab 0 0 644
 system/etc/wifi 0 0 755
@@ -722,6 +731,10 @@ system/framework/bu.jar 0 0 644
 system/framework/com.android.future.usb.accessory.jar 0 0 644
 system/framework/com.android.location.provider.jar 0 0 644
 system/framework/com.android.nfc_extras.jar 0 0 644
+system/framework/com.sonyericsson.colorextraction_impl.jar.jar 0 0 644
+system/framework/com.sonymobile.imageprocessor.jpegdecoder_impl.jar 0 0 644
+system/framework/com.sonymobile.imageprocessor.jpegencoder_impl.jar 0 0 644
+system/framework/com.sonymobile.imageprocessor.superresolution_impl.jar 0 0 644
 system/framework/content.jar 0 0 644
 system/framework/core.jar 0 0 644
 system/framework/core-junit.jar 0 0 644
@@ -737,6 +750,7 @@ system/framework/pm.jar 0 0 644
 system/framework/requestsync.jar 0 0 644
 system/framework/services.jar 0 0 644
 system/framework/settings.jar 0 0 644
+system/framework/semc_audioeffectif.jar 0 0 644
 system/framework/svc.jar 0 0 644
 system/framework/telephony-common.jar 0 0 644
 system/framework/uiautomator.jar 0 0 644
@@ -777,6 +791,7 @@ system/lib/hw/sensors.default.so 0 0 644
 system/lib/hw/vendor-camera.qcom.so 0 0 644
 system/lib/hw/vendor-lights.default.so 0 0 644
 system/lib/libacdbloader.so 0 0 644
+system/lib/libacdbmapper.so 0 0 644
 system/lib/libalsa-intf.so 0 0 644
 system/lib/libals.so 0 0 644
 system/lib/libanalogradiobroadcasting.so 0 0 644
@@ -786,6 +801,7 @@ system/lib/libandroid_servers.so 0 0 644
 system/lib/libandroid.so 0 0 644
 system/lib/lib_asb_tee.so 0 0 644
 system/lib/libaudcal.so 0 0 644
+system/lib/libaudioparsers.so 0 0 644
 system/lib/libaudioeffect_jni.so 0 0 644
 system/lib/libaudioflinger.so 0 0 644
 system/lib/libaudio-resampler.so 0 0 644
@@ -886,6 +902,7 @@ system/lib/libidl.so 0 0 644
 system/lib/libimage-jpeg-dec-omx-comp.so 0 0 644
 system/lib/libimage-jpeg-enc-omx-comp.so 0 0 644
 system/lib/libimage-omx-common.so 0 0 644
+system/lib/libiwnn.so 0 0 775
 system/lib/libinput.so 0 0 644
 system/lib/libiprouteutil.so 0 0 644
 system/lib/libjackpal-androidterm4.so 0 0 644
@@ -913,6 +930,7 @@ system/lib/libmedia.so 0 0 644
 system/lib/libmemalloc.so 0 0 644
 system/lib/libmercury.so 0 0 644
 system/lib/libmiscta.so 0 0 644
+system/lib/libmm-audio-resampler.so 0 0 644
 system/lib/libmmcamera_frameproc.so 0 0 644
 system/lib/libmmcamera_hdr_lib.so 0 0 644
 system/lib/libmmcamera_image_stab.so 0 0 644
@@ -985,6 +1003,7 @@ system/lib/libsensorservice.so 0 0 644
 system/lib/libskia.so 0 0 644
 system/lib/libsonivox.so 0 0 644
 system/lib/libsoundpool.so 0 0 644
+system/lib/libsurround_proc.so 0 0 644
 system/lib/libsparse.so 0 0 644
 system/lib/libspeexresampler.so 0 0 644
 system/lib/libsqlite_jni.so 0 0 644
@@ -1023,6 +1042,7 @@ system/lib/libstlport.so 0 0 644
 system/lib/libsurfaceflinger_ddmconnection.so 0 0 644
 system/lib/libsurfaceflinger.so 0 0 644
 system/lib/libsuspend.so 0 0 644
+system/lib/libswiqisettinghelper.so 0 0 644
 system/lib/libsync.so 0 0 644
 system/lib/libsystem_server.so 0 0 644
 system/lib/libsys-utils.so 0 0 644
@@ -1042,6 +1062,8 @@ system/lib/libvideoeditor_osal.so 0 0 644
 system/lib/libvideoeditorplayer.so 0 0 644
 system/lib/libvideoeditor_videofilters.so 0 0 644
 system/lib/libvorbisidec.so 0 0 644
+system/lib/libvptwrapper.so 0 0 644
+system/lib/libvt_jni.so 0 0 644
 system/lib/libwebcore.so 0 0 644
 system/lib/libwebrtc_audio_preprocessing.so 0 0 644
 system/lib/libwilhelm.so 0 0 644
@@ -1077,6 +1099,14 @@ system/lib/soundfx/libcyanogen-dsp.so 0 0 644
 system/lib/soundfx/libdownmix.so 0 0 644
 system/lib/soundfx/libreverbwrapper.so 0 0 644
 system/lib/soundfx/libvisualizer.so 0 0 644
+system/lib/soundfx/libclearaudiowrapper.so 0 0 644
+system/lib/soundfx/libfnrwrapper.so 0 0 644
+system/lib/soundfx/libhearingprotection.so 0 0 644
+system/lib/soundfx/libposteffectwrapper.so 0 0 644
+system/lib/soundfx/libpreeffectwrapper.so 0 0 644
+system/lib/soundfx/libsoundaurawrapper.so 0 0 644
+system/lib/soundfx/libvptwrapper.so 0 0 644
+system/lib/soundfx/libxloudwrapper.so 0 0 644
 system/lib/ssl 0 0 755
 system/lib/ssl/engines 0 0 755
 system/lib/ssl/engines/libkeystore.so 0 0 644
