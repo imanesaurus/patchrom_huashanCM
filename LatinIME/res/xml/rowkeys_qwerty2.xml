@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <Key latin:moreKeys="!text/more_keys_for_a" latin:additionalMoreKeys="\\@" latin:keyLabel="a" latin:keyHintLabel="\@" />
+    <Key latin:moreKeys="!text/more_keys_for_s" latin:additionalMoreKeys="\#" latin:keyLabel="s" latin:keyHintLabel="\#" />
+    <Key latin:moreKeys="!text/more_keys_for_d" latin:additionalMoreKeys="$" latin:keyLabel="d" latin:keyHintLabel="$" />
+    <Key latin:additionalMoreKeys="%" latin:keyLabel="f" latin:keyHintLabel="%" />
+    <Key latin:moreKeys="!text/more_keys_for_g" latin:additionalMoreKeys="&amp;" latin:keyLabel="g" latin:keyHintLabel="&amp;" />
+    <Key latin:moreKeys="!text/more_keys_for_h" latin:additionalMoreKeys="*" latin:keyLabel="h" latin:keyHintLabel="*" />
+    <Key latin:moreKeys="!text/more_keys_for_j" latin:additionalMoreKeys="-" latin:keyLabel="j" latin:keyHintLabel="-" />
+    <Key latin:moreKeys="!text/more_keys_for_k" latin:additionalMoreKeys="+" latin:keyLabel="k" latin:keyHintLabel="+" />
+    <Key latin:moreKeys="!text/more_keys_for_l" latin:additionalMoreKeys="_" latin:keyLabel="l" latin:keyHintLabel="_" />
+</merge>

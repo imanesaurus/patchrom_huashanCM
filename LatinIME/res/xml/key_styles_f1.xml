@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <switch>
+        <case latin:clobberSettingsKey="true">
+            <key-style latin:backgroundType="functional" latin:styleName="f1MoreKeysStyle" />
+        </case>
+        <default>
+            <key-style latin:moreKeys="!text/settings_as_more_key" latin:backgroundType="functional" latin:keyLabelFlags="hasPopupHint" latin:styleName="f1MoreKeysStyle" />
+        </default>
+    </switch>
+</merge>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <switch>
+        <case latin:keyboardLayoutSetElement="alphabetManualShifted|alphabetShiftLocked|alphabetShiftLockShifted">
+            <Key latin:keyLabel="(" />
+            <Key latin:keyLabel=")" />
+            <Key latin:keyLabel="ฉ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ฮ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:code="0x0E3A" latin:keyLabel=" ฺ" latin:keyLabelFlags="fontNormal|followKeyLetterRatio" />
+            <Key latin:code="0x0E4C" latin:keyLabel=" ์" latin:keyLabelFlags="fontNormal|followKeyLetterRatio" />
+            <Key latin:keyLabel="\?" />
+            <Key latin:keyLabel="ฒ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ฬ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ฦ" latin:keyLabelFlags="fontNormal" />
+        </case>
+        <default>
+            <Key latin:keyLabel="ผ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ป" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="แ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="อ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:code="0x0E34" latin:keyLabel=" ิ" latin:keyLabelFlags="fontNormal|followKeyLetterRatio" />
+            <Key latin:code="0x0E37" latin:keyLabel=" ื" latin:keyLabelFlags="fontNormal|followKeyLetterRatio" />
+            <Key latin:keyLabel="ท" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ม" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ใ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ฝ" latin:keyLabelFlags="fontNormal" />
+        </default>
+    </switch>
+</merge>

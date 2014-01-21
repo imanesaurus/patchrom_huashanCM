@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.inputmethod.research.FeedbackLayout android:orientation="vertical" android:id="@id/research_feedback_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <fragment android:name="com.android.inputmethod.research.FeedbackFragment" android:id="@id/research_feedback_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.android.inputmethod.research.FeedbackLayout>

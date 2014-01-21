@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="keyboardHeight">302.39844dip</dimen>
+    <dimen name="popup_key_height">63.0dip</dimen>
+    <dimen name="more_keys_keyboard_key_horizontal_padding">12.0dip</dimen>
+    <dimen name="more_keys_keyboard_slide_allowance">98.29999dip</dimen>
+    <dimen name="more_keys_keyboard_vertical_correction">-81.899994dip</dimen>
+    <dimen name="key_preview_height">94.5dip</dimen>
+    <dimen name="key_preview_offset">16.0dip</dimen>
+    <dimen name="key_label_horizontal_padding">6.0dip</dimen>
+    <dimen name="key_hint_letter_padding">3.0dip</dimen>
+    <dimen name="key_uppercase_letter_padding">3.0dip</dimen>
+    <dimen name="key_preview_offset_ics">8.0dip</dimen>
+    <dimen name="more_keys_keyboard_vertical_correction_ics">-31.5dip</dimen>
+    <dimen name="suggestions_strip_height">44.0dip</dimen>
+    <dimen name="more_suggestions_row_height">44.0dip</dimen>
+    <dimen name="suggestions_strip_padding">94.5dip</dimen>
+    <dimen name="suggestion_min_width">46.0dip</dimen>
+    <dimen name="suggestion_padding">8.0dip</dimen>
+    <dimen name="suggestion_text_size">22.0dip</dimen>
+    <dimen name="more_suggestions_hint_text_size">33.0dip</dimen>
+    <dimen name="gesture_floating_preview_text_size">26.0dip</dimen>
+    <dimen name="gesture_floating_preview_text_offset">86.0dip</dimen>
+    <dimen name="gesture_floating_preview_horizontal_padding">26.0dip</dimen>
+    <dimen name="gesture_floating_preview_vertical_padding">17.0dip</dimen>
+    <dimen name="gesture_floating_preview_round_radius">3.0dip</dimen>
+    <dimen name="gesture_preview_trail_width">2.5dip</dimen>
+</resources>

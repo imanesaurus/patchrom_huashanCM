@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <Key latin:moreKeys="ά" latin:keyLabel="α" />
+    <Key latin:keyLabel="σ" />
+    <Key latin:keyLabel="δ" />
+    <Key latin:keyLabel="φ" />
+    <Key latin:keyLabel="γ" />
+    <Key latin:moreKeys="ή" latin:keyLabel="η" />
+    <Key latin:keyLabel="ξ" />
+    <Key latin:keyLabel="κ" />
+    <Key latin:keyLabel="λ" />
+</merge>

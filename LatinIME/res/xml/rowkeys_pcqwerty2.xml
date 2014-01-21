@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <switch>
+        <case latin:keyboardLayoutSetElement="symbols|symbolsShifted">
+            <include latin:keyboardLayout="@xml/keys_pcqwerty_symbols2" />
+        </case>
+        <default>
+            <include latin:keyLabelFlags="disableKeyHintLabel|disableAdditionalMoreKeys" latin:keyboardLayout="@xml/rowkeys_qwerty1" />
+        </default>
+    </switch>
+    <include latin:keyboardLayout="@xml/keys_pcqwerty2_right3" />
+</merge>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <switch>
+        <case latin:keyboardLayoutSetElement="alphabet|alphabetAutomaticShifted">
+            <Key latin:moreKeys="{" latin:keyLabel="[" />
+            <Key latin:moreKeys="}" latin:keyLabel="]" />
+            <Key latin:moreKeys="\\|,¦" latin:keyLabel="\\" />
+        </case>
+        <default>
+            <Key latin:keyLabel="{" />
+            <Key latin:keyLabel="}" />
+            <Key latin:moreKeys="¦" latin:keyLabel="|" />
+        </default>
+    </switch>
+</merge>

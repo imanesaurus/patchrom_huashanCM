@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <switch>
+        <case latin:keyboardLayoutSetElement="alphabetManualShifted|alphabetShiftLocked|alphabetShiftLockShifted">
+            <Key latin:keyLabel="+" />
+            <Key latin:keyLabel="๑" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="๒" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="๓" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="๔" latin:keyLabelFlags="fontNormal" />
+            <Key latin:code="0x0E39" latin:keyLabel=" ู" latin:keyLabelFlags="fontNormal|followKeyLetterRatio" />
+            <Key latin:keyLabel="฿" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="๕" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="๖" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="๗" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="๘" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="๙" latin:keyLabelFlags="fontNormal" />
+        </case>
+        <default>
+            <Key latin:keyLabel="ๅ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="/" />
+            <Key latin:keyLabel="_" />
+            <Key latin:keyLabel="ภ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ถ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:code="0x0E38" latin:keyLabel=" ุ" latin:keyLabelFlags="fontNormal|followKeyLetterRatio" />
+            <Key latin:code="0x0E36" latin:keyLabel=" ึ" latin:keyLabelFlags="fontNormal|followKeyLetterRatio" />
+            <Key latin:keyLabel="ค" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ต" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="จ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ข" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ช" latin:keyLabelFlags="fontNormal" />
+        </default>
+    </switch>
+</merge>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <Key latin:keyLabel="ա" />
+    <Key latin:keyLabel="ս" />
+    <Key latin:keyLabel="դ" />
+    <Key latin:keyLabel="ֆ" />
+    <Key latin:keyLabel="ք" />
+    <Key latin:keyLabel="հ" />
+    <Key latin:keyLabel="ճ" />
+    <Key latin:keyLabel="կ" />
+    <Key latin:keyLabel="լ" />
+    <Key latin:keyLabel="թ" />
+    <Key latin:keyLabel="փ" />
+</merge>

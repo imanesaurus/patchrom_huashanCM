@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/english_ime_settings" android:key="english_ime_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/general_category" android:key="general_settings">
+        <CheckBoxPreference android:persistent="true" android:title="@string/auto_cap" android:key="auto_cap" android:summary="@string/auto_cap_summary" android:defaultValue="true" />
+        <CheckBoxPreference android:persistent="true" android:title="@string/vibrate_on_keypress" android:key="vibrate_on" android:defaultValue="@bool/config_default_vibration_enabled" />
+        <CheckBoxPreference android:persistent="true" android:title="@string/sound_on_keypress" android:key="sound_on" android:defaultValue="@bool/config_default_sound_enabled" />
+        <CheckBoxPreference android:persistent="true" android:title="@string/popup_on_keypress" android:key="popup_on" android:defaultValue="@bool/config_default_popup_preview" />
+        <ListPreference android:persistent="true" android:entries="@array/voice_input_modes" android:title="@string/voice_input" android:key="voice_mode" android:defaultValue="@string/voice_mode_main" android:entryValues="@array/voice_input_modes_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/correction_category" android:key="correction_settings">
+        <PreferenceScreen android:title="@string/configure_dictionaries_title" android:key="configure_dictionaries_key">
+            <intent android:targetPackage="@string/dictionary_pack_package_name" android:action="android.intent.action.MAIN" android:targetClass="@string/dictionary_pack_settings_activity" />
+        </PreferenceScreen>
+        <ListPreference android:persistent="true" android:entries="@array/auto_correction_threshold_modes" android:title="@string/auto_correction" android:key="auto_correction_threshold" android:summary="@string/auto_correction_summary" android:defaultValue="@string/auto_correction_threshold_mode_index_modest" android:entryValues="@array/auto_correction_threshold_mode_indexes" />
+        <ListPreference android:persistent="true" android:entries="@array/prefs_suggestion_visibilities" android:title="@string/prefs_show_suggestions" android:key="show_suggestions_setting" android:summary="@string/prefs_show_suggestions_summary" android:defaultValue="@string/prefs_suggestion_visibility_default_value" android:entryValues="@array/prefs_suggestion_visibility_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/gesture_typing_category" android:key="gesture_typing_settings">
+        <CheckBoxPreference android:persistent="true" android:title="@string/gesture_input" android:key="gesture_input" android:summary="@string/gesture_input_summary" android:defaultValue="true" />
+        <CheckBoxPreference android:persistent="true" android:title="@string/gesture_floating_preview_text" android:key="pref_gesture_floating_preview_text" android:summary="@string/gesture_floating_preview_text_summary" android:defaultValue="true" />
+        <CheckBoxPreference android:persistent="true" android:title="@string/gesture_preview_trail" android:key="pref_gesture_preview_trail" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/misc_category" android:key="misc_settings">
+        <CheckBoxPreference android:persistent="true" android:title="@string/bigram_prediction" android:key="next_word_prediction" android:summary="@string/bigram_prediction_summary" android:defaultValue="true" />
+        <PreferenceScreen android:title="@string/advanced_settings" android:key="pref_advanced_settings" android:summary="@string/advanced_settings_summary">
+            <CheckBoxPreference android:persistent="true" android:title="@string/use_contacts_dict" android:key="pref_key_use_contacts_dict" android:summary="@string/use_contacts_dict_summary" android:defaultValue="true" />
+            <CheckBoxPreference android:persistent="true" android:title="@string/show_language_switch_key" android:key="pref_show_language_switch_key" android:summary="@string/show_language_switch_key_summary" android:defaultValue="true" />
+            <CheckBoxPreference android:persistent="true" android:title="@string/include_other_imes_in_language_switch_list" android:key="pref_include_other_imes_in_language_switch_list" android:summary="@string/include_other_imes_in_language_switch_list_summary" android:defaultValue="true" />
+            <PreferenceScreen android:title="@string/custom_input_styles_title" android:key="custom_input_styles" android:fragment="com.android.inputmethod.latin.AdditionalSubtypeSettings" />
+            <ListPreference android:title="@string/key_preview_popup_dismiss_delay" android:key="pref_key_preview_popup_dismiss_delay" />
+            <PreferenceScreen android:title="@string/prefs_keypress_vibration_duration_settings" android:key="pref_vibration_duration_settings" />
+            <PreferenceScreen android:title="@string/prefs_keypress_sound_volume_settings" android:key="pref_keypress_sound_volume" />
+        </PreferenceScreen>
+        <PreferenceScreen android:persistent="true" android:title="Debug settings" android:key="debug_settings" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

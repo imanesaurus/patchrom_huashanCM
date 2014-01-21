@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <include latin:keyboardLayout="@xml/key_styles_common" />
+    <Row latin:keyWidth="7.5999975%p">
+        <Key latin:keyLabelFlags="alignLeft" latin:keyStyle="tabKeyStyle" latin:keyWidth="8.200002%p" />
+        <include latin:keyboardLayout="@xml/rowkeys_armenian1" />
+        <Key latin:keyStyle="deleteKeyStyle" latin:keyWidth="fillRight" />
+    </Row>
+    <Row latin:keyWidth="7.5999975%p">
+        <Key latin:keyLabelFlags="alignLeft" latin:keyStyle="toSymbolKeyStyle" latin:keyWidth="8.200002%p" />
+        <include latin:keyboardLayout="@xml/rowkeys_armenian2" />
+        <Key latin:keyStyle="enterKeyStyle" latin:keyWidth="fillRight" />
+    </Row>
+    <Row latin:keyWidth="7.5999975%p">
+        <Key latin:keyStyle="shiftKeyStyle" latin:keyWidth="8.200002%p" />
+        <include latin:keyboardLayout="@xml/rowkeys_armenian3" />
+        <include latin:keyboardLayout="@xml/keys_comma_period" />
+        <Key latin:keyStyle="shiftKeyStyle" latin:keyWidth="fillRight" />
+    </Row>
+    <include latin:keyboardLayout="@xml/row_qwerty4" />
+</merge>

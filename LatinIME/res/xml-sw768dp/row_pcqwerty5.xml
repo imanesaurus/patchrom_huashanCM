@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <Row latin:keyWidth="8.046997%p">
+        <include latin:keyboardLayout="@xml/key_settings" />
+        <switch>
+            <case latin:keyboardLayoutSetElement="symbols|symbolsShifted">
+                <Spacer latin:keyWidth="10.500002%p" latin:keyXPos="14.999998%p" />
+            </case>
+            <case latin:mode="email|url">
+                <Key latin:keyStyle="comKeyStyle" latin:keyWidth="10.500002%p" latin:keyXPos="14.999998%p" />
+            </case>
+            <default>
+                <Spacer latin:keyWidth="10.500002%p" latin:keyXPos="14.999998%p" />
+            </default>
+        </switch>
+        <Key latin:keyStyle="spaceKeyStyle" latin:keyWidth="49.0%p" />
+        <include latin:keyWidth="fillRight" latin:keyXPos="-8.046997%p" latin:keyboardLayout="@xml/key_shortcut" />
+    </Row>
+</merge>

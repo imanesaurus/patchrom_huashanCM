@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <Row latin:backgroundType="functional" latin:keyWidth="8.046997%p">
+        <Spacer latin:keyWidth="5.7819963%p" />
+        <include latin:keyboardLayout="@xml/key_settings" />
+        <include latin:keyboardLayout="@xml/key_shortcut" />
+        <include latin:keyboardLayout="@xml/key_f1" />
+        <include latin:backgroundType="normal" latin:keyXPos="29.922998%p" latin:keyboardLayout="@xml/key_space" />
+        <include latin:keyboardLayout="@xml/key_question_exclamation" />
+        <include latin:keyboardLayout="@xml/key_dash" />
+        <include latin:keyboardLayout="@xml/key_f2" />
+        <Spacer latin:keyWidth="fillRight" />
+    </Row>
+</merge>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <switch>
+        <case latin:keyboardLayoutSetElement="alphabetManualShifted|alphabetShiftLocked|alphabetShiftLockShifted">
+            <Key latin:keyLabel="๐" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="&quot;" />
+            <Key latin:keyLabel="ฎ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ฑ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ธ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:code="0x0E4D" latin:keyLabel=" ํ" latin:keyLabelFlags="fontNormal|followKeyLetterRatio" />
+            <Key latin:code="0x0E4A" latin:keyLabel=" ๊" latin:keyLabelFlags="fontNormal|followKeyLetterRatio" />
+            <Key latin:keyLabel="ณ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ฯ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ญ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ฐ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="," />
+        </case>
+        <default>
+            <Key latin:keyLabel="ๆ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ไ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ำ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="พ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ะ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:code="0x0E31" latin:keyLabel=" ั" latin:keyLabelFlags="fontNormal|followKeyLetterRatio" />
+            <Key latin:code="0x0E35" latin:keyLabel=" ี" latin:keyLabelFlags="fontNormal|followKeyLetterRatio" />
+            <Key latin:keyLabel="ร" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="น" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ย" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="บ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ล" latin:keyLabelFlags="fontNormal" />
+        </default>
+    </switch>
+</merge>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="config_enable_show_voice_key_option">false</bool>
+    <bool name="config_enable_show_popup_on_keypress_option">false</bool>
+    <bool name="config_default_popup_preview">false</bool>
+    <bool name="config_default_sound_enabled">true</bool>
+    <bool name="config_sliding_key_input_enabled">false</bool>
+    <bool name="config_show_more_keys_keyboard_at_touched_point">true</bool>
+    <bool name="config_enable_bigram_suggestions_option">false</bool>
+    <bool name="config_auto_correction_spacebar_led_enabled">false</bool>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <switch>
+        <case latin:mode="email|url">
+            <Key latin:keyLabel="-" />
+        </case>
+        <default>
+            <Key latin:moreKeys="!" latin:keyLabel="\?" latin:keyHintLabel="!" latin:keyStyle="hasShiftedLetterHintStyle" />
+        </default>
+    </switch>
+</merge>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:layout_gravity="fill_horizontal|center" android:id="@id/research_feedback_contents" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:hint="@string/research_feedback_hint" android:lines="2" android:inputType="textMultiLine" android:imeOptions="flagNoFullscreen">
+        <requestFocus />
+    </EditText>
+    <CheckBox android:id="@id/research_feedback_include_history" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:checked="true" android:text="@string/research_feedback_include_history_label" />
+</LinearLayout>

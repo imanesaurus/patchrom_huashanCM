@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_go_key">გადასვლა</string>
+    <string name="label_next_key">შემდეგი</string>
+    <string name="label_previous_key">წინა</string>
+    <string name="label_done_key">შესრულებულია</string>
+    <string name="label_send_key">გაგზავნა</string>
+    <string name="label_to_alpha_key">ABC</string>
+</resources>

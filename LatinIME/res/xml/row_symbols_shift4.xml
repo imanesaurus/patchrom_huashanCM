@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <Row latin:keyWidth="10.000002%p">
+        <Key latin:keyStyle="toAlphaKeyStyle" latin:keyWidth="14.999998%p" />
+        <Key latin:backgroundType="functional" latin:keyLabel="„" />
+        <include latin:keyXPos="25.0%p" latin:keyboardLayout="@xml/key_space" />
+        <Key latin:backgroundType="functional" latin:keyLabel="…" />
+        <Key latin:keyStyle="enterKeyStyle" latin:keyWidth="fillRight" />
+    </Row>
+</merge>

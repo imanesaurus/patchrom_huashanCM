@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <fraction name="minKeyboardHeight">45.000004%p</fraction>
+    <fraction name="keyboard_top_padding">2.444005%p</fraction>
+    <fraction name="keyboard_bottom_padding">0.0%p</fraction>
+    <fraction name="key_bottom_gap">4.9110055%p</fraction>
+    <fraction name="key_horizontal_gap">1.2840033%p</fraction>
+    <fraction name="key_bottom_gap_stone">4.3550014%p</fraction>
+    <fraction name="key_horizontal_gap_stone">1.5050054%p</fraction>
+    <fraction name="key_bottom_gap_gb">5.2000046%p</fraction>
+    <fraction name="key_horizontal_gap_gb">1.4469981%p</fraction>
+    <fraction name="keyboard_bottom_padding_ics">0.0%p</fraction>
+    <fraction name="key_bottom_gap_ics">4.4999957%p</fraction>
+    <fraction name="key_horizontal_gap_ics">0.8999944%p</fraction>
+    <fraction name="key_letter_ratio">50.0%</fraction>
+    <fraction name="key_large_letter_ratio">48.0%</fraction>
+    <fraction name="key_label_ratio">32.000004%</fraction>
+    <fraction name="key_hint_letter_ratio">23.000002%</fraction>
+    <fraction name="key_hint_label_ratio">34.000004%</fraction>
+    <fraction name="key_uppercase_letter_ratio">28.999996%</fraction>
+    <fraction name="spacebar_text_ratio">29.999996%</fraction>
+    <fraction name="key_bottom_gap_5row">3.1999946%p</fraction>
+    <fraction name="key_letter_ratio_5row">62.0%</fraction>
+    <fraction name="key_uppercase_letter_ratio_5row">36.0%</fraction>
+    <fraction name="min_more_suggestions_width">50.0%</fraction>
+</resources>

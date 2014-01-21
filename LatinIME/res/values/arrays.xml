@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="auto_correction_threshold_values">
+        <item></item>
+        <item>0.185</item>
+        <item>0.067</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="prefs_suggestion_visibility_values">
+        <item>@string/prefs_suggestion_visibility_show_value</item>
+        <item>@string/prefs_suggestion_visibility_show_only_portrait_value</item>
+        <item>@string/prefs_suggestion_visibility_hide_value</item>
+    </string-array>
+    <string-array name="prefs_suggestion_visibilities">
+        <item>@string/prefs_suggestion_visibility_show_name</item>
+        <item>@string/prefs_suggestion_visibility_show_only_portrait_name</item>
+        <item>@string/prefs_suggestion_visibility_hide_name</item>
+    </string-array>
+    <string-array name="auto_correction_threshold_mode_indexes">
+        <item>@string/auto_correction_threshold_mode_index_off</item>
+        <item>@string/auto_correction_threshold_mode_index_modest</item>
+        <item>@string/auto_correction_threshold_mode_index_aggeressive</item>
+        <item>@string/auto_correction_threshold_mode_index_very_aggeressive</item>
+    </string-array>
+    <string-array name="auto_correction_threshold_modes">
+        <item>@string/auto_correction_threshold_mode_off</item>
+        <item>@string/auto_correction_threshold_mode_modest</item>
+        <item>@string/auto_correction_threshold_mode_aggeressive</item>
+        <item>@string/auto_correction_threshold_mode_very_aggeressive</item>
+    </string-array>
+    <string-array name="voice_input_modes_values">
+        <item>@string/voice_mode_main</item>
+        <item>@string/voice_mode_symbols</item>
+        <item>@string/voice_mode_off</item>
+    </string-array>
+    <string-array name="voice_input_modes">
+        <item>@string/voice_input_modes_main_keyboard</item>
+        <item>@string/voice_input_modes_symbols_keyboard</item>
+        <item>@string/voice_input_modes_off</item>
+    </string-array>
+    <string-array name="voice_input_modes_summary">
+        <item>@string/voice_input_modes_summary_main_keyboard</item>
+        <item>@string/voice_input_modes_summary_symbols_keyboard</item>
+        <item>@string/voice_input_modes_summary_off</item>
+    </string-array>
+    <string-array name="keyboard_layout_modes">
+        <item>@string/layout_basic</item>
+        <item>@string/layout_high_contrast</item>
+        <item>@string/layout_stone_normal</item>
+        <item>@string/layout_stone_bold</item>
+        <item>@string/layout_gingerbread</item>
+        <item>@string/layout_ics</item>
+    </string-array>
+    <string-array name="keyboard_layout_modes_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="subtype_locale_exception_keys">
+        <item>en_US</item>
+        <item>en_GB</item>
+        <item>hu_ZZ</item>
+    </string-array>
+    <string-array name="subtype_locale_exception_values">
+        <item>English (US)</item>
+        <item>English (UK)</item>
+        <item>Hungarian (QUERTY)</item>
+    </string-array>
+    <string-array name="predefined_layouts">
+        <item>qwerty</item>
+        <item>qwertz</item>
+        <item>azerty</item>
+        <item>dvorak</item>
+        <item>colemak</item>
+        <item>pcqwerty</item>
+    </string-array>
+    <string-array name="predefined_layout_display_names">
+        <item>QWERTY</item>
+        <item>QWERTZ</item>
+        <item>AZERTY</item>
+        <item>Dvorak</item>
+        <item>Colemak</item>
+        <item>PC</item>
+    </string-array>
+    <string-array name="locale_and_extra_value_to_keyboard_layout_set_map">
+        <item>en_US:TrySuppressingImeSwitcher,AsciiCapable,SupportTouchPositionCorrection</item>
+        <item>qwerty</item>
+        <item>en_GB:TrySuppressingImeSwitcher,AsciiCapable,SupportTouchPositionCorrection</item>
+        <item>qwerty</item>
+        <item>ar:SupportTouchPositionCorrection</item>
+        <item>arabic</item>
+        <item>cs:AsciiCapable,SupportTouchPositionCorrection</item>
+        <item>qwertz</item>
+        <item>da:AsciiCapable,SupportTouchPositionCorrection</item>
+        <item>nordic</item>
+        <item>de:AsciiCapable,SupportTouchPositionCorrection</item>
+        <item>qwertz</item>
+        <item>es:AsciiCapable,SupportTouchPositionCorrection</item>
+        <item>spanish</item>
+        <item>fi:AsciiCapable,SupportTouchPositionCorrection</item>
+        <item>nordic</item>
+        <item>fr:AsciiCapable,SupportTouchPositionCorrection</item>
+        <item>azerty</item>
+        <item>fr_CA:AsciiCapable,SupportTouchPositionCorrection</item>
+        <item>qwerty</item>
+        <item>hr:AsciiCapable,SupportTouchPositionCorrection</item>
+        <item>qwertz</item>
+        <item>hu:AsciiCapable,SupportTouchPositionCorrection</item>
+        <item>qwertz</item>
+        <item>it:AsciiCapable,SupportTouchPositionCorrection</item>
+        <item>qwerty</item>
+        <item>iw:SupportTouchPositionCorrection</item>
+        <item>hebrew</item>
+        <item>nb:AsciiCapable,SupportTouchPositionCorrection</item>
+        <item>nordic</item>
+        <item>nl:AsciiCapable,SupportTouchPositionCorrection</item>
+        <item>qwerty</item>
+        <item>pl:AsciiCapable,SupportTouchPositionCorrection</item>
+        <item>qwerty</item>
+        <item>ru:SupportTouchPositionCorrection</item>
+        <item>east_slavic</item>
+        <item>sr:SupportTouchPositionCorrection</item>
+        <item>south_slavic</item>
+        <item>sv:AsciiCapable,SupportTouchPositionCorrection</item>
+        <item>nordic</item>
+        <item>tr:AsciiCapable,SupportTouchPositionCorrection</item>
+        <item>qwerty</item>
+    </string-array>
+    <string-array name="keyboard_heights">
+        <item>sholes,227.0167</item>
+        <item>mahimahi,217.5932</item>
+        <item>herring,200.8554</item>
+        <item>tuna,202.5869</item>
+        <item>stingray,283.1337</item>
+    </string-array>
+    <string-array name="keypress_vibration_durations">
+        <item>herring,5</item>
+        <item>tuna,5</item>
+        <item>mako,5</item>
+        <item>manta,16</item>
+    </string-array>
+    <string-array name="keypress_volumes">
+        <item>herring,0.5</item>
+        <item>tuna,0.5</item>
+        <item>stingray,0.4</item>
+        <item>grouper,0.3</item>
+        <item>mako,0.3</item>
+        <item>manta,0.2</item>
+    </string-array>
+    <string-array name="phantom_sudden_move_event_device_list">
+        <item>stingray,true</item>
+    </string-array>
+    <string-array name="predefined_subtypes">
+        <item>de:qwerty:AsciiCapable</item>
+        <item>fr:qwertz:AsciiCapable</item>
+    </string-array>
+    <string-array name="sudden_jumping_touch_event_device_list">
+        <item>mahimahi,true</item>
+        <item>sholes,true</item>
+    </string-array>
+    <array name="touch_position_correction_data_default" />
+    <string-array name="touch_position_correction_data_gingerbread">
+        <item>0.0091285</item>
+        <item>0.1193203</item>
+        <item>0.1622607</item>
+        <item>-0.0233128</item>
+        <item>0.1379798</item>
+        <item>0.1585229</item>
+        <item>-0.0080185</item>
+        <item>0.1911477</item>
+        <item>0.1570948</item>
+    </string-array>
+    <string-array name="touch_position_correction_data_ice_cream_sandwich">
+        <item>0.0038756</item>
+        <item>-0.0005677</item>
+        <item>0.1577026</item>
+        <item>-0.0236678</item>
+        <item>0.0381731</item>
+        <item>0.1529972</item>
+        <item>-0.0086827</item>
+        <item>0.0880847</item>
+        <item>0.1522819</item>
+    </string-array>
+</resources>

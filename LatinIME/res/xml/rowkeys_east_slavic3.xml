@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <Key latin:additionalMoreKeys="!" latin:keyLabel="я" latin:keyHintLabel="!" />
+    <Key latin:additionalMoreKeys="&quot;" latin:keyLabel="ч" latin:keyHintLabel="&quot;" />
+    <Key latin:additionalMoreKeys="'" latin:keyLabel="с" latin:keyHintLabel="'" />
+    <Key latin:additionalMoreKeys=":" latin:keyLabel="м" latin:keyHintLabel=":" />
+    <Key latin:additionalMoreKeys=";" latin:keyLabel="!text/keylabel_for_east_slavic_row3_5" latin:keyHintLabel=";" />
+    <Key latin:additionalMoreKeys="/" latin:keyLabel="т" latin:keyHintLabel="/" />
+    <Key latin:moreKeys="!text/more_keys_for_cyrillic_soft_sign" latin:additionalMoreKeys="\\?" latin:keyLabel="ь" latin:keyHintLabel="\?" />
+    <Key latin:additionalMoreKeys="&lt;" latin:keyLabel="б" latin:keyHintLabel="&lt;" />
+    <Key latin:additionalMoreKeys=">" latin:keyLabel="ю" latin:keyHintLabel=">" />
+</merge>

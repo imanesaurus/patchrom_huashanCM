@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <switch>
+        <case latin:keyboardLayoutSetElement="symbols" latin:mode="url">
+            <Key latin:keyLabel=":" />
+        </case>
+        <case latin:keyboardLayoutSetElement="symbols">
+            <Key latin:keyLabel="\@" />
+        </case>
+        <case latin:mode="email">
+            <Key latin:keyLabel="\@" />
+        </case>
+        <case latin:mode="url">
+            <Key latin:moreKeys=":" latin:keyLabel="/" latin:keyHintLabel=":" latin:keyStyle="hasShiftedLetterHintStyle" />
+        </case>
+        <default>
+            <Key latin:moreKeys="\@" latin:keyLabel="/" latin:keyHintLabel="\@" latin:keyStyle="hasShiftedLetterHintStyle" />
+        </default>
+    </switch>
+</merge>

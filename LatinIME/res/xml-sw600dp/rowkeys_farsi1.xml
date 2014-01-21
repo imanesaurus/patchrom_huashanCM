@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <Key latin:keyLabel="ض" latin:keyLabelFlags="fontNormal" />
+    <Key latin:keyLabel="ص" latin:keyLabelFlags="fontNormal" />
+    <Key latin:keyLabel="ث" latin:keyLabelFlags="fontNormal" />
+    <Key latin:keyLabel="ق" latin:keyLabelFlags="fontNormal" />
+    <Key latin:keyLabel="ف" latin:keyLabelFlags="fontNormal" />
+    <Key latin:keyLabel="غ" latin:keyLabelFlags="fontNormal" />
+    <Key latin:keyLabel="ع" latin:keyLabelFlags="fontNormal" />
+    <Key latin:moreKeys="ﻫ|ه‍,هٔ,ة,%" latin:keyLabel="ه" latin:keyLabelFlags="fontNormal" />
+    <Key latin:keyLabel="خ" latin:keyLabelFlags="fontNormal" />
+    <Key latin:keyLabel="ح" latin:keyLabelFlags="fontNormal" />
+    <Key latin:keyLabel="ج" latin:keyLabelFlags="fontNormal" />
+    <Key latin:keyLabel="چ" latin:keyLabelFlags="fontNormal" />
+</merge>

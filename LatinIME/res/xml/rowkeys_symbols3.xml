@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <switch>
+        <case latin:languageCode="hy">
+            <Key latin:moreKeys="!text/more_keys_for_symbols_exclamation" latin:keyLabel="՛" latin:keyHintLabel="՜" />
+        </case>
+        <default>
+            <Key latin:moreKeys="!text/more_keys_for_symbols_exclamation" latin:keyLabel="!" />
+        </default>
+    </switch>
+    <switch>
+        <case latin:languageCode="fa">
+            <Key latin:code="0x00BB" latin:moreKeys="!text/more_keys_for_double_quote" latin:keyLabel="«" />
+            <Key latin:code="0x00AB" latin:moreKeys="!text/more_keys_for_single_quote" latin:keyLabel="»" />
+        </case>
+        <case latin:languageCode="hy">
+            <Key latin:moreKeys="!text/more_keys_for_double_quote" latin:keyLabel="«" />
+            <Key latin:moreKeys="!text/more_keys_for_single_quote" latin:keyLabel="»" />
+        </case>
+        <default>
+            <Key latin:moreKeys="!text/more_keys_for_double_quote" latin:keyLabel="&quot;" />
+            <Key latin:moreKeys="!text/more_keys_for_single_quote" latin:keyLabel="'" />
+        </default>
+    </switch>
+    <switch>
+        <case latin:languageCode="hy">
+            <Key latin:keyLabel="." />
+        </case>
+        <default>
+            <Key latin:keyLabel=":" />
+        </default>
+    </switch>
+    <Key latin:moreKeys="!text/more_keys_for_symbols_semicolon" latin:keyLabel="!text/keylabel_for_symbols_semicolon" />
+    <Key latin:keyLabel="/" />
+    <switch>
+        <case latin:languageCode="hy">
+            <Key latin:moreKeys="!text/more_keys_for_symbols_question" latin:keyLabel="՞" latin:keyHintLabel="՝" />
+        </case>
+        <default>
+            <Key latin:moreKeys="!text/more_keys_for_symbols_question" latin:keyLabel="!text/keylabel_for_symbols_question" />
+        </default>
+    </switch>
+</merge>

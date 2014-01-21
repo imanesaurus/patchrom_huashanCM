@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <Key latin:moreKeys="!text/more_keys_for_y" latin:additionalMoreKeys="&lt;" latin:keyLabel="y" latin:keyHintLabel="&lt;" />
+    <Key latin:additionalMoreKeys=">" latin:keyLabel="x" latin:keyHintLabel=">" />
+    <Key latin:moreKeys="!text/more_keys_for_c" latin:additionalMoreKeys="=" latin:keyLabel="c" latin:keyHintLabel="=" />
+    <Key latin:moreKeys="!text/more_keys_for_v" latin:additionalMoreKeys=":" latin:keyLabel="v" latin:keyHintLabel=":" />
+    <Key latin:additionalMoreKeys=";" latin:keyLabel="b" latin:keyHintLabel=";" />
+    <Key latin:moreKeys="!text/more_keys_for_n" latin:additionalMoreKeys="(" latin:keyLabel="n" latin:keyHintLabel="(" />
+    <Key latin:additionalMoreKeys=")" latin:keyLabel="m" latin:keyHintLabel=")" />
+</merge>

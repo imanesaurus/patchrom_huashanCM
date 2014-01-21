@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <Key latin:moreKeys="¬" latin:keyLabel="~" />
+    <Key latin:moreKeys="¡" latin:keyLabel="!" />
+    <Key latin:keyLabel="\@" />
+    <Key latin:keyLabel="\#" />
+    <Key latin:keyLabel="$" />
+    <Key latin:moreKeys="‰" latin:keyLabel="%" />
+    <Key latin:keyLabel="^" />
+    <Key latin:keyLabel="&amp;" />
+    <Key latin:moreKeys="!text/more_keys_for_star" latin:keyLabel="*" />
+    <Key latin:keyLabel="(" />
+    <Key latin:keyLabel=")" />
+    <Key latin:keyLabel="_" />
+    <Key latin:keyLabel="+" />
+</merge>

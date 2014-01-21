@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <switch>
+        <case latin:keyboardLayoutSetElement="alphabetManualShifted|alphabetShiftLocked|alphabetShiftLockShifted">
+            <Key latin:moreKeys="ऒं" latin:keyLabel="औ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ऐं" latin:keyLabel="ऐ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="आं,आँ" latin:keyLabel="आ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ईं" latin:keyLabel="ई" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ऊं,ऊँ" latin:keyLabel="ऊ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="भ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ः" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="घ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="क्ष,श्र" latin:keyLabel="ध" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="झ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ढ" latin:keyLabelFlags="fontNormal" />
+        </case>
+        <default>
+            <Key latin:moreKeys="ौं,%" latin:additionalMoreKeys="१,1" latin:keyLabel="ौ" latin:keyHintLabel="1" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ैं,%" latin:additionalMoreKeys="२,2" latin:keyLabel="ै" latin:keyHintLabel="2" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ां,ाँ,%" latin:additionalMoreKeys="३,3" latin:keyLabel="ा" latin:keyHintLabel="3" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ीं,%" latin:additionalMoreKeys="४,4" latin:keyLabel="ी" latin:keyHintLabel="4" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ूं,ूँ,%" latin:additionalMoreKeys="५,5" latin:keyLabel="ू" latin:keyHintLabel="5" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ब॒,%" latin:additionalMoreKeys="६,6" latin:keyLabel="ब" latin:keyHintLabel="6" latin:keyLabelFlags="fontNormal" />
+            <Key latin:additionalMoreKeys="७,7" latin:keyLabel="ह" latin:keyHintLabel="7" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ज्ञ,ग़,ग॒,%" latin:additionalMoreKeys="८,8" latin:keyLabel="ग" latin:keyHintLabel="8" latin:keyLabelFlags="fontNormal" />
+            <Key latin:additionalMoreKeys="9" latin:keyLabel="द" latin:keyHintLabel="9" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ज॒,ज्ञ,ज़,%" latin:additionalMoreKeys="०,0" latin:keyLabel="ज" latin:keyHintLabel="0" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ड॒,ड़" latin:keyLabel="ड" latin:keyLabelFlags="fontNormal" />
+        </default>
+    </switch>
+</merge>

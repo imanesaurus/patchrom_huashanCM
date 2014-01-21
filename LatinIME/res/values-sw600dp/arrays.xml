@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="touch_position_correction_data_default" />
+    <array name="touch_position_correction_data_gingerbread" />
+    <array name="touch_position_correction_data_ice_cream_sandwich" />
+</resources>

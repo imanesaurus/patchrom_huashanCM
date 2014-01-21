@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <switch>
+        <case latin:keyboardLayoutSetElement="alphabetManualShifted|alphabetShiftLocked|alphabetShiftLockShifted">
+            <Key latin:keyLabel="ฤ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ฆ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ฏ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="โ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ฌ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:code="0x0E47" latin:keyLabel=" ็" latin:keyLabelFlags="fontNormal|followKeyLetterRatio" />
+            <Key latin:code="0x0E4B" latin:keyLabel=" ๋" latin:keyLabelFlags="fontNormal|followKeyLetterRatio" />
+            <Key latin:keyLabel="ษ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ศ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ซ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="." />
+        </case>
+        <default>
+            <Key latin:keyLabel="ฟ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ห" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ก" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ด" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="เ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:code="0x0E49" latin:keyLabel=" ้" latin:keyLabelFlags="fontNormal|followKeyLetterRatio" />
+            <Key latin:code="0x0E48" latin:keyLabel=" ่" latin:keyLabelFlags="fontNormal|followKeyLetterRatio" />
+            <Key latin:keyLabel="า" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ส" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ว" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ง" latin:keyLabelFlags="fontNormal" />
+        </default>
+    </switch>
+</merge>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator android:duration="3000" android:valueFrom="255" android:valueTo="128" android:valueType="intType" android:propertyName="altCodeKeyWhileTypingAnimAlpha"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

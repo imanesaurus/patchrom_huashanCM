@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <Key latin:keyLabel="๑" latin:keyLabelFlags="fontNormal" />
+    <Key latin:keyLabel="๒" latin:keyLabelFlags="fontNormal" />
+    <Key latin:keyLabel="๓" latin:keyLabelFlags="fontNormal" />
+    <Key latin:keyLabel="๔" latin:keyLabelFlags="fontNormal" />
+    <Key latin:keyLabel="๕" latin:keyLabelFlags="fontNormal" />
+    <Key latin:keyLabel="๖" latin:keyLabelFlags="fontNormal" />
+    <Key latin:keyLabel="๗" latin:keyLabelFlags="fontNormal" />
+    <Key latin:keyLabel="๘" latin:keyLabelFlags="fontNormal" />
+    <Key latin:keyLabel="๙" latin:keyLabelFlags="fontNormal" />
+    <Key latin:keyLabel="๐" latin:keyLabelFlags="fontNormal" />
+</merge>

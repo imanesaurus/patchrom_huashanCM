@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="keyboard_heights">
+        <item>sholes,194.3333</item>
+        <item>mahimahi,186.2667</item>
+        <item>herring,171.9385</item>
+        <item>tuna,173.4207</item>
+        <item>stingray,265.4378</item>
+    </string-array>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <switch>
+        <case latin:keyboardLayoutSetElement="alphabetManualShifted|alphabetShiftLocked|alphabetShiftLockShifted">
+            <Key latin:keyLabel="ऑ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ॅ" latin:keyLabel="ँ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ण" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ऩ" />
+            <Key latin:moreKeys="ऴ" latin:keyLabel="ळ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="श" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ष" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ॄ" latin:keyLabel="ृ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ञ" latin:keyLabelFlags="fontNormal" />
+        </case>
+        <default>
+            <Key latin:keyLabel="ॉ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ं" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ॐ" latin:keyLabel="म" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ञ,ङ,ऩ" latin:keyLabel="न" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="व" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ऌ,ॡ" latin:keyLabel="ल" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="स" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="य़" latin:keyLabel="य" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ॽ,॰,ऽ" latin:keyLabel="़" latin:keyLabelFlags="fontNormal" />
+        </default>
+    </switch>
+</merge>

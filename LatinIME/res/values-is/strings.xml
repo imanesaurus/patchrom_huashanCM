@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_go_key">Áfram</string>
+    <string name="label_next_key">Næsta</string>
+    <string name="label_previous_key">Fyrra</string>
+    <string name="label_done_key">Lokið</string>
+    <string name="label_send_key">Senda</string>
+    <string name="label_to_alpha_key">ABC</string>
+</resources>

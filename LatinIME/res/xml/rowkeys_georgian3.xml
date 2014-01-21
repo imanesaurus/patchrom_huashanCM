@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <switch>
+        <case latin:keyboardLayoutSetElement="alphabetManualShifted|alphabetShiftLocked|alphabetShiftLockShifted">
+            <Key latin:keyLabel="ძ" />
+            <Key latin:keyLabel="X" />
+            <Key latin:keyLabel="ჩ" />
+            <Key latin:keyLabel="V" />
+            <Key latin:keyLabel="B" />
+            <Key latin:keyLabel="N" />
+            <Key latin:keyLabel="M" />
+        </case>
+        <default>
+            <Key latin:keyLabel="ზ" />
+            <Key latin:moreKeys="ჴ" latin:keyLabel="ხ" />
+            <Key latin:keyLabel="ც" />
+            <Key latin:moreKeys="ჳ" latin:keyLabel="ვ" />
+            <Key latin:keyLabel="ბ" />
+            <Key latin:moreKeys="ჼ" latin:keyLabel="ნ" />
+            <Key latin:keyLabel="მ" />
+        </default>
+    </switch>
+</merge>

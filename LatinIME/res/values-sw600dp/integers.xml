@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="config_device_form_factor">1</integer>
+    <integer name="config_max_more_keys_column">5</integer>
+    <integer name="max_more_suggestions_row">6</integer>
+    <integer name="config_delay_before_fadeout_language_on_spacebar">1200</integer>
+</resources>

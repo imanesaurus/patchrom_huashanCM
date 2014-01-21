@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <Key latin:additionalMoreKeys="1,١" latin:keyLabel="ض" latin:keyHintLabel="1" latin:keyLabelFlags="fontNormal" />
+    <Key latin:additionalMoreKeys="2,٢" latin:keyLabel="ص" latin:keyHintLabel="2" latin:keyLabelFlags="fontNormal" />
+    <Key latin:moreKeys="ڨ" latin:additionalMoreKeys="3,٣" latin:keyLabel="ق" latin:keyHintLabel="3" latin:keyLabelFlags="fontNormal" />
+    <Key latin:moreKeys="ڤ,ڢ,ڥ" latin:additionalMoreKeys="4,٤" latin:keyLabel="ف" latin:keyHintLabel="4" latin:keyLabelFlags="fontNormal" />
+    <Key latin:additionalMoreKeys="5,٥" latin:keyLabel="غ" latin:keyHintLabel="5" latin:keyLabelFlags="fontNormal" />
+    <Key latin:additionalMoreKeys="6,٦" latin:keyLabel="ع" latin:keyHintLabel="6" latin:keyLabelFlags="fontNormal" />
+    <Key latin:moreKeys="ﻫ|ه‍" latin:additionalMoreKeys="7,٧" latin:keyLabel="ه" latin:keyHintLabel="7" latin:keyLabelFlags="fontNormal" />
+    <Key latin:additionalMoreKeys="8,٨" latin:keyLabel="خ" latin:keyHintLabel="8" latin:keyLabelFlags="fontNormal" />
+    <Key latin:additionalMoreKeys="9,٩" latin:keyLabel="ح" latin:keyHintLabel="9" latin:keyLabelFlags="fontNormal" />
+    <Key latin:moreKeys="چ" latin:additionalMoreKeys="0,٠" latin:keyLabel="ج" latin:keyHintLabel="0" latin:keyLabelFlags="fontNormal" />
+</merge>

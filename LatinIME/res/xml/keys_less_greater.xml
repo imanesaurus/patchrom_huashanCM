@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <switch>
+        <case latin:languageCode="fa">
+            <Key latin:code="0x00BB" latin:moreKeys="!text/more_keys_for_less_than" latin:keyLabel="«" />
+            <Key latin:code="0x00AB" latin:moreKeys="!text/more_keys_for_greater_than" latin:keyLabel="»" />
+        </case>
+        <case latin:languageCode="hy">
+            <Key latin:moreKeys="!text/more_keys_for_less_than" latin:keyLabel="«" />
+            <Key latin:moreKeys="!text/more_keys_for_greater_than" latin:keyLabel="»" />
+        </case>
+        <default>
+            <Key latin:code="!code/key_less_than" latin:moreKeys="!text/more_keys_for_less_than" latin:keyLabel="&lt;" />
+            <Key latin:code="!code/key_greater_than" latin:moreKeys="!text/more_keys_for_greater_than" latin:keyLabel=">" />
+        </default>
+    </switch>
+</merge>

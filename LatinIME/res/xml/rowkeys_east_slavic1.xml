@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <Key latin:additionalMoreKeys="1" latin:keyLabel="й" latin:keyHintLabel="1" />
+    <Key latin:additionalMoreKeys="2" latin:keyLabel="ц" latin:keyHintLabel="2" />
+    <Key latin:moreKeys="!text/more_keys_for_cyrillic_u" latin:additionalMoreKeys="3" latin:keyLabel="у" latin:keyHintLabel="3" />
+    <Key latin:additionalMoreKeys="4" latin:keyLabel="к" latin:keyHintLabel="4" />
+    <Key latin:moreKeys="!text/more_keys_for_cyrillic_ie" latin:additionalMoreKeys="5" latin:keyLabel="е" latin:keyHintLabel="5" />
+    <Key latin:moreKeys="!text/more_keys_for_cyrillic_en" latin:additionalMoreKeys="6" latin:keyLabel="н" latin:keyHintLabel="6" />
+    <Key latin:moreKeys="!text/more_keys_for_cyrillic_ghe" latin:additionalMoreKeys="7" latin:keyLabel="г" latin:keyHintLabel="7" />
+    <Key latin:additionalMoreKeys="8" latin:keyLabel="ш" latin:keyHintLabel="8" />
+    <Key latin:additionalMoreKeys="9" latin:keyLabel="!text/keylabel_for_east_slavic_row1_9" latin:keyHintLabel="9" />
+    <Key latin:additionalMoreKeys="0" latin:keyLabel="з" latin:keyHintLabel="0" />
+    <Key latin:keyLabel="х" />
+</merge>

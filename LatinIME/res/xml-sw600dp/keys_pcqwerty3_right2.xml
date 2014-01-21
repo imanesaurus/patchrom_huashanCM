@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <switch>
+        <case latin:keyboardLayoutSetElement="symbols|symbolsShifted">
+            <Key latin:moreKeys=":" latin:keyLabel=";" />
+            <Key latin:moreKeys="!fixedColumnOrder!4,“,”,‘,’,‚,‛,&quot;" latin:keyLabel="'" />
+        </case>
+        <default>
+            <Key latin:moreKeys=":" latin:keyLabel=";" latin:keyHintLabel=":" latin:keyStyle="hasShiftedLetterHintStyle" />
+            <Key latin:moreKeys="!fixedColumnOrder!4,“,”,‘,’,‚,‛,&quot;" latin:keyLabel="'" latin:keyHintLabel="&quot;" latin:keyStyle="hasShiftedLetterHintStyle" />
+        </default>
+    </switch>
+</merge>

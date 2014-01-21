@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <Key latin:additionalMoreKeys="1" latin:keyLabel="ש" latin:keyHintLabel="1" />
+    <Key latin:additionalMoreKeys="2" latin:keyLabel="ד" latin:keyHintLabel="2" />
+    <Key latin:moreKeys="ג׳" latin:additionalMoreKeys="3" latin:keyLabel="ג" latin:keyHintLabel="3" />
+    <Key latin:additionalMoreKeys="4" latin:keyLabel="כ" latin:keyHintLabel="4" />
+    <Key latin:additionalMoreKeys="5" latin:keyLabel="ע" latin:keyHintLabel="5" />
+    <Key latin:moreKeys="ײַ" latin:additionalMoreKeys="6" latin:keyLabel="י" latin:keyHintLabel="6" />
+    <Key latin:moreKeys="ח׳" latin:additionalMoreKeys="7" latin:keyLabel="ח" latin:keyHintLabel="7" />
+    <Key latin:additionalMoreKeys="8" latin:keyLabel="ל" latin:keyHintLabel="8" />
+    <Key latin:additionalMoreKeys="9" latin:keyLabel="ך" latin:keyHintLabel="9" />
+    <Key latin:additionalMoreKeys="0" latin:keyLabel="ף" latin:keyHintLabel="0" />
+</merge>

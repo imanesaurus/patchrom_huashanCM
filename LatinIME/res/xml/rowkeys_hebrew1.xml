@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <Key latin:keyLabel="ק" />
+    <Key latin:keyLabel="ר" />
+    <Key latin:keyLabel="א" />
+    <Key latin:keyLabel="ט" />
+    <Key latin:keyLabel="ו" />
+    <Key latin:keyLabel="ן" />
+    <Key latin:keyLabel="ם" />
+    <Key latin:keyLabel="פ" />
+</merge>

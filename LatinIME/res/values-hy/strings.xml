@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_go_key">Անցում</string>
+    <string name="label_next_key">Հաջորդ</string>
+    <string name="label_previous_key">Նախորդ</string>
+    <string name="label_done_key">Պատրաստ է</string>
+    <string name="label_send_key">Ուղարկել</string>
+    <string name="label_to_alpha_key">ԱԲԳ</string>
+    <string name="label_to_symbol_key">՞,12</string>
+</resources>

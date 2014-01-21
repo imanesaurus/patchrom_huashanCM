@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="config_device_form_factor">0</integer>
+    <integer name="config_delay_update_suggestions">100</integer>
+    <integer name="config_delay_update_old_suggestions">300</integer>
+    <integer name="config_delay_update_shift_state">100</integer>
+    <integer name="config_language_on_spacebar_final_alpha">128</integer>
+    <integer name="config_more_keys_keyboard_fadein_anim_time">0</integer>
+    <integer name="config_more_keys_keyboard_fadeout_anim_time">100</integer>
+    <integer name="config_keyboard_grid_width">32</integer>
+    <integer name="config_keyboard_grid_height">16</integer>
+    <integer name="config_double_spaces_turn_into_period_timeout">1100</integer>
+    <integer name="config_max_more_keys_column">5</integer>
+    <integer name="config_key_preview_linger_timeout">70</integer>
+    <integer name="config_gesture_floating_preview_text_linger_timeout">200</integer>
+    <integer name="config_gesture_preview_trail_fadeout_start_delay">100</integer>
+    <integer name="config_gesture_preview_trail_fadeout_duration">800</integer>
+    <integer name="config_gesture_preview_trail_update_interval">20</integer>
+    <integer name="config_touch_noise_threshold_time">40</integer>
+    <integer name="config_key_repeat_start_timeout">400</integer>
+    <integer name="config_key_repeat_interval">50</integer>
+    <integer name="config_long_press_key_timeout">400</integer>
+    <integer name="config_long_press_shift_key_timeout">1200</integer>
+    <integer name="config_ignore_alt_code_key_timeout">350</integer>
+    <integer name="config_gesture_static_time_threshold_after_fast_typing">500</integer>
+    <integer name="config_gesture_dynamic_threshold_decay_duration">450</integer>
+    <integer name="config_gesture_dynamic_time_threshold_from">300</integer>
+    <integer name="config_gesture_dynamic_time_threshold_to">20</integer>
+    <integer name="config_gesture_recognition_minimum_time">100</integer>
+    <integer name="config_suppress_key_preview_after_batch_input_duration">1000</integer>
+    <integer name="log_screen_metrics">0</integer>
+    <integer name="max_more_suggestions_row">6</integer>
+    <integer name="suggestions_count_in_strip">3</integer>
+</resources>

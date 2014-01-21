@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin">
+    <switch>
+        <case latin:keyboardLayoutSetElement="alphabetManualShifted|alphabetShiftLocked|alphabetShiftLockShifted">
+            <Key latin:moreKeys="ओं,ऑ,ऒ" latin:keyLabel="ओ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="एं,एँ,ऍ,ऎ" latin:keyLabel="ए" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="अं,अँ" latin:keyLabel="अ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="इं,इँ" latin:keyLabel="इ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="उं,उँ" latin:keyLabel="उ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="फ़" latin:keyLabel="फ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="्र,र्" latin:keyLabel="ऱ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ख़" latin:keyLabel="ख" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="थ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="छ" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ठ" latin:keyLabelFlags="fontNormal" />
+        </case>
+        <default>
+            <Key latin:moreKeys="ों,ॉ,ॊ" latin:keyLabel="ो" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ें" latin:keyLabel="े" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="्" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="िं" latin:keyLabel="ि" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ुं,ुँ" latin:keyLabel="ु" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="प" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="ऋ,ऱ,ॠ" latin:keyLabel="र" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="क़" latin:keyLabel="क" latin:keyLabelFlags="fontNormal" />
+            <Key latin:moreKeys="त्र" latin:keyLabel="त" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="च" latin:keyLabelFlags="fontNormal" />
+            <Key latin:keyLabel="ट" latin:keyLabelFlags="fontNormal" />
+        </default>
+    </switch>
+</merge>
