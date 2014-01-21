@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="build_author">Built by</string>
+    <string name="indo_translation">Indo by</string>
+    <string name="header_category_xperia">XPERIA</string>
+    <string name="viper_settings">Viper4Android FX</string>
+    <string name="carrier_settings">Carrier name</string>
+    <string name="xperia_settings">XPERIA settings</string>
+    <string name="cp_settings">Control panel</string>
+    <string name="xp_settings">Vibrate Controls</string>
+    <string name="age_settings">Hovering Controls</string>
+    <string name="line_breaking_title">Optimize paragraph text</string>
+    <string name="line_breaking_summary">Optimize paragraphs wrap effect</string>
+</resources>
