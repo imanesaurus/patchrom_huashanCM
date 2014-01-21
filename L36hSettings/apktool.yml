@@ -1,0 +1,14 @@
+version: 1.5.2
+apkFileName: L36hSettings.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  - 6
+sdkInfo:
+  minSdkVersion: '17'
+  targetSdkVersion: '17'
+packageInfo:
+  cur_package: com.android.l36hspecialsettings
+  orig_package: com.android.l36hspecialsettings
+compressionType: false

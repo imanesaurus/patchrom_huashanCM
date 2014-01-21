@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:key="iwnnime_pref"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/ti_preference_key_setting_menu_txt" android:key="category_key">
+        <CheckBoxPreference android:title="@string/ti_preference_display_language_switch_key_txt" android:key="opt_display_language_switch_key" android:dependency="opt_enable_half_alphabet" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/ti_preference_change_otherime_title_txt" android:key="opt_change_otherime" android:summary="@string/ti_preference_change_otherime_summary_txt" android:dependency="opt_display_language_switch_key" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/ti_preference_halfalphabet_setting_menu_txt" android:key="opt_enable_half_alphabet" android:summary="@string/ti_preference_halfalphabet_setting_summary_txt" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/ti_preference_key_sound_title_txt" android:key="key_sound" android:summary="@string/ti_preference_key_sound_summary_txt" />
+        <CheckBoxPreference android:title="@string/ti_preference_key_vibration_title_txt" android:key="key_vibration" android:summary="@string/ti_preference_key_vibration_summary_txt" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/ti_preference_preview_title_txt" android:key="popup_preview" android:summary="@string/ti_preference_preview_summary_txt" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/ti_preference_auto_caps_title_txt" android:key="auto_caps" android:summary="@string/ti_preference_auto_caps_summary_txt" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/ti_preference_auto_space_title_txt" android:key="opt_auto_space" android:summary="@string/ti_preference_auto_space_summary_txt" android:defaultValue="true" />
+        <PreferenceScreen android:persistent="false" android:title="@string/ti_preference_keyboard_type_title_txt" android:key="keyboard_mode_type_setting" android:summary="@string/ti_preference_keyboard_type_summary_txt">
+            <PreferenceCategory android:title="@string/ti_preference_keyboard_type_portrait_title_txt">
+                <jp.co.omronsoft.iwnnime.ml.iwnn.KeyboardTypeDialogPreference android:title="@string/ti_preference_keyboard_type_common_12_title_txt" android:key="input_mode_type_comm_12_0" android:summary="@string/ti_preference_keyboard_type_common_12_summary_txt" android:dialogMessage="@string/ti_preference_keyboard_type_common_12_message_txt" android:positiveButtonText="@string/ti_dialog_button_ok_txt" android:negativeButtonText="@string/ti_dialog_button_cancel_txt" />
+                <jp.co.omronsoft.iwnnime.ml.iwnn.KeyboardTypeDialogPreference android:title="@string/ti_preference_keyboard_type_common_qwerty_title_txt" android:key="input_mode_type_comm_qwerty_0" android:summary="@string/ti_preference_keyboard_type_common_qwerty_summary_txt" android:dialogMessage="@string/ti_preference_keyboard_type_common_qwerty_message_txt" android:positiveButtonText="@string/ti_dialog_button_ok_txt" android:negativeButtonText="@string/ti_dialog_button_cancel_txt" />
+                <jp.co.omronsoft.iwnnime.ml.iwnn.KeyboardTypeDialogPreference android:title="@string/ti_preference_keyboard_type_common_last_title_txt" android:key="input_mode_type_comm_last_0" android:summary="@string/ti_preference_keyboard_type_common_last_summary_txt" android:dialogMessage="@string/ti_preference_keyboard_type_common_last_message_txt" android:positiveButtonText="@string/ti_dialog_button_ok_txt" android:negativeButtonText="@string/ti_dialog_button_cancel_txt" />
+                <PreferenceScreen android:persistent="false" android:title="@string/ti_preference_keyboard_type_diff_title_txt" android:key="keyboard_mode_type_diff_setting" android:summary="@string/ti_preference_keyboard_type_diff_summary_txt">
+                    <intent android:targetPackage="jp.co.omronsoft.iwnnime.ml" android:action="jp.co.omronsoft.iwnnime.ml.SET_PORTRAIT_KEYBOARD_TYPE" android:targetClass="jp.co.omronsoft.iwnnime.ml.KeyboardTypePreferenceActivity" />
+                </PreferenceScreen>
+            </PreferenceCategory>
+            <PreferenceCategory android:title="@string/ti_preference_keyboard_type_landscape_title_txt">
+                <jp.co.omronsoft.iwnnime.ml.iwnn.KeyboardTypeDialogPreference android:title="@string/ti_preference_keyboard_type_common_12_title_txt" android:key="input_mode_type_comm_12_1" android:summary="@string/ti_preference_keyboard_type_common_12_summary_txt" android:dialogMessage="@string/ti_preference_keyboard_type_common_12_message_txt" android:positiveButtonText="@string/ti_dialog_button_ok_txt" android:negativeButtonText="@string/ti_dialog_button_cancel_txt" />
+                <jp.co.omronsoft.iwnnime.ml.iwnn.KeyboardTypeDialogPreference android:title="@string/ti_preference_keyboard_type_common_qwerty_title_txt" android:key="input_mode_type_comm_qwerty_1" android:summary="@string/ti_preference_keyboard_type_common_qwerty_summary_txt" android:dialogMessage="@string/ti_preference_keyboard_type_common_qwerty_message_txt" android:positiveButtonText="@string/ti_dialog_button_ok_txt" android:negativeButtonText="@string/ti_dialog_button_cancel_txt" />
+                <jp.co.omronsoft.iwnnime.ml.iwnn.KeyboardTypeDialogPreference android:title="@string/ti_preference_keyboard_type_common_last_title_txt" android:key="input_mode_type_comm_last_1" android:summary="@string/ti_preference_keyboard_type_common_last_summary_txt" android:dialogMessage="@string/ti_preference_keyboard_type_common_last_message_txt" android:positiveButtonText="@string/ti_dialog_button_ok_txt" android:negativeButtonText="@string/ti_dialog_button_cancel_txt" />
+                <PreferenceScreen android:persistent="false" android:title="@string/ti_preference_keyboard_type_diff_title_txt" android:key="keyboard_mode_type_diff_setting" android:summary="@string/ti_preference_keyboard_type_diff_summary_txt">
+                    <intent android:targetPackage="jp.co.omronsoft.iwnnime.ml" android:action="jp.co.omronsoft.iwnnime.ml.SET_LANDSCAPE_KEYBOARD_TYPE" android:targetClass="jp.co.omronsoft.iwnnime.ml.KeyboardTypePreferenceActivity" />
+                </PreferenceScreen>
+            </PreferenceCategory>
+        </PreferenceScreen>
+        <jp.co.omronsoft.iwnnime.ml.KeySizeDialogPreference android:title="@string/ti_preference_key_height_title_txt" android:key="key_size" android:summary="@string/ti_preference_key_height_summary_txt" />
+        <jp.co.omronsoft.iwnnime.ml.KeyBoardSkinAddListPreference android:entries="@array/keyboard_skinadd" android:title="@string/ti_preference_keyboard_skinadd_title_txt" android:key="keyboard_skin_add" android:summary="@string/ti_preference_keyboard_skinadd_summary_txt" android:defaultValue="@string/keyboard_skinadd_id_default" android:negativeButtonText="@string/ti_dialog_button_cancel_txt" android:entryValues="@array/keyboard_skinadd_id" />
+        <CheckBoxPreference android:title="@string/ti_preference_voice_input_title_txt" android:key="voice_input" android:summary="@string/ti_preference_voice_input_summary_txt" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/ti_preference_fullscreen_mode_title_txt" android:key="fullscreen_mode" android:summary="@string/ti_preference_fullscreen_mode_summary_txt" android:defaultValue="true" />
+        <PreferenceScreen android:title="@string/ti_preference_candidate_lines_title_txt" android:key="opt_candidate_lines" android:summary="@string/ti_preference_candidate_lines_summary_txt">
+            <ListPreference android:entries="@array/setting_portrait_entry" android:title="@string/ti_preference_candidate_lines_portrait_title_txt" android:key="setting_portrait" android:summary="@string/ti_preference_candidate_lines_portrait_summary_txt" android:defaultValue="@string/setting_portrait_default_value" android:negativeButtonText="@string/ti_dialog_button_cancel_txt" android:entryValues="@array/setting_portrait_value" />
+            <ListPreference android:entries="@array/setting_landscape_entry" android:title="@string/ti_preference_candidate_lines_landscape_title_txt" android:key="setting_landscape" android:summary="@string/ti_preference_candidate_lines_landscape_summary_txt" android:defaultValue="@string/setting_landscape_default_value" android:negativeButtonText="@string/ti_dialog_button_cancel_txt" android:entryValues="@array/setting_landscape_value" />
+            <CheckBoxPreference android:title="@string/ti_preference_candidate_area_title_txt" android:key="candidate_area" android:summary="@string/ti_preference_candidate_area_summary_txt" android:defaultValue="false" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/ti_preference_12key_setting_menu_txt" android:key="category_12key">
+        <CheckBoxPreference android:title="@string/ti_preference_flick_title_txt" android:key="flick_input" android:summary="@string/ti_preference_flick_summary_txt" android:defaultValue="true" />
+        <jp.co.omronsoft.iwnnime.ml.FlickSensitivityPreference android:title="@string/ti_preference_flick_sensitivity_title_txt" android:key="flick_sensitivity_relative" android:summary="@string/ti_preference_flick_sensitivity_summary_txt" android:dependency="flick_input" android:defaultValue="@string/flick_sensitivity_default_value" />
+        <CheckBoxPreference android:title="@string/ti_preference_flick_toggle_title_txt" android:key="flick_toggle_input" android:summary="@string/ti_preference_flick_toggle_summary_txt" android:dependency="flick_input" android:defaultValue="true" />
+        <android.preference.ListPreference android:entries="@array/auto_cursor_movement" android:title="@string/ti_preference_auto_cursor_movement_menu_txt" android:key="opt_auto_cursor_movement" android:summary="@string/ti_preference_auto_cursor_movement_summary_txt" android:defaultValue="@string/auto_cursor_movement_id_default" android:negativeButtonText="@string/ti_dialog_button_cancel_txt" android:entryValues="@array/auto_cursor_movement_id" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/ti_preference_qwertykey_setting_menu_txt" android:key="category_qwertykey">
+        <CheckBoxPreference android:title="@string/ti_preference_display_left_right_title_txt" android:key="opt_display_left_right_key" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/ti_preference_conversion_menu_ja_txt" android:key="category_conversion_ja">
+        <CheckBoxPreference android:title="@string/ti_preference_input_learning_title_ja_txt" android:key="opt_enable_learning_ja" android:summary="@string/ti_preference_input_learning_summary_txt" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/ti_preference_prediction_title_ja_txt" android:key="opt_prediction_ja" android:summary="@string/ti_preference_prediction_summary_txt" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/ti_preference_funfun_title_ja_txt" android:key="opt_funfun_ja" android:summary="@string/ti_preference_funfun_summary_txt" android:dependency="opt_prediction_ja" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/ti_preference_conversion_menu_en_txt" android:key="category_conversion_en">
+        <CheckBoxPreference android:title="@string/ti_preference_input_learning_title_en_txt" android:key="opt_enable_learning_en" android:summary="@string/ti_preference_input_learning_summary_txt" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/ti_preference_prediction_title_en_txt" android:key="opt_prediction_en" android:summary="@string/ti_preference_prediction_summary_txt" />
+        <CheckBoxPreference android:title="@string/ti_preference_funfun_title_en_txt" android:key="opt_funfun_en" android:summary="@string/ti_preference_funfun_summary_txt" android:dependency="opt_prediction_en" />
+        <CheckBoxPreference android:title="@string/ti_preference_correct_spell_title_en_txt" android:key="opt_spell_correction_en" android:summary="@string/ti_preference_correct_spell_summary_txt" android:dependency="opt_prediction_en" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/ti_preference_dictionary_menu_txt" android:key="category_dictionary">
+        <PreferenceScreen android:persistent="false" android:title="@string/ti_preference_dictionary_menu_standard_txt" android:key="user_dictionary_edit_words" android:summary="@string/ti_preference_user_dictionary_edit_words_summary_txt">
+            <intent android:targetPackage="jp.co.omronsoft.iwnnime.ml" android:action="android.intent.action.MAIN" android:targetClass="jp.co.omronsoft.iwnnime.ml.standardcommon.UserDictionaryToolsListStandard" />
+        </PreferenceScreen>
+        <PreferenceScreen android:persistent="false" android:title="@string/ti_preference_dictionary_menu_ja_txt" android:key="user_dictionary_edit_words_ja" android:summary="@string/ti_preference_user_dictionary_edit_words_summary_ja_txt">
+            <intent android:targetPackage="jp.co.omronsoft.iwnnime.ml" android:action="android.intent.action.MAIN" android:targetClass="jp.co.omronsoft.iwnnime.ml.jajp.UserDictionaryToolsListJa" />
+        </PreferenceScreen>
+        <PreferenceScreen android:persistent="false" android:title="@string/ti_preference_dictionary_menu_en_txt" android:key="user_dictionary_edit_words_en" android:summary="@string/ti_preference_user_dictionary_edit_words_summary_en_txt">
+            <intent android:targetPackage="jp.co.omronsoft.iwnnime.ml" android:action="android.intent.action.MAIN" android:targetClass="jp.co.omronsoft.iwnnime.ml.jajp.UserDictionaryToolsListEn" />
+        </PreferenceScreen>
+        <jp.co.omronsoft.iwnnime.ml.standardcommon.ClearLearningDictionaryDialogPreferenceStandard android:title="@string/ti_preference_user_dictionary_clear_learning_title_txt" android:key="clear_learn_dictionary" android:summary="@string/ti_preference_user_dictionary_clear_learning_summary_txt" android:dialogMessage="@string/ti_dialog_clear_learning_dictionary_message_txt" android:positiveButtonText="@string/ti_dialog_button_ok_txt" android:negativeButtonText="@string/ti_dialog_button_cancel_txt" />
+        <PreferenceScreen android:title="@string/ti_preference_additional_dic_title_txt" android:key="additional_dictionary" android:summary="@string/ti_preference_additional_dic_summary_txt">
+            <intent android:targetPackage="jp.co.omronsoft.iwnnime.ml" android:action="android.intent.action.MAIN" android:targetClass="jp.co.omronsoft.iwnnime.ml.AdditionalDictionaryPreferenceActivity" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/ti_preference_aboutime_menu_txt">
+        <Preference android:title="@string/ti_iwnnime_version_title_txt" android:key="iwnnime" android:summary="@string/ti_iwnnime_copyright_SUBTYPE_txt" style="?android:preferenceInformationStyle" />
+    </PreferenceCategory>
+</PreferenceScreen>

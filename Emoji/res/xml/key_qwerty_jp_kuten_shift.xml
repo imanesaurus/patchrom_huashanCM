@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:iwnn="http://schemas.android.com/apk/res/jp.co.omronsoft.iwnnime.ml">
+    <switch>
+        <case iwnn:keyboardCondition="modeHiragana">
+            <Row-Key>
+                <Key iwnn:codes="65311" iwnn:keyIcon="@drawable/key_qwerty_full_question" iwnn:popupCharacters="@string/ti_alternates_maru_jajp_qwerty_ja_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="\?" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeFullAlpha">
+            <Row-Key>
+                <Key iwnn:codes="65311" iwnn:keyIcon="@drawable/key_qwerty_half_question" iwnn:popupCharacters="@string/ti_alternates_maru_jajp_qwerty_en_full_alphabet_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="\?" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeFullNum">
+            <Row-Key>
+                <Key iwnn:codes="12539" iwnn:keyIcon="@drawable/key_qwerty_num_middledot" iwnn:keyPreviewLabel="・" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeFullKatakana">
+            <Row-Key>
+                <Key iwnn:codes="65311" iwnn:keyIcon="@drawable/key_qwerty_full_question" iwnn:popupCharacters="@string/ti_alternates_maru_jajp_qwerty_ja_full_katakana_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="\?" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeHalfAlpha">
+            <Row-Key>
+                <Key iwnn:codes="63" iwnn:keyIcon="@drawable/key_qwerty_half_question" iwnn:popupCharacters="@string/ti_alternates_maru_jajp_qwerty_en_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="\?" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeHalfNum">
+            <Row-Key>
+                <Key iwnn:codes="63" iwnn:keyIcon="@drawable/key_qwerty_num_question" iwnn:keyPreviewLabel="\?" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeHalfKatakana">
+            <Row-Key>
+                <Key iwnn:codes="63" iwnn:keyIcon="@drawable/key_qwerty_full_question" iwnn:popupCharacters="@string/ti_alternates_maru_jajp_qwerty_ja_half_katakana_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="\?" />
+            </Row-Key>
+        </case>
+    </switch>
+</Keyboard>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/candidate_layout_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/left_more" android:background="@drawable/cand_back_1line" android:layout_width="wrap_content" android:layout_height="@dimen/candidate_layout_height">
+        <ImageView android:id="@id/left_more_imageview" android:clickable="true" android:layout_width="@dimen/candidate_layout_width" android:layout_height="fill_parent" android:src="@drawable/cand_left" android:soundEffectsEnabled="false" />
+    </LinearLayout>
+    <HorizontalScrollView android:id="@id/candview_scroll_1line" android:background="@color/candidate_back_1line" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="@dimen/candidate_layout_height" android:layout_weight="1.0" android:requiresFadingEdge="horizontal">
+        <LinearLayout android:id="@id/candidates_view_1line" android:background="@color/candidate_back_1line" android:layout_width="fill_parent" android:layout_height="@dimen/candidate_layout_height" />
+    </HorizontalScrollView>
+    <LinearLayout android:orientation="horizontal" android:id="@id/right_more" android:background="@drawable/cand_back_1line" android:layout_width="wrap_content" android:layout_height="@dimen/candidate_layout_height">
+        <ImageView android:id="@id/right_more_imageview" android:clickable="true" android:layout_width="@dimen/candidate_layout_width" android:layout_height="fill_parent" android:src="@drawable/cand_right" android:soundEffectsEnabled="false" />
+    </LinearLayout>
+</LinearLayout>

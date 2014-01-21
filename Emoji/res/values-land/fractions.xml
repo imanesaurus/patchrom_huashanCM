@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <fraction name="keyboard_qwerty_row4_vertical_gap">1.1109948%p</fraction>
+    <fraction name="keyboard_qwerty_del_keywidth">13.999998%p</fraction>
+    <fraction name="keyboard_12key_common_keywidth">20.735%p</fraction>
+    <fraction name="keyboard_12key_row4_verticalGap">0.0%p</fraction>
+    <fraction name="keyboard_12key_function_keywidth">16.889%p</fraction>
+    <fraction name="keyboard_12key_phone_function_keywidth">8.443999%</fraction>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:iwnn="http://schemas.android.com/apk/res/jp.co.omronsoft.iwnnime.ml">
+    <switch>
+        <case iwnn:keyboardCondition="switchImeOn">
+            <Row-Key>
+                <Key iwnn:codes="-412" iwnn:iconPreview="@drawable/key_12key_switchime_b" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_12key_switchime" iwnn:keyWidth="@fraction/keyboard_12key_function_keywidth" iwnn:isSecondKey="true" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="switchImeOff">
+            <Row-Key>
+                <Key iwnn:codes="-219" iwnn:iconPreview="@drawable/key_12key_reverse_b" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_12key_reverse" iwnn:keyWidth="@fraction/keyboard_12key_function_keywidth" iwnn:isSecondKey="true" />
+            </Row-Key>
+        </case>
+    </switch>
+</Keyboard>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard iwnn:horizontalGap="@fraction/keyboard_12key_common_horizontal_gap" iwnn:keyHeight="@dimen/keyboard_12key_common_keyheight" iwnn:keyWidth="@fraction/keyboard_12key_common_keywidth" iwnn:verticalGap="@dimen/keyboard_12key_common_vertical_gap"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:iwnn="http://schemas.android.com/apk/res/jp.co.omronsoft.iwnnime.ml">
+    <Row>
+        <Key iwnn:codes="-219" iwnn:iconPreview="@drawable/key_12key_reverse_b" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_12key_reverse" iwnn:keyWidth="@fraction/keyboard_12key_function_keywidth" iwnn:isSecondKey="true" />
+        <Key iwnn:codes="-201" iwnn:keyIcon="@drawable/key_12key_full_flick_off_katakana1" iwnn:horizontalGap="@fraction/keyboard_12key_function_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_12key_input_keywidth" iwnn:keyPreviewLabel="ｱ" />
+        <Key iwnn:codes="-202" iwnn:keyIcon="@drawable/key_12key_full_flick_off_katakana2" iwnn:horizontalGap="@fraction/keyboard_12key_input_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_12key_input_keywidth" iwnn:keyPreviewLabel="ｶ" />
+        <Key iwnn:codes="-203" iwnn:keyIcon="@drawable/key_12key_full_flick_off_katakana3" iwnn:horizontalGap="@fraction/keyboard_12key_input_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_12key_input_keywidth" iwnn:keyPreviewLabel="ｻ" />
+        <Key iwnn:codes="-214" iwnn:iconPreview="@drawable/key_del_b" iwnn:isRepeatable="true" iwnn:keyEdgeFlags="right" iwnn:keyIcon="@drawable/key_del" iwnn:horizontalGap="@fraction/keyboard_12key_function_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_12key_function_keywidth" iwnn:isSecondKey="true" />
+    </Row>
+    <Row>
+        <Key iwnn:codes="-218" iwnn:iconPreview="@drawable/key_12key_left_b" iwnn:isRepeatable="true" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_12key_left" iwnn:keyWidth="@fraction/keyboard_12key_function_keywidth" iwnn:isSecondKey="true" />
+        <Key iwnn:codes="-204" iwnn:keyIcon="@drawable/key_12key_full_flick_off_katakana4" iwnn:horizontalGap="@fraction/keyboard_12key_function_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_12key_input_keywidth" iwnn:keyPreviewLabel="ﾀ" />
+        <Key iwnn:codes="-205" iwnn:keyIcon="@drawable/key_12key_full_flick_off_katakana5" iwnn:horizontalGap="@fraction/keyboard_12key_input_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_12key_input_keywidth" iwnn:keyPreviewLabel="ﾅ" />
+        <Key iwnn:codes="-206" iwnn:keyIcon="@drawable/key_12key_full_flick_off_katakana6" iwnn:horizontalGap="@fraction/keyboard_12key_input_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_12key_input_keywidth" iwnn:keyPreviewLabel="ﾊ" />
+        <Key iwnn:codes="-217" iwnn:iconPreview="@drawable/key_12key_right_b" iwnn:isRepeatable="true" iwnn:keyEdgeFlags="right" iwnn:keyIcon="@drawable/key_12key_right" iwnn:horizontalGap="@fraction/keyboard_12key_function_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_12key_function_keywidth" iwnn:isSecondKey="true" />
+    </Row>
+    <Row>
+        <Key iwnn:codes="-222" iwnn:iconPreview="@drawable/key_pict_sym_b" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_12key_pict_sym" iwnn:keyWidth="@fraction/keyboard_12key_function_keywidth" iwnn:isSecondKey="true" />
+        <Key iwnn:codes="-207" iwnn:keyIcon="@drawable/key_12key_full_flick_off_katakana7" iwnn:horizontalGap="@fraction/keyboard_12key_function_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_12key_input_keywidth" iwnn:keyPreviewLabel="ﾏ" />
+        <Key iwnn:codes="-208" iwnn:keyIcon="@drawable/key_12key_full_flick_off_katakana8" iwnn:horizontalGap="@fraction/keyboard_12key_input_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_12key_input_keywidth" iwnn:keyPreviewLabel="ﾔ" />
+        <Key iwnn:codes="-209" iwnn:keyIcon="@drawable/key_12key_full_flick_off_katakana9" iwnn:horizontalGap="@fraction/keyboard_12key_input_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_12key_input_keywidth" iwnn:keyPreviewLabel="ﾗ" />
+        <Key iwnn:codes="-215" iwnn:iconPreview="@drawable/key_12key_space_b" iwnn:isRepeatable="true" iwnn:keyEdgeFlags="right" iwnn:keyIcon="@drawable/key_12key_space" iwnn:horizontalGap="@fraction/keyboard_12key_function_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_12key_function_keywidth" iwnn:isSecondKey="true" />
+    </Row>
+    <Row iwnn:rowEdgeFlags="bottom" iwnn:verticalGap="@fraction/keyboard_12key_row4_verticalGap">
+        <Key iwnn:codes="-230" iwnn:iconPreview="@drawable/key_mode_change_b" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_mode_half_kata" iwnn:popupKeyboard="@xml/keyboard_switch_key_jp" iwnn:keyWidth="@fraction/keyboard_12key_function_keywidth" iwnn:isSecondKey="true" />
+        <Key iwnn:codes="-213" iwnn:iconPreview="@drawable/key_12key_dakuten_b" iwnn:keyIcon="@drawable/key_12key_dakuten" iwnn:horizontalGap="@fraction/keyboard_12key_function_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_12key_input_keywidth" />
+        <Key iwnn:codes="-210" iwnn:keyIcon="@drawable/key_12key_full_flick_off_katakana0" iwnn:horizontalGap="@fraction/keyboard_12key_input_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_12key_input_keywidth" iwnn:keyPreviewLabel="ﾜ" />
+        <Key iwnn:codes="-211" iwnn:iconPreview="@drawable/key_12key_ten_b" iwnn:keyIcon="@drawable/key_12key_ten" iwnn:horizontalGap="@fraction/keyboard_12key_input_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_12key_input_keywidth" />
+        <Key iwnn:codes="-216" iwnn:iconPreview="@drawable/key_enter_b" iwnn:keyEdgeFlags="right" iwnn:keyIcon="@drawable/key_enter" iwnn:horizontalGap="@fraction/keyboard_12key_function_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_12key_function_keywidth" iwnn:isSecondKey="true" />
+    </Row>
+</Keyboard>

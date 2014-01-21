@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Configurações avançadas</string>
+    <string name="defaults_button">Redefinir para padrão</string>
+    <string name="category_haptic_title">Resposta tátil</string>
+    <string name="vibrator_title">Vibração</string>
+    <string name="vibrator_tuning_title">Intensidade da vibração</string>
+    <string name="vibrator_tuning_summary_head">Ajusar a intensidade da resposta por vibração</string>
+    <string name="vibrator_warning">Valores maiores que %1$d não são recomendados</string>
+</resources>

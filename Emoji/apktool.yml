@@ -1,0 +1,13 @@
+version: 1.5.2
+apkFileName: iWnnIME.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  - 6
+sdkInfo:
+  minSdkVersion: '14'
+packageInfo:
+  cur_package: jp.co.omronsoft.iwnnime.ml
+  orig_package: jp.co.omronsoft.iwnnime.ml
+compressionType: false

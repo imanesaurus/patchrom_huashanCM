@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard iwnn:horizontalGap="0.0dip" iwnn:keyHeight="50.0dip" iwnn:keyWidth="14.999998%p" iwnn:verticalGap="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:iwnn="http://schemas.android.com/apk/res/jp.co.omronsoft.iwnnime.ml">
+    <Row>
+        <Key iwnn:codes="-301" iwnn:keyEdgeFlags="left" iwnn:keyLabel="@string/ti_key_12key_switch_full_hiragana_txt" />
+        <Key iwnn:codes="-302" iwnn:keyLabel="@string/ti_key_12key_switch_full_katakana_txt" />
+        <Key iwnn:codes="-303" iwnn:keyLabel="@string/ti_key_12key_switch_full_alphabet_txt" />
+        <Key iwnn:codes="-304" iwnn:keyEdgeFlags="right" iwnn:keyLabel="@string/ti_key_12key_switch_full_number_txt" />
+    </Row>
+    <Row>
+        <Key iwnn:codes="-221" iwnn:iconPreview="@drawable/key_mode_panel_kbd_b" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_mode_panel_kbd" />
+        <Key iwnn:codes="-306" iwnn:keyLabel="@string/ti_key_12key_switch_half_katakana_txt" />
+        <Key iwnn:codes="-307" iwnn:keyLabel="@string/ti_key_12key_switch_half_alphabet_txt" />
+        <Key iwnn:codes="-308" iwnn:keyEdgeFlags="right" iwnn:keyLabel="@string/ti_key_12key_switch_half_number_txt" />
+    </Row>
+</Keyboard>

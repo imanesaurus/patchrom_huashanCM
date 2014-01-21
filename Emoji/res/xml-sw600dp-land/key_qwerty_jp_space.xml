@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:iwnn="http://schemas.android.com/apk/res/jp.co.omronsoft.iwnnime.ml">
+    <switch>
+        <case iwnn:keyboardCondition="modeHiragana|switchImeOff">
+            <case iwnn:keyboardCondition="modeFullAlpha|switchImeOff">
+                <case iwnn:keyboardCondition="modeFullNum|switchImeOff">
+                    <case iwnn:keyboardCondition="modeFullKatakana|switchImeOff">
+                        <Row-Key>
+                            <Key iwnn:codes="12288" iwnn:isRepeatable="true" iwnn:keyLabel=" " iwnn:keyWidth="@fraction/keyboard_qwerty_space_keywidth" />
+                        </Row-Key>
+                    </case>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeHiragana|switchImeOn">
+            <case iwnn:keyboardCondition="modeFullAlpha|switchImeOn">
+                <case iwnn:keyboardCondition="modeFullNum|switchImeOn">
+                    <case iwnn:keyboardCondition="modeFullKatakana|switchImeOn">
+                        <Row-Key>
+                            <Key iwnn:codes="12288" iwnn:isRepeatable="true" iwnn:keyLabel=" " iwnn:keyWidth="@fraction/keyboard_qwerty_space_switchime_keywidth" />
+                        </Row-Key>
+                    </case>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeHalfAlpha|switchImeOff">
+            <case iwnn:keyboardCondition="modeHalfNum|switchImeOff">
+                <case iwnn:keyboardCondition="modeHalfKatakana|switchImeOff">
+                    <Row-Key>
+                        <Key iwnn:codes="32" iwnn:isRepeatable="true" iwnn:keyLabel=" " iwnn:keyWidth="@fraction/keyboard_qwerty_space_keywidth" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeHalfAlpha|switchImeOn">
+            <case iwnn:keyboardCondition="modeHalfNum|switchImeOn">
+                <case iwnn:keyboardCondition="modeHalfKatakana|switchImeOn">
+                    <Row-Key>
+                        <Key iwnn:codes="32" iwnn:isRepeatable="true" iwnn:keyLabel=" " iwnn:keyWidth="@fraction/keyboard_qwerty_space_switchime_keywidth" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+    </switch>
+</Keyboard>

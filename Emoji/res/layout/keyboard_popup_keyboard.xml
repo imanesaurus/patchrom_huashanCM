@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/keyboard_popup_panel_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:iwnn="http://schemas.android.com/apk/res/jp.co.omronsoft.iwnnime.ml">
+    <jp.co.omronsoft.iwnnime.ml.KeyboardView android:id="@id/keyboardView" android:background="@*android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" iwnn:keyBackground="@drawable/btn_keyboard_key" iwnn:verticalCorrection="-10.0dip" iwnn:keyTextSize="22.0dip" iwnn:keyTextColor="@color/key_text_color_std" iwnn:labelTextSize="14.0dip" iwnn:popupLayout="@layout/keyboard_popup_keyboard" iwnn:shadowColor="#bb000000" iwnn:shadowRadius="0.5" />
+</LinearLayout>

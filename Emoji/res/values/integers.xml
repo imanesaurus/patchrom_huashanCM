@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="vibrate_time">5</integer>
+    <integer name="candidate_longpress_dialog_candidate_word_size">28</integer>
+    <integer name="candidate_longpress_dialog_candidate_emoji_word_size">56</integer>
+    <integer name="key_preview_backdrawable_jugde_correction_percent">10</integer>
+    <integer name="screen_size">0</integer>
+    <integer name="flick_sensitivity_preference_default">50</integer>
+    <integer name="flick_sensitivity_preference_min">1</integer>
+    <integer name="flick_sensitivity_preference_max">100</integer>
+    <integer name="keyboard_12key_row4_rowedgeflags">8</integer>
+</resources>

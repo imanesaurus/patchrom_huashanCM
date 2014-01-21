@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:iwnn="http://schemas.android.com/apk/res/jp.co.omronsoft.iwnnime.ml">
+    <switch>
+        <case iwnn:keyboardCondition="modeHiragana">
+            <Row-Key>
+                <Key iwnn:codes="-230" iwnn:iconPreview="@drawable/key_mode_change_b" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_mode_hira" iwnn:popupKeyboard="@xml/keyboard_switch_key_qwerty_jp" iwnn:horizontalGap="@fraction/keyboard_qwerty_row_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_qwerty_mode_change_keywidth" iwnn:isSecondKey="true" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeFullAlpha">
+            <Row-Key>
+                <Key iwnn:codes="-230" iwnn:iconPreview="@drawable/key_mode_change_b" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_mode_full_alpha" iwnn:popupKeyboard="@xml/keyboard_switch_key_qwerty_jp" iwnn:horizontalGap="@fraction/keyboard_qwerty_row_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_qwerty_mode_change_keywidth" iwnn:isSecondKey="true" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeFullNum">
+            <Row-Key>
+                <Key iwnn:codes="-230" iwnn:iconPreview="@drawable/key_mode_change_b" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_mode_full_num" iwnn:popupKeyboard="@xml/keyboard_switch_key_qwerty_jp" iwnn:horizontalGap="@fraction/keyboard_qwerty_row_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_qwerty_mode_change_keywidth" iwnn:isSecondKey="true" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeFullKatakana">
+            <Row-Key>
+                <Key iwnn:codes="-230" iwnn:iconPreview="@drawable/key_mode_change_b" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_mode_full_kata" iwnn:popupKeyboard="@xml/keyboard_switch_key_qwerty_jp" iwnn:horizontalGap="@fraction/keyboard_qwerty_row_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_qwerty_mode_change_keywidth" iwnn:isSecondKey="true" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeHalfAlpha">
+            <Row-Key>
+                <Key iwnn:codes="-230" iwnn:iconPreview="@drawable/key_mode_change_b" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_mode_half_alpha" iwnn:popupKeyboard="@xml/keyboard_switch_key_qwerty_jp" iwnn:horizontalGap="@fraction/keyboard_qwerty_row_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_qwerty_mode_change_keywidth" iwnn:isSecondKey="true" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeHalfNum">
+            <Row-Key>
+                <Key iwnn:codes="-230" iwnn:iconPreview="@drawable/key_mode_change_b" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_mode_half_num" iwnn:popupKeyboard="@xml/keyboard_switch_key_qwerty_jp" iwnn:horizontalGap="@fraction/keyboard_qwerty_row_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_qwerty_mode_change_keywidth" iwnn:isSecondKey="true" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeHalfKatakana">
+            <Row-Key>
+                <Key iwnn:codes="-230" iwnn:iconPreview="@drawable/key_mode_change_b" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_mode_half_kata" iwnn:popupKeyboard="@xml/keyboard_switch_key_qwerty_jp" iwnn:horizontalGap="@fraction/keyboard_qwerty_row_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_qwerty_mode_change_keywidth" iwnn:isSecondKey="true" />
+            </Row-Key>
+        </case>
+    </switch>
+</Keyboard>

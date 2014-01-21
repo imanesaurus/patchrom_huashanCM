@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <fraction name="keyboard_qwerty_row4_vertical_gap">0.703001%p</fraction>
+    <fraction name="keyboard_12key_row4_verticalGap">0.3900051%p</fraction>
+</resources>

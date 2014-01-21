@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/vibrator_title">
+        <com.cyanogenmod.settings.device.VibratorTuningPreference android:title="@string/vibrator_tuning_title" android:key="vibrator_tuning" android:dialogTitle="@string/vibrator_tuning_title" />
+    </PreferenceCategory>
+</PreferenceScreen>

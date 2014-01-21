@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <fraction name="keyboard_qwerty_common_keywidth">9.000004%p</fraction>
+    <fraction name="keyboard_qwerty_common_horizontal_gap">0.83999634%p</fraction>
+    <fraction name="keyboard_qwerty_row_horizontal_gap">1.1999965%p</fraction>
+    <item type="fraction" name="keyboard_qwerty_row2_horizontal_gap">@fraction/keyboard_qwerty_row_horizontal_gap</item>
+    <fraction name="keyboard_qwerty_row4_vertical_gap">3.0930042%p</fraction>
+    <fraction name="keyboard_qwerty_shift_keywidth">13.999998%p</fraction>
+    <fraction name="keyboard_qwerty_del_keywidth">13.900005%p</fraction>
+    <item type="fraction" name="keyboard_qwerty_mode_change_keywidth">@fraction/keyboard_qwerty_shift_keywidth</item>
+    <item type="fraction" name="keyboard_qwerty_enter_keywidth">@fraction/keyboard_qwerty_del_keywidth</item>
+    <item type="fraction" name="keyboard_qwerty_pict_sym_voicedisable_keywidth">@fraction/keyboard_qwerty_common_keywidth</item>
+    <item type="fraction" name="keyboard_qwerty_voice_keywidth">@fraction/keyboard_qwerty_common_keywidth</item>
+    <fraction name="keyboard_qwerty_space_keywidth">18.900002%p</fraction>
+    <fraction name="keyboard_qwerty_space_cursordisable_keywidth">38.600002%p</fraction>
+    <item type="fraction" name="keyboard_qwerty_space_switchime_keywidth">@fraction/keyboard_qwerty_common_keywidth</item>
+    <fraction name="keyboard_qwerty_space_switchime_cursordisable_keywidth">28.8%p</fraction>
+    <fraction name="keyboard_qwerty_space_voicedisable_keywidth">28.8%p</fraction>
+    <fraction name="keyboard_qwerty_space_voicedisable_cursordisable_keywidth">48.5%p</fraction>
+    <fraction name="keyboard_qwerty_space_voicedisable_switchime_keywidth">18.900002%p</fraction>
+    <fraction name="keyboard_qwerty_space_voicedisable_switchime_cursordisable_keywidth">38.600002%p</fraction>
+    <item type="fraction" name="keyboard_4key_vertical_gap">@fraction/keyboard_qwerty_row4_vertical_gap</item>
+    <fraction name="keyboard_4key_keywidth">14.999998%p</fraction>
+    <fraction name="keyboard_4key_category_keywidth">39.999996%p</fraction>
+    <item type="fraction" name="keyboard_5key_vertical_gap">@fraction/keyboard_qwerty_row4_vertical_gap</item>
+    <fraction name="keyboard_5key_keywidth">14.999998%p</fraction>
+    <fraction name="keyboard_5key_language_switch_keywidth">10.000002%p</fraction>
+    <fraction name="keyboard_5key_category_keywidth">29.999996%p</fraction>
+    <fraction name="keyboard_12key_common_keywidth">21.111%p</fraction>
+    <fraction name="keyboard_12key_common_horizontal_gap">0.0%p</fraction>
+    <fraction name="keyboard_12key_function_horizontal_gap">1.9999981%</fraction>
+    <item type="fraction" name="keyboard_12key_input_horizontal_gap">@fraction/keyboard_12key_common_horizontal_gap</item>
+    <fraction name="keyboard_12key_row4_verticalGap">1.5879989%p</fraction>
+    <fraction name="keyboard_12key_function_keywidth">16.387999%p</fraction>
+    <item type="fraction" name="keyboard_12key_input_keywidth">@fraction/keyboard_12key_common_keywidth</item>
+    <fraction name="keyboard_12key_phone_function_keywidth">8.193005%</fraction>
+</resources>

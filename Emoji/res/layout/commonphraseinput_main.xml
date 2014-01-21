@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="#ffbfbfbf" android:gravity="left" android:id="@id/phraseListTitle" android:background="#ff212021" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ti_preference_lang_setting_menu_txt" />
+    <ListView android:id="@id/LanguageSelectView" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:textColor="#ffbfbfbf" android:gravity="left" android:id="@id/phraseListTitle" android:background="#ff212021" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ti_preference_category_setting_menu_txt" />
+    <ListView android:id="@id/CategoryListView" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+</LinearLayout>

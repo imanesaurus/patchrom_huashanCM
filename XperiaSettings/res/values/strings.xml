@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vibrator_sysfs_file">/sys/class/timed_output/vibrator/level</string>
+    <string name="intensity_max_value">31</string>
+    <string name="intensity_warning_threshold">30</string>
+    <string name="intensity_default_value">29</string>
+    <string name="intensity_min_value">19</string>
+    <string name="app_name">Advanced settings</string>
+    <string name="defaults_button">Reset to default</string>
+    <string name="category_haptic_title">Haptic</string>
+    <string name="vibrator_title">Vibrator</string>
+    <string name="vibrator_tuning_title">Vibration strength</string>
+    <string name="vibrator_tuning_summary_head">Adjust the strength of the vibration feedback</string>
+    <string name="vibrator_warning">Values higher than %1$d are not recommended</string>
+</resources>

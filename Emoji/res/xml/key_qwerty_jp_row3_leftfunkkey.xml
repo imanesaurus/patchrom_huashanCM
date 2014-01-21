@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:iwnn="http://schemas.android.com/apk/res/jp.co.omronsoft.iwnnime.ml">
+    <switch>
+        <case iwnn:keyboardCondition="modeHiragana">
+            <case iwnn:keyboardCondition="modeFullKatakana">
+                <case iwnn:keyboardCondition="modeHalfKatakana">
+                    <Row-Key>
+                        <Key iwnn:codes="-106" iwnn:iconPreview="@drawable/key_pict_sym_b" iwnn:isModifier="true" iwnn:isSticky="false" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_qwerty_pict_sym" iwnn:horizontalGap="@fraction/keyboard_qwerty_row_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_qwerty_shift_keywidth" iwnn:isSecondKey="true" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeFullAlpha">
+            <case iwnn:keyboardCondition="modeFullNum">
+                <case iwnn:keyboardCondition="modeHalfAlpha">
+                    <case iwnn:keyboardCondition="modeHalfNum">
+                        <Row-Key>
+                            <Key iwnn:codes="-1" iwnn:iconPreview="@drawable/key_qwerty_shift_b" iwnn:isModifier="true" iwnn:isSticky="false" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_qwerty_shift" iwnn:horizontalGap="@fraction/keyboard_qwerty_row_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_qwerty_shift_keywidth" iwnn:isSecondKey="true" />
+                        </Row-Key>
+                    </case>
+                </case>
+            </case>
+        </case>
+    </switch>
+</Keyboard>

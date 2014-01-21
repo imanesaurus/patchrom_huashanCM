@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/candview_main" android:background="@color/candidate_back" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/candview_tab" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <HorizontalScrollView android:id="@id/tab_scroll" android:background="@color/candidate_tab_back" android:scrollbars="none" android:fadingEdgeLength="@dimen/tab_scroll_fading_edge_length" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:requiresFadingEdge="horizontal">
+                <LinearLayout android:orientation="horizontal" android:id="@id/tab_base" android:background="@color/candidate_tab_back" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/tab_text_size" android:textColor="@color/tab_textcolor_no_select" android:gravity="center" android:id="@id/candview_pictgram" android:background="@drawable/cand_tab" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ti_cand_tab_pictgram_txt" android:singleLine="true" android:layout_weight="1.0" android:soundEffectsEnabled="false" />
+                    <TextView android:textSize="@dimen/tab_text_size" android:textColor="@color/tab_textcolor_no_select" android:gravity="center" android:id="@id/candview_pictgram_uni6" android:background="@drawable/cand_tab" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ti_cand_tab_pictgram_uni6_txt" android:singleLine="true" android:layout_weight="1.0" android:soundEffectsEnabled="false" />
+                    <TextView android:textSize="@dimen/tab_text_size" android:textColor="@color/tab_textcolor_no_select" android:gravity="center" android:id="@id/candview_symbol" android:background="@drawable/cand_tab" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ti_cand_tab_symbol_txt" android:singleLine="true" android:layout_weight="1.0" android:soundEffectsEnabled="false" />
+                    <TextView android:textSize="@dimen/tab_text_size" android:textColor="@color/tab_textcolor_no_select" android:gravity="center" android:id="@id/candview_emoticon" android:background="@drawable/cand_tab" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ti_cand_tab_emoticon_txt" android:singleLine="true" android:layout_weight="1.0" android:soundEffectsEnabled="false" />
+                    <TextView android:textSize="@dimen/tab_text_size" android:textColor="@color/tab_textcolor_no_select" android:gravity="center" android:id="@id/candview_decoemojilist" android:background="@drawable/cand_tab" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ti_cand_tab_decoemojilist_txt" android:singleLine="true" android:layout_weight="1.0" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+        <ScrollView android:id="@id/candview_scroll" android:background="@color/candidate_back" android:scrollbars="vertical" android:fadingEdgeLength="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/candview_base" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@id/candidates_1st_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <AbsoluteLayout android:id="@id/candidates_2nd_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:id="@id/candidates_are_nothing" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/ti_candidates_are_nothing_txt" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout android:gravity="right" android:orientation="vertical" android:id="@id/read_more" android:fadingEdgeLength="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/read_more_button" android:paddingRight="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:soundEffectsEnabled="false" />
+    </LinearLayout>
+</FrameLayout>

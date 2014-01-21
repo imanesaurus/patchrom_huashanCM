@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Opzioni avanzate</string>
+    <string name="defaults_button">Ripristina predefinito</string>
+    <string name="category_haptic_title">Aptico</string>
+    <string name="vibrator_title">Vibrazione</string>
+    <string name="vibrator_tuning_title">Intensità vibrazione</string>
+    <string name="vibrator_tuning_summary_head">"Modifica l'intensità della vibrazione del feedback aptico"</string>
+    <string name="vibrator_warning">Valori superiori a %1$d non sono raccomandati</string>
+</resources>

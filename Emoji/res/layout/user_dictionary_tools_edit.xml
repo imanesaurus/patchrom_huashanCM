@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/labelRead" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/ti_user_dictionary_title_read_txt" />
+    <EditText android:id="@id/editRead" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLength="50" android:inputType="textPhonetic" />
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/labelCandidate" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/ti_user_dictionary_title_candidate_txt" />
+    <EditText android:id="@id/editCandidate" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLength="50" />
+    <RelativeLayout android:background="@*android:drawable/bottom_bar" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight" android:layout_marginTop="1.0dip">
+        <Button android:id="@id/cancelButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="120.0dip" android:minHeight="48.0dip" android:text="@string/ti_dialog_button_cancel_txt" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <Button android:id="@id/addButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="120.0dip" android:minHeight="48.0dip" android:text="@string/ti_user_dictionary_save_txt" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

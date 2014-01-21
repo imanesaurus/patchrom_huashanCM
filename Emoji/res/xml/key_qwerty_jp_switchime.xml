@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:iwnn="http://schemas.android.com/apk/res/jp.co.omronsoft.iwnnime.ml">
+    <switch>
+        <case iwnn:keyboardCondition="switchImeOn">
+            <Row-Key>
+                <Key iwnn:codes="-412" iwnn:iconPreview="@drawable/key_qwerty_switchime_b" iwnn:keyIcon="@drawable/key_qwerty_switchime" />
+            </Row-Key>
+        </case>
+    </switch>
+</Keyboard>

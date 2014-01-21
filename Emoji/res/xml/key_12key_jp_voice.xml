@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:iwnn="http://schemas.android.com/apk/res/jp.co.omronsoft.iwnnime.ml">
+    <switch>
+        <case iwnn:keyboardCondition="voiceOn">
+            <Row-Key>
+                <Key iwnn:codes="-311" iwnn:iconPreview="@drawable/key_12key_voice_b" iwnn:keyIcon="@drawable/key_12key_voice" iwnn:horizontalGap="@fraction/keyboard_12key_function_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_12key_input_keywidth" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeHiragana|voiceOff">
+            <case iwnn:keyboardCondition="modeFullKatakana|voiceOff">
+                <case iwnn:keyboardCondition="modeHalfKatakana|voiceOff">
+                    <Row-Key>
+                        <Key iwnn:codes="-213" iwnn:iconPreview="@drawable/key_12key_dakuten_b" iwnn:keyIcon="@drawable/key_12key_dakuten" iwnn:horizontalGap="@fraction/keyboard_12key_function_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_12key_input_keywidth" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeFullAlpha|voiceOff">
+            <case iwnn:keyboardCondition="modeHalfAlpha|voiceOff">
+                <Row-Key>
+                    <Key iwnn:codes="-213" iwnn:iconPreview="@drawable/key_12key_caps_b" iwnn:keyIcon="@drawable/key_12key_caps" iwnn:horizontalGap="@fraction/keyboard_12key_function_horizontal_gap" iwnn:keyWidth="@fraction/keyboard_12key_input_keywidth" />
+                </Row-Key>
+            </case>
+        </case>
+    </switch>
+</Keyboard>

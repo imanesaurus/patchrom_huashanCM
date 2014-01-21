@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard iwnn:horizontalGap="@fraction/keyboard_qwerty_common_horizontal_gap" iwnn:keyHeight="@dimen/keyboard_qwerty_common_keyheight" iwnn:keyWidth="@fraction/keyboard_qwerty_common_keywidth" iwnn:verticalGap="@dimen/keyboard_qwerty_common_vertical_gap"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:iwnn="http://schemas.android.com/apk/res/jp.co.omronsoft.iwnnime.ml">
+    <Row>
+        <include iwnn:keyboardLayout="@xml/key_qwerty_jp_row1_q_to_p_shift" />
+    </Row>
+    <Row>
+        <include iwnn:keyboardLayout="@xml/key_qwerty_jp_row2_a_to_l_shift" />
+    </Row>
+    <Row>
+        <Key iwnn:codes="-1" iwnn:iconPreview="@drawable/key_qwerty_shift_b" iwnn:isModifier="true" iwnn:isSticky="false" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_qwerty_shift_locked" iwnn:horizontalGap="@fraction/keyboard_qwerty_row_horizontal_gap" iwnn:isSecondKey="true" />
+        <include iwnn:keyboardLayout="@xml/key_qwerty_jp_row3_z_to_m_shift" />
+        <include iwnn:keyboardLayout="@xml/key_qwerty_jp_tyouon_shift" />
+        <Key iwnn:codes="-100" iwnn:iconPreview="@drawable/key_del_b" iwnn:isRepeatable="true" iwnn:keyEdgeFlags="right" iwnn:keyIcon="@drawable/key_del" iwnn:isSecondKey="true" />
+    </Row>
+    <Row iwnn:verticalGap="@fraction/keyboard_qwerty_row4_vertical_gap">
+        <include iwnn:keyboardLayout="@xml/key_qwerty_jp_row4_shift" />
+    </Row>
+</Keyboard>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="key_height">84.0dip</dimen>
+    <dimen name="candidate_delete_word_size">40.0dip</dimen>
+    <dimen name="key_label_text_size">6.0dip</dimen>
+    <dimen name="key_text_size">30.0dip</dimen>
+    <dimen name="cand_space_width_emoji_symbol">0.0dip</dimen>
+    <dimen name="keyboard_qwerty_common_vertical_gap">10.0dip</dimen>
+    <item type="dimen" name="keyboard_12key_common_vertical_gap">@dimen/keyboard_qwerty_common_vertical_gap</item>
+</resources>

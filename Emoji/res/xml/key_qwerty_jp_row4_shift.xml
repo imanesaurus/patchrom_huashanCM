@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:iwnn="http://schemas.android.com/apk/res/jp.co.omronsoft.iwnnime.ml">
+    <switch>
+        <case iwnn:keyboardCondition="cursorLeftRightOn">
+            <Row-Key>
+                <include iwnn:keyboardLayout="@xml/key_qwerty_jp_mode" />
+                <include iwnn:keyboardLayout="@xml/key_qwerty_jp_cursor_left" />
+                <include iwnn:keyboardLayout="@xml/key_qwerty_jp_voice" />
+                <include iwnn:keyboardLayout="@xml/key_qwerty_jp_touten_shift" />
+                <include iwnn:keyboardLayout="@xml/key_qwerty_jp_switchime" />
+                <include iwnn:keyboardLayout="@xml/key_qwerty_jp_space" />
+                <include iwnn:keyboardLayout="@xml/key_qwerty_jp_kuten_shift" />
+                <include iwnn:keyboardLayout="@xml/key_qwerty_jp_cursor_right" />
+                <include iwnn:keyboardLayout="@xml/key_qwerty_jp_enter" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="cursorLeftRightOff">
+            <Row-Key>
+                <include iwnn:keyboardLayout="@xml/key_qwerty_jp_mode" />
+                <include iwnn:keyboardLayout="@xml/key_qwerty_jp_voice" />
+                <include iwnn:keyboardLayout="@xml/key_qwerty_jp_touten_shift" />
+                <include iwnn:keyboardLayout="@xml/key_qwerty_jp_switchime" />
+                <include iwnn:keyboardLayout="@xml/key_qwerty_jp_space" />
+                <include iwnn:keyboardLayout="@xml/key_qwerty_jp_kuten_shift" />
+                <include iwnn:keyboardLayout="@xml/key_qwerty_jp_enter" />
+            </Row-Key>
+        </case>
+    </switch>
+</Keyboard>

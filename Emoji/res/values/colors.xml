@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="key_text_color_2nd">#ffffffff</color>
+    <color name="key_text_color_std">#ffffffff</color>
+    <color name="voice_recognition_text">#ffffffff</color>
+    <color name="candidate_text_1line">#ffffffff</color>
+    <color name="candidate_back_1line">#ff000000</color>
+    <color name="webapi_text_key">#ff0052b7</color>
+    <color name="webapi_text_nocandidate">#400000ff</color>
+    <color name="candidate_tab_back">#ff000000</color>
+    <color name="tab_textcolor_select">#ffffffff</color>
+    <color name="tab_textcolor_no_select">#ffffffff</color>
+    <color name="tab_textcolor_disable">#ff404040</color>
+    <color name="indicator_textcolor_caps_off">#ffc0c0c0</color>
+    <color name="indicator_textcolor_caps_on">#cd32cd32</color>
+    <color name="indicator_textcolor_caps_lock">#ff32cd32</color>
+    <color name="indicator_textcolor_alt_off">#ffc0c0c0</color>
+    <color name="indicator_textcolor_alt_on">#cdff8800</color>
+    <color name="indicator_textcolor_alt_lock">#ffff8800</color>
+    <color name="indicator_textbackground_default">#fff0f0f0</color>
+    <color name="indicator_background_lock_caps">#5532cd32</color>
+    <color name="indicator_background_lock_alt">#55ff8800</color>
+    <color name="key_text_color">#ffffffff</color>
+    <color name="candidate_text">#d833b5e5</color>
+    <color name="candidate_text_symbol">#ffffffff</color>
+    <color name="candidate_text_cate">#ffffffff</color>
+    <color name="candidate_back">#ff282828</color>
+    <item type="color" name="webapi_text_candidate">@color/webapi_text_key</item>
+</resources>

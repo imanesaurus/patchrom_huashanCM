@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="7" android:versionName="2.2.6" package="jp.co.omronsoft.iwnnime.ml"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.VIBRATE"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application android:label="iWnn IME" android:icon="@drawable/iwnnime_icon" android:hardwareAccelerated="true">
+        <service android:label="@string/ti_ime_name_standard_txt" android:name="jp.co.omronsoft.iwnnime.ml.standardcommon.IWnnLanguageSwitcher" android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+            <meta-data android:name="android.view.im" android:resource="@xml/method_standard" />
+        </service>
+        <activity android:theme="@miui:style/V5.Theme.Light" android:label="@string/ti_ime_name_setting_title_standard_txt" android:name="ControlPanelStandard" android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name="jp.co.omronsoft.iwnnime.ml.standardcommon.UserDictionaryToolsListStandard" />
+        <activity android:label="@string/ti_user_dictionary_edit_words_txt" android:name="jp.co.omronsoft.iwnnime.ml.standardcommon.UserDictionaryToolsEditStandard" android:configChanges="orientation|screenSize" />
+        <activity android:name="jp.co.omronsoft.iwnnime.ml.jajp.UserDictionaryToolsListJa" />
+        <activity android:label="@string/ti_user_dictionary_edit_words_txt" android:name="jp.co.omronsoft.iwnnime.ml.jajp.UserDictionaryToolsEditJa" android:configChanges="orientation|screenSize" />
+        <activity android:name="jp.co.omronsoft.iwnnime.ml.jajp.UserDictionaryToolsListEn" />
+        <activity android:label="@string/ti_user_dictionary_edit_words_txt" android:name="jp.co.omronsoft.iwnnime.ml.jajp.UserDictionaryToolsEditEn" android:configChanges="orientation|screenSize" />
+        <activity android:theme="@style/MushroomDialog" android:label="@string/ti_mushroom_launcher_title_txt" android:name="jp.co.omronsoft.iwnnime.ml.Mushroom" android:excludeFromRecents="true" />
+        <activity android:theme="@miui:style/V5.Theme.Light" android:label="@string/ti_preference_keyboard_type_diff_title_txt" android:name="jp.co.omronsoft.iwnnime.ml.KeyboardTypePreferenceActivity" />
+        <activity android:theme="@miui:style/V5.Theme.Light" android:name="jp.co.omronsoft.iwnnime.ml.AdditionalDictionaryPreferenceActivity" />
+        <activity android:theme="@miui:style/V5.Theme.Light" android:name="jp.co.omronsoft.iwnnime.ml.DownloadDictionaryPreferenceActivity" />
+        <receiver android:name="jp.co.omronsoft.iwnnime.ml.WebApiReceiver">
+            <intent-filter>
+                <action android:name="jp.co.omronsoft.iwnnime.ml.RETURN_CANDIDATES" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="jp.co.omronsoft.iwnnime.ml.AutoLearningReceiver">
+            <intent-filter>
+                <action android:name="jp.co.omronsoft.iwnnime.ml.AUTO_LEARNING" />
+                <action android:name="jp.co.omronsoft.iwnnime.ml.CLEAR_LEARNING" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="jp.co.omronsoft.iwnnime.ml.UninstallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="DecoEmojiListener">
+            <intent-filter>
+                <action android:name="jp.co.omronsoft.iwnnime.ml" />
+                <action android:name="jp.co.omronsoft.android.decoemojimanager" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

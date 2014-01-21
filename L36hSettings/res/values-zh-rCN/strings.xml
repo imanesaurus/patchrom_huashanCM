@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="l36h_settings">原厂设置</string>
+    <string name="l36h_settings_summary">原厂设置</string>
+    <string name="xloud_strings_xloud_desc_txt">增强扬声器音量</string>
+    <string name="swiqi_strings_swiqi_desc_txt">增强照片和视频的图像质量</string>
+    <string name="preferences_application_title">作者信息</string>
+    <string name="application_version">LeeForgetMeNot</string>
+    <string name="application_copyright">关注我的微博 http://weibo.com/LeeForgetMeNot</string>
+    <string name="white_balance">白平衡</string>
+</resources>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:iwnn="http://schemas.android.com/apk/res/jp.co.omronsoft.iwnnime.ml">
+    <switch>
+        <case iwnn:keyboardCondition="modeHiragana|voiceOn|switchImeOff|cursorLeftRightOn">
+            <Row-Key>
+                <Key iwnn:codes="12288" iwnn:iconPreview="@drawable/key_qwerty_space_conv_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space_conv" iwnn:keyWidth="@fraction/keyboard_qwerty_space_keywidth" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeHiragana|voiceOn|switchImeOff|cursorLeftRightOff">
+            <Row-Key>
+                <Key iwnn:codes="12288" iwnn:iconPreview="@drawable/key_qwerty_space_conv_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space_conv" iwnn:keyWidth="@fraction/keyboard_qwerty_space_cursordisable_keywidth" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeHiragana|voiceOn|switchImeOn|cursorLeftRightOn">
+            <Row-Key>
+                <Key iwnn:codes="12288" iwnn:iconPreview="@drawable/key_qwerty_space_conv_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space_conv" iwnn:keyWidth="@fraction/keyboard_qwerty_space_switchime_keywidth" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeHiragana|voiceOn|switchImeOn|cursorLeftRightOff">
+            <Row-Key>
+                <Key iwnn:codes="12288" iwnn:iconPreview="@drawable/key_qwerty_space_conv_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space_conv" iwnn:keyWidth="@fraction/keyboard_qwerty_space_switchime_cursordisable_keywidth" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeHiragana|voiceOff|switchImeOff|cursorLeftRightOn">
+            <Row-Key>
+                <Key iwnn:codes="12288" iwnn:iconPreview="@drawable/key_qwerty_space_conv_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space_conv" iwnn:keyWidth="@fraction/keyboard_qwerty_space_voicedisable_keywidth" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeHiragana|voiceOff|switchImeOff|cursorLeftRightOff">
+            <Row-Key>
+                <Key iwnn:codes="12288" iwnn:iconPreview="@drawable/key_qwerty_space_conv_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space_conv" iwnn:keyWidth="@fraction/keyboard_qwerty_space_voicedisable_cursordisable_keywidth" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeHiragana|voiceOff|switchImeOn|cursorLeftRightOn">
+            <Row-Key>
+                <Key iwnn:codes="12288" iwnn:iconPreview="@drawable/key_qwerty_space_conv_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space_conv" iwnn:keyWidth="@fraction/keyboard_qwerty_space_voicedisable_switchime_keywidth" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeHiragana|voiceOff|switchImeOn|cursorLeftRightOff">
+            <Row-Key>
+                <Key iwnn:codes="12288" iwnn:iconPreview="@drawable/key_qwerty_space_conv_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space_conv" iwnn:keyWidth="@fraction/keyboard_qwerty_space_voicedisable_switchime_cursordisable_keywidth" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeFullAlpha|voiceOn|switchImeOff|cursorLeftRightOn">
+            <case iwnn:keyboardCondition="modeFullNum|voiceOn|switchImeOff|cursorLeftRightOn">
+                <case iwnn:keyboardCondition="modeFullKatakana|voiceOn|switchImeOff|cursorLeftRightOn">
+                    <Row-Key>
+                        <Key iwnn:codes="12288" iwnn:iconPreview="@drawable/key_qwerty_space_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space" iwnn:keyWidth="@fraction/keyboard_qwerty_space_keywidth" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeFullAlpha|voiceOn|switchImeOff|cursorLeftRightOff">
+            <case iwnn:keyboardCondition="modeFullNum|voiceOn|switchImeOff|cursorLeftRightOff">
+                <case iwnn:keyboardCondition="modeFullKatakana|voiceOn|switchImeOff|cursorLeftRightOff">
+                    <Row-Key>
+                        <Key iwnn:codes="12288" iwnn:iconPreview="@drawable/key_qwerty_space_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space" iwnn:keyWidth="@fraction/keyboard_qwerty_space_cursordisable_keywidth" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeFullAlpha|voiceOn|switchImeOn|cursorLeftRightOn">
+            <case iwnn:keyboardCondition="modeFullNum|voiceOn|switchImeOn|cursorLeftRightOn">
+                <case iwnn:keyboardCondition="modeFullKatakana|voiceOn|switchImeOn|cursorLeftRightOn">
+                    <Row-Key>
+                        <Key iwnn:codes="12288" iwnn:iconPreview="@drawable/key_qwerty_space_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space" iwnn:keyWidth="@fraction/keyboard_qwerty_space_switchime_keywidth" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeFullAlpha|voiceOn|switchImeOn|cursorLeftRightOff">
+            <case iwnn:keyboardCondition="modeFullNum|voiceOn|switchImeOn|cursorLeftRightOff">
+                <case iwnn:keyboardCondition="modeFullKatakana|voiceOn|switchImeOn|cursorLeftRightOff">
+                    <Row-Key>
+                        <Key iwnn:codes="12288" iwnn:iconPreview="@drawable/key_qwerty_space_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space" iwnn:keyWidth="@fraction/keyboard_qwerty_space_switchime_cursordisable_keywidth" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeFullAlpha|voiceOff|switchImeOff|cursorLeftRightOn">
+            <case iwnn:keyboardCondition="modeFullNum|voiceOff|switchImeOff|cursorLeftRightOn">
+                <case iwnn:keyboardCondition="modeFullKatakana|voiceOff|switchImeOff|cursorLeftRightOn">
+                    <Row-Key>
+                        <Key iwnn:codes="12288" iwnn:iconPreview="@drawable/key_qwerty_space_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space" iwnn:keyWidth="@fraction/keyboard_qwerty_space_voicedisable_keywidth" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeFullAlpha|voiceOff|switchImeOff|cursorLeftRightOff">
+            <case iwnn:keyboardCondition="modeFullNum|voiceOff|switchImeOff|cursorLeftRightOff">
+                <case iwnn:keyboardCondition="modeFullKatakana|voiceOff|switchImeOff|cursorLeftRightOff">
+                    <Row-Key>
+                        <Key iwnn:codes="12288" iwnn:iconPreview="@drawable/key_qwerty_space_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space" iwnn:keyWidth="@fraction/keyboard_qwerty_space_voicedisable_cursordisable_keywidth" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeFullAlpha|voiceOff|switchImeOn|cursorLeftRightOn">
+            <case iwnn:keyboardCondition="modeFullNum|voiceOff|switchImeOn|cursorLeftRightOn">
+                <case iwnn:keyboardCondition="modeFullKatakana|voiceOff|switchImeOn|cursorLeftRightOn">
+                    <Row-Key>
+                        <Key iwnn:codes="12288" iwnn:iconPreview="@drawable/key_qwerty_space_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space" iwnn:keyWidth="@fraction/keyboard_qwerty_space_voicedisable_switchime_keywidth" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeFullAlpha|voiceOff|switchImeOn|cursorLeftRightOff">
+            <case iwnn:keyboardCondition="modeFullNum|voiceOff|switchImeOn|cursorLeftRightOff">
+                <case iwnn:keyboardCondition="modeFullKatakana|voiceOff|switchImeOn|cursorLeftRightOff">
+                    <Row-Key>
+                        <Key iwnn:codes="12288" iwnn:iconPreview="@drawable/key_qwerty_space_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space" iwnn:keyWidth="@fraction/keyboard_qwerty_space_voicedisable_switchime_cursordisable_keywidth" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeHalfAlpha|voiceOn|switchImeOff|cursorLeftRightOn">
+            <case iwnn:keyboardCondition="modeHalfNum|voiceOn|switchImeOff|cursorLeftRightOn">
+                <case iwnn:keyboardCondition="modeHalfKatakana|voiceOn|switchImeOff|cursorLeftRightOn">
+                    <Row-Key>
+                        <Key iwnn:codes="32" iwnn:iconPreview="@drawable/key_qwerty_space_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space" iwnn:keyWidth="@fraction/keyboard_qwerty_space_keywidth" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeHalfAlpha|voiceOn|switchImeOff|cursorLeftRightOff">
+            <case iwnn:keyboardCondition="modeHalfNum|voiceOn|switchImeOff|cursorLeftRightOff">
+                <case iwnn:keyboardCondition="modeHalfKatakana|voiceOn|switchImeOff|cursorLeftRightOff">
+                    <Row-Key>
+                        <Key iwnn:codes="32" iwnn:iconPreview="@drawable/key_qwerty_space_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space" iwnn:keyWidth="@fraction/keyboard_qwerty_space_cursordisable_keywidth" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeHalfAlpha|voiceOn|switchImeOn|cursorLeftRightOn">
+            <case iwnn:keyboardCondition="modeHalfNum|voiceOn|switchImeOn|cursorLeftRightOn">
+                <case iwnn:keyboardCondition="modeHalfKatakana|voiceOn|switchImeOn|cursorLeftRightOn">
+                    <Row-Key>
+                        <Key iwnn:codes="32" iwnn:iconPreview="@drawable/key_qwerty_space_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space" iwnn:keyWidth="@fraction/keyboard_qwerty_space_switchime_keywidth" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeHalfAlpha|voiceOn|switchImeOn|cursorLeftRightOff">
+            <case iwnn:keyboardCondition="modeHalfNum|voiceOn|switchImeOn|cursorLeftRightOff">
+                <case iwnn:keyboardCondition="modeHalfKatakana|voiceOn|switchImeOn|cursorLeftRightOff">
+                    <Row-Key>
+                        <Key iwnn:codes="32" iwnn:iconPreview="@drawable/key_qwerty_space_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space" iwnn:keyWidth="@fraction/keyboard_qwerty_space_switchime_cursordisable_keywidth" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeHalfAlpha|voiceOff|switchImeOff|cursorLeftRightOn">
+            <case iwnn:keyboardCondition="modeHalfNum|voiceOff|switchImeOff|cursorLeftRightOn">
+                <case iwnn:keyboardCondition="modeHalfKatakana|voiceOff|switchImeOff|cursorLeftRightOn">
+                    <Row-Key>
+                        <Key iwnn:codes="32" iwnn:iconPreview="@drawable/key_qwerty_space_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space" iwnn:keyWidth="@fraction/keyboard_qwerty_space_voicedisable_keywidth" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeHalfAlpha|voiceOff|switchImeOff|cursorLeftRightOff">
+            <case iwnn:keyboardCondition="modeHalfNum|voiceOff|switchImeOff|cursorLeftRightOff">
+                <case iwnn:keyboardCondition="modeHalfKatakana|voiceOff|switchImeOff|cursorLeftRightOff">
+                    <Row-Key>
+                        <Key iwnn:codes="32" iwnn:iconPreview="@drawable/key_qwerty_space_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space" iwnn:keyWidth="@fraction/keyboard_qwerty_space_voicedisable_cursordisable_keywidth" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeHalfAlpha|voiceOff|switchImeOn|cursorLeftRightOn">
+            <case iwnn:keyboardCondition="modeHalfNum|voiceOff|switchImeOn|cursorLeftRightOn">
+                <case iwnn:keyboardCondition="modeHalfKatakana|voiceOff|switchImeOn|cursorLeftRightOn">
+                    <Row-Key>
+                        <Key iwnn:codes="32" iwnn:iconPreview="@drawable/key_qwerty_space_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space" iwnn:keyWidth="@fraction/keyboard_qwerty_space_voicedisable_switchime_keywidth" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeHalfAlpha|voiceOff|switchImeOn|cursorLeftRightOff">
+            <case iwnn:keyboardCondition="modeHalfNum|voiceOff|switchImeOn|cursorLeftRightOff">
+                <case iwnn:keyboardCondition="modeHalfKatakana|voiceOff|switchImeOn|cursorLeftRightOff">
+                    <Row-Key>
+                        <Key iwnn:codes="32" iwnn:iconPreview="@drawable/key_qwerty_space_b" iwnn:isRepeatable="true" iwnn:keyIcon="@drawable/key_qwerty_space" iwnn:keyWidth="@fraction/keyboard_qwerty_space_voicedisable_switchime_cursordisable_keywidth" />
+                    </Row-Key>
+                </case>
+            </case>
+        </case>
+    </switch>
+</Keyboard>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">高级设置</string>
+    <string name="defaults_button">重置为默认值</string>
+    <string name="category_haptic_title">振动</string>
+    <string name="vibrator_title">振动器</string>
+    <string name="vibrator_tuning_title">振动强度</string>
+    <string name="vibrator_tuning_summary_head">调整振动反馈的强度</string>
+    <string name="vibrator_warning">不建议使用超过 %1$d 的值</string>
+</resources>

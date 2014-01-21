@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="#ff000000" android:gravity="center" android:id="@id/phraseListTitle" android:background="#ffff9900" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ti_textview_commonphrase_txt" />
+　　<ListView android:id="@id/phrase_list_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+</LinearLayout>

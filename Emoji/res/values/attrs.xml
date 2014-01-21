@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="keyBackground" format="reference" />
+    <attr name="verticalCorrection" format="dimension" />
+    <attr name="keyPreviewLayout" format="reference" />
+    <attr name="keyPreviewOffset" format="dimension" />
+    <attr name="keyPreviewHeight" format="dimension" />
+    <attr name="keyTextSize" format="dimension" />
+    <attr name="keyTextColor" format="color" />
+    <attr name="labelTextSize" format="dimension" />
+    <attr name="popupLayout" format="reference" />
+    <attr name="shadowColor" format="color" />
+    <attr name="shadowRadius" format="float" />
+    <attr name="codes" format="string|integer" />
+    <attr name="iconPreview" format="reference" />
+    <attr name="isModifier" format="boolean" />
+    <attr name="isRepeatable" format="boolean" />
+    <attr name="isSticky" format="boolean" />
+    <attr name="keyEdgeFlags">
+        <flag name="left" value="0x00000001" />
+        <flag name="right" value="0x00000002" />
+    </attr>
+    <attr name="keyIcon" format="reference" />
+    <attr name="keyLabel" format="string" />
+    <attr name="keyOutputText" format="string" />
+    <attr name="popupCharacters" format="string" />
+    <attr name="popupKeyboard" format="reference" />
+    <attr name="keyboardMode" format="reference" />
+    <attr name="rowEdgeFlags">
+        <flag name="top" value="0x00000004" />
+        <flag name="bottom" value="0x00000008" />
+    </attr>
+    <attr name="horizontalGap" format="dimension|fraction" />
+    <attr name="keyHeight" format="dimension|fraction" />
+    <attr name="keyWidth" format="dimension|fraction" />
+    <attr name="verticalGap" format="dimension|fraction" />
+    <attr name="backgroundDimAmount" format="float" />
+    <attr name="keyBackground2nd" format="reference" />
+    <attr name="keyTextColor2nd" format="color" />
+    <attr name="shadowColor2nd" format="color" />
+    <attr name="shadowRadius2nd" format="float" />
+    <attr name="isSecondKey" format="boolean" />
+    <attr name="keyPreviewLabel" format="string" />
+    <attr name="keyboardLayout" format="reference" />
+    <attr name="keyboardCondition">
+        <flag name="none" value="0x00000000" />
+        <flag name="modeHiragana" value="0x00000001" />
+        <flag name="modeFullAlpha" value="0x00000002" />
+        <flag name="modeFullNum" value="0x00000003" />
+        <flag name="modeFullKatakana" value="0x00000004" />
+        <flag name="modeHalfAlpha" value="0x00000005" />
+        <flag name="modeHalfNum" value="0x00000006" />
+        <flag name="modeHalfKatakana" value="0x00000007" />
+        <flag name="voiceOff" value="0x00000010" />
+        <flag name="voiceOn" value="0x00000020" />
+        <flag name="switchImeOff" value="0x00000040" />
+        <flag name="switchImeOn" value="0x00000080" />
+        <flag name="cursorLeftRightOff" value="0x00000100" />
+        <flag name="cursorLeftRightOn" value="0x00000200" />
+    </attr>
+    <attr name="keyBackground3rd" format="reference" />
+</resources>

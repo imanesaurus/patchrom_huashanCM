@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="l36h_settings">Xperia Settings</string>
+    <string name="l36h_settings_summary">Xperia Settings</string>
+    <string name="xloud_strings_xloud_txt">xLOUD™</string>
+    <string name="xloud_strings_xloud_desc_txt">Enhance the loudness of speaker</string>
+    <string name="swiqi_strings_swiqi_txt">X-Reality Engine</string>
+    <string name="swiqi_strings_swiqi_desc_txt">Image quality enhancer for photos and videos</string>
+    <string name="preferences_application_title">Author information</string>
+    <string name="application_version">LeeForgetMeNot</string>
+    <string name="application_copyright">Follow me on Weibo http://weibo.com/LeeForgetMeNot</string>
+    <string name="white_balance">white_balance</string>
+</resources>

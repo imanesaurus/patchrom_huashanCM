@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard iwnn:horizontalGap="@fraction/keyboard_qwerty_common_horizontal_gap" iwnn:keyHeight="@dimen/keyboard_qwerty_common_keyheight" iwnn:keyWidth="@fraction/keyboard_qwerty_common_keywidth" iwnn:verticalGap="@dimen/keyboard_qwerty_common_vertical_gap"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:iwnn="http://schemas.android.com/apk/res/jp.co.omronsoft.iwnnime.ml">
+    <Row>
+        <Key iwnn:codes="49" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_qwerty_num_1" iwnn:horizontalGap="@fraction/keyboard_qwerty_row_horizontal_gap" iwnn:keyPreviewLabel="1" />
+        <Key iwnn:codes="50" iwnn:keyIcon="@drawable/key_qwerty_num_2" iwnn:keyPreviewLabel="2" />
+        <Key iwnn:codes="51" iwnn:keyIcon="@drawable/key_qwerty_num_3" iwnn:keyPreviewLabel="3" />
+        <Key iwnn:codes="52" iwnn:keyIcon="@drawable/key_qwerty_num_4" iwnn:keyPreviewLabel="4" />
+        <Key iwnn:codes="53" iwnn:keyIcon="@drawable/key_qwerty_num_5" iwnn:keyPreviewLabel="5" />
+        <Key iwnn:codes="54" iwnn:keyIcon="@drawable/key_qwerty_num_6" iwnn:keyPreviewLabel="6" />
+        <Key iwnn:codes="55" iwnn:keyIcon="@drawable/key_qwerty_num_7" iwnn:keyPreviewLabel="7" />
+        <Key iwnn:codes="56" iwnn:keyIcon="@drawable/key_qwerty_num_8" iwnn:keyPreviewLabel="8" />
+        <Key iwnn:codes="57" iwnn:keyIcon="@drawable/key_qwerty_num_9" iwnn:keyPreviewLabel="9" />
+        <Key iwnn:codes="48" iwnn:keyEdgeFlags="right" iwnn:keyIcon="@drawable/key_qwerty_num_0" iwnn:keyPreviewLabel="0" />
+    </Row>
+    <Row>
+        <Key iwnn:codes="64" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_qwerty_num_at" iwnn:horizontalGap="@fraction/keyboard_qwerty_row2_horizontal_gap" iwnn:keyPreviewLabel="\@" />
+        <Key iwnn:codes="35" iwnn:keyIcon="@drawable/key_qwerty_num_sharp" iwnn:keyPreviewLabel="\#" />
+        <Key iwnn:codes="37" iwnn:keyIcon="@drawable/key_qwerty_num_percent" iwnn:keyPreviewLabel="%" />
+        <Key iwnn:codes="38" iwnn:keyIcon="@drawable/key_qwerty_num_ampersand" iwnn:keyPreviewLabel="&amp;" />
+        <Key iwnn:codes="42" iwnn:keyIcon="@drawable/key_qwerty_num_asterisk" iwnn:keyPreviewLabel="*" />
+        <Key iwnn:codes="47" iwnn:keyIcon="@drawable/key_qwerty_num_slash" iwnn:keyPreviewLabel="/" />
+        <Key iwnn:codes="43" iwnn:keyIcon="@drawable/key_qwerty_num_plus" iwnn:keyPreviewLabel="+" />
+        <Key iwnn:codes="45" iwnn:keyIcon="@drawable/key_qwerty_num_minus" iwnn:keyPreviewLabel="-" />
+        <Key iwnn:codes="61" iwnn:keyEdgeFlags="right" iwnn:keyIcon="@drawable/key_qwerty_num_equals" iwnn:keyPreviewLabel="=" />
+    </Row>
+    <Row>
+        <Key iwnn:codes="-1" iwnn:iconPreview="@drawable/key_qwerty_shift_b" iwnn:isModifier="true" iwnn:isSticky="false" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_qwerty_shift" iwnn:horizontalGap="@fraction/keyboard_qwerty_row_horizontal_gap" iwnn:isSecondKey="true" />
+        <Key iwnn:codes="40" iwnn:keyIcon="@drawable/key_qwerty_num_parenthesis_left" iwnn:keyPreviewLabel="(" />
+        <Key iwnn:codes="41" iwnn:keyIcon="@drawable/key_qwerty_num_parenthesis_right" iwnn:keyPreviewLabel=")" />
+        <Key iwnn:codes="58" iwnn:keyIcon="@drawable/key_qwerty_num_colon" iwnn:keyPreviewLabel=":" />
+        <Key iwnn:codes="59" iwnn:keyIcon="@drawable/key_qwerty_num_semicolon" iwnn:keyPreviewLabel=";" />
+        <Key iwnn:codes="33" iwnn:keyIcon="@drawable/key_qwerty_num_exclamation" iwnn:keyPreviewLabel="!" />
+        <Key iwnn:codes="63" iwnn:keyIcon="@drawable/key_qwerty_num_question" iwnn:keyPreviewLabel="\?" />
+        <Key iwnn:codes="91" iwnn:keyIcon="@drawable/key_qwerty_num_bracket_left" iwnn:keyPreviewLabel="[" />
+        <Key iwnn:codes="93" iwnn:keyIcon="@drawable/key_qwerty_num_bracket_right" iwnn:keyPreviewLabel="]" />
+        <Key iwnn:codes="-100" iwnn:iconPreview="@drawable/key_del_b" iwnn:isRepeatable="true" iwnn:keyEdgeFlags="right" iwnn:keyIcon="@drawable/key_del" iwnn:isSecondKey="true" />
+    </Row>
+    <Row iwnn:verticalGap="@fraction/keyboard_qwerty_row4_vertical_gap">
+        <include iwnn:keyboardLayout="@xml/key_qwerty_jp_row4" />
+    </Row>
+</Keyboard>

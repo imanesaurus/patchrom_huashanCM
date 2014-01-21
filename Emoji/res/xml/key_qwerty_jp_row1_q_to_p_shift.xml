@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:iwnn="http://schemas.android.com/apk/res/jp.co.omronsoft.iwnnime.ml">
+    <switch>
+        <case iwnn:keyboardCondition="modeHiragana">
+            <case iwnn:keyboardCondition="modeHalfKatakana">
+                <Row-Key>
+                    <Key iwnn:codes="81" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_qwerty_shift_on_q" iwnn:popupCharacters="@string/ti_alternates_q_jajp_qwerty_ja_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:horizontalGap="@fraction/keyboard_qwerty_row_horizontal_gap" iwnn:keyPreviewLabel="Q" />
+                    <Key iwnn:codes="87" iwnn:keyIcon="@drawable/key_qwerty_shift_on_w" iwnn:popupCharacters="@string/ti_alternates_w_jajp_qwerty_ja_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="W" />
+                    <Key iwnn:codes="69" iwnn:keyIcon="@drawable/key_qwerty_shift_on_e" iwnn:popupCharacters="@string/ti_alternates_e_jajp_qwerty_ja_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="E" />
+                    <Key iwnn:codes="82" iwnn:keyIcon="@drawable/key_qwerty_shift_on_r" iwnn:popupCharacters="@string/ti_alternates_r_jajp_qwerty_ja_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="R" />
+                    <Key iwnn:codes="84" iwnn:keyIcon="@drawable/key_qwerty_shift_on_t" iwnn:popupCharacters="@string/ti_alternates_t_jajp_qwerty_ja_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="T" />
+                    <Key iwnn:codes="89" iwnn:keyIcon="@drawable/key_qwerty_shift_on_y" iwnn:popupCharacters="@string/ti_alternates_y_jajp_qwerty_ja_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="Y" />
+                    <Key iwnn:codes="85" iwnn:keyIcon="@drawable/key_qwerty_shift_on_u" iwnn:popupCharacters="@string/ti_alternates_u_jajp_qwerty_ja_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="U" />
+                    <Key iwnn:codes="73" iwnn:keyIcon="@drawable/key_qwerty_shift_on_i" iwnn:popupCharacters="@string/ti_alternates_i_jajp_qwerty_ja_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="I" />
+                    <Key iwnn:codes="79" iwnn:keyIcon="@drawable/key_qwerty_shift_on_o" iwnn:popupCharacters="@string/ti_alternates_o_jajp_qwerty_ja_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="O" />
+                    <Key iwnn:codes="80" iwnn:keyEdgeFlags="right" iwnn:keyIcon="@drawable/key_qwerty_shift_on_p" iwnn:popupCharacters="@string/ti_alternates_p_jajp_qwerty_ja_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="P" />
+                </Row-Key>
+            </case>
+        </case>
+        <case iwnn:keyboardCondition="modeFullKatakana">
+            <Row-Key>
+                <Key iwnn:codes="81" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_qwerty_shift_on_q" iwnn:popupCharacters="@string/ti_alternates_q_jajp_qwerty_ja_full_katakana_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:horizontalGap="@fraction/keyboard_qwerty_row_horizontal_gap" iwnn:keyPreviewLabel="Q" />
+                <Key iwnn:codes="87" iwnn:keyIcon="@drawable/key_qwerty_shift_on_w" iwnn:popupCharacters="@string/ti_alternates_w_jajp_qwerty_ja_full_katakana_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="W" />
+                <Key iwnn:codes="69" iwnn:keyIcon="@drawable/key_qwerty_shift_on_e" iwnn:popupCharacters="@string/ti_alternates_e_jajp_qwerty_ja_full_katakana_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="E" />
+                <Key iwnn:codes="82" iwnn:keyIcon="@drawable/key_qwerty_shift_on_r" iwnn:popupCharacters="@string/ti_alternates_r_jajp_qwerty_ja_full_katakana_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="R" />
+                <Key iwnn:codes="84" iwnn:keyIcon="@drawable/key_qwerty_shift_on_t" iwnn:popupCharacters="@string/ti_alternates_t_jajp_qwerty_ja_full_katakana_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="T" />
+                <Key iwnn:codes="89" iwnn:keyIcon="@drawable/key_qwerty_shift_on_y" iwnn:popupCharacters="@string/ti_alternates_y_jajp_qwerty_ja_full_katakana_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="Y" />
+                <Key iwnn:codes="85" iwnn:keyIcon="@drawable/key_qwerty_shift_on_u" iwnn:popupCharacters="@string/ti_alternates_u_jajp_qwerty_ja_full_katakana_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="U" />
+                <Key iwnn:codes="73" iwnn:keyIcon="@drawable/key_qwerty_shift_on_i" iwnn:popupCharacters="@string/ti_alternates_i_jajp_qwerty_ja_full_katakana_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="I" />
+                <Key iwnn:codes="79" iwnn:keyIcon="@drawable/key_qwerty_shift_on_o" iwnn:popupCharacters="@string/ti_alternates_o_jajp_qwerty_ja_full_katakana_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="O" />
+                <Key iwnn:codes="80" iwnn:keyEdgeFlags="right" iwnn:keyIcon="@drawable/key_qwerty_shift_on_p" iwnn:popupCharacters="@string/ti_alternates_p_jajp_qwerty_ja_full_katakana_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="P" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeFullAlpha">
+            <Row-Key>
+                <Key iwnn:codes="65329" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_qwerty_shift_on_q" iwnn:popupCharacters="@string/ti_alternates_q_jajp_qwerty_en_full_alphabet_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:horizontalGap="@fraction/keyboard_qwerty_row_horizontal_gap" iwnn:keyPreviewLabel="Q" />
+                <Key iwnn:codes="65335" iwnn:keyIcon="@drawable/key_qwerty_shift_on_w" iwnn:popupCharacters="@string/ti_alternates_w_jajp_qwerty_en_full_alphabet_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="W" />
+                <Key iwnn:codes="65317" iwnn:keyIcon="@drawable/key_qwerty_shift_on_e" iwnn:popupCharacters="@string/ti_alternates_e_jajp_qwerty_en_full_alphabet_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="E" />
+                <Key iwnn:codes="65330" iwnn:keyIcon="@drawable/key_qwerty_shift_on_r" iwnn:popupCharacters="@string/ti_alternates_r_jajp_qwerty_en_full_alphabet_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="R" />
+                <Key iwnn:codes="65332" iwnn:keyIcon="@drawable/key_qwerty_shift_on_t" iwnn:popupCharacters="@string/ti_alternates_t_jajp_qwerty_en_full_alphabet_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="T" />
+                <Key iwnn:codes="65337" iwnn:keyIcon="@drawable/key_qwerty_shift_on_y" iwnn:popupCharacters="@string/ti_alternates_y_jajp_qwerty_en_full_alphabet_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="Y" />
+                <Key iwnn:codes="65333" iwnn:keyIcon="@drawable/key_qwerty_shift_on_u" iwnn:popupCharacters="@string/ti_alternates_u_jajp_qwerty_en_full_alphabet_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="U" />
+                <Key iwnn:codes="65321" iwnn:keyIcon="@drawable/key_qwerty_shift_on_i" iwnn:popupCharacters="@string/ti_alternates_i_jajp_qwerty_en_full_alphabet_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="I" />
+                <Key iwnn:codes="65327" iwnn:keyIcon="@drawable/key_qwerty_shift_on_o" iwnn:popupCharacters="@string/ti_alternates_o_jajp_qwerty_en_full_alphabet_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="O" />
+                <Key iwnn:codes="65328" iwnn:keyEdgeFlags="right" iwnn:keyIcon="@drawable/key_qwerty_shift_on_p" iwnn:popupCharacters="@string/ti_alternates_p_jajp_qwerty_en_full_alphabet_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="P" />
+            </Row-Key>
+        </case>
+        <case iwnn:keyboardCondition="modeHalfAlpha">
+            <Row-Key>
+                <Key iwnn:codes="81" iwnn:keyEdgeFlags="left" iwnn:keyIcon="@drawable/key_qwerty_shift_on_q" iwnn:popupCharacters="@string/ti_alternates_q_jajp_qwerty_en_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:horizontalGap="@fraction/keyboard_qwerty_row_horizontal_gap" iwnn:keyPreviewLabel="Q" />
+                <Key iwnn:codes="87" iwnn:keyIcon="@drawable/key_qwerty_shift_on_w" iwnn:popupCharacters="@string/ti_alternates_w_jajp_qwerty_en_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="W" />
+                <Key iwnn:codes="69" iwnn:keyIcon="@drawable/key_qwerty_shift_on_e" iwnn:popupCharacters="@string/ti_alternates_e_jajp_qwerty_en_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="E" />
+                <Key iwnn:codes="82" iwnn:keyIcon="@drawable/key_qwerty_shift_on_r" iwnn:popupCharacters="@string/ti_alternates_r_jajp_qwerty_en_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="R" />
+                <Key iwnn:codes="84" iwnn:keyIcon="@drawable/key_qwerty_shift_on_t" iwnn:popupCharacters="@string/ti_alternates_t_jajp_qwerty_en_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="T" />
+                <Key iwnn:codes="89" iwnn:keyIcon="@drawable/key_qwerty_shift_on_y" iwnn:popupCharacters="@string/ti_alternates_y_jajp_qwerty_en_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="Y" />
+                <Key iwnn:codes="85" iwnn:keyIcon="@drawable/key_qwerty_shift_on_u" iwnn:popupCharacters="@string/ti_alternates_u_jajp_qwerty_en_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="U" />
+                <Key iwnn:codes="73" iwnn:keyIcon="@drawable/key_qwerty_shift_on_i" iwnn:popupCharacters="@string/ti_alternates_i_jajp_qwerty_en_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="I" />
+                <Key iwnn:codes="79" iwnn:keyIcon="@drawable/key_qwerty_shift_on_o" iwnn:popupCharacters="@string/ti_alternates_o_jajp_qwerty_en_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="O" />
+                <Key iwnn:codes="80" iwnn:keyEdgeFlags="right" iwnn:keyIcon="@drawable/key_qwerty_shift_on_p" iwnn:popupCharacters="@string/ti_alternates_p_jajp_qwerty_en_shift_on_txt" iwnn:popupKeyboard="@xml/keyboard_popup_template" iwnn:keyPreviewLabel="P" />
+            </Row-Key>
+        </case>
+    </switch>
+</Keyboard>

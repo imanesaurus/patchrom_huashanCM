@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:iwnn="http://schemas.android.com/apk/res/jp.co.omronsoft.iwnnime.ml">
+    <switch>
+        <case iwnn:keyboardCondition="voiceOn">
+            <Row-Key>
+                <Key iwnn:codes="-311" iwnn:iconPreview="@drawable/key_qwerty_voice_b" iwnn:keyIcon="@drawable/key_qwerty_voice" iwnn:keyWidth="@fraction/keyboard_qwerty_voice_keywidth" iwnn:isSecondKey="true" />
+            </Row-Key>
+        </case>
+    </switch>
+</Keyboard>

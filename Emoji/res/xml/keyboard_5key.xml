@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard iwnn:keyHeight="@dimen/key_height" iwnn:verticalGap="@dimen/keyboard_qwerty_common_vertical_gap"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:iwnn="http://schemas.android.com/apk/res/jp.co.omronsoft.iwnnime.ml">
+    <Row iwnn:verticalGap="@fraction/keyboard_5key_vertical_gap">
+        <Key iwnn:codes="-231" iwnn:keyEdgeFlags="left" iwnn:keyLabel="@string/ti_key_symbol_mode" iwnn:keyWidth="@fraction/keyboard_5key_keywidth" iwnn:isSecondKey="true" />
+        <Key iwnn:codes="-412" iwnn:iconPreview="@drawable/key_12key_switchime_b" iwnn:keyIcon="@drawable/key_12key_switchime" iwnn:keyWidth="@fraction/keyboard_5key_language_switch_keywidth" iwnn:isSecondKey="true" />
+        <Key iwnn:codes="-601" iwnn:keyLabel="≪" iwnn:keyWidth="@fraction/keyboard_5key_keywidth" iwnn:isSecondKey="true" />
+        <Key iwnn:codes="-600" iwnn:keyLabel="@string/ti_key_category_txt" iwnn:keyWidth="@fraction/keyboard_5key_category_keywidth" iwnn:isSecondKey="true" />
+        <Key iwnn:codes="-602" iwnn:keyLabel="≫" iwnn:keyWidth="@fraction/keyboard_5key_keywidth" iwnn:isSecondKey="true" />
+        <Key iwnn:codes="-234" iwnn:iconPreview="@drawable/key_del_b" iwnn:isRepeatable="true" iwnn:keyEdgeFlags="right" iwnn:keyIcon="@drawable/key_del" iwnn:keyWidth="@fraction/keyboard_5key_keywidth" iwnn:isSecondKey="true" />
+    </Row>
+</Keyboard>

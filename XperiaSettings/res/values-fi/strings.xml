@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lisäasetukset</string>
+    <string name="defaults_button">Palauta oletusasetukset</string>
+    <string name="category_haptic_title">Haptinen</string>
+    <string name="vibrator_title">Värinä</string>
+    <string name="vibrator_tuning_title">Värinän voimakkuus</string>
+    <string name="vibrator_tuning_summary_head">Säädä värinän voimakkuutta</string>
+    <string name="vibrator_warning">Korkeampia arvoja kuin %1$d ei suositella</string>
+</resources>

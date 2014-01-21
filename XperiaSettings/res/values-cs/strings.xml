@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pokročilé nastavení</string>
+    <string name="defaults_button">Obnovit výchozí</string>
+    <string name="category_haptic_title">Hmatová odezva</string>
+    <string name="vibrator_title">Vibrace</string>
+    <string name="vibrator_tuning_title">Síla vibrací</string>
+    <string name="vibrator_tuning_summary_head">Upravení síly vibrací zpětné vazby</string>
+    <string name="vibrator_warning">Hodnoty větší než %1$d nejsou doporučovány</string>
+</resources>

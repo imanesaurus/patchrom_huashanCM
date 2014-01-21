@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Geavanceerde instellingen</string>
+    <string name="defaults_button">Herstellen naar standaard</string>
+    <string name="category_haptic_title">Trillen</string>
+    <string name="vibrator_title">Trilapparaat</string>
+    <string name="vibrator_tuning_title">Trilsterkte</string>
+    <string name="vibrator_tuning_summary_head">Sterkte instellen van trillen</string>
+    <string name="vibrator_warning">Values higher than %1$d are not recommended</string>
+</resources>
