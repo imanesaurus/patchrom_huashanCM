@@ -12,6 +12,7 @@ pl=$PORT_ROOT/multi/polish/Polish/main
 fr=$PORT_ROOT/multi/french/French/main
 de=$PORT_ROOT/multi/german/German/main
 es=$PORT_ROOT/multi/spain/Spanish/main
+ru=$PORT_ROOT/multi/russian/Russian/main
 GIT_APPLY=$PORT_ROOT/tools/git.apply
 curdir=`pwd`
 
@@ -28,7 +29,7 @@ function adjustDpi() {
 }
 
 function addMultilang() {
-    for file in `find $in $ar $hu $pl $fr $de $es -name $1.apk`
+    for file in `find $in $ar $hu $pl $fr $de $es $ru -name $1.apk`
     do
 	cp -u -r $file/* out/$1
 	find out/$1/res -name "drawable-pl-hdpi" | xargs rm -rf
@@ -161,19 +162,20 @@ if [ $1 = "MiuiGallery" ];then
 fi
 
 if [ $1 = "Settings" ];then
-#    cp $1/*.part out/
-#    cd out
-#    $GIT_APPLY Settings.part
-#    cd ..
-#    for file in `find $2 -name *.rej`
-#    do
-#	echo "Fatal error: Settings patch fail"
-#        exit 1
-#    done
+    cp $1/*.part out/
+    cd out
+    $GIT_APPLY Settings.part
+    cd ..
+    for file in `find $2 -name *.rej`
+    do
+	echo "Fatal error: Settings patch fail"
+        exit 1
+    done
 	addMultilang $1
 	adjustDpi $1
+	appendPart $1
 	$XMLMERGYTOOL $1/res/values $2/res/values
-    	$XMLMERGYTOOL $1/res/values-hdpi $2/res/values-hdpi
+    $XMLMERGYTOOL $1/res/values-hdpi $2/res/values-hdpi
 fi
 
 if [ $1 = "Mms" ];then
