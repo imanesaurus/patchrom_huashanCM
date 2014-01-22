@@ -1543,6 +1543,89 @@
     goto :goto_0
 .end method
 
+.method private getNavBarHeight(I)I
+    .locals 6
+    .parameter
+
+    .prologue
+    const/4 v0, -0x1
+
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string v2, "m7NavBarHeight"
+
+    invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v1
+
+    if-ltz v1, :cond_0
+
+    return v1
+
+    :cond_0
+    return p1
+.end method
+
+.method private getNavBarOnOff(I)I
+    .locals 6
+    .parameter
+
+    .prologue
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string v2, "m7NavBarOnOff"
+
+    invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    return v1
+
+    :cond_0
+    const/4 v1, -0x1
+
+    return v1
+.end method
+
+.method private getNavBarWidth(I)I
+    .locals 6
+    .parameter
+
+    .prologue
+    const/4 v0, -0x1
+
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string v2, "m7NavBarWidth"
+
+    invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v1
+
+    if-ltz v1, :cond_0
+
+    return v1
+
+    :cond_0
+    return p1
+.end method
+
 .method private getScreenshotChordLongPressDelay()J
     .locals 3
 
@@ -15275,6 +15358,12 @@
 
     move-result v13
 
+    move-object/from16 v0, p0
+
+    invoke-direct {v0, v13}, Lcom/android/internal/policy/impl/PhoneWindowManager;->getNavBarHeight(I)I
+
+    move-result v13
+
     aput v13, v11, v12
 
     aput v13, v9, v10
@@ -15306,6 +15395,12 @@
     const v14, 0x105000e
 
     invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v13
+
+    move-object/from16 v0, p0
+
+    invoke-direct {v0, v13}, Lcom/android/internal/policy/impl/PhoneWindowManager;->getNavBarWidth(I)I
 
     move-result v13
 
@@ -15363,13 +15458,21 @@
 
     move-result v17
 
-    aput v17, v15, v16
+    move-object/from16 v0, p0
 
-    aput v17, v13, v14
+    move/from16 v6, v17
 
-    aput v17, v11, v12
+    invoke-direct {v0, v6}, Lcom/android/internal/policy/impl/PhoneWindowManager;->getNavBarWidth(I)I
 
-    aput v17, v9, v10
+    move-result v6
+
+    aput v6, v15, v16
+
+    aput v6, v13, v14
+
+    aput v6, v11, v12
+
+    aput v6, v9, v10
 
     mul-int/lit16 v9, v7, 0xa0
 
@@ -15418,6 +15521,30 @@
 
     iput-boolean v9, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mHasNavigationBar:Z
 
+    invoke-direct {v0, v9}, Lcom/android/internal/policy/impl/PhoneWindowManager;->getNavBarOnOff(I)I
+
+    move-result v9
+
+    if-ltz v9, :cond_d
+
+    const/4 v8, 0x2
+
+    if-eq v8, v9, :cond_c
+
+    const/4 v9, 0x0
+
+    iput-boolean v9, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mHasNavigationBar:Z
+
+    goto :goto_2
+
+    :cond_c
+    const/4 v9, 0x1
+
+    iput-boolean v9, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mHasNavigationBar:Z
+
+    goto :goto_2
+
+    :cond_d
     const-string v9, "qemu.hw.mainkeys"
 
     invoke-static {v9}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;

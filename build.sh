@@ -15,7 +15,8 @@ cp -rf out/MiuiSystemUI backupfiles/MiuiSystemUI$2
 
 cd ..
 cp -f huashan/out/target_files.zip target_files_$2.zip
-./ota.sh $2
+cp target_files_$3.zip last_target_files_$3.zip
+./ota.sh $2 $3
 cp -f ota_update_$2.zip ../../../mnt/hgfs/D/miuihuashan/ota_miui_huashan_$2-from-$3.zip 
 cd huashan
 exit

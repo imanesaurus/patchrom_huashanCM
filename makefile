@@ -12,7 +12,7 @@ local-out-zip-file := MIUI_`date '+%d.%b.%Y-%H.%M.%S'`_huashanCM.zip
 local-previous-target-dir := 
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := V4A SPN XperiaSettings L36hSettings AGE LatinIME Emoji
+local-modified-apps := V4A SPN XperiaSettings L36hSettings AGE LatinIME Emoji m7Parts
 
 local-modified-jars :=
 
