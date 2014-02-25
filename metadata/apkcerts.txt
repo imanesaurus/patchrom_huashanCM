@@ -37,6 +37,7 @@ name="HoloSpiralWallpaper.apk" certificate="build/target/product/security/shared
 name="HTMLViewer.apk" certificate="PRESIGNED" private_key=""
 name="InputDevices.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="KeyChain.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
+name="KitkatKeyboard.apk" certificate="build/target/product/security/shared.x509.pem" private_key="build/target/product/security/shared.pk8"
 name="LatinIME.apk" certificate="build/target/product/security/shared.x509.pem" private_key="build/target/product/security/shared.pk8"
 name="LiveWallpapers.apk" certificate="build/target/product/security/shared.x509.pem" private_key="build/target/product/security/shared.pk8"
 name="LiveWallpapersPicker.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
@@ -90,3 +91,4 @@ name="ChromeBookmarksSyncAdapter.apk" certificate="build/target/product/security
 name="GoogleServicesFramework.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="GooglePartnerSetup.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="L36hSettings.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
+name="textinput-tng.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"

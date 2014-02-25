@@ -13,6 +13,9 @@ fr=$PORT_ROOT/multi/french/French/main
 de=$PORT_ROOT/multi/german/German/main
 es=$PORT_ROOT/multi/spain/Spanish/main
 ru=$PORT_ROOT/multi/russian/Russian/main
+nl=$PORT_ROOT/multi/dutch/Dutch/main
+pt=$PORT_ROOT/multi/portuguese/Portuguese/main
+en=$PORT_ROOT/multi/english/English/main
 GIT_APPLY=$PORT_ROOT/tools/git.apply
 curdir=`pwd`
 
@@ -29,7 +32,7 @@ function adjustDpi() {
 }
 
 function addMultilang() {
-    for file in `find $in $ar $hu $pl $fr $de $es $ru -name $1.apk`
+    for file in `find $in $ar $hu $pl $fr $de $es $ru $nl $pt $en -name $1.apk`
     do
 	cp -u -r $file/* out/$1
 	find out/$1/res -name "drawable-pl-hdpi" | xargs rm -rf
@@ -254,6 +257,7 @@ if [ $1 = "Music" ];then
 	addMultilang $1
 	adjustDpi $1
 	sed -i 's#@string/app_class#com.miui.player.Application#g' $2/AndroidManifest.xml
+	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
 if [ $1 = "NetworkAssistant" ];then

@@ -17,7 +17,7 @@ Subject: [PATCH] add manufacturer_settings icon
 
 --- a/Settings/res/xml/settings_headers.xml
 +++ b/Settings/res/xml/settings_headers.xml
-@@ -51,9 +51,25 @@
+@@ -51,9 +51,22 @@
      <header android:icon="@drawable/ic_headset_settings" android:id="@id/headset_settings" android:title="@string/headset_settings">
          <intent android:action="miui.intent.action.HEADSET_SETTINGS" />
      </header>
@@ -25,9 +25,6 @@ Subject: [PATCH] add manufacturer_settings icon
 +    <header android:title="@string/header_category_xperia" />
 +    <header android:icon="@drawable/ic_ringer_volume_settings" android:title="@string/viper_settings">
 +        <intent android:action="com.android.settings.VIPER" />
-+    </header>
-+    <header android:icon="@drawable/ic_mobile_network_settings" android:title="@string/carrier_settings">
-+        <intent android:action="com.android.settings.CARRIER" />
 +    </header>
 +    <header android:icon="@drawable/ic_menu_scan_network" android:title="@string/xp_settings">
 +        <intent android:action="com.android.settings.VIBRATE" />
@@ -38,7 +35,7 @@ Subject: [PATCH] add manufacturer_settings icon
 +    <header android:icon="@drawable/ic_launcher_settings" android:id="@id/manufacturer_settings" android:title="@string/xperia_settings">
          <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
      </header>
-+    <header android:icon="@drawable/ic_status_bar_settings" android:title="@st
++    <header android:icon="@drawable/ic_status_bar_settings" android:title="@string/cp_settings">
 +        <intent android:action="com.android.settings.M7PARTS" />
 +    </header>
      <header android:id="@id/system_section" android:title="@string/header_category_system" />

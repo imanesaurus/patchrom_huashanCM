@@ -3842,7 +3842,7 @@
     <public type="string" name="autofill_name_on_card_contextual_re" id="0x010403d9" />
     <public type="string" name="autofill_card_cvc_re" id="0x010403da" />
     <public type="string" name="autofill_card_number_re" id="0x010403db" />
-    <public type="string" name="autofill_expiration_month_re" id="0x0104044b" />
+    <public type="string" name="autofill_expiration_month_re" id="0x010403dc" />
     <public type="string" name="autofill_expiration_date_re" id="0x010403dd" />
     <public type="string" name="autofill_card_ignored_re" id="0x010403de" />
     <public type="string" name="autofill_fax_re" id="0x010403df" />
@@ -3953,7 +3953,7 @@
     <public type="string" name="anr_application_process" id="0x01040448" />
     <public type="string" name="anr_process" id="0x01040449" />
     <public type="string" name="force_close" id="0x0104044a" />
-    <public type="string" name="report" id="0x010403dc" />
+    <public type="string" name="report" id="0x0104044b" />
     <public type="string" name="wait" id="0x0104044c" />
     <public type="string" name="webpage_unresponsive" id="0x0104044d" />
     <public type="string" name="launch_warning_title" id="0x0104044e" />
@@ -3961,7 +3961,7 @@
     <public type="string" name="launch_warning_original" id="0x01040450" />
     <public type="string" name="screen_compat_mode_scale" id="0x01040451" />
     <public type="string" name="screen_compat_mode_show" id="0x01040452" />
-    <public type="string" name="screen_compat_mode_hint" id="0x01040453" />
+    <public type="string" name="screen_compat_mode_hint" id="0x010404c2" />
     <public type="string" name="smv_application" id="0x01040454" />
     <public type="string" name="smv_process" id="0x01040455" />
     <public type="string" name="android_upgrading_title" id="0x01040456" />
@@ -4072,7 +4072,7 @@
     <public type="string" name="adb_active_notification_title" id="0x010404bf" />
     <public type="string" name="adb_active_notification_message" id="0x010404c0" />
     <public type="string" name="locale_replacement" id="0x010404c1" />
-    <public type="string" name="select_input_method" id="0x010404c2" />
+    <public type="string" name="select_input_method" id="0x01040453" />
     <public type="string" name="configure_input_methods" id="0x010404c3" />
     <public type="string" name="use_physical_keyboard" id="0x010404c4" />
     <public type="string" name="hardware" id="0x010404c5" />

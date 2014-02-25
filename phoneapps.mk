@@ -7,7 +7,6 @@ private-phone-apps := ApplicationsProvider \
 					  DefaultContainerService \
 					  DrmProvider \
 					  KeyChain \
-                                          LatinIME \
 					  LiveWallpapers \
                                           LiveWallpapersPicker \
 					  MagicSmokeWallpapers \

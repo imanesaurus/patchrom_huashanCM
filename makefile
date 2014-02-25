@@ -12,12 +12,12 @@ local-out-zip-file := MIUI_`date '+%d.%b.%Y-%H.%M.%S'`_huashanCM.zip
 local-previous-target-dir := 
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := V4A SPN XperiaSettings L36hSettings AGE LatinIME Emoji m7Parts
+local-modified-apps := V4A L36hSettings AGE m7Parts
 
 local-modified-jars :=
 
 # All apks from MIUI
-local-miui-removed-apps := MediaProvider BaiduNetworkLocation Userbook VoiceAssist 
+local-miui-removed-apps := MediaProvider BaiduNetworkLocation MiuiVideo SuperMarket GameCenter GameCenterSDKService
 
 local-miui-modified-apps := AntiSpam Backup Browser BugReport Calculator Calendar CalendarProvider CloudService Contacts \
 			ContactsProvider DeskClock DownloadProvider DownloadProviderUi Email Exchange2 FileExplorer MiuiCompass \
@@ -52,10 +52,10 @@ local-pre-zip-misc:
 	cp other/system_fonts.xml $(ZIP_DIR)/system/etc/system_fonts.xml
 # To Fix Headset Button
 	cp other/Generic.kl $(ZIP_DIR)/system/usr/keylayout/Generic.kl
-# To added GAPPS
-	cp -rf other/gapps/* $(ZIP_DIR)
 # To added XLOUD and Xrealty Engine
 	cp -rf other/xloud/* $(ZIP_DIR)/system
+# To added XPERIA Z1s 4.4 keyboard
+	cp -rf other/ek/* $(ZIP_DIR)/system
 # To replace spn
 #	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
 # To added V4A
@@ -68,8 +68,6 @@ local-pre-zip-misc:
 	cp other/09batterytweaks $(ZIP_DIR)/system/etc/init.d
 # To replace FM icon
 	cp -rf other/miui_mod_icons/* $(ZIP_DIR)/system/media/theme/miui_mod_icons/
-# To add Emoji keyboard
-	cp -f other/libiwnn.so $(ZIP_DIR)/system/lib/libiwnn.so
 # To add MiuiSettings
 #	cp other/MiuiSettings.apk $(ZIP_DIR)/system/app/MiuiSettings.apk
 	rm -rf $(ZIP_DIR)/system/addon.d
@@ -77,6 +75,7 @@ local-pre-zip-misc:
 	rm -rf $(ZIP_DIR)/system/bin/backuptool.sh
 	
 	@echo Remove usless stuff
+	rm -rf $(ZIP_DIR)/data/media/preinstall_apps/*.apk
 	rm -rf $(ZIP_DIR)/system/media/video/*.mp4
 	rm -rf $(ZIP_DIR)/system/tts/lang_pico/*.bin
 out/framework2.jar : out/framework.jar
